@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Lexend';
+    src: url('../../fonts/Lexend/Lexend-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'Black Ops One';
+    src: url('../../fonts/BlackOpsOne/BlackOpsOne-Regular.ttf');
+}
+html{
+    font-family: 'Lexend';
+    text-align: justify;
+    /*color: white;
+    background-color: #222;*/
+    margin: 1em;
+}
+h2{
+    font-family: 'Black Ops One';
+    display: inline;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 100% 4px;
+    background-image:
+        linear-gradient(
+            to right,
+            #ffffffff 0%,
+            #dfffacff 20%,
+            #ffc862ff 60%,
+            #ffc862ff 100%
+        );
+}
+p{
+    text-indent: 2em;
+}
+ul{
+    list-style: none;
+}
+ul li:before{
+    color: #ffc862ff;
+    content: '▸';
+    margin: 0 1em;
+}
+a{
+    color: #ffc862ff;
+}
