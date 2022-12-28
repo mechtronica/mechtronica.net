@@ -1,16 +1,53 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
-        <ul class="tree-view">
-            <li> 
-
-            </li>
-        </ul>
+        <nav>
+            <img src="./images/logo.svg">
+            <ul class="tree-view">
+                <li> 
+                    <h3 class="tree-header">Rules</h3>
+                    <ul class="tree-group">
+                        <li>
+                            <h3 class="tree-header">Combat</h3>
+                            <ul class="tree-group">
+                                <li><a href="./rules/combat/attacking.html">Attacking</a></li>
+                                <li><a href="./rules/combat/turn-structure.html">Turn Structure</a></li>
+                                <li><a href="./rules/combat/weapons-specials.html">Weapons Specials</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="tree-header">Mech Building</h3>
+                            <ul class="tree-group">
+                                <li><a href="./rules/mech-building/mech-building.html">Intro</a></li>
+                                <li><a href="./rules/mech-building/planning.html">Planning</a></li>
+                                <li><a href="./rules/mech-building/selecting-components.html">Selecting Components</a></li>
+                                <li><a href="./rules/mech-building/validating.html">Validating</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li> 
+                    <h3 class="tree-header">Section2</h3>
+                    <ul class="tree-group">
+                        <li>Item1</li>
+                        <li>Item2</li>
+                        <li>Item3</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </body>
     <script>
-
+        var toggler = document.getElementsByClassName("tree-header");
+        var i;
+        for (i = 0; i < toggler.length; i++) {
+            toggler[i].addEventListener("click", function() {
+                this.parentElement.querySelector(".tree-group").classList.toggle("tree-group-expanded");
+                this.parentElement.querySelector(".tree-header").classList.toggle("tree-header-expanded");
+            });
+        } 
     </script>
 </html>

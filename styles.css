@@ -8,6 +8,8 @@
 }
 
 :root {
+    --mech-fg1: #ddd;
+    --mech-fg2: #bbb;
     --mech-orange: #ffc862ff;
     --mech-gradient:
         linear-gradient(
@@ -42,11 +44,50 @@ p{
 ul{
     list-style: none;
 }
-ul li:before{
+ul:not(.tree-view, .tree-group) li:before{
     color: var(--mech-orange);
     content: '▸';
     margin: 0 1em;
 }
 a{
     color: var(--mech-orange);
+}
+.tree-view{
+    margin: 0;
+    padding-left: 0;
+}
+.tree-header{
+    background-color: var(--mech-fg1);
+    margin: 0;
+    padding: 0.3em;
+}
+.tree-group>li>*{
+    padding-left: 0.5em;
+}
+.tree-header:before{
+    content: '+';
+    margin: 0.2em;
+}
+.tree-header-expanded:before{
+    content: '-';
+    margin: 0.2em;
+}
+.tree-group{
+    background-color: var(--mech-fg2);
+    padding: 0;
+    display: none;
+}
+.tree-group-expanded {
+    display: block;
+}
+nav{
+    background-color: var(--mech-fg1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12em;
+    height: 100%;
+}
+img{
+    margin: 0.3em;
 }
