@@ -6,21 +6,10 @@
     font-family: 'Black Ops One';
     src: url('../../fonts/BlackOpsOne/BlackOpsOne-Regular.ttf');
 }
-html{
-    font-family: 'Lexend';
-    text-align: justify;
-    /*color: white;
-    background-color: #222;*/
-    margin: 1em;
-}
-h2{
-    font-family: 'Black Ops One';
-    display: inline;
-    text-decoration: none;
-    background-repeat: no-repeat;
-    background-position: 0 100%;
-    background-size: 100% 4px;
-    background-image:
+
+:root {
+    --mech-orange: #ffc862ff;
+    --mech-gradient:
         linear-gradient(
             to right,
             #ffffffff 0%,
@@ -29,6 +18,24 @@ h2{
             #ffc862ff 100%
         );
 }
+
+html{
+    font-family: 'Lexend';
+    text-align: justify;
+    /*color: white;
+    background-color: #222;*/
+    margin: 1em;
+}
+
+h2{
+    font-family: 'Black Ops One';
+    display: inline;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 100% 4px;
+    background-image: var(--mech-gradient)
+}
 p{
     text-indent: 2em;
 }
@@ -36,10 +43,10 @@ ul{
     list-style: none;
 }
 ul li:before{
-    color: #ffc862ff;
+    color: var(--mech-orange);
     content: '▸';
     margin: 0 1em;
 }
 a{
-    color: #ffc862ff;
+    color: var(--mech-orange);
 }
