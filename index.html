@@ -4,41 +4,46 @@
         <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
-        <nav>
-            <img src="./images/logo.svg">
-            <ul class="tree-view">
-                <li> 
-                    <h3 class="tree-header">Rules</h3>
-                    <ul class="tree-group">
-                        <li>
-                            <h3 class="tree-header">Combat</h3>
-                            <ul class="tree-group">
-                                <li><a href="./rules/combat/attacking.html">Attacking</a></li>
-                                <li><a href="./rules/combat/turn-structure.html">Turn Structure</a></li>
-                                <li><a href="./rules/combat/weapons-specials.html">Weapons Specials</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h3 class="tree-header">Mech Building</h3>
-                            <ul class="tree-group">
-                                <li><a href="./rules/mech-building/mech-building.html">Intro</a></li>
-                                <li><a href="./rules/mech-building/planning.html">Planning</a></li>
-                                <li><a href="./rules/mech-building/selecting-components.html">Selecting Components</a></li>
-                                <li><a href="./rules/mech-building/validating.html">Validating</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li> 
-                    <h3 class="tree-header">Section2</h3>
-                    <ul class="tree-group">
-                        <li>Item1</li>
-                        <li>Item2</li>
-                        <li>Item3</li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+        <div class="flex-container">
+            <nav id="main-nav">
+                <img src="./images/logo.svg">
+                <ul class="tree-view">
+                    <li> 
+                        <h3 class="tree-header">Rules</h3>
+                        <ul class="tree-group">
+                            <li>
+                                <h3 class="tree-header">Combat</h3>
+                                <ul class="tree-group">
+                                    <li class="tree-item" onclick="load_content('./rules/combat/attacking.html')">Attacking</li>
+                                    <li class="tree-item" onclick="load_content('./rules/combat/turn-structure.html')">Turn Structure</li>
+                                    <li class="tree-item" onclick="load_content('./rules/combat/weapons-specials.html')">Weapons Specials</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3 class="tree-header">Mech Building</h3>
+                                <ul class="tree-group">
+                                    <li class="tree-item" onclick="load_content('./rules/mech-building/mech-building.html')">Intro</li>
+                                    <li class="tree-item" onclick="load_content('./rules/mech-building/planning.html')">Planning</li>
+                                    <li class="tree-item" onclick="load_content('./rules/mech-building/selecting-components.html')">Selecting Components</li>
+                                    <li class="tree-item" onclick="load_content('./rules/mech-building/validating.html')">Validating</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <h3 class="tree-header">Section2</h3>
+                        <ul class="tree-group">
+                            <li>Item1</li>
+                            <li>Item2</li>
+                            <li>Item3</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <section id="main-content-section">
+                <object id="main-content" data="rules/combat/attacking.html"></object>
+            </section>
+        </div>
     </body>
     <script>
         var toggler = document.getElementsByClassName("tree-header");
@@ -48,6 +53,9 @@
                 this.parentElement.querySelector(".tree-group").classList.toggle("tree-group-expanded");
                 this.parentElement.querySelector(".tree-header").classList.toggle("tree-header-expanded");
             });
-        } 
+        }
+        function load_content(url) {
+            document.getElementById("main-content").setAttribute("data", url);
+        }
     </script>
 </html>

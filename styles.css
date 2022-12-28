@@ -1,10 +1,11 @@
 @font-face {
     font-family: 'Lexend';
-    src: url('../../fonts/Lexend/Lexend-VariableFont_wght.ttf');
+    src: url('./fonts/Lexend/Lexend-VariableFont_wght.ttf');
 }
+
 @font-face {
     font-family: 'Black Ops One';
-    src: url('../../fonts/BlackOpsOne/BlackOpsOne-Regular.ttf');
+    src: url('./fonts/BlackOpsOne/BlackOpsOne-Regular.ttf');
 }
 
 :root {
@@ -24,11 +25,14 @@
 html{
     font-family: 'Lexend';
     text-align: justify;
+    margin: 0;
     /*color: white;
     background-color: #222;*/
-    margin: 1em;
 }
-
+body{
+    margin: 0;
+    height: 100vh;
+}
 h2{
     font-family: 'Black Ops One';
     display: inline;
@@ -62,7 +66,10 @@ a{
     padding: 0.3em;
 }
 .tree-group>li>*{
-    padding-left: 0.5em;
+    padding-left: 1em;
+}
+.tree-item{
+    margin: 0.5em;
 }
 .tree-header:before{
     content: '+';
@@ -80,14 +87,26 @@ a{
 .tree-group-expanded {
     display: block;
 }
-nav{
+#main-nav{
     background-color: var(--mech-fg1);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 12em;
+    width: 15em;
+}
+#main-content-section{
+    flex-grow: 1;
+}
+#main-content{
+    width: 100%;
     height: 100%;
 }
 img{
-    margin: 0.3em;
+    margin: 1em;
+}
+.flex-container{
+    display: flex;
+    align-content: stretch;
+    width: 100%;
+    height: 100%;
+}
+.rules-page{
+    margin: 2em;
 }
