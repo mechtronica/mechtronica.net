@@ -9,8 +9,11 @@
 }
 
 :root {
-    --mech-fg1: #ddd;
-    --mech-fg2: #bbb;
+    --mech-h: #ddd;
+    --mech-p: #fff;
+    --mech-bg: #222;
+    --mech-fg1: #333;
+    --mech-fg2: #222;
     --mech-orange: #ffc862ff;
     --mech-gradient:
         linear-gradient(
@@ -22,18 +25,34 @@
         );
 }
 
+@media (prefers-color-scheme: light)
+{
+    :root {
+        --mech-h: #000;
+        --mech-p: #000;
+        --mech-bg: #fff;
+        --mech-fg1: #ddd;
+        --mech-fg2: #bbb;
+    }
+}
+
 html{
     font-family: 'Lexend';
     text-align: justify;
     margin: 0;
-    /*color: white;
-    background-color: #222;*/
+    font-size: 16px;
+    color: var(--mech-p);
+    background-color: var(--mech-bg);
 }
+
 body{
     margin: 0;
     height: 100vh;
 }
+title{ color: var(--mech-h)}
+h1{ color: var(--mech-h)}
 h2{
+    color: var(--mech-h);
     font-family: 'Black Ops One';
     display: inline;
     text-decoration: none;
@@ -42,6 +61,7 @@ h2{
     background-size: 100% 4px;
     background-image: var(--mech-gradient)
 }
+h3{ color: var(--mech-h)}
 p{
     text-indent: 2em;
 }
@@ -64,12 +84,14 @@ a{
     background-color: var(--mech-fg1);
     margin: 0;
     padding: 0.3em;
+    cursor: pointer;
 }
 .tree-group>li>*{
     padding-left: 1em;
 }
 .tree-item{
     margin: 0.5em;
+    cursor: pointer;
 }
 .tree-header:before{
     content: '+';
@@ -89,7 +111,7 @@ a{
 }
 #main-nav{
     background-color: var(--mech-fg1);
-    width: 15em;
+    width: 250px;
 }
 #main-content-section{
     flex-grow: 1;
@@ -109,4 +131,5 @@ img{
 }
 .rules-page{
     margin: 2em;
+    margin-right: 20%;
 }
