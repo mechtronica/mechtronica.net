@@ -40,7 +40,6 @@ html{
     font-family: 'Lexend';
     text-align: justify;
     margin: 0;
-    font-size: 16px;
     color: var(--mech-p);
     background-color: var(--mech-bg);
 }
@@ -111,7 +110,7 @@ a{
 }
 #main-nav{
     background-color: var(--mech-fg1);
-    width: 250px;
+    width: calc(8em + 16vh);
 }
 #main-content-section{
     flex-grow: 1;
@@ -131,5 +130,5 @@ img{
 }
 .rules-page{
     margin: 2em;
-    margin-right: 20%;
+    margin-right: 10%;
 }
