@@ -19,8 +19,8 @@
         linear-gradient(
             to right,
             #ffffffff 0%,
-            #dfffacff 20%,
-            #ffc862ff 60%,
+            #dfffacff 10%,
+            #ffc862ff 40%,
             #ffc862ff 100%
         );
 }
@@ -43,13 +43,23 @@ html{
     color: var(--mech-p);
     background-color: var(--mech-bg);
 }
-
 body{
     margin: 0;
     height: 100vh;
 }
-title{ color: var(--mech-h)}
-h1{ color: var(--mech-h)}
+.logo{
+    text-align: center;
+    margin: 0.35em;
+    font-size: 1.8em;
+}
+h1{
+    font-family: 'Black Ops One';
+    background: var(--mech-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1.3px;
+    -webkit-text-stroke-color: #777;
+}
 h2{
     color: var(--mech-h);
     font-family: 'Black Ops One';
