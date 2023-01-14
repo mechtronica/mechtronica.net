@@ -5,49 +5,12 @@
     </head>
     <body>
         <div class="flex-container">
-            <nav id="main-nav">
-                <h1 class="logo">Mechtronica</h1>
-                <ul class="tree-view">
-                    <li> 
-                        <h3 class="tree-header">Rules</h3>
-                        <ul class="tree-group">
-                            <li>
-                                <h3 class="tree-header">Combat</h3>
-                                <ul class="tree-group">
-                                    <li class="tree-item" onclick="load_content('./rules/combat/attacking.html')">Attacking</li>
-                                    <li class="tree-item" onclick="load_content('./rules/combat/turn-structure.html')">Turn Structure</li>
-                                    <li class="tree-item" onclick="load_content('./rules/combat/weapons-specials.html')">Weapons Specials</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <h3 class="tree-header">Mech Building</h3>
-                                <ul class="tree-group">
-                                    <li class="tree-item" onclick="load_content('./rules/mech-building/mech-building.html')">Intro</li>
-                                    <li class="tree-item" onclick="load_content('./rules/mech-building/planning.html')">Planning</li>
-                                    <li class="tree-item" onclick="load_content('./rules/mech-building/selecting-components.html')">Selecting Components</li>
-                                    <li class="tree-item" onclick="load_content('./rules/mech-building/validating.html')">Validating</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
+            <section id="sidebar-section">
+                <object id="sidebar" data="navigation.html"></object>
+            </section>
             <section id="main-content-section">
                 <object id="main-content" data="rules/combat/attacking.html"></object>
             </section>
         </div>
     </body>
-    <script>
-        var toggler = document.getElementsByClassName("tree-header");
-        var i;
-        for (i = 0; i < toggler.length; i++) {
-            toggler[i].addEventListener("click", function() {
-                this.parentElement.querySelector(".tree-group").classList.toggle("tree-group-expanded");
-                this.parentElement.querySelector(".tree-header").classList.toggle("tree-header-expanded");
-            });
-        }
-        function load_content(url) {
-            document.getElementById("main-content").setAttribute("data", url);
-        }
-    </script>
 </html>
