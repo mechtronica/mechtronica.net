@@ -5,12 +5,8 @@
     </head>
     <body>
         <div class="flex-container">
-            <section id="sidebar-section">
-                <object id="sidebar" data="navigation.html"></object>
-            </section>
-            <section id="main-content-section">
-                <object id="main-content" data="rules/combat/attacking.html"></object>
-            </section>
+            {% include navigation.html %}
+            <object id="main-content" data="rules/combat/attacking.html"></object>
         </div>
     </body>
 </html>

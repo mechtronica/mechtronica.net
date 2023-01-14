@@ -118,6 +118,10 @@ a{
 .tree-group-expanded {
     display: block;
 }
+
+#sidebar{
+    width: 100%;
+}
 #main-nav{
     background-color: var(--mech-fg1);
     width: calc(8em + 16vh);
