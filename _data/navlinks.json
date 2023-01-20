@@ -1,0 +1,15 @@
+{ 
+  "Mech Building" :
+  {
+  "Intro": "/rules/mech-building/intro",
+  "Planning": "/rules/mech-building/planning",
+  "Selecting Components": "/rules/mech-building/selecting-components",
+  "Validating": "/rules/mech-building/validating"
+  },
+  "Turn Based Play" :
+  {
+    "Combat": "/rules/turn-based-play/combat",
+    "Turn Structure": "/rules/turn-based-play/turn-structure",
+    "Weapons Specials": "/rules/turn-based-play/weapons-specials"
+  }
+}
