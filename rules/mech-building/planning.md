@@ -13,15 +13,15 @@ Once you have an idea of how you want to play, you should select a Mech Frame an
 Type. Read on for information on how each of these affect your mech.
 
 ### The Mech Frame
-The Frame is the foundation of your mech. It provides the superstructure you'll attach
+The **Frame** is the foundation of your mech. It provides the superstructure you'll attach
 your weapons and components to, as well as the moving parts and power distribution system.
+Each frame has a number of slots for installing components.
 
 #### The Speed Tradeoff
-One major tradeoff in mech design is speed. Frame size determines how many slots
-you have, and your base speed. Plating determines your health and gives a speed
-penalty. This means generally the more firepower and more health your mech has,
-the slower it will be. This can be mitigated to some extent with attachments, but
-not perfectly.
+Frames come in three basic sizes: **Light**, **Standard**, and **Heavy**. Frame size 
+determines how many slots you have and your base speed. Light mechs have the fewest 
+slots, but move the fastest. Heavy mechs have a plethora of slots, but move at a crawl. 
+This generally means that the more firepower your mech has, the slower it will be. 
 
 ### The Power Subsystem
 Every mech requires a steady supply of **Power** to keep running. The power subsystem 
@@ -38,7 +38,7 @@ Electrical, and Steam. Since almost all components in your mech must use the sam
 type, it's important to choose the right one.
 
 #### Power Type and Weapon Range
-Mech play style varies quite a bit with Power Type. Mechanical mechs tend have 
+Mech play style varies quite a bit with power type. Mechanical mechs tend have 
 short-range weaponry, while Electrical mechs tend to have the longest range. Steam-powered
 mechs have access to both short-range Blunt Force weapons and long-range artillery, so
 they're sort of a jack-of-all-trades.
