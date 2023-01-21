@@ -1,16 +1,18 @@
 module.exports = function(eleventyConfig) {
+    const markdownIt = require('markdown-it')
+    const markdownItAttrs = require('markdown-it-attrs')
+    const markdownItOptions = {
+      html: true,
+      breaks: true,
+      linkify: true
+    }
+    const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs)
     eleventyConfig.addPassthroughCopy("halfmoonui");
     eleventyConfig.addPassthroughCopy("images");
     eleventyConfig.addPassthroughCopy("fonts");
-    eleventyConfig.addCollection("rules_pages", (collection) =>
-      collection.getFilteredByGlob("rules/*.md").sort((a, b) => {
-        if (a.page.url > b.page.url) return -1;
-        else if (a.page.url < b.page.url) return 1;
-        else return 0;
-      })
-    );
     eleventyConfig.setNunjucksEnvironmentOptions({
       throwOnUndefined: true,
       autoescape: false, // warning: don’t do this!
     });
+    eleventyConfig.setLibrary('md', markdownLib);
 };

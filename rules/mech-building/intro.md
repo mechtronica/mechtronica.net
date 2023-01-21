@@ -1,9 +1,7 @@
 ---
 layout: template.njk
 title: Mech Building
-tags:
- - rules_page
- - intro
+tags: rules_page
 ---
 ## Building a Mech
 
