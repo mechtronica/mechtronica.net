@@ -1,4 +1,4 @@
-#### Mechtronica: a Mech-Building TTRPG
+# Mechtronica: a Mech-Building TTRPG
 
 This repository hosts artifacts related to the Mechtronica website. Currently a work in progress.
 
