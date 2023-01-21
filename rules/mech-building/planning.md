@@ -48,6 +48,7 @@ they're sort of a jack-of-all-trades.
 | Mechanical  | Close range (50 ft to 600 ft) |
 | Steam       | Mid range (50 ft to 900 ft)   |
 | Electrical  | Long range (200 ft to 900 ft) |
+
 {.table}
 
 <!-- TODO: Go over basic planning steps & link to selecting components page -->
