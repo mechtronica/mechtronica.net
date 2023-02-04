@@ -1,6 +1,7 @@
 ---
 layout: template.njk
 title: Turn Structure
+permalink: rules/turn-structure/
 tags: rules_page
 ---
 ## Turn Structure
@@ -18,4 +19,4 @@ Thus, you may move, attack, and retreat, this allows for many different strategi
 ### Self Maintenance
 Self maintenance is... uh, maintenance on yourself.
 This is as opposed to maintenance on other mechs using attachment toolkits.
-For details on maintenance see the Maintenance Section.
+For details on maintenance see the [Maintenance Section]({{site.url}}/rules/making-repairs).

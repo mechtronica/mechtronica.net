@@ -7,8 +7,15 @@
   },
   "Turn Based Play" :
   {
-    "Combat": "/rules/turn-based-play/combat",
-    "Turn Structure": "/rules/turn-based-play/turn-structure",
-    "Weapons Specials": "/rules/turn-based-play/weapons-specials"
+    "Combat": "/rules/combat",
+    "Turn Structure": "/rules/turn-structure",
+    "Weapons Specials": "/rules/weapon-specials"
+  },
+  "Maintenance" :
+  {
+    "Making Repairs": "/rules/making-repairs",
+    "Maintenance Costs": "/rules/maintenance-costs",
+    "Component States": "/rules/component-states",
+    "Placing Components": "/rules/placing-components"
   }
 }
