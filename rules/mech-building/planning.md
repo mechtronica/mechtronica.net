@@ -1,6 +1,7 @@
 ---
 layout: template.njk
 title: Planning
+permalink: /rules/build-planning/
 tags: rules_page
 ---
 ## Planning a Mech Build
@@ -17,7 +18,7 @@ Frames come in three basic sizes: **Light**, **Standard**, and **Heavy**. Frame 
 ### The Power Subsystem
 Every mech requires a steady supply of **Power** to keep running. The power subsystem supplies that power.
 
-The power subsystem consists of two components: a **Power Plant** and a **Fuel Tank**. The power plant uses fuel from the fuel tank to generate a steady supply of energy. In order to have a working mech, you'll need a plant that generates enough power to feed all of your **constant draw** components. And if you want to use any other **attachments** - like weapons - you'll need enough **excess** power left over to supply those too.
+The power subsystem consists of two components: a **Power Plant** and a **Fuel Tank**. The power plant uses fuel from the fuel tank to generate a steady supply of energy. In order to have a working mech, you'll need a plant that generates enough power to feed all of your **constant-draw** components. And if you want to use any other **attachments** - like weapons - you'll need enough **excess** power left over to supply those too.
 
 There are three types of power systems you can build into your mech: Mechanical, Electrical, and Steam. Since almost all components in your mech must use the same power type, it's important to choose the right one.
 
@@ -32,4 +33,5 @@ Mech play style varies quite a bit with power type. Mechanical mechs tend have s
 
 {.table}
 
+Next up: [Selecting Components]({{ site.url }}/rules/selecting-components)
 <!-- TODO: Go over basic planning steps & link to selecting components page -->
