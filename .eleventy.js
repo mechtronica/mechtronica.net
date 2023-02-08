@@ -10,6 +10,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("halfmoonui");
     eleventyConfig.addPassthroughCopy("images");
     eleventyConfig.addPassthroughCopy("fonts");
+    eleventyConfig.addPassthroughCopy("mechdb/data");
     eleventyConfig.setNunjucksEnvironmentOptions({
       throwOnUndefined: true,
       autoescape: false, // warning: don’t do this!

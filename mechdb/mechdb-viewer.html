@@ -1,0 +1,45 @@
+---
+layout: template.njk
+title: MechDB Viewer
+permalink: mechdb/viewer/
+---
+<h2>MechDB</h2>
+<input type="text" class="form-control" id="mechdb-search" placeholder="Search MechDB">
+<table class='table' id='results'></table>
+
+<script>
+document.getElementById('mechdb-search').addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    val = document.getElementById('mechdb-search').value
+    fetchandloadjson(val)
+  }
+}); 
+fetchandloadjson = function(query) {
+  fetch('/mechdb/data/cabins.json')
+    .then((response) => response.json())
+    .then((json) => loadjson(json, query));
+}
+loadjson = function(data, query) {
+  headers = []
+  text = ''
+  for (let x of data) {
+    for (let y in x) {
+      if (!headers.includes(y)) {
+        headers.push(y)
+        text += '<th>' + y + '</th>'
+      }
+    }
+  }
+  for (let x of data) {
+    text += '<tr>'
+    for (let y in x) {
+      text += '<td>' + x[y] + '</td>';
+    }
+    text += '</tr>'
+  }
+  document.getElementById('results').innerHTML = text;
+}
+</script>
