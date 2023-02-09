@@ -4,28 +4,56 @@ title: MechDB Viewer
 permalink: mechdb/viewer/
 ---
 <h2>MechDB</h2>
-<input type="text" class="form-control" id="mechdb-search" placeholder="Search MechDB">
+<input type='text' class='form-control' id='mechdb-search' placeholder='Search MechDB'>
 <table class='table' id='results'></table>
 
 <script>
-document.getElementById('mechdb-search').addEventListener("keypress", function(event) {
-  // If the user presses the "Enter" key on the keyboard
-  if (event.key === "Enter") {
+document.getElementById('mechdb-search').addEventListener('keypress', function(event) {
+  // If the user presses the 'Enter' key on the keyboard
+  if (event.key === 'Enter') {
     // Cancel the default action, if needed
     event.preventDefault();
     val = document.getElementById('mechdb-search').value
-    fetchandloadjson(val)
+    fetchAndLoadData(val)
   }
 }); 
-fetchandloadjson = function(query) {
+
+function fetchAndLoadData(query) {
   fetch('/mechdb/data/cabins.json')
     .then((response) => response.json())
-    .then((json) => loadjson(json, query));
+    .then((json) => loadJson(json, query));
 }
-loadjson = function(data, query) {
+
+function searchJson(data, search) {
+  results = []
+  for (let x of data) {
+    for (let y in x) {
+      if (typeof x[y] === 'string' || x[y] instanceof String) {
+        if ( x[y].includes(search)) {
+          results.push(x)
+          break
+        }
+      }
+    }
+  }
+  return results
+}
+
+function loadJson(data, query) {
   headers = []
   text = ''
-  for (let x of data) {
+  filteredData = data
+  if (query != '')
+  {
+    if (query[0] == '$') {
+      filteredData = jsonPath(data, query)
+    }
+    else {
+      filteredData = searchJson(data, query)
+    }
+  }
+
+  for (let x of filteredData) {
     for (let y in x) {
       if (!headers.includes(y)) {
         headers.push(y)
@@ -33,7 +61,7 @@ loadjson = function(data, query) {
       }
     }
   }
-  for (let x of data) {
+  for (let x of filteredData) {
     text += '<tr>'
     for (let y in x) {
       text += '<td>' + x[y] + '</td>';
@@ -43,3 +71,4 @@ loadjson = function(data, query) {
   document.getElementById('results').innerHTML = text;
 }
 </script>
+<script src='/jsonpath-0.8.0.js'></script>
