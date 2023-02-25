@@ -4,6 +4,9 @@ title: Turn Structure
 permalink: rules/turn-structure/
 tags: rules_page
 ---
+## Turn Order
+Whoever initiates combat goes first, all others go in order of their speed (highest first, lowest last). Ties can be broken however the GM wants.
+
 ## Turn Structure
 On your turn you have a few options. You can either:
  - Take a normal turn consisting of using attachments and moving.
@@ -19,4 +22,4 @@ Thus, you may move, attack, and retreat, this allows for many different strategi
 ### Self Maintenance
 Self maintenance is... uh, maintenance on yourself.
 This is as opposed to maintenance on other mechs using attachment toolkits.
-For details on maintenance see the [Maintenance Section]({{site.url}}/rules/making-repairs).
+For details on maintenance see [Making Repairs]({{site.url}}/rules/making-repairs).
