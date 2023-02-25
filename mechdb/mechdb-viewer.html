@@ -8,6 +8,19 @@ permalink: mechdb/viewer/
 <table class='table' id='results'></table>
 
 <script>
+data = []
+excluded_headers = ['description']
+
+loadDataFile('/mechdb/data/cabins.json')
+loadDataFile('/mechdb/data/frames.json')
+loadDataFile('/mechdb/data/plating.json')
+loadDataFile('/mechdb/data/weapons.json')
+loadDataFile('/mechdb/data/power-plants.json')
+loadDataFile('/mechdb/data/coolers.json')
+loadDataFile('/mechdb/data/attachments.json')
+loadDataFile('/mechdb/data/mainframes.json')
+loadDataFile('/mechdb/data/modules.json')
+
 document.getElementById('mechdb-search').addEventListener('keypress', function(event) {
   // If the user presses the 'Enter' key on the keyboard
   if (event.key === 'Enter') {
@@ -18,18 +31,18 @@ document.getElementById('mechdb-search').addEventListener('keypress', function(e
   }
 }); 
 
-function fetchAndLoadData(query) {
-  fetch('/mechdb/data/cabins.json')
+function loadDataFile(path) {
+  fetch(path)
     .then((response) => response.json())
-    .then((json) => loadJson(json, query));
+    .then((json) => data.push(...json));
 }
 
-function searchJson(data, search) {
+function searchJson(search) {
   results = []
   for (let x of data) {
     for (let y in x) {
       if (typeof x[y] === 'string' || x[y] instanceof String) {
-        if ( x[y].includes(search)) {
+        if ( x[y].toLowerCase().includes(search.toLowerCase())) {
           results.push(x)
           break
         }
@@ -39,7 +52,7 @@ function searchJson(data, search) {
   return results
 }
 
-function loadJson(data, query) {
+function showJson(query) {
   headers = []
   text = ''
   filteredData = data
@@ -55,15 +68,19 @@ function loadJson(data, query) {
 
   for (let x of filteredData) {
     for (let y in x) {
-      if (!headers.includes(y)) {
-        headers.push(y)
-        text += '<th>' + y + '</th>'
+      if (!excluded_headers.includes(y))
+      {
+        if (!headers.includes(y)) {
+          headers.push(y)
+          text += '<th>' + y + '</th>'
+        }
       }
     }
   }
+
   for (let x of filteredData) {
     text += '<tr>'
-    for (let y in x) {
+    for (let y in headers) {
       text += '<td>' + x[y] + '</td>';
     }
     text += '</tr>'

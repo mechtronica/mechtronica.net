@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@11ty/eleventy": "github:11ty/eleventy",
     "markdown-it": "^13.0.1",
     "markdown-it-attrs": "^4.1.6"
   }
