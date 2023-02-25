@@ -45,7 +45,7 @@ If your Used Resource amounts are greater than your Available resources, your me
 <!-- TODO: Add example -->
 
 #### Excess Resources
-After figuring out Available and Used resources, it's pretty simple to figure out how much Excess resources you have left over.
+After figuring out Available and Used resources, it's pretty simple to figure out how much Excess resources you have left over. Just subtract Used resources from your Available resources.
 
 | Resource   | Excess amount                          |
 | ---------- | -------------------------------------- |
