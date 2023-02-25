@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Favicon and title -->
+    <link rel="icon" href="path/to/fav.png">
+    <title> MechDB Viewer </title>
+
+    <!-- Halfmoon CSS -->
+    <link href="/halfmoonui/css/halfmoon-variables.min.css" rel="stylesheet" />
+
+    <!-- Google Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-set-preferred-theme-onload="true">
+    <!-- Modals go here -->
+    <!-- Reference: https://www.gethalfmoon.com/docs/modal -->
+
+    <!-- Page wrapper start -->
+    <div class="page-wrapper with-sidebar" data-sidebar-type="full-height">
+      
+      <!-- Sticky alerts (toasts), empty container -->
+      <!-- Reference: https://www.gethalfmoon.com/docs/sticky-alerts-toasts -->
+      <div class="sticky-alerts"></div>
+
+      <!-- Sidebar start -->
+      <div class="sidebar">
+        <div class="sidebar-menu">
+          <!-- Sidebar brand -->
+          <a href="#" class="sidebar-brand">
+            <img src="/images/logo.svg" alt="Mechtronica">
+          </a>
+          <!-- Sidebar links and titles -->
+          <a href="/mechdb/viewer" class="sidebar-link ml-10">MechDB Viewer</a>
+          <div class="sidebar-divider"></div>
+          <h5 class="sidebar-title">Rules</h5>
+          <div class="sidebar-divider"></div>
+          
+              <h6 class="sidebar-title">Mechaneer Creation</h6>
+              
+              <a href="/rules/mechaneer-background" class="sidebar-link ml-10">Mechaneer Background</a>
+              
+              <a href="/rules/mechaneer-stats" class="sidebar-link ml-10">Mechaneer Stats</a>
+              
+          
+              <h6 class="sidebar-title">Mech Building</h6>
+              
+              <a href="/rules/build-planning" class="sidebar-link ml-10">Planning</a>
+              
+              <a href="/rules/selecting-components" class="sidebar-link ml-10">Selecting Components</a>
+              
+              <a href="/rules/placing-components" class="sidebar-link ml-10">Placing Components</a>
+              
+              <a href="/rules/build-validating" class="sidebar-link ml-10">Validating</a>
+              
+          
+              <h6 class="sidebar-title">Turn Based Play</h6>
+              
+              <a href="/rules/combat" class="sidebar-link ml-10">Combat</a>
+              
+              <a href="/rules/turn-structure" class="sidebar-link ml-10">Turn Structure</a>
+              
+              <a href="/rules/weapon-specials" class="sidebar-link ml-10">Weapons Specials</a>
+              
+              <a href="/rules/attachment-traits" class="sidebar-link ml-10">Other Attachments</a>
+              
+          
+              <h6 class="sidebar-title">Maintenance</h6>
+              
+              <a href="/rules/making-repairs" class="sidebar-link ml-10">Making Repairs</a>
+              
+              <a href="/rules/maintenance-costs" class="sidebar-link ml-10">Maintenance Costs</a>
+              
+              <a href="/rules/component-states" class="sidebar-link ml-10">Component States</a>
+              
+          
+              <h6 class="sidebar-title">Appendices</h6>
+              
+              <a href="/rules/assumptions" class="sidebar-link ml-10">Assumptions</a>
+              
+              <a href="/rules/tips-for-gms" class="sidebar-link ml-10">Tips for GMs</a>
+              
+              <a href="/rules/glossary" class="sidebar-link ml-10">Glossary</a>
+              
+          
+        </div>
+      </div>
+      <!-- Sidebar end -->
+
+      <!-- Content wrapper start -->
+      <div class="content-wrapper">
+        <button class="btn btn-square m-10" type="button" onclick="halfmoon.toggleSidebar()" style="padding-top: 0.4rem;">
+          <span class="material-symbols-outlined">menu</span>
+          <span class="sr-only">Toggle sidebar</span> <!-- sr-only = show only on screen readers -->
+        </button>
+        <div class="content">
+          <h2>MechDB</h2>
+<input type='text' class='form-control' id='mechdb-search' placeholder='Search MechDB'>
+<table class='table' id='results'></table>
+
+<script>
+data = []
+excluded_headers = ['description']
+
+loadDataFile('/mechdb/data/cabins.json')
+loadDataFile('/mechdb/data/frames.json')
+loadDataFile('/mechdb/data/plating.json')
+loadDataFile('/mechdb/data/weapons.json')
+loadDataFile('/mechdb/data/power-plants.json')
+loadDataFile('/mechdb/data/coolers.json')
+loadDataFile('/mechdb/data/attachments.json')
+loadDataFile('/mechdb/data/mainframes.json')
+loadDataFile('/mechdb/data/modules.json')
+
+document.getElementById('mechdb-search').addEventListener('keypress', function(event) {
+  // If the user presses the 'Enter' key on the keyboard
+  if (event.key === 'Enter') {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    val = document.getElementById('mechdb-search').value
+    fetchAndLoadData(val)
+  }
+}); 
+
+function loadDataFile(path) {
+  fetch(path)
+    .then((response) => response.json())
+    .then((json) => data.push(...json));
+}
+
+function searchJson(search) {
+  results = []
+  for (let x of data) {
+    for (let y in x) {
+      if (typeof x[y] === 'string' || x[y] instanceof String) {
+        if ( x[y].toLowerCase().includes(search.toLowerCase())) {
+          results.push(x)
+          break
+        }
+      }
+    }
+  }
+  return results
+}
+
+function showJson(query) {
+  headers = []
+  text = ''
+  filteredData = data
+  if (query != '')
+  {
+    if (query[0] == '$') {
+      filteredData = jsonPath(data, query)
+    }
+    else {
+      filteredData = searchJson(data, query)
+    }
+  }
+
+  for (let x of filteredData) {
+    for (let y in x) {
+      if (!excluded_headers.includes(y))
+      {
+        if (!headers.includes(y)) {
+          headers.push(y)
+          text += '<th>' + y + '</th>'
+        }
+      }
+    }
+  }
+
+  for (let x of filteredData) {
+    text += '<tr>'
+    for (let y in headers) {
+      text += '<td>' + x[y] + '</td>';
+    }
+    text += '</tr>'
+  }
+  document.getElementById('results').innerHTML = text;
+}
+</script>
+<script src='/jsonpath-0.8.0.js'></script>
+        </div>
+      </div>
+      <!-- Content wrapper end -->
+
+    </div>
+    <script src="/halfmoonui/js/halfmoon.min.js"></script>
+  </body>
+</html>

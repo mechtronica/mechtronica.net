@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Favicon and title -->
+    <link rel="icon" href="path/to/fav.png">
+    <title> Making Repairs </title>
+
+    <!-- Halfmoon CSS -->
+    <link href="/halfmoonui/css/halfmoon-variables.min.css" rel="stylesheet" />
+
+    <!-- Google Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-set-preferred-theme-onload="true">
+    <!-- Modals go here -->
+    <!-- Reference: https://www.gethalfmoon.com/docs/modal -->
+
+    <!-- Page wrapper start -->
+    <div class="page-wrapper with-sidebar" data-sidebar-type="full-height">
+      
+      <!-- Sticky alerts (toasts), empty container -->
+      <!-- Reference: https://www.gethalfmoon.com/docs/sticky-alerts-toasts -->
+      <div class="sticky-alerts"></div>
+
+      <!-- Sidebar start -->
+      <div class="sidebar">
+        <div class="sidebar-menu">
+          <!-- Sidebar brand -->
+          <a href="#" class="sidebar-brand">
+            <img src="/images/logo.svg" alt="Mechtronica">
+          </a>
+          <!-- Sidebar links and titles -->
+          <a href="/mechdb/viewer" class="sidebar-link ml-10">MechDB Viewer</a>
+          <div class="sidebar-divider"></div>
+          <h5 class="sidebar-title">Rules</h5>
+          <div class="sidebar-divider"></div>
+          
+              <h6 class="sidebar-title">Mechaneer Creation</h6>
+              
+              <a href="/rules/mechaneer-background" class="sidebar-link ml-10">Mechaneer Background</a>
+              
+              <a href="/rules/mechaneer-stats" class="sidebar-link ml-10">Mechaneer Stats</a>
+              
+          
+              <h6 class="sidebar-title">Mech Building</h6>
+              
+              <a href="/rules/build-planning" class="sidebar-link ml-10">Planning</a>
+              
+              <a href="/rules/selecting-components" class="sidebar-link ml-10">Selecting Components</a>
+              
+              <a href="/rules/placing-components" class="sidebar-link ml-10">Placing Components</a>
+              
+              <a href="/rules/build-validating" class="sidebar-link ml-10">Validating</a>
+              
+          
+              <h6 class="sidebar-title">Turn Based Play</h6>
+              
+              <a href="/rules/combat" class="sidebar-link ml-10">Combat</a>
+              
+              <a href="/rules/turn-structure" class="sidebar-link ml-10">Turn Structure</a>
+              
+              <a href="/rules/weapon-specials" class="sidebar-link ml-10">Weapons Specials</a>
+              
+              <a href="/rules/attachment-traits" class="sidebar-link ml-10">Other Attachments</a>
+              
+          
+              <h6 class="sidebar-title">Maintenance</h6>
+              
+              <a href="/rules/making-repairs" class="sidebar-link ml-10">Making Repairs</a>
+              
+              <a href="/rules/maintenance-costs" class="sidebar-link ml-10">Maintenance Costs</a>
+              
+              <a href="/rules/component-states" class="sidebar-link ml-10">Component States</a>
+              
+          
+              <h6 class="sidebar-title">Appendices</h6>
+              
+              <a href="/rules/assumptions" class="sidebar-link ml-10">Assumptions</a>
+              
+              <a href="/rules/tips-for-gms" class="sidebar-link ml-10">Tips for GMs</a>
+              
+              <a href="/rules/glossary" class="sidebar-link ml-10">Glossary</a>
+              
+          
+        </div>
+      </div>
+      <!-- Sidebar end -->
+
+      <!-- Content wrapper start -->
+      <div class="content-wrapper">
+        <button class="btn btn-square m-10" type="button" onclick="halfmoon.toggleSidebar()" style="padding-top: 0.4rem;">
+          <span class="material-symbols-outlined">menu</span>
+          <span class="sr-only">Toggle sidebar</span> <!-- sr-only = show only on screen readers -->
+        </button>
+        <div class="content">
+          <h2>Making Repairs</h2>
+<p>Repairing and tinkering with your mech in the field are an integral part of mechaneering. How repairs work will depend somewhat on your location:</p>
+<ul>
+<li><strong>Garages</strong>: While at a garage, maintenance does not consume Maintenance Power.</li>
+<li><strong>In the Field</strong>: Repairs may be made by expending Maintenance Power.</li>
+<li><strong>Repairing Yourself During Combat</strong>: You may choose to give up your actions and movement to do maintenance equal to the item toolkit you are using. Plating cannot be self repaired during combat.</li>
+<li><strong>Repairing Others During Combat</strong>: You may use one or more attachment toolkits to do repairs on other mechs without sacrificing your turn. The amount of repairs you can do is equal to the sum of the MP of the attachment toolkits you choose to use.</li>
+</ul>
+<p>There are also some other important mechanics related to repairing, including:</p>
+<ul>
+<li><strong>Disassembling</strong>: A large component yields 2 spare parts and a small component yields 1 spare part. The spare parts will be of the power type of the component being disassembled. When disassembling mainframes you always get electric spare parts. When disassembling cabins you get any modules installed in it.</li>
+<li><strong>Salvaging</strong>: You may salvage components in the field, which is like uninstalling them but with a chance of failure. The MP costs are 10MP for small components and 20MP for large. Roll 1d4. On a 1 the component is destroyed. On a 2 or 3 it is damaged. On 4 it is intact. You must use an attachment toolkit for salvaging.</li>
+</ul>
+
+        </div>
+      </div>
+      <!-- Content wrapper end -->
+
+    </div>
+    <script src="/halfmoonui/js/halfmoon.min.js"></script>
+  </body>
+</html>
