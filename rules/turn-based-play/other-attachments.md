@@ -1,6 +1,6 @@
 ---
 layout: template.njk
-title: Turn Structure
+title: Other Attachments
 permalink: rules/attachment-traits/
 tags: rules_page
 ---

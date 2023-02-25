@@ -1,4 +1,9 @@
 {
+  "Mechaneer Creation":
+  {
+    "Mechaneer Background" : "/rules/mechaneer-background",
+    "Mechaneer Stats" : "/rules/mechaneer-stats"
+  },
   "Mech Building" :
   {
   "Planning": "/rules/build-planning",
@@ -19,7 +24,9 @@
     "Maintenance Costs": "/rules/maintenance-costs",
     "Component States": "/rules/component-states"
   },
-  "Appendix" : {
+  "Appendices" : {
+    "Assumptions": "/rules/assumptions",
+    "Tips for GMs": "/rules/tips-for-gms",
     "Glossary": "/rules/glossary"
   }
 }
