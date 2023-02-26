@@ -44,7 +44,7 @@
           {% for section_name, section in navlinks %}
               <h6 class="sidebar-title">{{ section_name }}</h6>
               {% for link_name, link in section %}
-              <a href="{{link}}" class="sidebar-link ml-10">{{ link_name }}</a>
+              <a href="{{site.url}}{{link}}" class="sidebar-link ml-10">{{ link_name }}</a>
               {% endfor %}
           {% endfor %}
         </div>
