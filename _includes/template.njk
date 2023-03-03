@@ -40,25 +40,23 @@
           <a href="#" class="sidebar-brand">
             <img src="{{site.url}}/images/logo.svg" alt="Mechtronica">
           </a>
-          
+          <br/>
+
           <!-- Sidebar links and titles -->
-          <a href="{{site.url}}/mechdb/viewer" class="sidebar-link sidebar-link-with-icon active">
-            <span class="sidebar-icon">
-              <i class="fa fa-database" aria-hidden="true"></i>
-            </span>
+          <a href="{{site.url}}/mechdb/viewer" class="sidebar-link {{ "active" if page in collections.rules_page }}">
             MechDB Viewer
           </a>
           <br/>
 
-          <details class="collapse-panel w-400 mw-full"> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+          <details class="collapse-panel"> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
             <summary class="collapse-header">
               Rules
             </summary>
-            <div class="collapse-content">
+            <div class="collapse-content"{{ "open" if page in collections.rules_page }}>
               {% for section_name, section in navlinks %}
                   <h6 class="sidebar-title">{{ section_name }}</h6>
                 {% for link_name, link in section %}
-                  <a href="{{site.url}}{{link}}" class="sidebar-link ml-10">{{ link_name }}</a>
+                  <a href="{{site.url}}{{link}}" class="sidebar-link {{ "active" if page in collections.rules_page }}">{{ link_name }}</a>
                 {% endfor %}
               {% endfor %}
             </div>
