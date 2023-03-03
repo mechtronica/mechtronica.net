@@ -43,7 +43,10 @@
           <br/>
 
           <!-- Sidebar links and titles -->
-          <a href="{{site.url}}/mechdb/viewer" class="sidebar-link {{ "active" if page in collections.rules_page }}">
+          <a href="{{site.url}}/mechdb/viewer" class="sidebar-link {{ "active" if page.permalink == "home" }}">
+            Home
+          </a>
+          <a href="{{site.url}}/mechdb/viewer" class="sidebar-link {{ "active" if page.permalink == "mechdb/viewer/" }}">
             MechDB Viewer
           </a>
           <br/>
@@ -52,11 +55,11 @@
             <summary class="collapse-header">
               Rules
             </summary>
-            <div class="collapse-content"{{ "open" if page in collections.rules_page }}>
+            <div class="collapse-content"{{ " open" if page in collections.rules_page }}>
               {% for section_name, section in navlinks %}
                   <h6 class="sidebar-title">{{ section_name }}</h6>
                 {% for link_name, link in section %}
-                  <a href="{{site.url}}{{link}}" class="sidebar-link {{ "active" if page in collections.rules_page }}">{{ link_name }}</a>
+                  <a href="{{site.url}}{{link}}" class="sidebar-link ml-10{{ " active" if page in collections.rules_page }}">{{ link_name }}</a>
                 {% endfor %}
               {% endfor %}
             </div>
