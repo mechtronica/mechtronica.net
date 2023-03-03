@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width" />
 
     <!-- Favicon and title -->
-    <link rel="icon" href="path/to/fav.png">
+    <link rel="icon" href="{{site.url}}/images/icon.svg">
     <title> {{ title }} </title>
 
     <!-- Halfmoon CSS -->
@@ -32,21 +32,35 @@
       <!-- Sidebar start -->
       <div class="sidebar">
         <div class="sidebar-menu">
+          
           <!-- Sidebar brand -->
           <a href="#" class="sidebar-brand">
-            <img src="/images/logo.svg" alt="Mechtronica">
+            <img src="{{site.url}}/images/logo.svg" alt="Mechtronica">
           </a>
+          
           <!-- Sidebar links and titles -->
-          <a href="/mechdb/viewer" class="sidebar-link ml-10">MechDB Viewer</a>
-          <div class="sidebar-divider"></div>
-          <h5 class="sidebar-title">Rules</h5>
-          <div class="sidebar-divider"></div>
-          {% for section_name, section in navlinks %}
-              <h6 class="sidebar-title">{{ section_name }}</h6>
-              {% for link_name, link in section %}
-              <a href="{{site.url}}{{link}}" class="sidebar-link ml-10">{{ link_name }}</a>
+          <a href="{{site.url}}/mechdb/viewer" class="sidebar-link sidebar-link-with-icon active">
+            <span class="sidebar-icon">
+              <i class="fa database" aria-hidden="true"></i>
+            </span>
+            MechDB Viewer
+          </a>
+          <br/>
+
+          <details class="collapse-panel w-400 mw-full"> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+            <summary class="collapse-header">
+              <h5 class="sidebar-title">Rules</h5>
+            </summary>
+            <div class="collapse-content">
+              {% for section_name, section in navlinks %}
+                  <h6 class="sidebar-title">{{ section_name }}</h6>
+                {% for link_name, link in section %}
+                  <a href="{{site.url}}{{link}}" class="sidebar-link ml-10">{{ link_name }}</a>
+                {% endfor %}
               {% endfor %}
-          {% endfor %}
+            </div>
+          </details>
+
         </div>
       </div>
       <!-- Sidebar end -->
