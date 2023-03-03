@@ -43,10 +43,10 @@
           <br/>
 
           <!-- Sidebar links and titles -->
-          <a href="{{site.url}}/mechdb/viewer" class="sidebar-link {{ "active" if page.permalink == "home" }}">
+          <a href="{{site.url}}/mechdb/viewer" class="sidebar-link {{ "active" if page.url == "home/" }}">
             Home
           </a>
-          <a href="{{site.url}}/mechdb/viewer" class="sidebar-link {{ "active" if page.permalink == "mechdb/viewer/" }}">
+          <a href="{{site.url}}/mechdb/viewer" class="sidebar-link {{ "active" if page.url == "mechdb/viewer/" }}">
             MechDB Viewer
           </a>
           <br/>
@@ -59,7 +59,7 @@
               {% for section_name, section in navlinks %}
                   <h6 class="sidebar-title">{{ section_name }}</h6>
                 {% for link_name, link in section %}
-                  <a href="{{site.url}}{{link}}" class="sidebar-link ml-10{{ " active" if page in collections.rules_page }}">{{ link_name }}</a>
+                  <a href="{{site.url}}{{link}}" class="sidebar-link ml-10{{ " active" if page.url == link }}">{{ link_name }}</a>
                 {% endfor %}
               {% endfor %}
             </div>

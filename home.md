@@ -1,7 +1,7 @@
 ---
 layout: template.njk
 title: Home
-permalink: home
+permalink: home/
 ---
 
 ## What is Mechtronica?
