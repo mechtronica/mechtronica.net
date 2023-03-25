@@ -146,7 +146,7 @@ function loadDataFile(path) {
     .then((json) => data.push(...json));
 }
 
-function searchJson(search) {
+function searchJson(data, search) {
   results = []
   for (let x of data) {
     for (let y in x) {
