@@ -58,7 +58,7 @@
             <summary class="collapse-header">
               Rules
             </summary>
-            <div class="collapse-content"{{ " open" if page in collections.rules_page }}>
+            <div class="collapse-content"{{ " open" if tags and "rules_page" in tags }}>
               {% for section_name, section in navlinks %}
                   <h6 class="sidebar-title">{{ section_name }}</h6>
                 {% for link_name, link in section %}

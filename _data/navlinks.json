@@ -1,32 +1,32 @@
 {
   "Mechaneer Creation":
   {
-    "Mechaneer Background" : "/rules/mechaneer-background",
-    "Mechaneer Stats" : "/rules/mechaneer-stats"
+    "Mechaneer Background" : "/rules/mechaneer-background/",
+    "Mechaneer Stats" : "/rules/mechaneer-stats/"
   },
   "Mech Building" :
   {
-  "Planning": "/rules/build-planning",
-  "Selecting Components": "/rules/selecting-components",
-  "Placing Components": "/rules/placing-components",
-  "Validating": "/rules/build-validating"
+  "Planning": "/rules/build-planning/",
+  "Selecting Components": "/rules/selecting-components/",
+  "Placing Components": "/rules/placing-components/",
+  "Validating": "/rules/build-validating/"
   },
   "Turn Based Play" :
   {
-    "Combat": "/rules/combat",
-    "Turn Structure": "/rules/turn-structure",
-    "Weapons Specials": "/rules/weapon-specials",
-    "Other Attachments": "/rules/attachment-traits"
+    "Combat": "/rules/combat/",
+    "Turn Structure": "/rules/turn-structure/",
+    "Weapons Specials": "/rules/weapon-specials/",
+    "Other Attachments": "/rules/attachment-traits/"
   },
   "Maintenance" :
   {
-    "Making Repairs": "/rules/making-repairs",
-    "Maintenance Costs": "/rules/maintenance-costs",
-    "Component States": "/rules/component-states"
+    "Making Repairs": "/rules/making-repairs/",
+    "Maintenance Costs": "/rules/maintenance-costs/",
+    "Component States": "/rules/component-states/"
   },
   "Appendices" : {
-    "Assumptions": "/rules/assumptions",
-    "Tips for GMs": "/rules/tips-for-gms",
-    "Glossary": "/rules/glossary"
+    "Assumptions": "/rules/assumptions/",
+    "Tips for GMs": "/rules/tips-for-gms/",
+    "Glossary": "/rules/glossary/"
   }
 }
