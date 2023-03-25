@@ -12,16 +12,20 @@ serve: clean
 publish:
     #!/usr/bin/env bash
     set -euxo pipefail
-    mv -f _site /tmp/mechtronica_site
+    rm -rf /tmp/mechtronica
+    mv -f _site /tmp/mechtronica
     git checkout published_site
     for f in `ls`
     do
         rm -rf $f
     done
-    mv /tmp/mechtronica_site/* .
-    git add *
+    for f in `ls /tmp/mechtronica`
+    do
+        mv /tmp/mechtronica/$f .
+    done
+    git add -u
     git commit -m "publish"
 
 # Remove old static site content
 clean: 
-    rm -rf _site
+    rm -rf _siteS
