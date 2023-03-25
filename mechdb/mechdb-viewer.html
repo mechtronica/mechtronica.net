@@ -13,15 +13,7 @@ permalink: mechdb/viewer/
 data = []
 excluded_headers = ['description']
 
-loadDataFile('/mechdb/data/cabins.json')
-loadDataFile('/mechdb/data/frames.json')
-loadDataFile('/mechdb/data/plating.json')
-loadDataFile('/mechdb/data/weapons.json')
-loadDataFile('/mechdb/data/power-plants.json')
-loadDataFile('/mechdb/data/coolers.json')
-loadDataFile('/mechdb/data/attachments.json')
-loadDataFile('/mechdb/data/mainframes.json')
-loadDataFile('/mechdb/data/modules.json')
+loadDataFile('/mechdb/parts_database.json')
 
 document.getElementById('mechdb-search').addEventListener('keypress', function(event) {
   // If the user presses the 'Enter' key on the keyboard
@@ -29,7 +21,7 @@ document.getElementById('mechdb-search').addEventListener('keypress', function(e
     // Cancel the default action, if needed
     event.preventDefault();
     val = document.getElementById('mechdb-search').value
-    fetchAndLoadData(val)
+    showJson(val)
   }
 }); 
 
