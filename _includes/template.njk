@@ -54,11 +54,11 @@
           </a>
           <br/>
 
-          <details class="collapse-panel"> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+          <details class="collapse-panel"{{ " open" if tags and "rules_page" in tags }}> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
             <summary class="collapse-header">
               Rules
             </summary>
-            <div class="collapse-content"{{ " open" if tags and "rules_page" in tags }}>
+            <div class="collapse-content">
               {% for section_name, section in navlinks %}
                   <h6 class="sidebar-title">{{ section_name }}</h6>
                 {% for link_name, link in section %}
