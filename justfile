@@ -24,7 +24,7 @@ publish:
         mv /tmp/mechtronica/$f .
     done
     echo "mechtronica.net" > "CNAME"
-    git add -u
+    git add -A
     git commit -m "publish"
     echo "Double check that things look ok, then run git push"
 

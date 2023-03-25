@@ -10,7 +10,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("halfmoonui");
     eleventyConfig.addPassthroughCopy("images");
     eleventyConfig.addPassthroughCopy("fonts");
-    eleventyConfig.addPassthroughCopy("character-sheets");
+    eleventyConfig.addPassthroughCopy("character-sheets/*.pdf");
     eleventyConfig.addPassthroughCopy("mechdb/parts_database.json");
     eleventyConfig.addPassthroughCopy("jsonpath-0.8.0.js");
     eleventyConfig.addPassthroughCopy("custom-variables.css");
