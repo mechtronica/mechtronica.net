@@ -28,4 +28,4 @@ publish:
 
 # Remove old static site content
 clean: 
-    rm -rf _siteS
+    rm -rf _sites
