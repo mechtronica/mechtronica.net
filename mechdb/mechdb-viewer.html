@@ -31,8 +31,9 @@ function loadDataFile(path) {
     .then((json) => data.push(...json));
 }
 
-function searchJson(data, search) {
+function searchJson(search) {
   results = []
+  console.log(search)
   for (let x of data) {
     for (let y in x) {
       if (typeof x[y] === 'string' || x[y] instanceof String) {
@@ -56,7 +57,7 @@ function showJson(query) {
       filteredData = jsonPath(data, query)
     }
     else {
-      filteredData = searchJson(data, query)
+      filteredData = searchJson(query)
     }
   }
 
