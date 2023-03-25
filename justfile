@@ -25,6 +25,7 @@ publish:
     done
     git add -u
     git commit -m "publish"
+    echo "Double check that things look ok, then run git push"
 
 # Remove old static site content
 clean: 
