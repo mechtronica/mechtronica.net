@@ -4,12 +4,15 @@ default: serve
 setup:
     npm i @11ty/eleventy markdown-it markdown-it-attrs
 
+build: clean setup
+    npx @11ty/eleventy
+
 # Regenerate and serve the site
-serve: clean
+serve: setup
     npx @11ty/eleventy --serve
 
 # Publish the website from the current state
-publish:
+publish: build
     #!/usr/bin/env bash
     set -euxo pipefail
     rm -rf /tmp/mechtronica

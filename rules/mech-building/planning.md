@@ -45,7 +45,15 @@ The second most important bit of the control subsystem is the Mainframe. This pr
 Finally we have Modules. Modules consume some amount of Processing in order to provide extra capabilities to your mech. There are a wide variety of modules that do many different things. Some add passive scanning capabilities to your mech. Others improve the accuracy of your weapons. Others still help you optimize resource usage. 
 
 #### Software
-TODO
+In order to control your mech, your Cabin and Modules need to be compatible with the **Software** running on your Mainframe. There are three different types of Software, and each has distinct benefits:
+
+| Software  | Advantages                                                          |
+| --------- | ------------------------------------------------------------------- |
+| ProtOS    | Well balanced, produces a moderate amount of CPU at reasonable cost |
+| Ursa NT   | Bonus to Targeting, lots of CPU and mod slots, but large and hot    |
+| UMIX      | Very small, low power usage, but limited CPU production             |
+
+Many components are compatible with multiple types of software, but you can only run one type of software at a time on your Mainframe. You can change software at a Garage. As long as your Cabin and Modules can all run the same software as your Mainframe, your mech will be operable.
 
 ### Step by Step Outline
 
