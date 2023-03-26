@@ -43,30 +43,29 @@
           <br/>
 
           <!-- Sidebar links and titles -->
-          <a href="{{site.url}}/home" class="sidebar-link {{ "active" if page.url == "home/" }}">
-            Home
-          </a>
-          <a href="{{site.url}}/character-sheets/downloads" class="sidebar-link {{ "active" if page.url == "character-sheets/downloads" }}">
-            Character Sheets
-          </a>
-          <a href="{{site.url}}/mechdb/viewer" class="sidebar-link {{ "active" if page.url == "mechdb/viewer/" }}">
-            MechDB Viewer
-          </a>
-          <br/>
-
-          <details class="collapse-panel"{{ " open" if tags and "rules_page" in tags }}> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
-            <summary class="collapse-header">
-              Rules
-            </summary>
-            <div class="collapse-content">
-              {% for section_name, section in navlinks %}
-                  <h6 class="sidebar-title">{{ section_name }}</h6>
-                {% for link_name, link in section %}
-                  <a href="{{site.url}}{{link}}" class="sidebar-link ml-10{{ " active" if page.url == link }}">{{ link_name }}</a>
-                {% endfor %}
-              {% endfor %}
-            </div>
-          </details>
+          {% for k1, v1 in navlinks %}
+            {% if v1 is string %}
+              <a href="{{site.url}}{{v1}}" class="sidebar-link ml-10{{ " active" if page.url == v1 }}">{{ k1 }}</a>
+            {% else %}
+              <details class="collapse-panel"{{ " open" if page.url in v1 | dump }}> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+                <summary class="collapse-header">
+                  {{ k1 }}
+                </summary>
+                <div class="collapse-content">
+                  {% for k2, v2 in v1 %}
+                    {% if v2 is string %}
+                      <a href="{{site.url}}{{v2}}" class="sidebar-link ml-10{{ " active" if page.url == v2 }}">{{ k2 }}</a>
+                    {% else %}
+                        <h6 class="sidebar-title">{{ k2 }}</h6>
+                      {% for k3, v3 in v2 %}
+                        <a href="{{site.url}}{{v3}}" class="sidebar-link ml-10{{ " active" if page.url == v3 }}">{{ k3 }}</a>
+                      {% endfor %}
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </details>
+            {% endif %}
+          {% endfor %}
 
         </div>
       </div>

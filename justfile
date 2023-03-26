@@ -5,7 +5,11 @@ setup:
     npm i @11ty/eleventy markdown-it markdown-it-attrs
 
 build: clean setup
+    #!/usr/bin/env bash
+    export SITE_URL="https://mechtronica.net"
+    echo $SITE_URL
     npx @11ty/eleventy
+    unset SITE_URL
 
 # Regenerate and serve the site
 serve: setup
