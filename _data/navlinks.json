@@ -2,6 +2,11 @@
   "Home" : "/home/",
   "Character Sheets" : "/character-sheets/downloads/",
   "MechDB" : "/mechdb/viewer/",
+  "Lore" : 
+  {
+    "Intro" : "/lore/intro/",
+    "Solar System" : "/lore/solar-system/"
+  },
   "Rules":
   {
     "Mechaneer Creation":
