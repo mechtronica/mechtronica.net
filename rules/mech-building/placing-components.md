@@ -7,13 +7,10 @@ tags: rules_page
 ## Placing Components
 
 ### Mech Frames and Sections
-Mech Frames are divided up into four sections:
- - Left Arm
- - Right Arm
- - Torso
- - Legs
 
-<img src="{{ site.url }}/images/sections-diagram.svg" alt="Mechs have 4 sections: Left Arm, Right Arm, Torso, and Legs">
+Mech Frames are divided up into four sections: Left Arm, Right Arm, Torso, and Legs.
+
+<img class="w-400" src="{{ site.url }}/images/sections-diagram.svg" alt="Mechs have 4 sections: Left Arm, Right Arm, Torso, and Legs">
 
 Each section of the frame will have some combination of joints and component slots. More on those in the sections below.
 

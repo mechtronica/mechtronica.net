@@ -37,4 +37,4 @@ publish: build
 
 # Remove old static site content
 clean: 
-    rm -rf _sites
+    rm -rf _site

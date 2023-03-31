@@ -1,7 +1,7 @@
 ---
 layout: template.njk
 title: Intro
-permalink: lore/intro
+permalink: lore/intro/
 tags: lore_page
 ---
 ## Intro

@@ -1,7 +1,7 @@
 ---
 layout: template.njk
 title: Solar System
-permalink: lore/solar-system
+permalink: lore/solar-system/
 tags: lore_page
 ---
 ## Solar System
