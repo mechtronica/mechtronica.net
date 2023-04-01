@@ -1,3 +1,8 @@
 :root {
     --collapse-header-padding-with-bg-image: 0.5rem 2rem 0.5rem 4rem;
+    --collapse-header-border-radius: 0;
+    --collapse-header-border-width: 0;
+    --collapse-content-border-width: 0;
+    --lm-collapse-header-bg-color: var(--gray-color-light);
+    --dm-collapse-header-bg-color: rgba(255, 255, 255, 0.05);;
 }
