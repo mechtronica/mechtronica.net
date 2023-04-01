@@ -37,7 +37,7 @@ When placing your components, you'll want to keep in mind how likely each slot i
 Some components have limitations on where they can be placed in your mech.
  - **Plating**: Plating goes on the outside of your mech. A unit of plating covers one section of your mech, so you'll need 4 units of plating in order to protect your whole mech.
  - **Infrastructure Components**: Infrastructure Components (power plants, coolers, mainframes, and cabins) can only go in the torso.
- - **Attachments**: Weapons and other attachments can be placed anywhere in your mech’s frame.
+ - **Attachments**: Weapons and Equipment can be placed anywhere in your mech’s frame.
  - **Modules**: Modules are installed in your cabin. You can have as many modules as your cabin has mod slots.
 
-Now that you've placed your components, check out [Validating]({{ site.url }}/rules/build-validating).
+Now that you've placed your components, you should [Validate]({{ site.url }}/rules/build-validating) your mech build.

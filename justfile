@@ -7,7 +7,6 @@ setup:
 build: clean setup
     #!/usr/bin/env bash
     export SITE_URL="https://mechtronica.net"
-    echo $SITE_URL
     npx @11ty/eleventy
     unset SITE_URL
 

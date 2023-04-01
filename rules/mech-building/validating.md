@@ -5,7 +5,7 @@ permalink: rules/build-validating/
 tags: rules_page
 ---
 ## Validating a Mech Build
-Once you've selected components, you have to actually make sure they work together. This involves a bit of arithmetic -- wait don't run away! It's not too much work.
+Once you've selected components, you have to actually make sure they work together. This involves a bit of arithmetic.
 
 The basic idea is to figure out how much **Power**, **Cooling**, and **CPU** your mech has to work with, then make sure that your **constant-draw** components aren't using more than that. You'll also want to have enough resources left over to use any **attachments**. 
 
@@ -55,4 +55,4 @@ After figuring out Available and Used resources, it's pretty simple to figure ou
 
 {.table}
 
-Excess resource is used to power the components of your mech that aren't always in use, such as weapons and other attachments. Some modules also use Excess resources to operate. You'll want to make sure you have enough Excess left over to be effective in combat. 
+Excess resource is used to power the components of your mech that aren't always in use, such as weapons and equipment. Some modules also use Excess resources to operate. You'll want to make sure you have enough Excess left over to be effective in combat. 
