@@ -10,7 +10,7 @@
 
     <!-- Favicon and title -->
     <link rel="icon" href="https://mechtronica.net/images/icon.svg">
-    <title> Validating </title>
+    <title> Outline </title>
 
     <!-- Halfmoon CSS -->
     <link href="https://mechtronica.net/halfmoonui/css/halfmoon-variables.min.css" rel="stylesheet" />
@@ -76,7 +76,7 @@
             
           
             
-              <details class="collapse-panel" open> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+              <details class="collapse-panel"> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
                 <summary class="collapse-header">
                   Rules
                 </summary>
@@ -100,7 +100,7 @@
                       
                         <a href="https://mechtronica.net/rules/placing-components/" class="sidebar-link ml-10">Placing Components</a>
                       
-                        <a href="https://mechtronica.net/rules/build-validating/" class="sidebar-link ml-10 active">Validating</a>
+                        <a href="https://mechtronica.net/rules/build-validating/" class="sidebar-link ml-10">Validating</a>
                       
                     
                   
@@ -155,89 +155,61 @@
           <span class="sr-only">Toggle sidebar</span> <!-- sr-only = show only on screen readers -->
         </button>
         <div class="content">
-          <h2>Validating a Mech Build</h2>
-<p>Once you've selected components, you have to actually make sure they work together. This involves a bit of arithmetic.</p>
-<p>The basic idea is to figure out how much <strong>Power</strong>, <strong>Cooling</strong>, and <strong>CPU</strong> your mech has to work with, then make sure that your <strong>constant-draw</strong> components aren't using more than that. You'll also want to have enough resources left over to use any <strong>attachments</strong>.</p>
-<h3>Resource Calculations</h3>
-<p>Let's start by breaking down resources into three categories: <strong>Available Resources</strong>, <strong>Used Resources</strong>, and <strong>Excess Resources</strong>. These should add up such that <strong>Available = Used + Excess</strong>.</p>
-<h4>Available Resources</h4>
-<p>Available resources are the total amount of each resource you have to work with. To calculate Available resources, you just need to figure out how much of each resource your mech is producing. There are some exceptions, but usually that breaks down something like this:</p>
-<table class="table">
-<thead>
-<tr>
-<th>Resource</th>
-<th>Available amount</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Power</td>
-<td>Amount produced by Power Plant</td>
-</tr>
-<tr>
-<td>Cooling</td>
-<td>Amount provided by Frame &amp; Plating + any provided by Coolers</td>
-</tr>
-<tr>
-<td>Processing</td>
-<td>Amount provided by Mainframe + any provided by Modules</td>
-</tr>
-</tbody>
-</table>
-<p>Note that each section of your mech has its own plating, so you get Cooling from the plating on each section.</p>
-<p>As you can see from the table above, your resources mostly come from <strong>Infrastructure Components</strong> such as your mech's Frame, Plating, Power Plant, and Mainframe.</p>
-<!-- TODO: Add example -->
-<h4>Used Resources</h4>
-<p>Used resources are the resources used by all of your constant-draw components. This calculation is pretty straightforward: just add up all of the Power, Cooling, and Processing used up by constant-draw components in your mech.</p>
-<table class="table">
-<thead>
-<tr>
-<th>Resource</th>
-<th>Used amount</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Power</td>
-<td>Total Power used by constant-draw components</td>
-</tr>
-<tr>
-<td>Cooling</td>
-<td>Total Cooling used by constant-draw components</td>
-</tr>
-<tr>
-<td>Processing</td>
-<td>Total Processing used by constant-draw components</td>
-</tr>
-</tbody>
-</table>
-<p>If your Used Resource amounts are greater than your Available resources, your mech will not be able to function. If you find yourself in this situation, you have two options: upgrade your resource-producing components, or choose constant-draw components that use less resources.</p>
-<!-- TODO: Add example -->
-<h4>Excess Resources</h4>
-<p>After figuring out Available and Used resources, it's pretty simple to figure out how much Excess resources you have left over. Just subtract Used resources from your Available resources.</p>
-<table class="table">
-<thead>
-<tr>
-<th>Resource</th>
-<th>Excess amount</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Power</td>
-<td>Available Power - Used Power</td>
-</tr>
-<tr>
-<td>Cooling</td>
-<td>Available Cooling - Used Cooling</td>
-</tr>
-<tr>
-<td>Processing</td>
-<td>Available Processing - Used Processing</td>
-</tr>
-</tbody>
-</table>
-<p>Excess resource is used to power the components of your mech that aren't always in use, such as weapons and equipment. Some modules also use Excess resources to operate. You'll want to make sure you have enough Excess left over to be effective in combat.</p>
+          <h3>Step by Step Outline</h3>
+<ol>
+<li>Develop a vision for your mechaneer and mech
+<ul>
+<li>Come up with a name and background for your mechaneer</li>
+<li>Decide what you want to focus your mech on (heavy weapons, speed, etc.)</li>
+</ul>
+</li>
+<li>Choose a Frame
+<ul>
+<li>Smaller mechs are faster and often don't need auxiliary cooling</li>
+<li>Larger mechs have much more firepower</li>
+</ul>
+</li>
+<li>Choose your mech's main weapons and attachments
+<ul>
+<li>Find a some weapons and equipment that fit your vision</li>
+<li>Choose a power type that lets you get most of the weapons and equipment you want</li>
+<li>Don't worry about filling all your slots here, just pick a couple must-haves</li>
+</ul>
+</li>
+<li>Add the control subsystem
+<ul>
+<li>Choose a mainframe that provides enough processing for your weapons and frame, plus a bit extra to spare</li>
+<li>Choose a cabin compatible with your mainframe's software</li>
+</ul>
+</li>
+<li>Add the power subsystem
+<ul>
+<li>Choose a power plant that provides enough power for your weapons, plus a bit extra to spare</li>
+<li>Choose a fuel tank for your power plant</li>
+</ul>
+</li>
+<li>Check whether you need to add a cooler
+<ul>
+<li>If you just barely have enough excess cooling to use your weapons and equipment at this point, you probably need to add a cooler</li>
+</ul>
+</li>
+<li>Add more weapons and equipment
+<ul>
+<li>Fill in the remaining slots in your mech with a few more weapons and equipment</li>
+</ul>
+</li>
+<li>Add Modules to your Mainframe
+<ul>
+<li>Select modules that synergize with your mech's capabilities</li>
+</ul>
+</li>
+<li>Check your resources and rebalance if needed
+<ul>
+<li>Compute Available, Used, and Excess resources for Power, Processing, and Cooling</li>
+<li>If you don't have enough excess resources, consider upgrading infrastructure components or using less chonky weapons and equipment</li>
+</ul>
+</li>
+</ol>
 
         </div>
       </div>
