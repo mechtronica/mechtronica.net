@@ -11,7 +11,7 @@
   {
     "Mechaneer Creation":
     {
-      "Mechaneer Background" : "/rules/mechaneer-background/",
+      "Mechaneer Description" : "/rules/mechaneer-description/",
       "Mechaneer Stats" : "/rules/mechaneer-stats/"
     },
     "Mech Building" :
