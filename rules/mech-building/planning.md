@@ -53,6 +53,8 @@ In order to control your mech, your Cabin and Modules need to be compatible with
 | Ursa NT   | Bonus to Targeting, lots of CPU and mod slots, but large and hot    |
 | UMIX      | Very small, low power usage, but limited CPU production             |
 
+{.table}
+
 Many components are compatible with multiple types of software, but you can only run one type of software at a time on your Mainframe. You can change software at a Garage. As long as your Cabin and Modules can all run the same software as your Mainframe, your mech will be operable.
 
 Next, check out [Selecting Components]({{ site.url }}/rules/selecting-components).
