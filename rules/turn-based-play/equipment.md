@@ -1,7 +1,7 @@
 ---
 layout: template.njk
 title: Equipment
-permalink: rules/equipment-traits/
+permalink: rules/equipment/
 tags: rules_page
 ---
 
@@ -13,11 +13,11 @@ Equipment includes any attachments that aren't weapons. They work similarly to w
 
 **Continuous Use of Equipment**: equipment may be used “continuously” in non-turn-based game play. In that case your mech consumes fuel equal to your Used Power and the equipment's power cost combined per day. You can divide this by 12 to determine hourly fuel cost.
 
-### Equipment Traits
-Equipment traits are like weapon specials for equipment! Weather you're repairing, hauling, or doing science, there's sure to be an equipment trait for you. Below is a table listing all the basic traits:
+### Equipment Keyword Effects
+Equipment, like weapons, often have similar effects and these are then labeled with keywords to make things easier. Weather you're repairing, hauling, or doing science, there's sure to be an equipment keyword effect for you. Below is a table listing all the basic equipment keyword effects:
 | Trait       | Description |
 | ----------- | ----------- |
-| Toolkit     | For performing maintenance on other mechs, value listed in MP. See [Making Repairs](({{site.url}}/rules/making-repairs)) for details on their use. |
+| Toolkit     | For performing maintenance on other mechs, value listed in MP. See [Maintenance](({{site.url}}/rules/maintenance)) for details on their use. |
 | Manipulator | For fine manipulation of objects (mechs have next to zero fine manipulation normally), value listed in percentage chance of success. |
 | Jump        | For jumping (mechs normally cannot jump appreciably), value listed in foot-tons (divide by your mech’s weight to get jump height). |
 | Boost       | For extra movement in a straight line, value listed in foot-tons (divide by your mech’s weight to get boost distance). |

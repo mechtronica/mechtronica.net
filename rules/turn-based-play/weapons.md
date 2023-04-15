@@ -1,12 +1,12 @@
 ---
 layout: template.njk
 title: Weapon Specials
-permalink: rules/weapon-specials/
+permalink: rules/weapons/
 tags: rules_page
 ---
-## Weapons Specials
-Ah... weapon specials. Those fun little things that make already destructive tools all the more devastating. Weapon specials provide extra mechanics that enhance (or sometimes decrease) your weapons effectiveness.
-Here is a list of all standard weapon specials and what they do:
+## Weapon Keywords Effects
+Many weapons do special things and when this is the case these effects get a keyword.
+Here is a list of all standard weapon keyword effects and what they do:
 
 | Special   | Effect |
 | --------- | ------ |
