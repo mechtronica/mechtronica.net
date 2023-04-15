@@ -22,4 +22,4 @@ Thus, you may move, attack, and retreat, this allows for many different strategi
 ### Self Maintenance
 Self maintenance is... uh, maintenance on yourself.
 This is as opposed to maintenance on other mechs using attachment toolkits.
-For details on maintenance see [Making Repairs]({{site.url}}/rules/making-repairs).
+For details on maintenance see [Maintenance]({{site.url}}/rules/maintenance).
