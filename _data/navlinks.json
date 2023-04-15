@@ -25,12 +25,12 @@
     {
       "Combat": "/rules/combat/",
       "Turn Structure": "/rules/turn-structure/",
-      "Weapons Specials": "/rules/weapon-specials/",
-      "Eqiuipment": "/rules/equipment-traits/"
+      "Weapons": "/rules/weapons/",
+      "Eqiuipment": "/rules/equipment/"
     },
     "Maintenance" :
     {
-      "Making Repairs": "/rules/making-repairs/",
+      "Performing Maintenance": "/rules/maintenance/",
       "Maintenance Costs": "/rules/maintenance-costs/",
       "Component States": "/rules/component-states/"
     },

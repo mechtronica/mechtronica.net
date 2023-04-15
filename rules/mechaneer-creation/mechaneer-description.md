@@ -5,7 +5,7 @@ permalink: rules/mechaneer-description/
 tags: rules_page
 ---
 
-## Mechaneer Background
+## Mechaneer Description
 
 ### Species
 The first you will want to do is select a species. The Mechtronica universe only has one organic sapient species, humans, but there are a few robots to choose from as well if being human doesn't strike your fancy.
