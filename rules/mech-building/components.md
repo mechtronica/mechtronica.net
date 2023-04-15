@@ -54,3 +54,17 @@ The number of slots in a frame depends on the frame class.
 | Hit Values | The minimum and maximum range you have to roll when targeting in order to hit a particular slot. See [Combat]({{ site.url }}/rules/combat). |
 
 {.table}
+
+More details on component slots and mech frames can be found in [Placing Components]({{ site.url }}/rules/placing-components).
+
+### Plating
+Plating protects mech components by absorbing damage dealt to a particular section. Keep in mind that plating covers a single section of your mech, so you can mix and match different types on different sections.
+
+| Stat    | Description |
+| ------- | ----------- |
+| Cooling | The cooling provided by the plating. |
+| Shields | The amount of damage the plating can take before breaking. |
+| Speed   | How much the plating slows down your mech. |
+| Effect  | Special effects conferred by the plating. |
+
+###
