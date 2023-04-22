@@ -23,6 +23,7 @@ Mech play style varies quite a bit with power type. Mechanical mechs tend have s
 {.table}
 
 <!-- TODO: Discuss fuel type and power plant class tradeoffs -->
+<!-- TODO: Explain how fuel is depleted, and why you might want a larger fuel tank -->
 
 ### Step by step Mech-Building Outline
 
