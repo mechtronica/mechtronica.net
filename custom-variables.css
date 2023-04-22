@@ -4,5 +4,13 @@
     --collapse-header-border-width: 0;
     --collapse-content-border-width: 0;
     --lm-collapse-header-bg-color: var(--gray-color-light);
-    --dm-collapse-header-bg-color: rgba(255, 255, 255, 0.05);;
+    --dm-collapse-header-bg-color: rgba(0, 0, 0, 0);
+    --base-font-size: 1.6rem;
+    --dark-color-light: #141416;
+    --dark-color: #1c1c1e;
+    --dark-color-dark: #242426;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
 }

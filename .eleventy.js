@@ -19,9 +19,4 @@ module.exports = function(eleventyConfig) {
       autoescape: false, // warning: don’t do this!
     });
     eleventyConfig.setLibrary('md', markdownLib);
-    eleventyConfig.addShortcode("link", function(page_name) 
-    {  
-      return `
-      `
-    });
 };
