@@ -8,7 +8,7 @@ tags: rules_page
 Many weapons do special things and when this is the case these effects get a keyword.
 Here is a list of all standard weapon keyword effects and what they do:
 
-| Special   | Effect |
+| Keyword   | Effect |
 | --------- | ------ |
 | EMP       | If this weapon hits in a place where their shields are destroyed, the mech loses its next turn. |
 | Stagger   | After this weapon hits a mech, that mech takes an extra 2 dmg per hit for the remainder of this player’s turn. |
