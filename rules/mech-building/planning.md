@@ -9,6 +9,21 @@ The first step in building your mech is planning. Typically you first want to ha
 
 Once you have an idea of how you want to play, you should select a Mech Frame and Power Type. Read on for information on how each of these affect your mech.
 
+### Tradeoffs (WIP)
+
+#### Power Type and Weapon Range
+Mech play style varies quite a bit with power type. Mechanical mechs tend have short-range weaponry, while Electrical mechs tend to have the longest range. Steam-powered mechs have access to both short-range blunt force weapons and long-range artillery, so they're sort of a jack-of-all-trades.
+
+| Power Type  | Range                         |
+| ----------- | ----------------------------- |
+| Mechanical  | Close range (50 ft to 600 ft) |
+| Steam       | Mid range (50 ft to 900 ft)   |
+| Electrical  | Long range (200 ft to 900 ft) |
+
+{.table}
+
+<!-- TODO: Discuss fuel type and power plant class tradeoffs -->
+
 ### Step by step Mech-Building Outline
 
 1. Develop a vision for your mechaneer and mech
