@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Favicon and title -->
+    <link rel="icon" href="https://mechtronica.net/images/icon.svg">
+    <title> Outline </title>
+
+    <!-- Halfmoon CSS -->
+    <link href="https://mechtronica.net/halfmoonui/css/halfmoon-variables.min.css" rel="stylesheet" />
+
+    <!-- Custom Halfmoon Variables -->
+    <link href="https://mechtronica.net/custom-variables.css" rel="stylesheet" />
+
+    <!-- Google Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+
+  </head>
+  <body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-set-preferred-theme-onload="true">
+    <!-- Modals go here -->
+    <!-- Reference: https://www.gethalfmoon.com/docs/modal -->
+
+    <!-- Page wrapper start -->
+    <div class="page-wrapper with-sidebar" data-sidebar-type="full-height">
+      
+      <!-- Sticky alerts (toasts), empty container -->
+      <!-- Reference: https://www.gethalfmoon.com/docs/sticky-alerts-toasts -->
+      <div class="sticky-alerts"></div>
+
+      <!-- Sidebar start -->
+      <div class="sidebar">
+        <div class="sidebar-menu">
+
+          <!-- Sidebar brand -->
+          <a href="#" class="sidebar-brand">
+            <img src="https://mechtronica.net/images/logo.svg" alt="Mechtronica">
+          </a>
+          <br/>
+
+          <!-- Sidebar links and titles -->
+          
+            
+              <a href="https://mechtronica.net/home/" class="sidebar-link ml-10">Home</a>
+            
+          
+            
+              <a href="https://mechtronica.net/character-sheets/downloads/" class="sidebar-link ml-10">Character Sheets</a>
+            
+          
+            
+              <a href="https://mechtronica.net/mechdb/viewer/" class="sidebar-link ml-10">MechDB</a>
+            
+          
+            
+              <details class="collapse-panel"> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+                <summary class="collapse-header">
+                  Lore
+                </summary>
+                <div class="collapse-content">
+                  
+                    
+                      <a href="https://mechtronica.net/lore/intro/" class="sidebar-link ml-10">Intro</a>
+                    
+                  
+                    
+                      <a href="https://mechtronica.net/lore/solar-system/" class="sidebar-link ml-10">Solar System</a>
+                    
+                  
+                </div>
+              </details>
+            
+          
+            
+              <details class="collapse-panel"> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+                <summary class="collapse-header">
+                  Rules
+                </summary>
+                <div class="collapse-content">
+                  
+                    
+                        <h6 class="sidebar-title">Mechaneer Creation</h6>
+                      
+                        <a href="https://mechtronica.net/rules/mechaneer-description/" class="sidebar-link ml-10">Mechaneer Description</a>
+                      
+                        <a href="https://mechtronica.net/rules/mechaneer-stats/" class="sidebar-link ml-10">Mechaneer Stats</a>
+                      
+                    
+                  
+                    
+                        <h6 class="sidebar-title">Mech Building</h6>
+                      
+                        <a href="https://mechtronica.net/rules/build-planning/" class="sidebar-link ml-10">Planning</a>
+                      
+                        <a href="https://mechtronica.net/rules/selecting-components/" class="sidebar-link ml-10">Selecting Components</a>
+                      
+                        <a href="https://mechtronica.net/rules/placing-components/" class="sidebar-link ml-10">Placing Components</a>
+                      
+                        <a href="https://mechtronica.net/rules/build-validating/" class="sidebar-link ml-10">Validating</a>
+                      
+                    
+                  
+                    
+                        <h6 class="sidebar-title">Turn Based Play</h6>
+                      
+                        <a href="https://mechtronica.net/rules/combat/" class="sidebar-link ml-10">Combat</a>
+                      
+                        <a href="https://mechtronica.net/rules/turn-structure/" class="sidebar-link ml-10">Turn Structure</a>
+                      
+                        <a href="https://mechtronica.net/rules/weapons/" class="sidebar-link ml-10">Weapons</a>
+                      
+                        <a href="https://mechtronica.net/rules/equipment/" class="sidebar-link ml-10">Equipment</a>
+                      
+                    
+                  
+                    
+                        <h6 class="sidebar-title">Maintenance</h6>
+                      
+                        <a href="https://mechtronica.net/rules/maintenance/" class="sidebar-link ml-10">Performing Maintenance</a>
+                      
+                        <a href="https://mechtronica.net/rules/maintenance-costs/" class="sidebar-link ml-10">Maintenance Costs</a>
+                      
+                        <a href="https://mechtronica.net/rules/component-states/" class="sidebar-link ml-10">Component States</a>
+                      
+                    
+                  
+                    
+                        <h6 class="sidebar-title">Appendices</h6>
+                      
+                        <a href="https://mechtronica.net/rules/assumptions/" class="sidebar-link ml-10">Assumptions</a>
+                      
+                        <a href="https://mechtronica.net/rules/tips-for-gms/" class="sidebar-link ml-10">Tips for GMs</a>
+                      
+                        <a href="https://mechtronica.net/rules/glossary/" class="sidebar-link ml-10">Glossary</a>
+                      
+                    
+                  
+                </div>
+              </details>
+            
+          
+
+        </div>
+      </div>
+      <!-- Sidebar end -->
+
+      <!-- Content wrapper start -->
+      <div class="content-wrapper">
+        <button class="btn btn-square m-10" type="button" onclick="halfmoon.toggleSidebar()" style="padding-top: 0.4rem;">
+          <span class="material-symbols-outlined">menu</span>
+          <span class="sr-only">Toggle sidebar</span> <!-- sr-only = show only on screen readers -->
+        </button>
+        <div class="content">
+          <h3>Step by Step Outline</h3>
+<ol>
+<li>Develop a vision for your mechaneer and mech
+<ul>
+<li>Come up with a name and background for your mechaneer</li>
+<li>Decide what you want to focus your mech on (heavy weapons, speed, etc.)</li>
+</ul>
+</li>
+<li>Choose a Frame
+<ul>
+<li>Smaller mechs are faster and often don't need auxiliary cooling</li>
+<li>Larger mechs have much more firepower</li>
+</ul>
+</li>
+<li>Choose your mech's main weapons and attachments
+<ul>
+<li>Find a some weapons and equipment that fit your vision</li>
+<li>Choose a power type that lets you get most of the weapons and equipment you want</li>
+<li>Don't worry about filling all your slots here, just pick a couple must-haves</li>
+</ul>
+</li>
+<li>Add the control subsystem
+<ul>
+<li>Choose a mainframe that provides enough processing for your weapons and frame, plus a bit extra to spare</li>
+<li>Choose a cabin compatible with your mainframe's software</li>
+</ul>
+</li>
+<li>Add the power subsystem
+<ul>
+<li>Choose a power plant that provides enough power for your weapons, plus a bit extra to spare</li>
+<li>Choose a fuel tank for your power plant</li>
+</ul>
+</li>
+<li>Check whether you need to add a cooler
+<ul>
+<li>If you just barely have enough excess cooling to use your weapons and equipment at this point, you probably need to add a cooler</li>
+</ul>
+</li>
+<li>Add more weapons and equipment
+<ul>
+<li>Fill in the remaining slots in your mech with a few more weapons and equipment</li>
+</ul>
+</li>
+<li>Add Modules to your Mainframe
+<ul>
+<li>Select modules that synergize with your mech's capabilities</li>
+</ul>
+</li>
+<li>Check your resources and rebalance if needed
+<ul>
+<li>Compute Available, Used, and Excess resources for Power, Processing, and Cooling</li>
+<li>If you don't have enough excess resources, consider upgrading infrastructure components or using less chonky weapons and equipment</li>
+</ul>
+</li>
+</ol>
+
+        </div>
+      </div>
+      <!-- Content wrapper end -->
+
+    </div>
+    <script src="https://mechtronica.net/halfmoonui/js/halfmoon.min.js"></script>
+  </body>
+</html>

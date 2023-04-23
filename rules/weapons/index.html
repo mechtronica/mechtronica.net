@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Favicon and title -->
+    <link rel="icon" href="https://mechtronica.net/images/icon.svg">
+    <title> Weapon Specials </title>
+
+    <!-- Halfmoon CSS -->
+    <link href="https://mechtronica.net/halfmoonui/css/halfmoon-variables.min.css" rel="stylesheet" />
+
+    <!-- Custom Halfmoon Variables -->
+    <link href="https://mechtronica.net/custom-variables.css" rel="stylesheet" />
+
+    <!-- Google Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+
+  </head>
+  <body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-set-preferred-theme-onload="true">
+    <!-- Modals go here -->
+    <!-- Reference: https://www.gethalfmoon.com/docs/modal -->
+
+    <!-- Page wrapper start -->
+    <div class="page-wrapper with-sidebar" data-sidebar-type="full-height">
+      
+      <!-- Sticky alerts (toasts), empty container -->
+      <!-- Reference: https://www.gethalfmoon.com/docs/sticky-alerts-toasts -->
+      <div class="sticky-alerts"></div>
+
+      <!-- Sidebar start -->
+      <div class="sidebar">
+        <div class="sidebar-menu">
+
+          <!-- Sidebar brand -->
+          <a href="#" class="sidebar-brand">
+            <img src="https://mechtronica.net/images/logo.svg" alt="Mechtronica">
+          </a>
+          <br/>
+
+          <!-- Sidebar links and titles -->
+          
+            
+              <a href="https://mechtronica.net/home/" class="sidebar-link ml-10">Home</a>
+            
+          
+            
+              <a href="https://mechtronica.net/character-sheets/downloads/" class="sidebar-link ml-10">Character Sheets</a>
+            
+          
+            
+              <a href="https://mechtronica.net/mechdb/viewer/" class="sidebar-link ml-10">MechDB</a>
+            
+          
+            
+              <details class="collapse-panel"> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+                <summary class="collapse-header">
+                  Lore
+                </summary>
+                <div class="collapse-content">
+                  
+                    
+                      <a href="https://mechtronica.net/lore/intro/" class="sidebar-link ml-10">Intro</a>
+                    
+                  
+                    
+                      <a href="https://mechtronica.net/lore/solar-system/" class="sidebar-link ml-10">Solar System</a>
+                    
+                  
+                </div>
+              </details>
+            
+          
+            
+              <details class="collapse-panel" open> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+                <summary class="collapse-header">
+                  Rules
+                </summary>
+                <div class="collapse-content">
+                  
+                    
+                        <h6 class="sidebar-title">Mechaneer Creation</h6>
+                      
+                        <a href="https://mechtronica.net/rules/mechaneer-description/" class="sidebar-link ml-10">Mechaneer Description</a>
+                      
+                        <a href="https://mechtronica.net/rules/mechaneer-stats/" class="sidebar-link ml-10">Mechaneer Stats</a>
+                      
+                    
+                  
+                    
+                        <h6 class="sidebar-title">Mech Building</h6>
+                      
+                        <a href="https://mechtronica.net/rules/build-planning/" class="sidebar-link ml-10">Planning</a>
+                      
+                        <a href="https://mechtronica.net/rules/selecting-components/" class="sidebar-link ml-10">Selecting Components</a>
+                      
+                        <a href="https://mechtronica.net/rules/placing-components/" class="sidebar-link ml-10">Placing Components</a>
+                      
+                        <a href="https://mechtronica.net/rules/build-validating/" class="sidebar-link ml-10">Validating</a>
+                      
+                    
+                  
+                    
+                        <h6 class="sidebar-title">Turn Based Play</h6>
+                      
+                        <a href="https://mechtronica.net/rules/combat/" class="sidebar-link ml-10">Combat</a>
+                      
+                        <a href="https://mechtronica.net/rules/turn-structure/" class="sidebar-link ml-10">Turn Structure</a>
+                      
+                        <a href="https://mechtronica.net/rules/weapons/" class="sidebar-link ml-10 active">Weapons</a>
+                      
+                        <a href="https://mechtronica.net/rules/equipment/" class="sidebar-link ml-10">Equipment</a>
+                      
+                    
+                  
+                    
+                        <h6 class="sidebar-title">Maintenance</h6>
+                      
+                        <a href="https://mechtronica.net/rules/maintenance/" class="sidebar-link ml-10">Performing Maintenance</a>
+                      
+                        <a href="https://mechtronica.net/rules/maintenance-costs/" class="sidebar-link ml-10">Maintenance Costs</a>
+                      
+                        <a href="https://mechtronica.net/rules/component-states/" class="sidebar-link ml-10">Component States</a>
+                      
+                    
+                  
+                    
+                        <h6 class="sidebar-title">Appendices</h6>
+                      
+                        <a href="https://mechtronica.net/rules/assumptions/" class="sidebar-link ml-10">Assumptions</a>
+                      
+                        <a href="https://mechtronica.net/rules/tips-for-gms/" class="sidebar-link ml-10">Tips for GMs</a>
+                      
+                        <a href="https://mechtronica.net/rules/glossary/" class="sidebar-link ml-10">Glossary</a>
+                      
+                    
+                  
+                </div>
+              </details>
+            
+          
+
+        </div>
+      </div>
+      <!-- Sidebar end -->
+
+      <!-- Content wrapper start -->
+      <div class="content-wrapper">
+        <button class="btn btn-square m-10" type="button" onclick="halfmoon.toggleSidebar()" style="padding-top: 0.4rem;">
+          <span class="material-symbols-outlined">menu</span>
+          <span class="sr-only">Toggle sidebar</span> <!-- sr-only = show only on screen readers -->
+        </button>
+        <div class="content">
+          <h2>Weapon Keywords Effects</h2>
+<p>Many weapons do special things and when this is the case these effects get a keyword.<br>
+Here is a list of all standard weapon keyword effects and what they do:</p>
+<table class="table">
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EMP</td>
+<td>If this weapon hits in a place where their shields are destroyed, the mech loses its next turn.</td>
+</tr>
+<tr>
+<td>Stagger</td>
+<td>After this weapon hits a mech, that mech takes an extra 2 dmg per hit for the remainder of this player’s turn.</td>
+</tr>
+<tr>
+<td>Blade</td>
+<td>If this weapon hits a non-joint slot on a limb, you may instead choose to hit a joint slot.</td>
+</tr>
+<tr>
+<td>Unstable</td>
+<td>You may not fire this weapon and move in the same turn.</td>
+</tr>
+<tr>
+<td>Overheat</td>
+<td>A successful hit on the opponent increases their used heat capacity for their next turn by 10.</td>
+</tr>
+<tr>
+<td>Overclock</td>
+<td>You may choose prior to firing to make a PWR saving throw where you must roll above 10. If you succeed the weapon will do double damage, if you fail the weapon becomes damaged.</td>
+</tr>
+<tr>
+<td>Explosive</td>
+<td>After impact the projectile explodes, immediately breaking the component hit.</td>
+</tr>
+<tr>
+<td>Leech</td>
+<td>Fires large latching rounds that deal 2 damage each turn after the hit. Rounds can be removed for 10MP each.</td>
+</tr>
+<tr>
+<td>Grab</td>
+<td>If you successfully hit a mech's limb, you may prevent that mech from using attachments in that limb or from using its normal alotted movement on its next turn as long as you stay within 50ft of the mech.</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+      </div>
+      <!-- Content wrapper end -->
+
+    </div>
+    <script src="https://mechtronica.net/halfmoonui/js/halfmoon.min.js"></script>
+  </body>
+</html>
