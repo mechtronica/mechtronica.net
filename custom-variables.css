@@ -1,14 +1,17 @@
 :root {
     /* Restyle collapse elements (to look good in the sidebar) */
+    --collapse-content-padding: 0;
     --collapse-header-padding-with-bg-image: 0.5rem 2rem 0.5rem 4rem;
     --collapse-header-border-radius: 0;
     --collapse-header-border-width: 0;
     --collapse-content-border-width: 0;
-    --lm-collapse-header-bg-color: var(--gray-color-light);
+    --lm-collapse-header-bg-color: rgba(0, 0, 0, 0);
     --dm-collapse-header-bg-color: rgba(0, 0, 0, 0);
 
     /* Make fonts bigger */
     --base-font-size: 1.6rem;
+
+    --navbar-brand-image-height: 2.5rem;
 
     /* Make dark theme darker */
     --dark-color-light: #141416;
@@ -29,8 +32,22 @@
     --dm-collapse-header-focus-effect-box-shadow: inset 0 0 0 0 var(--primary-color-dark);
 }
 
+/* More tooltip styling */
 [data-toggle="tooltip"]::after {
     text-align: left;
+}
+
+/* More collapse styling (to look good in the sidebar) */
+.collapse-content {
+    margin: 0.5rem 2.8rem;
+    border-left: 2px solid var(--dark-color);
+    border-radius: 0;
+}
+
+.collapse-content > .sidebar-link, .sidebar-title {
+    margin: 0;
+    padding: 0.5rem;
+    padding-left: 1rem;
 }
 
 body {
