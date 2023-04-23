@@ -6,7 +6,7 @@ tags: rules_page
 ---
 <!-- The goal of this page is to provide a detailed reference for component information -->
 ## Components
-A mech is exactly the sum of its parts. This page explains the details and stats of different mech parts and components, grouped by part type.
+A mech is exactly the sum of its parts. This page explains the details and stats of different mech {% keyword 'Parts' glossary %} and {% keyword 'Components' glossary %}, grouped by {% keyword 'Part Type' glossary %}.
 
 ### Common Traits
 Almost every part will have a few basic traits:
@@ -20,7 +20,7 @@ Almost every part will have a few basic traits:
 {.table}
 
 ### Mech Frames
-The **Frame** is the foundation of your mech. It provides the superstructure you'll attach your weapons and components to, as well as the moving parts and power distribution system. Each frame has some number of slots for installing components.
+The Frame is the foundation of your mech. It provides the superstructure you'll attach your weapons and components to, as well as the moving parts and power distribution system. Each frame has some number of slots for installing components.
 
 | Stat       | Description |
 | ---------- | ----------- |
@@ -35,7 +35,7 @@ The **Frame** is the foundation of your mech. It provides the superstructure you
 {.table}
 
 #### Classes: The Size vs Speed Tradeoff
-Frames come in three basic sizes: **Light**, **Standard**, and **Heavy**. Frame size determines how many slots you have and your base speed. Smaller frames are hard to hit, but larger frames have more space for more firepower.
+Frames come in three basic sizes: Light, Standard, and Heavy. Frame size determines how many slots you have and your base speed. Smaller frames are hard to hit, but larger frames have more space for more firepower.
 
 | Class     | Description |
 | --------- | ----------- |
@@ -73,10 +73,10 @@ Plating protects components by absorbing damage dealt to a particular section. Y
 {.table}
 
 ### The Power Subsystem
-The power subsystem consists of two components: a **Power Plant** and a **Fuel Tank**. The power plant uses fuel from the fuel tank to generate a steady supply of energy.
+The power subsystem consists of two components: a Power Plant and a Fuel Tank. The power plant uses fuel from the fuel tank to generate a steady supply of energy.
 
 #### Power Plants
-Power Plants convert fuel into power.
+Power Plants convert fuel into {% keyword 'Power' glossary %}.
 
 | Stat       | Description |
 | ---------- | ----------- |
@@ -110,7 +110,7 @@ Fuel tanks store fuel and supply it to the power plant. There are several differ
 {.table}
 
 ### The Control Subsystem
-Mechs are controlled by a combination of mechaneer input and computer automation. The control subsystem consists of the Cabin, Mainframe, and Modules.
+Mechs are controlled by a combination of {% keyword 'Mechaneer' glossary %} input and computer automation. The control subsystem consists of the Cabin, Mainframe, and Modules.
 
 | Class      | Description |
 | ---------- | ----------- |
@@ -121,7 +121,7 @@ Mechs are controlled by a combination of mechaneer input and computer automation
 {.table}
 
 #### Software
-In order to control your mech, your Cabin and Modules need to be compatible with the **Software** running on your Mainframe. There are three different types of Software, and each has distinct benefits.
+In order to control your mech, your Cabin and Modules need to be compatible with the Software running on your Mainframe. There are three different types of software, and each has distinct benefits.
 
 | Software  | Class      | Advantages                                                          |
 | --------- | ---------- | ------------------------------------------------------------------- |
@@ -147,8 +147,10 @@ Cabins provide mechaneers with all the necessary controls to pilot their mechs. 
 | Module slots | The maximum number of Modules that can be installed in this cabin. |
 | Cargo        | The maximum number of components that can be stored in the cabin's integrated storage. |
 
+{.table}
+
 #### Mainframes
-Mainframes provide mechs with Processing capacity.
+Mainframes provide mechs with {% keyword 'Processing' glossary %}.
 
 TODO: stat table
 
