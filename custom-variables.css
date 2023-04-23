@@ -1,16 +1,43 @@
 :root {
+    /* Restyle collapse elements (to look good in the sidebar) */
     --collapse-header-padding-with-bg-image: 0.5rem 2rem 0.5rem 4rem;
     --collapse-header-border-radius: 0;
     --collapse-header-border-width: 0;
     --collapse-content-border-width: 0;
     --lm-collapse-header-bg-color: var(--gray-color-light);
     --dm-collapse-header-bg-color: rgba(0, 0, 0, 0);
+
+    /* Make fonts bigger */
     --base-font-size: 1.6rem;
+
+    /* Make dark theme darker */
     --dark-color-light: #141416;
     --dark-color: #1c1c1e;
     --dark-color-dark: #242426;
+
+    /* Restyle tooltips */
+    --tooltip-width: 50rem;
+    --lm-tooltip-text-color: var(--lm-base-text-color);
+    --lm-tooltip-bg-color: var(--white-bg-color);
+    --dm-tooltip-text-color: var(--dm-base-text-color);
+    --dm-tooltip-bg-color: var(--dark-color);
+
+    /* Remove blue focus border */
+    --lm-button-box-shadow-focus: rgba(0, 0, 0, 0);
+    --dm-button-box-shadow-focus: rgba(0, 0, 0, 0);
+    --lm-collapse-header-focus-effect-box-shadow: inset 0 0 0 0 var(--primary-color-light);
+    --dm-collapse-header-focus-effect-box-shadow: inset 0 0 0 0 var(--primary-color-dark);
+}
+
+[data-toggle="tooltip"]::after {
+    text-align: left;
 }
 
 body {
     font-family: 'Jost', sans-serif;
+}
+
+.keyword {
+    font-family: 'Inconsolata', monospace;
+    color: #f478ff;
 }
