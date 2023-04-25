@@ -1,0 +1,54 @@
+---
+layout: template.njk
+title: Solar System
+permalink: lore/solar-system/
+tags: lore_page
+---
+<h2> Solar System </h2>
+
+<select class="form-control" id="select-planet" onchange="onchange_planet()">
+  <option value="Ilythia System" selected="selected">Ilythia System</option>
+  <option value="Ilythia">Ilythia</option>
+  <option value="Kaminos">Kaminos</option>
+  <option value="Okeanos">Okeanos</option>
+  <option value="Megalos">Megalos</option>
+  <option value="Katagaida">Katagaida</option>
+  <option value="Sosipolis">Sosipolis</option>
+  <option value="Xeimonas">Xeimonas</option>
+  <option value="Karvouno">Karvouno</option>
+  <option value="Efferos">Efferos</option>
+  <option value="Mnimi">Mnimi</option>
+</select>
+
+<div class="card d-flex">
+  <img id="planet-img" class="w-400">
+  <div>
+    <h2 class="card-title" id="planet-name"></h2>
+    <p id="planet-description"></p>
+  </div>
+</div>
+
+<script>
+  var select_planet = document.getElementById("select-planet");
+  var planet_img = document.getElementById("planet-img");
+  var planet_name = document.getElementById("planet-name");
+  var planet_description = document.getElementById("planet-description");
+  var planets = null;
+
+  loadPlanetsJson("/lore/planets.json")
+  onchange_planet()
+
+  function onchange_planet() {
+    var value = select_planet.value;
+    planet_name.innerHTML = value;
+    planet_img.src = planets[value]["img"]
+    planet_description.innerHTML = planets[value]["description"]
+  }
+
+  function loadPlanetsJson(path) {
+    fetch(path)
+      .then((response) => response.json())
+      .then((json) => planets = json);
+  }
+
+</script>
