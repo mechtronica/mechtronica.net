@@ -6,24 +6,24 @@ tags: lore_page
 ---
 <h2> Solar System </h2>
 
-<select class="form-control" id="select-planet" onchange="onchange_planet()">
-  <option value="Ilythia System" selected="selected">Ilythia System</option>
-  <option value="Ilythia">Ilythia</option>
-  <option value="Kaminos">Kaminos</option>
-  <option value="Okeanos">Okeanos</option>
-  <option value="Megalos">Megalos</option>
-  <option value="Katagaida">Katagaida</option>
-  <option value="Sosipolis">Sosipolis</option>
-  <option value="Xeimonas">Xeimonas</option>
-  <option value="Karvouno">Karvouno</option>
-  <option value="Efferos">Efferos</option>
-  <option value="Mnimi">Mnimi</option>
-</select>
+<img src="/images/solar-system-labeled.svg">
 
-<div class="card d-flex">
-  <img id="planet-img" class="w-400">
-  <div>
-    <h2 class="card-title" id="planet-name"></h2>
+<div class="card d-flex flex-wrap">
+  <img id="planet-img" class="w-lg-quarter w-full mb-20">
+  <div class="w-lg-three-quarter">
+    <select class="form-control" id="select-planet" onchange="onchange_planet()">
+      <option value="ilythia">Ilythia</option>
+      <option value="kaminos">Kaminos</option>
+      <option value="okeanos">Okeanos</option>
+      <option value="cheilos">Cheilos</option>
+      <option value="megalos">Megalos</option>
+      <option value="katagaida">Katagaida</option>
+      <option value="sosipolis">Sosipolis</option>
+      <option value="xeimonas">Xeimonas</option>
+      <option value="karvouno">Karvouno</option>
+      <option value="efferos">Efferos</option>
+      <option value="mnimi">Mnimi</option>
+    </select>
     <p id="planet-description"></p>
   </div>
 </div>
@@ -40,7 +40,6 @@ tags: lore_page
 
   function onchange_planet() {
     var value = select_planet.value;
-    planet_name.innerHTML = value;
     planet_img.src = planets[value]["img"]
     planet_description.innerHTML = planets[value]["description"]
   }
