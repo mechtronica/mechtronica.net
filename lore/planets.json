@@ -1,0 +1,74 @@
+{
+    "ilythia": 
+    {
+        "name": "Ilythia",
+        "description": "The primary star of the Ilythia system, it is a K class main sequence star.",
+        "img": "/images/planets/ilythia.svg"
+    },
+    "kaminos": 
+    {
+        "name": "Kaminos",
+        "description": "The fiery heat of this close orbit planet has prevented extensive habitation. The ruins of the civilizations who have tried litter the planet's surface.",
+        "img": "/images/planets/kaminos.svg"
+    },
+    "okeanos": 
+    {
+        "name": "Okeanos",
+        "description": "The surface of this planet is covered in water. The water is teeming with life and, although beautiful, sharp drop offs. The underwater cliffs and canyons act as treacherous terrain, as mechs can easily plunge to their doom while attempting to cross. The planet is home to the decimated moon Erimos.",
+        "img": "/images/planets/okeanos.svg"
+    },
+    "erimos": 
+    {
+        "name": "Erimos",
+        "description": "Erimos was once a barely habitable moon with a handful of underground cities, but a powerful display of force during the War stripped it of most of its outer layers leaving a solid metal core surrounded by debris. Its exposed mineral rich core makes it a desirable mining location.",
+        "img": "/images/planets/erimos.svg"
+    },
+    "cheilos": 
+    {
+        "name": "Cheilos",
+        "description": "A large tidally locked planet. Its habitable rim was once home to flourishing cities. But is now home to crumbling towns, desolate wastelands, and struggling farms that are plagued by marauders. Only the few remaining cities run by the largest corporations show any glimmer of the planet's former glory.",
+        "img": "/images/planets/cheilos.svg"
+    },
+    "megalos": 
+    {
+        "name": "Megalos",
+        "description": "A gas giant and the largest planet in the system, Megalos is home to the jungle moon Zounkla and the red rocky moon Vyssini as well as many smaller moons and space stations. Vyssini is a small red rocky moon and a long standing mining location. Zounkla is a verdant jungle moon, staying warm only by its thick atmosphere and thermal vents it is home to many massive dangerous creatures.",
+        "img": "/images/planets/megalos.svg"
+    },
+    "katagaida": 
+    {
+        "name": "Katagaida",
+        "description": "The lesser neighbor of Megalos, this ice giant has violent storms. Several large research stations and a few tiny moons orbit the planet, due to its orbital patterns it is an important waypoint between the resource-rich planets bound to Sosipolis and the more inhabited inner planets.",
+        "img": "/images/planets/katagaida.svg"
+    },
+    "sosipolis": 
+    {
+        "name": "Sosipolis",
+        "description": "Sosipolis is the second star in the Ilythia system, a small class T brown dwarf. It is quite far away from Ilythia and has several small resource-rich planets orbiting closely to it, Xeimonas, Korvouno, and Efferos.",
+        "img": "/images/planets/sosipolis.svg"
+    },
+    "xeimonas": 
+    {
+        "name": "Xeimonas",
+        "description": "A large icy planet, Xeimonas is rich in methane with methane lakes and underground aquifers. This makes it a prime source of fuel for the Ilythia system.",
+        "img": "/images/planets/xeimonas.svg"
+    },
+    "karvouno": 
+    {
+        "name": "Karvouno",
+        "description": "A carbon-rich planet, Korvouno is full of hydrocarbons giving a reddish-black color and making it home to many production plants and exports that depend on its vast resources.",
+        "img": "/images/planets/karvouno.svg"
+    },
+    "efferos": 
+    {
+        "name": "Efferos",
+        "description": "A small icy rock planet, Efferos is rich in phosphorus and other volatile compounds prompting mining activity for fertilizers and chemical feedstocks. However, the mining comes at a cost, as enormous worms prowl the planet's surface.",
+        "img": "/images/planets/efferos.svg"
+    },
+    "mnimi": 
+    {
+        "name": "Mnimi",
+        "description": "A small rocky dwarf planet, signs of ancient civilization here attracted much scientific research pre-War, although its lack of sunlight and atmosphere make extensive habitation near-impossible.",
+        "img": "/images/planets/mnimi.svg"
+    }
+}
