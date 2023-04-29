@@ -173,6 +173,8 @@ There are many different types of Modules grouped into classes based on their fu
 | Scanner     | Scanner modules provide extra detection capabilities beyond what's built into a mech.
 | Targeting   | Targeting modules provide a targeting bonus in combat.
 
+{.table}
+
 All modules must be compatible with the software running on the mainframe in order to function. Modules use up a small amount of processing.
 
 | Stat       | Description |
@@ -181,4 +183,4 @@ All modules must be compatible with the software running on the mainframe in ord
 | Processing | The amount of processing that this component requires. |
 | Effect     | Special effects and/or abilites provided by this module. |
 
-
+{.table}
