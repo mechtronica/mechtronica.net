@@ -14,6 +14,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('mechdb/parts_database.json');
     eleventyConfig.addPassthroughCopy('jsonpath-0.8.0.js');
     eleventyConfig.addPassthroughCopy('custom-variables.css');
+    eleventyConfig.addPassthroughCopy('lore/planets.json');
     eleventyConfig.setNunjucksEnvironmentOptions({
       throwOnUndefined: true,
       autoescape: false, // warning: don’t do this!
