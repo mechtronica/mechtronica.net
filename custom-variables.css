@@ -10,6 +10,7 @@
 
     /* Make fonts bigger */
     --base-font-size: 2rem;
+    --sidebar-title-font-size: var(--base-font-size);
 
     --navbar-brand-image-height: 2.5rem;
 
@@ -30,6 +31,25 @@
     --dm-button-box-shadow-focus: rgba(0, 0, 0, 0);
     --lm-collapse-header-focus-effect-box-shadow: inset 0 0 0 0 var(--primary-color-light);
     --dm-collapse-header-focus-effect-box-shadow: inset 0 0 0 0 var(--primary-color-dark);
+}
+
+h1 {
+    font-size: calc(2.5*var(--base-font-size));
+}
+h2 {
+    font-size: calc(2.25*var(--base-font-size));
+}
+h3 {
+    font-size: calc(2*var(--base-font-size));
+}
+h4 {
+    font-size: calc(1.75*var(--base-font-size));
+}
+h5 {
+    font-size: calc(1.5*var(--base-font-size));
+}
+h6 {
+    font-size: calc(1.25*var(--base-font-size));
 }
 
 /* More tooltip styling */
