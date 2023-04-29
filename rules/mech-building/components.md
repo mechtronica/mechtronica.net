@@ -112,26 +112,18 @@ Fuel tanks store fuel and supply it to the power plant. There are several differ
 ### The Control Subsystem
 Mechs are controlled by a combination of {% keyword 'Mechaneer' glossary %} input and computer automation. The control subsystem consists of the Cabin, Mainframe, and Modules.
 
-| Class      | Description |
-| ---------- | ----------- |
-| Efficiency | Efficiency-focused control components minimize size, power, and heat at the cost of lower processing capacity and fewer module slots. |
-| Standard   | The Standard class focuses on balancing heat, power, and processing while also providing plenty of cargo space. |
-| Combat     | Combat-focused control components prioritize maximum processing at the cost of higher heat output and power draw. Combat Mainframes also provide a bonus to targeting through dedicated aim point selection routines. |
-
-{.table}
-
 #### Software
-In order to control your mech, your Cabin and Modules need to be compatible with the Software running on your Mainframe. There are three different types of software, and each has distinct benefits.
+In order to control your mech, your Cabin and Modules need to be compatible with the Software running on your Mainframe. There are three different types of software, aligned with the three Control classes.
 
-| Software  | Class      | Advantages                                                          |
-| --------- | ---------- | ------------------------------------------------------------------- |
-| UMIX      | Efficiency | Very small, low power usage, but limited CPU production             |
-| ProtOS    | Standard   | Well balanced, produces a moderate amount of CPU at reasonable cost |
-| Ursa NT   | Combat     | Bonus to Targeting, lots of CPU and mod slots, but large and hot    |
+| Class      | Software | Description |
+| ---------- | -------- | ----------- |
+| Efficiency | UMIX     | Efficiency-focused control components minimize size, power, and heat at the cost of lower processing capacity and fewer module slots. |
+| Standard   | ProtOS   | The Standard class focuses on balancing heat, power, and processing while also providing plenty of cargo space. |
+| Combat     | Ursa NT  | Combat-focused control components prioritize maximum processing at the cost of higher heat output and power draw. Combat Mainframes also provide a bonus to targeting through dedicated aim point selection routines. |
 
 {.table}
 
-Many components are compatible with multiple types of software, but you can only run one type of software at a time on your Mainframe. Your Cabin and all Modules must be compatible with the software running on your Mainframe. You can change software at a Garage.
+Many components are compatible with multiple types of software, but you can only run one type of software at a time on your Mainframe. Your Cabin and all Modules must be compatible with the software on your Mainframe.
 
 #### Cabins
 Cabins provide mechaneers with all the necessary controls to pilot their mechs. They also usually have some slots for Modules and cargo.
@@ -141,7 +133,7 @@ Cabins provide mechaneers with all the necessary controls to pilot their mechs. 
 | Software     | The software this cabin is compatible with. |
 | Size         | The minimum slot size required to install this component. |
 | Power Type   | The type of power this component requires. |
-| Power        | The amount of power this component requires. |
+| Power        | The amount of power that this component requires. |
 | Cooling      | The amount of cooling that this component requires. |
 | Processsing  | The amount of processing that this component requires. |
 | Module slots | The maximum number of Modules that can be installed in this cabin. |
@@ -152,9 +144,41 @@ Cabins provide mechaneers with all the necessary controls to pilot their mechs. 
 #### Mainframes
 Mainframes provide mechs with {% keyword 'Processing' glossary %}.
 
-TODO: stat table
+| Stat       | Description |
+| ---------- | ----------- |
+| Software   | The software that runs on this mainframe. |
+| Size       | The minimum slot size required to install this component. |
+| Power      | The amount of power that this component requires. |
+| Cooling    | The amount of cooling that this component requires.
+| Processing | The amount of processing provided by this mainframe. |
+| Effect     | Special effects conferred by this mainframe, such as targeting bonuses. |
+
+{.table}
+
+Note that Mainframes do not specify a power type. This is because power for Mainframes is routed through the Cabin, where it is converted from the Cabin's power type into electrical power specifically for running control electronics. Effectively, this means that Mainframes use your Cabin's power type.
 
 #### Modules
-Modules are special mech parts that use a small amount of processing in order to augment mech capabilites. They vary widely in effect, from providing combat advantages to cosmetic improvements. Modules are installed in Module slots in the Cabin.
+Modules are special mech parts that use a small amount of processing in order to augment mech capabilites. They vary widely in effect, from providing combat advantages to cosmetic improvements. Modules are installed in Module slots in the Cabin. Modules, like mainframes, use the Cabin's power type.
 
-TODO: stat table
+There are many different types of Modules grouped into classes based on their function:
+
+| Class       | Description |
+| ----------- | ----------- |
+| Combat      | Combat modules augment combat capabilities of a mech through increased damage or special effects. |
+| Compute     | Compute modules provide a small amount of processing. |
+| Maintenance | These modules improve maintenance capabilities, usually by providing diagnostic information. |
+| Navigation  | Nav modules provide detailed location data and information about terrain. |
+| Remote Link | Remote Link modules allow mechaneers to remotely access another mech's functions. |
+| Resource    | These modules add advanced resource management features, such as scheduling activation of certain components for reduced resource usage. |
+| Scanner     | Scanner modules provide extra detection capabilities beyond what's built into a mech.
+| Targeting   | Targeting modules provide a targeting bonus in combat.
+
+All modules must be compatible with the software running on the mainframe in order to function. Modules use up a small amount of processing.
+
+| Stat       | Description |
+| ---------- | ----------- |
+| Software   | The software this module is compatible with. |
+| Processing | The amount of processing that this component requires. |
+| Effect     | Special effects and/or abilites provided by this module. |
+
+
