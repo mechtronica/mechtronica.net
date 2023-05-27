@@ -1,0 +1,112 @@
+[
+    {
+        "name": "Bardtronics",
+        "faction": "Arch Guild",
+        "description": "Bardtronics believes that piloting a mech is not just a science, but an art. They offer premium musical components for the sophisticated mech pilot."
+    },
+    {
+        "name": "BMI Standards Co",
+        "faction": "Industrial Group",
+        "description": "BMI Standards Co. is a well established company, they set the standards for, and still lead with the highest quality, neural interface systems."
+    },
+    {
+        "name": "Iriscorp",
+        "faction": "The Industrial Group",
+        "description": "Iriscorp has a long history of manufacturing high-quality, high performance computing and interface components."
+    },
+    {
+        "name": "Scorpio Logistics",
+        "faction": "Moscow Combine",
+        "description": "Scorpio is an excellent resource for weaponry and augments to meet specific needs. Their expertise in tracking and ballistic weaponry is always a valuable asset. "
+    },
+    {
+        "name": "Protos Industries",
+        "faction": "Independent",
+        "description": "The standard for industrial and military grade machinery, they've evolved over the years to cover many areas of technology, but their simple sturdy designs are unchanging."
+    },
+    {
+        "name": "Perwares Electronics",
+        "faction": "The Industrial Group",
+        "description": "Perwares is a classic for budget mechaneers everywhere."
+    },
+    {
+        "name": "Progressive Globotech",
+        "faction": "Moscow Combine",
+        "description": "A joint venture by the members of the Moscow Combine, Prog Globo is the result of megacorporations throwing money at problems. They mass produce products that do the job, but are often over-engineered and sometimes a bit flaky."
+    },
+    {
+        "name": "Nadornia Cybernetics",
+        "faction": "Arch Guild",
+        "description": "Known for their dependable precision joints and high speed application specific computer parts, as well as their lightweight frameworks."
+    },
+    {
+        "name": "Moscow Instruments",
+        "faction": "Moscow Combine",
+        "description": "While MI doesn't have the best reputation in industry, they produce reliable, easy-to-repair components. They probably didn't steal the intellectual property from another company."
+    },
+    {
+        "name": "Nebulon Inc",
+        "faction": "Moscow Combine",
+        "description": "Famed for their top-of-the-line advanced weaponry, and high quality materials."
+    },
+    {
+        "name": "Ultraco",
+        "faction": "Moscow Combine",
+        "description": "Before the war, Ultraco was the copy-cat company, making cheaper replicas of best sellers, but after contracts during the war they've changed into the quality, sometimes eccentric, manufacturer they are now."
+    },
+    {
+        "name": "Cryobank",
+        "faction": "Arch Guild",
+        "description": "A premium of manufacturer of high-end cooling equipment."
+    },
+    {
+        "name": "Apex Integration",
+        "faction": "The Industrial Group",
+        "description": ""
+    },
+    {
+        "name": "Anpidor Energies",
+        "faction": "The Industrial Group",
+        "description": ""
+    },
+    {
+        "name": "Kasosonic",
+        "faction": "The Industrial Group",
+        "description": "Kasosonic is has a long history of good build quality components and a wide range of options from budget to luxury."
+    },
+    {
+        "name": "ESC Group",
+        "faction": "N/A",
+        "description": "The ESC group evaporated mid-war when their factories were the target of coordinated attacks. Nonetheless their high-end parts still circulate the markets."
+    },
+    {
+        "name": "Ter Threpnicus Industries",
+        "faction": "Ter Threpnicus faction",
+        "description": "The manufacturing arm of the polical-relligious-economic power that is Ter Threpnicus."
+    },
+    {
+        "name": "Atlas Power",
+        "faction": "The Industrial Group",
+        "description": "Atlas power is an industry leader in highly advanced power systems. Many designs appear to be based on concepts that were emerging technologies mostly lost during the war, suggesting Atlas Power may have access to golden age data other companies don't."
+    },
+    {
+        "name": "Stigma Manufacturing",
+        "faction": "Ter Threpnicus faction",
+        "description": "Built upon the military intelligence, violent battles, and sacrifices of its founders' past, this company produces some of the most violent and unorthodox weapons."
+    },
+    {
+        "name": "Familiar Industries",
+        "faction": "The Industrial Group",
+        "description": ""
+    },
+    {
+        "name": "Vincent's",
+        "faction": "Arch Guild",
+        "description": "Never again will cramps or claustrophobia seize you when you are using one of Vincent's Mech Cabins! Our cabins are made using modern Spacial Maximization Strategies (SMS) to ensure that you have easy access to your controls and have space for all of your favorite accessories and decals, all while enjoying the finest luxury interior on the market. Our Vincent Mech Frames have been optimized for stability and security so that you can further enjoy the luxury and comfort of your Vincent Mech Cabin."
+    },
+    {
+        "name": "Erimos Mining Corp.",
+        "faction": "The Industrial Group",
+        "description": "The largest mining company on Erimos they have spread to mining operations on some other planets too. They produce exclusively mining equipment."
+    }
+]
