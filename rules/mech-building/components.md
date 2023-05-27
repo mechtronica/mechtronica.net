@@ -8,6 +8,8 @@ tags: rules_page
 ## Components
 A mech is exactly the sum of its parts. This page explains the details and stats of different mech {% keyword 'Parts' glossary %} and {% keyword 'Components' glossary %}, grouped by {% keyword 'Part Type' glossary %}.
 
+<!-- TODO: Table of Contents -->
+
 ### Common Traits
 Almost every part will have a few basic traits:
 
