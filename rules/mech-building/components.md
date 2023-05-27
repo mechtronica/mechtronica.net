@@ -34,7 +34,7 @@ The Frame is the foundation of your mech. It provides the superstructure you'll 
 
 {.table}
 
-#### Classes: The Size vs Speed Tradeoff
+#### Classes
 Frames come in three basic sizes: Light, Standard, and Heavy. Frame size determines how many slots you have and your base speed. Smaller frames are hard to hit, but larger frames have more space for more firepower.
 
 | Class     | Description |
@@ -149,7 +149,7 @@ Mainframes provide mechs with {% keyword 'Processing' glossary %}.
 | Software   | The software that runs on this mainframe. |
 | Size       | The minimum slot size required to install this component. |
 | Power      | The amount of power that this component requires. |
-| Cooling    | The amount of cooling that this component requires.
+| Cooling    | The amount of cooling that this component requires. |
 | Processing | The amount of processing provided by this mainframe. |
 | Effect     | Special effects conferred by this mainframe, such as targeting bonuses. |
 
@@ -158,7 +158,7 @@ Mainframes provide mechs with {% keyword 'Processing' glossary %}.
 Note that Mainframes do not specify a power type. This is because power for Mainframes is routed through the Cabin, where it is converted from the Cabin's power type into electrical power specifically for running control electronics. Effectively, this means that Mainframes use your Cabin's power type.
 
 #### Modules
-Modules are special mech parts that use a small amount of processing in order to augment mech capabilites. They vary widely in effect, from providing combat advantages to cosmetic improvements. Modules are installed in Module slots in the Cabin. Modules, like mainframes, use the Cabin's power type.
+Modules are special mech parts that use a small amount of processing in order to augment mech capabilites. They vary widely in effect, from providing combat advantages to cosmetic improvements. Modules are installed in Module slots in the Cabin. Modules, like Mainframes, use the Cabin's power type.
 
 There are many different types of Modules grouped into classes based on their function:
 
@@ -170,8 +170,8 @@ There are many different types of Modules grouped into classes based on their fu
 | Navigation  | Nav modules provide detailed location data and information about terrain. |
 | Remote Link | Remote Link modules allow mechaneers to remotely access another mech's functions. |
 | Resource    | These modules add advanced resource management features, such as scheduling activation of certain components for reduced resource usage. |
-| Scanner     | Scanner modules provide extra detection capabilities beyond what's built into a mech.
-| Targeting   | Targeting modules provide a targeting bonus in combat.
+| Scanner     | Scanner modules provide extra detection capabilities beyond what's built into a mech. |
+| Targeting   | Targeting modules provide a targeting bonus in combat. |
 
 {.table}
 
@@ -182,5 +182,27 @@ All modules must be compatible with the software running on the mainframe in ord
 | Software   | The software this module is compatible with. |
 | Processing | The amount of processing that this component requires. |
 | Effect     | Special effects and/or abilites provided by this module. |
+
+{.table}
+
+### Coolers
+If your mech generates too much heat, it won't be able to function at maximum efficiency. In some cases, some components may even be inoperable until sufficiently cooled down. That's where coolers come in. Coolers help regulate the heat your mech generates and keep everything running smoothly. 
+
+There are four classes of coolers: ultra-efficient passive coolers, moderately efficient air coolers, inneficient but capable phase change coolers, and middle-of-the-road water coolers.
+
+| Class        | Description |
+| ------------ | ----------- |
+| Passive      | Passive coolers provide a minimal amount of cooling with minimal resource usage. |
+| Air          | Air coolers provide a moderate amount of cooling with low resource usage. |
+| Water        | Water coolers provide significant cooling with only slightly more power usage than Air coolers. |
+| Phase Change | Phase Change coolers maximize cooling potential at the cost of higher resource usage. |
+
+{.table}
+
+| Stat       | Description |
+| ---------- | ----------- |
+| Power      | The amount of power that this component requires. |
+| Cooling    | The amount of cooling provided by this component. |
+| Processing | The amount of processing required by this component. |
 
 {.table}
