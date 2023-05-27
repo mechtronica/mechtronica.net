@@ -135,7 +135,7 @@ Cabins provide mechaneers with all the necessary controls to pilot their mechs. 
 | Power Type   | The type of power this component requires. |
 | Power        | The amount of power that this component requires. |
 | Cooling      | The amount of cooling that this component requires. |
-| Processsing  | The amount of processing that this component requires. |
+| Processing   | The amount of processing that this component requires. |
 | Module slots | The maximum number of Modules that can be installed in this cabin. |
 | Cargo        | The maximum number of components that can be stored in the cabin's integrated storage. |
 
@@ -204,5 +204,67 @@ There are four classes of coolers: ultra-efficient passive coolers, moderately e
 | Power      | The amount of power that this component requires. |
 | Cooling    | The amount of cooling provided by this component. |
 | Processing | The amount of processing required by this component. |
+
+{.table}
+
+### Attachments
+Attachments are components that orovide some sort of utility or offensive capability. These components are not in constant use, so they only draw resources when used. Attachment components can also be placed in a mech's arm sections, unlike the Infrastructure components discussed above.
+
+#### Weapons
+Weapons are attachments that are primarily intended for combat. In the harsh world of Mechtronica, mechaneers require a diverse array of unique weapon types to stay safe.
+
+| Class       | Description |
+| ----------- | ----------- |
+| Arc Rifle   | Arc rifles unleash massive shocks which can overload enemy mech circuits. |
+| Beam Rifle  | Beam rifles fire a laser of concentrated energy which dumps heat into enemy systems. |
+| Rocket      | Rockets launchers are long-range precision instruments capable of dealing significant damage without risking close-range combat. |
+| Auto Gun    | One of the oldest technologies still around, auto guns fire a constant stream of bullets at moderate range. |
+| Chain Blade | Chain Blades allow mechs to rapidly and precisely disassemble nearby opponents. |
+| Grenade     | Grenade launchers deal difficult-to-repair damage at close range. | 
+| Artillery   | Artillery cannons lob projectiles long distances to deal significant damage. |
+| Blunt Force | Blunt Force weapons are excellent for throwing enemy mechs off balance to help deal even more damage.
+| Cannon      | Cannons deal huge damage at moderate range. |
+
+{.table}
+
+| Stat       | Description |
+| ---------- | ----------- |
+| Size       | The minimum slot size required to install this component. |
+| Power Type | The type of power this component requires. |
+| Power      | The amount of power that this component requires. |
+| Cooling    | The amount of cooling that this component requires. |
+| Processing | The amount of processing that this component requires. |
+| Range      | The maximum range that this weapon can achieve. |
+| Targeting  | The amount you can adjust your targeting rolls. |
+| Damage     | The amount of damage that this weapon deals to plating. |
+| Effect     | Special effects triggered when landing a hit with this weapon. |
+
+{.table}
+
+#### Equipment
+Equipment describes attachments that provide some sort of utility that isn't strictly combat-focused. Many equipment components upgrade movement, enhance repair capabilities, or provide special measuring tools.
+
+| Class        | Description |
+| ------------ | ----------- |
+| Cargo Pod    | Cargo pods provide extra storage for your knicknacks. |
+| Booster      | Boost rockets let your mech move faster or jump higher. |
+| Flaregun     | Flare guns fire brilliant flares that can even signal help from ships in low orbit. |
+| Manipulator  | Manipulators significantly speed up salvaging and repairs on other mechs, while also providing precise manipulation for detail-oriented tasks. |
+| Mining Tool  | These tools allow you to mine raw resources which can later be sold or refined. |
+| MSAL         | Mobile Sample Analysis Labs provide specialized scientific measurement capabilities. |
+| Shield       | Shields let you provide temporary extra protection to yourself or nearby mechs. |
+| Welding Tool | These toolkits help with salvaging and repairs on other mechs. |
+| Winch        | Winches allow you to haul large objects with ease, up to a rated maximum weight. |
+
+{.table}
+
+| Stat       | Description |
+| ---------- | ----------- |
+| Size       | The minimum slot size required to install this component. |
+| Power Type | The type of power this component requires. |
+| Power      | The amount of power that this component requires. |
+| Cooling    | The amount of cooling that this component requires. |
+| Processing | The amount of processing that this component requires. |
+| Effect     | Special abilities conferred by this equipment. |
 
 {.table}
