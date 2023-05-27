@@ -24,7 +24,10 @@ tags: lore_page
       <option value="efferos">Efferos</option>
       <option value="mnimi">Mnimi</option>
     </select>
-    <p id="planet-description"></p>
+    <p><strong>Atmosphere: </strong><span id="planet-atmosphere"></span></p>
+    <p><strong>Weather: </strong><span id="planet-weather"></span></p>
+    <p><strong>Exports: </strong><span id="planet-exports"></span></p>
+    <p><strong>Description: </strong><span id="planet-description"></span></p>
   </div>
 </div>
 
@@ -33,6 +36,9 @@ tags: lore_page
   var planet_img = document.getElementById("planet-img");
   var planet_name = document.getElementById("planet-name");
   var planet_description = document.getElementById("planet-description");
+  var planet_atmosphere = document.getElementById("planet-atmosphere");
+  var planet_weather = document.getElementById("planet-weather");
+  var planet_exports = document.getElementById("planet-exports");
   var planets = null;
 
   loadPlanetsJson("/lore/planets.json")
@@ -42,12 +48,16 @@ tags: lore_page
     var value = select_planet.value;
     planet_img.src = planets[value]["img"]
     planet_description.innerHTML = planets[value]["description"]
+    planet_atmosphere.innerHTML = planets[value]["atmosphere"]
+    planet_weather.innerHTML = planets[value]["weather"]
+    planet_exports.innerHTML = planets[value]["exports"]
   }
 
   function loadPlanetsJson(path) {
     fetch(path)
       .then((response) => response.json())
-      .then((json) => planets = json);
+      .then((json) => planets = json)
+      .then(onchange_planet);
   }
 
 </script>
