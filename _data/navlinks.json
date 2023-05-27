@@ -5,7 +5,9 @@
   "Lore" : 
   {
     "Intro" : "/lore/intro/",
-    "Solar System" : "/lore/solar-system/"
+    "Solar System" : "/lore/solar-system/",
+    "Factions" : "/lore/factions/",
+    "Manufacturers" : "/lore/manufacturers/"
   },
   "Rules":
   {

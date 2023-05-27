@@ -1,0 +1,18 @@
+---
+layout: template.njk
+title: Manufacturers
+permalink: lore/manufacturers/
+tags: lore_page
+---
+
+<h2> Manufacturers </h2>
+<table class='table'>
+    <tr>
+        <th> Name </th> <th> Faction </th> <th> Description </th>
+    </tr>
+    {% for x in manufacturers %}
+    <tr>
+        <td> {{x['name']}} </td> <td> {{x['faction']}} </td> <td> {{x['description']}} </td>
+    </tr>
+    {% endfor %}
+</table>
