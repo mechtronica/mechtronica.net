@@ -63,7 +63,7 @@ The number of slots in a frame depends on the frame class.
 More details on component slots and mech frames can be found in [Placing Components]({{ site.url }}/rules/placing-components).
 
 #### Plating
-Plating protects components by absorbing damage dealt to a particular section. You should have plating on each section of your mech.
+Plating protects components by absorbing damage dealt to a particular section. You should probably have plating on each section of your mech, but some mechs (especially those focused on speed) will forgo plating in some sections. 
 
 | Stat    | Description |
 | ------- | ----------- |
@@ -181,7 +181,7 @@ All modules must be compatible with the software running on the mainframe in ord
 
 | Stat       | Description |
 | ---------- | ----------- |
-| Software   | The software this module is compatible with. |
+| Software   | The software(s) this module is compatible with. |
 | Processing | The amount of processing that this component requires. |
 | Effect     | Special effects and/or abilites provided by this module. |
 
@@ -210,7 +210,7 @@ There are four classes of coolers: ultra-efficient passive coolers, moderately e
 {.table}
 
 ### Attachments
-Attachments are components that orovide some sort of utility or offensive capability. These components are not in constant use, so they only draw resources when used. Attachment components can also be placed in a mech's arm sections, unlike the Infrastructure components discussed above.
+Attachments are components that provide some sort of utility or offensive capability. These components are not in constant use, so they only draw resources when used. Attachment components can also be placed in a mech's arm sections, unlike the Infrastructure components discussed above.
 
 #### Weapons
 Weapons are attachments that are primarily intended for combat. In the harsh world of Mechtronica, mechaneers require a diverse array of unique weapon types to stay safe.
@@ -239,7 +239,7 @@ Weapons are attachments that are primarily intended for combat. In the harsh wor
 | Range      | The maximum range that this weapon can achieve. |
 | Targeting  | The amount you can adjust your targeting rolls. |
 | Damage     | The amount of damage that this weapon deals to plating. |
-| Effect     | Special effects triggered when landing a hit with this weapon. |
+| Effect     | Special effects triggered when landing a hit with this weapon. See [Weapons]({{site.url}}/rules/weapons) for details on the different effects. |
 
 {.table}
 
@@ -267,6 +267,6 @@ Equipment describes attachments that provide some sort of utility that isn't str
 | Power      | The amount of power that this component requires. |
 | Cooling    | The amount of cooling that this component requires. |
 | Processing | The amount of processing that this component requires. |
-| Effect     | Special abilities conferred by this equipment. |
+| Effect     | Special abilities conferred by this equipment. See [Equipment]({{site.url}}/rules/equipment) for details on the different equipment effects. |
 
 {.table}
