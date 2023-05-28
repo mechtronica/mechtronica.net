@@ -5,27 +5,33 @@ permalink: /rules/build-planning/
 tags: rules_page
 ---
 ## Planning a Mech Build
-The first step in building your mech is planning. Typically you first want to have an idea of how you want your mech to feel. Up-close brawler mechs will feel very different from mid-range gunners or long-range snipers. Think about how you want to play -- and how that relates to your mechaneer's personality.
+The first step in building your mech is planning. Do you want to build a combat-focused mech built for dealing maximum damage? Perhaps your mechaneer needs a mech capable of hauling scientific equipment and taking specific measurements. Or maybe you earn a living as a field mechanic, and focus on equipment to make sophistocated repairs when far from a garage. Think about how you want to play, and how that relates to your mechaneer's personality.
 
 Once you have an idea of how you want to play, you should select a Mech Frame and Power Type. Read on for information on how each of these affect your mech.
 
-### Tradeoffs (WIP)
+## Significant Tradeoffs
 
-#### Power Type and Weapon Range
-Mech play style varies quite a bit with power type. Mechanical mechs tend have short-range weaponry, while Electrical mechs tend to have the longest range. Steam-powered mechs have access to both short-range blunt force weapons and long-range artillery, so they're sort of a jack-of-all-trades.
+### Frame Size and Speed
+As the foundation of your mech, your Frame has a significant impact on play style. Larger Frames offer more space for additional attachments, but are much slower as a result of their size. Large frames also offer a much larger target, and as such are easier to hit. Small frames are quick and hard to hit, but have very limited space for components.
+
+Note that Plating also confers a speed penalty. Heavier armor can absorb a lot more damage before breaking, but will slow your mech down.
+
+### Power Type and Weapon Range
+Mech play style varies quite a bit with power type. Mechanical mechs tend have short-range weaponry, while Electrical mechs tend to have the longest range. Steam-powered mechs have access to both short-range blunt force weapons which can compound damage and long-range artillery, so they're sort of a jack-of-all-trades.
 
 | Power Type  | Range                         |
 | ----------- | ----------------------------- |
 | Mechanical  | Close range (50 ft to 600 ft) |
-| Steam       | Mid range (50 ft to 900 ft)   |
+| Steam       | Any range (50 ft to 900 ft)   |
 | Electrical  | Long range (200 ft to 900 ft) |
 
 {.table}
 
+<!-- TODO: Discuss software options -->
 <!-- TODO: Discuss fuel type and power plant class tradeoffs -->
 <!-- TODO: Explain how fuel is depleted, and why you might want a larger fuel tank -->
 
-### Step by step Mech-Building Outline
+## Step by step Mech-Building Outline
 
 1. Develop a vision for your mechaneer and mech
     - Come up with a name and background for your mechaneer
