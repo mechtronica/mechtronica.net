@@ -5,54 +5,49 @@ permalink: rules/build-validating/
 tags: rules_page
 ---
 ## Validating a Mech Build
-Once you've selected components, you have to actually make sure they work together. This involves a bit of arithmetic.
+Once you've selected components, you have to make sure they actually work together. This section summarizes all the things you should double check to make sure your mech is a valid build.
 
-The basic idea is to figure out how much **Power**, **Cooling**, and **CPU** your mech has to work with, then make sure that your **constant-draw** components aren't using more than that. You'll also want to have enough resources left over to use any **attachments**. 
+### Component Placement
+Double check that:
+- You only have one cabin
+- Only attachments (weapons and equipment) are in the arm and leg sections
+- Large components are in large slots 
+
+### Power Type
+Before calculating any resources it's a good idea to get the hard constraints out of the way. First up is {% keyword "Power Type" glossary %}. If you are doing a single power plant mech (or a multi-power plant mech but they all produce the same power type), then all your other components must match the power type of your power plant. For mechs with multiple power types see [Multiple Power Plants]({{site_url}}/rules/multiple-power-plants/).
+
+### Software
+Your cabin and all your modules must be compatible with the {% keyword "Software" glossary %} of your mainframe.
 
 ### Resource Calculations
-Let's start by breaking down resources into three categories: **Available Resources**, **Used Resources**, and **Excess Resources**. These should add up such that **Available = Used + Excess**. 
+There are three parts to {% keyword "Resources" glossary %}, {% keyword "Available Resources" glossary %} (produced by components), {% keyword "Used Resources" glossary %} (used by constant-draw components), and {% keyword "Excess Resources" glossary %} (left over for excess draw components). They are related like so:
 
-#### Available Resources
-Available resources are the total amount of each resource you have to work with. To calculate Available resources, you just need to figure out how much of each resource your mech is producing. There are some exceptions, but usually that breaks down something like this: 
+Excess Resources = Available Resources - Used Resources
 
-| Resource   | Available amount                                             |
-| ---------- | ------------------------------------------------------------ |
-| Power      | Amount produced by Power Plant                               |
-| Cooling    | Amount provided by Frame & Plating + any provided by Coolers |
-| Processing | Amount provided by Mainframe + any provided by Modules       |
+To make sure you have enough resources simply go through your list of components and sum up the available and used resources and calculated the remaining excess resources. Then check to make sure your excess resources is enough to use as many of your excess-draw components as you want to in a single turn.
 
-{.table}
+Here are the component types that contribute to the resource calculations. Note that there may be exceptions to this if the component has a special {% keyword "Effect" glossary %}.
 
-Note that each section of your mech has its own plating, so you get Cooling from the plating on each section. 
-
-As you can see from the table above, your resources mostly come from **Infrastructure Components** such as your mech's Frame, Plating, Power Plant, and Mainframe. 
-
-<!-- TODO: Add example -->
-
-#### Used Resources
-Used resources are the resources used by all of your constant-draw components. This calculation is pretty straightforward: just add up all of the Power, Cooling, and Processing used up by constant-draw components in your mech.
-
-| Resource   | Used amount                                       |
-| ---------- | ------------------------------------------------- |
-| Power      | Total Power used by constant-draw components      |
-| Cooling    | Total Cooling used by constant-draw components    |
-| Processing | Total Processing used by constant-draw components |
+| Resource        | Calculation                                          |
+| --------------- | ---------------------------------------------------- |
+| Available Power | Sum power from Power Plant(s)                        |
+| Used Power      | Sum power from Frame, Cabin, Mainframe(s), Cooler(s) |
+| Excess Power    | Available Power - Used Power                         |
 
 {.table}
 
-If your Used Resource amounts are greater than your Available resources, your mech will not be able to function. If you find yourself in this situation, you have two options: upgrade your resource-producing components, or choose constant-draw components that use less resources. 
-
-<!-- TODO: Add example -->
-
-#### Excess Resources
-After figuring out Available and Used resources, it's pretty simple to figure out how much Excess resources you have left over. Just subtract Used resources from your Available resources.
-
-| Resource   | Excess amount                          |
-| ---------- | -------------------------------------- |
-| Power      | Available Power - Used Power           |
-| Cooling    | Available Cooling - Used Cooling       |
-| Processing | Available Processing - Used Processing |
+| Resource          | Calculation                                          |
+| ----------------- | ---------------------------------------------------- |
+| Available Cooling | Sum cooling from Frame, Plating, and Cooler(s)       |
+| Used Cooling      | Sum cooling from Power Plant(s), Cabin, Mainframe(s) |
+| Excess Cooling    | Available Cooling - Used Cooling                     |
 
 {.table}
 
-Excess resource is used to power the components of your mech that aren't always in use, such as weapons and equipment. Some modules also use Excess resources to operate. You'll want to make sure you have enough Excess left over to be effective in combat. 
+| Resource          | Calculation                                                   |
+| ----------------- | ------------------------------------------------------------- |
+| Available CPU     | Sum CPU from Mainframe(s), Compute Module(s)                  |
+| Used CPU          | Sum CPU from Cabin, Power Plant(s), Cooler(s), Other Module(s)|
+| Excess CPU        | Available CPU - Used CPU                                      |
+
+{.table}
