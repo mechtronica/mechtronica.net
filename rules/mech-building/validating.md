@@ -24,7 +24,7 @@ There are three parts to {% keyword "Resources" glossary %}, {% keyword "Availab
 
 Excess Resources = Available Resources - Used Resources
 
-To make sure you have enough resources simply go through your list of components and sum up the available and used resources and calculated the remaining excess resources. Then check to make sure your excess resources is enough to use as many of your excess-draw components as you want to in a single turn.
+To make sure you have enough resources, simply go through your list of components and sum up the available and used resources and calculate the remaining excess resources. Then check to make sure your excess resources is enough to use as many of your excess-draw components as you want to in a single turn.
 
 Here are the component types that contribute to the resource calculations. Note that there may be exceptions to this if the component has a special {% keyword "Effect" glossary %}.
 

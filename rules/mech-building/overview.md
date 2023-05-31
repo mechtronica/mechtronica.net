@@ -15,7 +15,7 @@ Nearly all parts use {% keyword "Resources" glossary %}. Resources (and the rela
 
 Most infrastructure components can be grouped into "Subsystems". These groups of components interact with each other closely and set constraints on each other. There are three such subsystems:
 - Frame Subsystem: Together, the frame and plating determine speed and provide some cooling
-- Control Subsystem: The control subsystem are constrained by software and related by production/consumption of CPU
-- Power Subsystem: The power subsystem are constrained by fuel type
+- Control Subsystem: The control subsystem components are constrained by software and related by production/consumption of CPU
+- Power Subsystem: The power subsystem components are constrained by fuel type
 
-Another important note is your cabin, the cabin and the frame are the only two components you can only have one of. The cabin is the ultimate weakpoint of your mech, and if it is destroyed, you die (see [Combat]({{ site.url }}/rules/combat)).
+There are also a few things to note about the cabin. The cabin and the frame are the only two components which you can have strictly one of each per mech. The cabin is the ultimate weakpoint of your mech, and if it is destroyed, you die (see [Combat]({{ site.url }}/rules/combat)).
