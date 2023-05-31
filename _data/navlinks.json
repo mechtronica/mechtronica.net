@@ -19,8 +19,8 @@
     "Mech Building" :
     {
       "Overview": "/rules/build-overview/",
+      "Components": "/rules/component-details/",
       "Planning": "/rules/build-planning/",
-      "Selecting Components": "/rules/selecting-components/",
       "Placing Components": "/rules/placing-components/",
       "Validating": "/rules/build-validating/"
     },
