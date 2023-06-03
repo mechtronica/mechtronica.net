@@ -21,7 +21,9 @@ One of the first things you should check is {% keyword "Power Type" glossary %}.
 Your cabin and all your modules must be compatible with the {% keyword "Software" glossary %} of your mainframe.
 
 ### Resources
-To make sure you have enough resources check that your available resources is greater than your used resources and that your left over excess resources is enough to use as many of your excess-draw components as you want to in a single turn.
+To make sure you have enough resources check that:
+- Your available resources is greater than your used resources
+- Your left over excess resources is enough to use as many of your excess-draw components as you want to in a single turn
 
 ### Fixing and tuning your build
-If at any point you realize you won't have enough resources to do something, or your stats are otherwise not as desired, you'll of course have to adjust what components you are using. Remember there's more than one way to adjust stats, often times modules and equipment provide alternative ways to adjust resource usage, speed, damage, or other stats and may be used to fine tune a build.
+If at any point you realize you won't have enough resources to do something, or your stats are otherwise not as desired, you'll of course have to adjust what components you are using. Remember there's more than one way to adjust stats; often times modules and equipment provide alternative ways to adjust resource usage, speed, damage, or other stats and may be used to fine tune a build.
