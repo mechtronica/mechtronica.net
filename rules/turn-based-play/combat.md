@@ -23,6 +23,7 @@ Attacking comes in a few steps like so:
 ### Consequences
 Losing some components will have severe consequences for you.
 If one of your components being damaged/destroyed leaves you with too few resources to power your constant draw components, your mech will no longer function at all.
+A destroyed joint means you can no longer use attachments in that joint, and if the destroyed joint was your in your legs section you can no longer move.
 At that point you will either have to disable some components or make repairs, in order to get back on your feet.
 
 ### Dying

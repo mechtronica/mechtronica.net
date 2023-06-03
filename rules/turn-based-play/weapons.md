@@ -4,7 +4,11 @@ title: Weapon Specials
 permalink: rules/weapons/
 tags: rules_page
 ---
-## Weapon Keywords Effects
+
+## Weapons
+Weapons deal damage and special effects during combat. For details on weapon use see [Combat]({{site_url}}/rules/combat/).
+
+### Weapon Keywords Effects
 Many weapons do special things and when this is the case these effects get a keyword.
 Here is a list of all standard weapon keyword effects and what they do:
 
