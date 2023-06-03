@@ -88,10 +88,10 @@ Depending on how much power your mech uses, you may need to consider a larger fu
     - Choose a power type that lets you get most of the attachments you want
     - Don't worry about filling all your slots here, just pick a couple must-haves
 4. Add the control subsystem
-    - Choose a mainframe that provides enough processing for your attachments and frame, plus a bit extra to spare
+    - Choose a mainframe that provides enough processing for the components you've selected so far, plus a bit extra to spare
     - Choose a cabin compatible with your mainframe's software
 5. Add the power subsystem
-    - Choose a power plant that provides enough power for your attachments and frame, plus a bit extra to spare
+    - Choose a power plant that provides enough power for the components you've selected so far, plus a bit extra to spare
     - Choose a fuel tank for your power plant
 6. Check whether you need to add a cooler
     - If you just barely have enough excess cooling to use your attachments at this point, you probably need to add a cooler
