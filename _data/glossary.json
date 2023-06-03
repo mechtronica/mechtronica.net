@@ -17,11 +17,12 @@
     "Mechaneer Stats": "The stats that describe your mechaneer. This includes dexterity, strength, agility, diplomacy, intelligence, and perception.",
     "Part Type": "Part Types describe categories of parts which share common features (such as Weapons, Cabins, or Modules)",
     "Parts": "The parts that make your mech operate. This includes Frames, Plating, Modules, and all types of Components.",
-    "Power": "Power is the resource that gets your mech moving. It comes in three types:  electrical, mechanical, and steam. ",
+    "Power": "Power is the resource that gets your mech moving. It comes in three types:  Electrical, Mechanical, and Steam. ",
     "Processing": "Processing is the resource that allows your mech to compute things. Most components require some amount of processing.",
     "Resources": "Power, Cooling, and CPU: the resources that your mech draws on to operate.",
     "Salvaging": "Removing a component from a mech in the field.",
     "Spare Parts": "Bits and pieces used to repair mech components.",
     "Toolkit": "A set of hand tools used for repairing mechs.",
-    "Used Resources": "See Resources. The amount of each resource used by constant-draw components."
+    "Used Resources": "See Resources. The amount of each resource used by constant-draw components.",
+    "Power Type": "Power comes in 3 different types: Electrical, Mechanical, and Steam."
 }
