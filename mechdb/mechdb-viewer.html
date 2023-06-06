@@ -109,6 +109,7 @@ function showJson(query) {
   ordered_headers = [];
   text = '';
   filteredData = [];
+
   if (query != '')
   {
     if (query[0] == '$') {
@@ -119,31 +120,40 @@ function showJson(query) {
     }
   }
 
-  for (let x of filteredData) {
-    for (let y in x) {
-      if (!excluded_headers.includes(y))
-      {
-        if (!headers.includes(y)) {
-          headers.push(y);
+  if (filteredData == false) {
+    text = `<div class="alert alert-secondary" role="alert">
+              <h4 class="alert-heading">No Results</h4>
+              Search returned no results or JSONPath expression has a syntax error.
+            </div>`;
+  }
+  else {
+    for (let x of filteredData) {
+      for (let y in x) {
+        if (!excluded_headers.includes(y))
+        {
+          if (!headers.includes(y)) {
+            headers.push(y);
+          }
         }
       }
     }
-  }
 
-  for (let x of header_order) {
-    if (headers.includes(x)) {
-      text += '<th>' + x + '</th>';
-      ordered_headers.push(x)
+    for (let x of header_order) {
+      if (headers.includes(x)) {
+        text += '<th>' + x + '</th>';
+        ordered_headers.push(x)
+      }
+    }
+
+    for (let x of filteredData) {
+      text += '<tr>';
+      for (let y of ordered_headers) {
+        text += '<td>' + (y in x ? x[y] : '---' ) + '</td>';
+      }
+      text += '</tr>';
     }
   }
 
-  for (let x of filteredData) {
-    text += '<tr>';
-    for (let y of ordered_headers) {
-      text += '<td>' + x[y] + '</td>';
-    }
-    text += '</tr>';
-  }
   document.getElementById('results').innerHTML = text;
 }
 </script>

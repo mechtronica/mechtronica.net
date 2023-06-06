@@ -2235,5 +2235,95 @@
         "size": "L",
         "effect": "Winch 50 tons",
         "description": ""
+    },
+    {
+        "msrp": "2000",
+        "type": "Tank",
+        "manufacturer": "Various",
+        "name": "Large Ethanol Tank",
+        "fuel": "Ethanol",
+        "size": "L",
+        "capacity": "60"
+    },
+    {
+        "msrp": "2000",
+        "type": "Tank",
+        "manufacturer": "Various",
+        "name": "Large Hydrogen Tank",
+        "fuel": "Hydrogen",
+        "size": "L",
+        "capacity": "20"
+    },
+    {
+        "msrp": "2000",
+        "type": "Tank",
+        "manufacturer": "Various",
+        "name": "Large Lithium Ion Battery",
+        "fuel": "Electric",
+        "size": "L",
+        "capacity": "40"
+    },
+    {
+        "msrp": "2000",
+        "type": "Tank",
+        "manufacturer": "Various",
+        "name": "Large Methane Tank",
+        "fuel": "Methane",
+        "size": "L",
+        "capacity": "80"
+    },
+    {
+        "msrp": "2000",
+        "type": "Tank",
+        "manufacturer": "Various",
+        "name": "Large Reactor Vessel",
+        "fuel": "Nuclear",
+        "size": "L",
+        "capacity": "100"
+    },
+    {
+        "msrp": "1000",
+        "type": "Tank",
+        "manufacturer": "Various",
+        "name": "Small Ethanol Tank",
+        "fuel": "Ethanol",
+        "size": "S",
+        "capacity": "30"
+    },
+    {
+        "msrp": "1000",
+        "type": "Tank",
+        "manufacturer": "Various",
+        "name": "Small Hydrogen Tank",
+        "fuel": "Hydrogen",
+        "size": "S",
+        "capacity": "10"
+    },
+    {
+        "msrp": "1000",
+        "type": "Tank",
+        "manufacturer": "Various",
+        "name": "Small Lithium Ion Battery",
+        "fuel": "Electric",
+        "size": "S",
+        "capacity": "20"
+    },
+    {
+        "msrp": "1000",
+        "type": "Tank",
+        "manufacturer": "Various",
+        "name": "Small Methane Tank",
+        "fuel": "Methane",
+        "size": "S",
+        "capacity": "40"
+    },
+    {
+        "msrp": "1000",
+        "type": "Tank",
+        "manufacturer": "Various",
+        "name": "Small Reactor Vessel",
+        "fuel": "Nuclear",
+        "size": "S",
+        "capacity": "60"
     }
 ]
