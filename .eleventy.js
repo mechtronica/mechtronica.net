@@ -11,7 +11,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('images');
     eleventyConfig.addPassthroughCopy('fonts');
     eleventyConfig.addPassthroughCopy('character-sheets/*.pdf');
-    eleventyConfig.addPassthroughCopy('mechdb/parts_database.json');
+    eleventyConfig.addPassthroughCopy('mechdb/core-parts.json');
     eleventyConfig.addPassthroughCopy('jsonpath-0.8.0.js');
     eleventyConfig.addPassthroughCopy('custom-variables.css');
     eleventyConfig.addPassthroughCopy('lore/planets.json');
