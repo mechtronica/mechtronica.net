@@ -11,6 +11,75 @@
         "pwr": "-2",
         "cool": "2",
         "cpu": "-1",
+        "slots": {
+            "T1": {
+                "size": "L",
+                "hit": [
+                    1,
+                    20
+                ]
+            },
+            "T2": {
+                "size": "L",
+                "hit": [
+                    21,
+                    40
+                ]
+            },
+            "T3": {
+                "size": "S",
+                "hit": [
+                    41,
+                    45
+                ]
+            },
+            "T4": {
+                "size": "S",
+                "hit": [
+                    46,
+                    55
+                ]
+            },
+            "T5": {
+                "size": "S",
+                "hit": [
+                    56,
+                    60
+                ]
+            },
+            "JL": {
+                "hit": [
+                    1,
+                    20
+                ]
+            },
+            "JR": {
+                "hit": [
+                    1,
+                    20
+                ]
+            },
+            "L1": {
+                "size": "S",
+                "hit": [
+                    21,
+                    55
+                ]
+            },
+            "R1": {
+                "size": "S",
+                "hit": [
+                    21,
+                    55
+                ]
+            },
+            "JB": {
+                "hit": [
+                    1,
+                    30
+                ]
+            }
+        },
         "description": "Remarkably light weight for it's size, the Albatross is an impressive feat of structural engineering.",
         "class": "Light"
     },
@@ -26,6 +95,75 @@
         "pwr": "-3",
         "cool": "3",
         "cpu": "-2",
+        "slots": {
+            "T1": {
+                "size": "S",
+                "hit": [
+                    1,
+                    12
+                ]
+            },
+            "T2": {
+                "size": "S",
+                "hit": [
+                    13,
+                    24
+                ]
+            },
+            "T3": {
+                "size": "S",
+                "hit": [
+                    25,
+                    36
+                ]
+            },
+            "T4": {
+                "size": "S",
+                "hit": [
+                    37,
+                    48
+                ]
+            },
+            "T5": {
+                "size": "S",
+                "hit": [
+                    49,
+                    60
+                ]
+            },
+            "JL": {
+                "hit": [
+                    1,
+                    15
+                ]
+            },
+            "JR": {
+                "hit": [
+                    1,
+                    15
+                ]
+            },
+            "L1": {
+                "size": "S",
+                "hit": [
+                    16,
+                    45
+                ]
+            },
+            "R1": {
+                "size": "S",
+                "hit": [
+                    16,
+                    45
+                ]
+            },
+            "JB": {
+                "hit": [
+                    1,
+                    30
+                ]
+            }
+        },
         "description": "Signature frame of Familiar Industries; built for speed and stealth ops.",
         "class": "Light"
     },
@@ -41,6 +179,75 @@
         "pwr": "-1",
         "cool": "4",
         "cpu": "-1",
+        "slots": {
+            "T1": {
+                "size": "S",
+                "hit": [
+                    1,
+                    10
+                ]
+            },
+            "T2": {
+                "size": "S",
+                "hit": [
+                    11,
+                    20
+                ]
+            },
+            "T3": {
+                "size": "S",
+                "hit": [
+                    21,
+                    30
+                ]
+            },
+            "T4": {
+                "size": "L",
+                "hit": [
+                    31,
+                    50
+                ]
+            },
+            "T5": {
+                "size": "S",
+                "hit": [
+                    51,
+                    60
+                ]
+            },
+            "JL": {
+                "hit": [
+                    1,
+                    20
+                ]
+            },
+            "JR": {
+                "hit": [
+                    1,
+                    20
+                ]
+            },
+            "L1": {
+                "size": "S",
+                "hit": [
+                    21,
+                    50
+                ]
+            },
+            "R1": {
+                "size": "S",
+                "hit": [
+                    21,
+                    50
+                ]
+            },
+            "JB": {
+                "hit": [
+                    1,
+                    30
+                ]
+            }
+        },
         "description": "The smallest in Protos frame lineup, the MC1 provides dexterity while still maintaining their signature durability.",
         "class": "Light"
     },
@@ -56,6 +263,96 @@
         "pwr": "-3",
         "cool": "3",
         "cpu": "-1",
+        "slots": {
+            "T1": {
+                "size": "S",
+                "hit": [
+                    1,
+                    10
+                ]
+            },
+            "T2": {
+                "size": "L",
+                "hit": [
+                    11,
+                    25
+                ]
+            },
+            "T3": {
+                "size": "S",
+                "hit": [
+                    26,
+                    35
+                ]
+            },
+            "T4": {
+                "size": "S",
+                "hit": [
+                    36,
+                    45
+                ]
+            },
+            "T5": {
+                "size": "L",
+                "hit": [
+                    46,
+                    60
+                ]
+            },
+            "T6": {
+                "size": "S",
+                "hit": [
+                    61,
+                    70
+                ]
+            },
+            "JL": {
+                "hit": [
+                    1,
+                    25
+                ]
+            },
+            "JR": {
+                "hit": [
+                    1,
+                    25
+                ]
+            },
+            "L1": {
+                "size": "S",
+                "hit": [
+                    26,
+                    45
+                ]
+            },
+            "R1": {
+                "size": "S",
+                "hit": [
+                    26,
+                    45
+                ]
+            },
+            "L2": {
+                "size": "S",
+                "hit": [
+                    45,
+                    65
+                ]
+            },
+            "R2": {
+                "size": "S",
+                "hit": [
+                    45,
+                    65
+                ]
+            },
+            "JB": {
+                "hit": [
+                    1,
+                    40
+                ]
+            }
+        },
         "description": "A classic early mech design, the Echo I is highly sought after by collectors.",
         "class": "Standard"
     },
@@ -71,6 +368,96 @@
         "pwr": "-5",
         "cool": "5",
         "cpu": "-2",
+        "slots": {
+            "T1": {
+                "size": "L",
+                "hit": [
+                    1,
+                    15
+                ]
+            },
+            "T2": {
+                "size": "L",
+                "hit": [
+                    16,
+                    30
+                ]
+            },
+            "T3": {
+                "size": "L",
+                "hit": [
+                    31,
+                    45
+                ]
+            },
+            "T4": {
+                "size": "S",
+                "hit": [
+                    46,
+                    50
+                ]
+            },
+            "T5": {
+                "size": "L",
+                "hit": [
+                    51,
+                    65
+                ]
+            },
+            "T6": {
+                "size": "S",
+                "hit": [
+                    66,
+                    70
+                ]
+            },
+            "JL": {
+                "hit": [
+                    1,
+                    20
+                ]
+            },
+            "JR": {
+                "hit": [
+                    1,
+                    20
+                ]
+            },
+            "L1": {
+                "size": "L",
+                "hit": [
+                    21,
+                    45
+                ]
+            },
+            "R1": {
+                "size": "L",
+                "hit": [
+                    21,
+                    45
+                ]
+            },
+            "L2": {
+                "size": "S",
+                "hit": [
+                    46,
+                    65
+                ]
+            },
+            "R2": {
+                "size": "S",
+                "hit": [
+                    46,
+                    65
+                ]
+            },
+            "JB": {
+                "hit": [
+                    1,
+                    40
+                ]
+            }
+        },
         "description": "A simple, well designed frame, the Black Mare has unique organic shapes that make it stand out.",
         "class": "Standard"
     },
@@ -86,6 +473,96 @@
         "pwr": "-4",
         "cool": "3",
         "cpu": "-2",
+        "slots": {
+            "T1": {
+                "size": "S",
+                "hit": [
+                    1,
+                    5
+                ]
+            },
+            "T2": {
+                "size": "L",
+                "hit": [
+                    6,
+                    15
+                ]
+            },
+            "T3": {
+                "size": "S",
+                "hit": [
+                    16,
+                    20
+                ]
+            },
+            "T4": {
+                "size": "L",
+                "hit": [
+                    21,
+                    40
+                ]
+            },
+            "T5": {
+                "size": "S",
+                "hit": [
+                    41,
+                    50
+                ]
+            },
+            "T6": {
+                "size": "L",
+                "hit": [
+                    51,
+                    70
+                ]
+            },
+            "JL": {
+                "hit": [
+                    1,
+                    20
+                ]
+            },
+            "JR": {
+                "hit": [
+                    1,
+                    20
+                ]
+            },
+            "L1": {
+                "size": "S",
+                "hit": [
+                    21,
+                    40
+                ]
+            },
+            "R1": {
+                "size": "S",
+                "hit": [
+                    21,
+                    40
+                ]
+            },
+            "L2": {
+                "size": "L",
+                "hit": [
+                    41,
+                    65
+                ]
+            },
+            "R2": {
+                "size": "L",
+                "hit": [
+                    41,
+                    65
+                ]
+            },
+            "JB": {
+                "hit": [
+                    1,
+                    40
+                ]
+            }
+        },
         "description": "One of Nadornia's most popular frames, the Hellion Mark 2 improves on the balance and structure of it's predecessor.",
         "class": "Standard"
     },
@@ -101,6 +578,96 @@
         "pwr": "-3",
         "cool": "2",
         "cpu": "-2",
+        "slots": {
+            "T1": {
+                "size": "S",
+                "hit": [
+                    1,
+                    10
+                ]
+            },
+            "T2": {
+                "size": "L",
+                "hit": [
+                    11,
+                    30
+                ]
+            },
+            "T3": {
+                "size": "S",
+                "hit": [
+                    31,
+                    40
+                ]
+            },
+            "T4": {
+                "size": "L",
+                "hit": [
+                    41,
+                    50
+                ]
+            },
+            "T5": {
+                "size": "S",
+                "hit": [
+                    51,
+                    60
+                ]
+            },
+            "T6": {
+                "size": "L",
+                "hit": [
+                    61,
+                    70
+                ]
+            },
+            "JL": {
+                "hit": [
+                    1,
+                    20
+                ]
+            },
+            "JR": {
+                "hit": [
+                    1,
+                    20
+                ]
+            },
+            "L1": {
+                "size": "S",
+                "hit": [
+                    21,
+                    40
+                ]
+            },
+            "R1": {
+                "size": "S",
+                "hit": [
+                    21,
+                    40
+                ]
+            },
+            "L2": {
+                "size": "S",
+                "hit": [
+                    41,
+                    70
+                ]
+            },
+            "R2": {
+                "size": "S",
+                "hit": [
+                    41,
+                    70
+                ]
+            },
+            "JB": {
+                "hit": [
+                    1,
+                    40
+                ]
+            }
+        },
         "description": "The prototypical mech frame, and one of Protos first, the MB7 continues to be a standard for mechaneers everywhere.",
         "class": "Standard"
     },
@@ -116,6 +683,96 @@
         "pwr": "-4",
         "cool": "2",
         "cpu": "-1",
+        "slots": {
+            "T1": {
+                "size": "L",
+                "hit": [
+                    1,
+                    15
+                ]
+            },
+            "T2": {
+                "size": "S",
+                "hit": [
+                    16,
+                    25
+                ]
+            },
+            "T3": {
+                "size": "L",
+                "hit": [
+                    26,
+                    40
+                ]
+            },
+            "T4": {
+                "size": "L",
+                "hit": [
+                    41,
+                    50
+                ]
+            },
+            "T5": {
+                "size": "L",
+                "hit": [
+                    51,
+                    60
+                ]
+            },
+            "T6": {
+                "size": "L",
+                "hit": [
+                    61,
+                    70
+                ]
+            },
+            "JL": {
+                "hit": [
+                    1,
+                    25
+                ]
+            },
+            "JR": {
+                "hit": [
+                    1,
+                    25
+                ]
+            },
+            "L1": {
+                "size": "S",
+                "hit": [
+                    26,
+                    45
+                ]
+            },
+            "R1": {
+                "size": "S",
+                "hit": [
+                    26,
+                    45
+                ]
+            },
+            "L2": {
+                "size": "L",
+                "hit": [
+                    46,
+                    70
+                ]
+            },
+            "R2": {
+                "size": "L",
+                "hit": [
+                    46,
+                    70
+                ]
+            },
+            "JB": {
+                "hit": [
+                    1,
+                    45
+                ]
+            }
+        },
         "description": "The bigger cousin of the MB7, this frame provides all the benefits with some extra headroom.",
         "class": "Standard"
     },
@@ -131,6 +788,117 @@
         "pwr": "-7",
         "cool": "4",
         "cpu": "-1",
+        "slots": {
+            "T1": {
+                "size": "L",
+                "hit": [
+                    1,
+                    20
+                ]
+            },
+            "T2": {
+                "size": "L",
+                "hit": [
+                    21,
+                    40
+                ]
+            },
+            "T3": {
+                "size": "S",
+                "hit": [
+                    41,
+                    45
+                ]
+            },
+            "T4": {
+                "size": "S",
+                "hit": [
+                    46,
+                    50
+                ]
+            },
+            "T5": {
+                "size": "L",
+                "hit": [
+                    51,
+                    60
+                ]
+            },
+            "T6": {
+                "size": "L",
+                "hit": [
+                    61,
+                    70
+                ]
+            },
+            "T7": {
+                "size": "L",
+                "hit": [
+                    71,
+                    80
+                ]
+            },
+            "JL": {
+                "hit": [
+                    1,
+                    30
+                ]
+            },
+            "JR": {
+                "hit": [
+                    1,
+                    30
+                ]
+            },
+            "L1": {
+                "size": "L",
+                "hit": [
+                    31,
+                    50
+                ]
+            },
+            "R1": {
+                "size": "L",
+                "hit": [
+                    31,
+                    50
+                ]
+            },
+            "L2": {
+                "size": "L",
+                "hit": [
+                    51,
+                    75
+                ]
+            },
+            "R2": {
+                "size": "L",
+                "hit": [
+                    51,
+                    75
+                ]
+            },
+            "JB": {
+                "hit": [
+                    1,
+                    30
+                ]
+            },
+            "B1": {
+                "size": "S",
+                "hit": [
+                    31,
+                    50
+                ]
+            },
+            "B2": {
+                "size": "S",
+                "hit": [
+                    51,
+                    70
+                ]
+            }
+        },
         "description": "The Manticore is a towering frame with spiked rims that are known to rip melee weapons and puncture plating.",
         "class": "Heavy"
     },
@@ -146,6 +914,117 @@
         "pwr": "-9",
         "cool": "2",
         "cpu": "-2",
+        "slots": {
+            "T1": {
+                "size": "S",
+                "hit": [
+                    1,
+                    10
+                ]
+            },
+            "T2": {
+                "size": "S",
+                "hit": [
+                    11,
+                    20
+                ]
+            },
+            "T3": {
+                "size": "L",
+                "hit": [
+                    21,
+                    40
+                ]
+            },
+            "T4": {
+                "size": "L",
+                "hit": [
+                    41,
+                    60
+                ]
+            },
+            "T5": {
+                "size": "L",
+                "hit": [
+                    61,
+                    70
+                ]
+            },
+            "T6": {
+                "size": "L",
+                "hit": [
+                    71,
+                    80
+                ]
+            },
+            "T7": {
+                "size": "L",
+                "hit": [
+                    81,
+                    90
+                ]
+            },
+            "JL": {
+                "hit": [
+                    1,
+                    30
+                ]
+            },
+            "JR": {
+                "hit": [
+                    1,
+                    30
+                ]
+            },
+            "L1": {
+                "size": "L",
+                "hit": [
+                    31,
+                    55
+                ]
+            },
+            "R1": {
+                "size": "L",
+                "hit": [
+                    31,
+                    55
+                ]
+            },
+            "L2": {
+                "size": "L",
+                "hit": [
+                    56,
+                    85
+                ]
+            },
+            "R2": {
+                "size": "L",
+                "hit": [
+                    56,
+                    85
+                ]
+            },
+            "JB": {
+                "hit": [
+                    1,
+                    30
+                ]
+            },
+            "B1": {
+                "size": "S",
+                "hit": [
+                    31,
+                    50
+                ]
+            },
+            "B2": {
+                "size": "S",
+                "hit": [
+                    51,
+                    70
+                ]
+            }
+        },
         "description": "A massive mining rig frame, the Hyper Rig 3500 is still used to this day in large mining operations.",
         "class": "Heavy"
     },
@@ -161,6 +1040,117 @@
         "pwr": "-6",
         "cool": "3",
         "cpu": "-1",
+        "slots": {
+            "T1": {
+                "size": "L",
+                "hit": [
+                    1,
+                    15
+                ]
+            },
+            "T2": {
+                "size": "L",
+                "hit": [
+                    16,
+                    30
+                ]
+            },
+            "T3": {
+                "size": "L",
+                "hit": [
+                    31,
+                    40
+                ]
+            },
+            "T4": {
+                "size": "L",
+                "hit": [
+                    41,
+                    50
+                ]
+            },
+            "T5": {
+                "size": "L",
+                "hit": [
+                    51,
+                    65
+                ]
+            },
+            "T6": {
+                "size": "S",
+                "hit": [
+                    66,
+                    75
+                ]
+            },
+            "T7": {
+                "size": "L",
+                "hit": [
+                    76,
+                    90
+                ]
+            },
+            "JL": {
+                "hit": [
+                    1,
+                    20
+                ]
+            },
+            "JR": {
+                "hit": [
+                    1,
+                    20
+                ]
+            },
+            "L1": {
+                "size": "L",
+                "hit": [
+                    21,
+                    50
+                ]
+            },
+            "R1": {
+                "size": "L",
+                "hit": [
+                    21,
+                    50
+                ]
+            },
+            "L2": {
+                "size": "L",
+                "hit": [
+                    51,
+                    75
+                ]
+            },
+            "R2": {
+                "size": "L",
+                "hit": [
+                    51,
+                    75
+                ]
+            },
+            "JB": {
+                "hit": [
+                    1,
+                    30
+                ]
+            },
+            "B1": {
+                "size": "S",
+                "hit": [
+                    31,
+                    50
+                ]
+            },
+            "B2": {
+                "size": "S",
+                "hit": [
+                    51,
+                    70
+                ]
+            }
+        },
         "description": "Protos largest frame standing at 50 ft, the MA9 is big enough to handle any task.",
         "class": "Heavy"
     },
