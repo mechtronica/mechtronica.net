@@ -23,4 +23,9 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addShortcode('keyword', function(word, glossary) {
       return '<b class="keyword" data-toggle="tooltip" data-title="' + glossary[word] + '">' + word + '</b>'
     });
+    eleventyConfig.addFilter('getObjectsByAttribute', function(objects, attribute, value) {
+      return objects.filter(function(obj) {
+        return obj.getAttribute(attribute) == value
+      });
+    });
 };
