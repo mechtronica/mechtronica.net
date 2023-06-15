@@ -18,6 +18,9 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy({'_data/parts.json': 'mechdb/parts.json'});
     eleventyConfig.addPassthroughCopy({'_data/planets.json': 'lore/planets.json'});
+
+    eleventyConfig.addPassthroughCopy('images/*.svg');
+    eleventyConfig.addPassthroughCopy('images/planets/*.svg');
     
     eleventyConfig.setNunjucksEnvironmentOptions({
       throwOnUndefined: true

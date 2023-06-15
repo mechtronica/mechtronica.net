@@ -56,12 +56,16 @@ header_order = [
         "dmg",
         "capacity",
         "targeting bonus",
+        "slots",
         "special",
         "effect",
         "description"
 ];
 
 type_select = document.getElementById('type-select')
+
+modal_title = document.getElementById('modal-title')
+modal_content = document.getElementById('modal-content')
 
 mechdb_search = document.getElementById('mechdb-search')
 mechdb_search.addEventListener('keypress', function(event) {
@@ -74,7 +78,7 @@ mechdb_search.addEventListener('keypress', function(event) {
   }
 }); 
 
-loadDataFile('/mechdb/core-parts.json');
+loadDataFile('/mechdb/parts.json');
 
 function loadDataFile(path) {
   fetch(path)
@@ -127,6 +131,7 @@ function showJson(query) {
             </div>`;
   }
   else {
+
     for (let x of filteredData) {
       for (let y in x) {
         if (!excluded_headers.includes(y))
@@ -148,13 +153,23 @@ function showJson(query) {
     for (let x of filteredData) {
       text += '<tr>';
       for (let y of ordered_headers) {
-        text += '<td>' + (y in x ? x[y] : '---' ) + '</td>';
+        if (y == 'slots' && y in x) {
+          text += '<td><a href="#modal-1" onclick="showFrameSlots(\'' + x.name + '\')">show</a></td>';
+        }
+        else {
+          text += '<td>' + (y in x ? x[y] : '---' ) + '</td>';
+        }
       }
       text += '</tr>';
     }
   }
 
   document.getElementById('results').innerHTML = text;
+}
+
+function showFrameSlots(name) {
+  modal_title.innerHTML = name;
+  modal_content.innerHTML = '<img src="{{site.url}}/images/frames/' + encodeURIComponent(name) + '.svg"></img>'
 }
 </script>
 <script src='{{site.url}}/jsonpath-0.8.0.js'></script>
