@@ -3132,7 +3132,7 @@
         "msrp": "5500",
         "type": "Equipment",
         "manufacturer": "Protos Industries",
-        "name": "RJ15",
+        "name": "JR15",
         "class": "Rocket",
         "p-type": "S",
         "pwr": "-5",

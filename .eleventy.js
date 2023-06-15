@@ -8,6 +8,17 @@ module.exports = function(eleventyConfig) {
       breaks: true,
       linkify: true
     }
+    eleventyConfig.addTemplateFormats('svg');
+    eleventyConfig.addExtension('svg', {
+      outputFileExtension: 'svg',
+      key: 'html'
+      /*compile: async (inputContent) => {
+        let output = nunjucks.renderString(inputContent)
+        return async () => {
+          return output;
+        };
+      }*/
+    });
     const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs)
 
     eleventyConfig.addPassthroughCopy('halfmoonui');
