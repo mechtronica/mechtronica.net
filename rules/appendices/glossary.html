@@ -7,7 +7,7 @@ tags: rules_page
 
 <h2> Glossary </h2>
 <table class='table'>
-    {% for k, v in glossary %}
+    {% for k, v in glossary | dictsort %}
     <tr>
         <td> {{ k }} </td> <td> {{ v }} </td>
     </tr>
