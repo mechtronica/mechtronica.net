@@ -24,5 +24,6 @@
     "Spare Parts": "Bits and pieces used to repair mech components.",
     "Toolkit": "A set of hand tools used for repairing mechs.",
     "Used Resources": "See Resources. The amount of each resource used by constant-draw components.",
-    "Power Type": "Power comes in 3 different types: Electrical, Mechanical, and Steam."
+    "Power Type": "Power comes in 3 different types: Electrical, Mechanical, and Steam.",
+    "Fuel Type": "Fuel comes in 5 different types: Hydrogen, Lithium Ion, Ethanol, Methane, and Nuclear."
 }
