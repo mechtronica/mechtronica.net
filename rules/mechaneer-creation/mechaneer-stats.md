@@ -20,4 +20,10 @@ Your mechaneer has 6 different stats to quanitfy their capabilities as follows:
 
 {.table}
 
-To roll for stats simply roll 3d20+40. Do this 6 times and assign each number to one your stats
+### Creating Stats
+
+To roll for stats simply roll 3d20+40. Do this 6 times and assign each number to one your stats.
+
+### Stat Checks
+
+Your GM may ask you to do a stat check to see if you succeed at a task requiring one of your Mechaneer's stats. The GM will tell you which stat to roll for and then you simply roll 1d100, if the result is less than your stat then you succeed (so smaller rolls are better).
