@@ -10,7 +10,7 @@ tags: lore_page
     <tr>
         <th> Name </th> <th> Faction </th> <th> Description </th>
     </tr>
-    {% for x in manufacturers %}
+    {% for x in manufacturers | sort(false, false, 'name') %}
     <tr>
         <td> {{x['name']}} </td> <td> {{x['faction']}} </td> <td> {{x['description']}} </td>
     </tr>
