@@ -23,7 +23,7 @@
         "atmosphere": "Breathable",
         "exports": "Water, salts, seafood",
         "weather": "Moderate winds, occasional storms, tropical climate",
-        "description": "The surface of this planet is covered in water. The water is teeming with life and, although beautiful, sharp drop offs. The underwater cliffs and canyons act as treacherous terrain, as mechs can easily plunge to their doom while attempting to cross. The planet is home to the decimated moon Erimos.",
+        "description": "The surface of this planet is covered in water. The water is teeming with life and, although beautiful, sharp drop offs. The underwater cliffs and canyons act as treacherous terrain, as mechs can easily plunge to their doom while attempting to cross. Many different creatures lurk in the depths. The planet is home to the decimated moon Erimos; once a small rocky moon with a few underground outposts, the moons surface was obliterated as a powerful show of force during the war. Erimos' exposed mineral rich core makes it a major mining location.",
         "img": "/images/planets/okeanos.svg"
     },
     "erimos": 
