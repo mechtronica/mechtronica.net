@@ -21,6 +21,16 @@
     <!-- Google Material Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   
+    <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 1,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 48
+    }
+    </style>
+
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
@@ -83,7 +93,14 @@
               </details>
             {% endif %}
           {% endfor %}
-
+          <div class="d-flex flex-row justify-content-center m-20">
+            <a class="text hidden-dm" style="color: #000;" href="mailto:feedback@mechtronica.net"><span class="material-symbols-outlined w-25 mx-10"> mail </span></a>
+            <a class="text hidden-lm" style="color: #fff;" href="mailto:feedback@mechtronica.net"><span class="material-symbols-outlined w-25 mx-10"> mail </span></a>
+            <a class="hidden-dm" href="https://github.com/mechtronica/mechtronica.net/issues"><img class="w-25 mx-10" src="{{site.url}}/images/github-mark.svg"/></a>
+            <a class="hidden-lm" href="https://github.com/mechtronica/mechtronica.net/issues"><img class="w-25 mx-10" src="{{site.url}}/images/github-mark-white.svg"/></a>
+            <a class="hidden-dm" href="https://discord.gg/pgJV39T7"><img class="w-25 mx-10" src="{{site.url}}/images/discord-mark-black.svg"/></a>
+            <a class="hidden-lm" href="https://discord.gg/pgJV39T7"><img class="w-25 mx-10" src="{{site.url}}/images/discord-mark-white.svg"/></a>
+          </div>
         </div>
       </div>
       <!-- Sidebar end -->
