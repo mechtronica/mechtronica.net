@@ -21,6 +21,16 @@
     <!-- Google Material Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   
+    <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 1,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 48
+    }
+    </style>
+
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
@@ -29,6 +39,18 @@
   <body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-set-preferred-theme-onload="true">
     <!-- Modals go here -->
     <!-- Reference: https://www.gethalfmoon.com/docs/modal -->
+
+    <div class="modal" id="modal-1" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content modal-content-media">
+          <a href="#" class="close" role="button" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </a>
+          <h5 class="modal-title" id="modal-title"></h5>
+          <span id="modal-content"></span>
+        </div>
+      </div>
+    </div>
 
     <!-- Page wrapper start -->
     <div class="page-wrapper with-sidebar" data-sidebar-type="full-height">
@@ -43,7 +65,7 @@
 
           <!-- Sidebar brand -->
           <a href="#" class="sidebar-brand">
-            <img src="https://mechtronica.net/images/logo.svg" alt="Mechtronica">
+            <img class="m-0" src="https://mechtronica.net/images/logo-beta.svg" alt="Mechtronica">
           </a>
           <br/>
 
@@ -76,6 +98,14 @@
                       <a href="https://mechtronica.net/lore/solar-system/" class="sidebar-link ml-10">Solar System</a>
                     
                   
+                    
+                      <a href="https://mechtronica.net/lore/factions/" class="sidebar-link ml-10">Factions</a>
+                    
+                  
+                    
+                      <a href="https://mechtronica.net/lore/manufacturers/" class="sidebar-link ml-10">Manufacturers</a>
+                    
+                  
                 </div>
               </details>
             
@@ -99,11 +129,15 @@
                     
                         <h6 class="sidebar-title">Mech Building</h6>
                       
+                        <a href="https://mechtronica.net/rules/build-overview/" class="sidebar-link ml-10">Overview</a>
+                      
+                        <a href="https://mechtronica.net/rules/component-details/" class="sidebar-link ml-10">Components</a>
+                      
                         <a href="https://mechtronica.net/rules/build-planning/" class="sidebar-link ml-10">Planning</a>
                       
-                        <a href="https://mechtronica.net/rules/selecting-components/" class="sidebar-link ml-10">Selecting Components</a>
-                      
                         <a href="https://mechtronica.net/rules/placing-components/" class="sidebar-link ml-10">Placing Components</a>
+                      
+                        <a href="https://mechtronica.net/rules/build-calculations/" class="sidebar-link ml-10">Calculations</a>
                       
                         <a href="https://mechtronica.net/rules/build-validating/" class="sidebar-link ml-10">Validating</a>
                       
@@ -136,10 +170,6 @@
                     
                         <h6 class="sidebar-title">Appendices</h6>
                       
-                        <a href="https://mechtronica.net/rules/assumptions/" class="sidebar-link ml-10">Assumptions</a>
-                      
-                        <a href="https://mechtronica.net/rules/tips-for-gms/" class="sidebar-link ml-10">Tips for GMs</a>
-                      
                         <a href="https://mechtronica.net/rules/glossary/" class="sidebar-link ml-10">Glossary</a>
                       
                     
@@ -148,7 +178,15 @@
               </details>
             
           
-
+          <div class="d-flex flex-row justify-content-center m-20">
+            <a class="text hidden-dm" style="color: #000;" href="mailto:feedback@mechtronica.net"><span class="material-symbols-outlined w-25 mx-10"> mail </span></a>
+            <a class="text hidden-lm" style="color: #fff;" href="mailto:feedback@mechtronica.net"><span class="material-symbols-outlined w-25 mx-10"> mail </span></a>
+            <a class="hidden-dm" href="https://github.com/mechtronica/mechtronica.net/issues"><img class="w-25 mx-10" src="https://mechtronica.net/images/github-mark.svg"/></a>
+            <a class="hidden-lm" href="https://github.com/mechtronica/mechtronica.net/issues"><img class="w-25 mx-10" src="https://mechtronica.net/images/github-mark-white.svg"/></a>
+            <a class="hidden-dm" href="https://discord.gg/VPzzYHqxFy"><img class="w-25 mx-10" src="https://mechtronica.net/images/discord-mark-black.svg"/></a>
+            <a class="hidden-lm" href="https://discord.gg/VPzzYHqxFy"><img class="w-25 mx-10" src="https://mechtronica.net/images/discord-mark-white.svg"/></a>
+          </div>
+          <p class="font-size-14 text-center"> The website is licensed under <br> <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode"> Creative Commons CC BY-SA </a></p>
         </div>
       </div>
       <!-- Sidebar end -->
@@ -165,26 +203,23 @@
 <h3>Attack Structure</h3>
 <p>Attacking comes in a few steps like so:</p>
 <ol>
-<li><strong>Aiming</strong>:<br>
-Select the section on the opponent mech to aim for.</li>
-<li><strong>Firing</strong>:<br>
-Roll 1d100. You may then adjust this number up or down up to the targeting bonus of your weapon.<br>
-If the roll falls within any of the section's roll ranges then you hit the corresponding slot.</li>
-<li><strong>Dealing Damage</strong>:<br>
-After a successful attack, deal damage to your opponent.
+<li><strong>Aiming</strong>: Select the section on the opponent mech to aim for.</li>
+<li><strong>Firing</strong>: Roll 1d100. You may then adjust this number up or down up to the targeting bonus of your weapon. If the roll falls within any of the section's roll ranges then you hit the corresponding slot.</li>
+<li><strong>Dealing Damage</strong>: After a successful attack, deal damage to your opponent.
 <ul>
 <li>If your opponent has shields on the section you hit, deal the damage to the shields in that section.</li>
-<li>If your opponent's shields in the section you hit have been destroyed, then the component in the slot you hit is now damaged.<br>
-If the component was already damaged then it is instead now destroyed (but may be scrapped later).</li>
+<li>If your opponent's shields in the section you hit have been destroyed, then the component in the slot you hit is now damaged.</li>
+<li>If the component was already damaged then it is instead now broken (but may be scrapped later).</li>
 </ul>
 </li>
 </ol>
 <h3>Consequences</h3>
 <p>Losing some components will have severe consequences for you.<br>
-If one of your components being damaged/destroyed leaves you with too few resources to power your constant draw components, your mech will no longer function at all.<br>
-At that point you will either have to disable some components or make repairs, in order to get back on your feet.</p>
+If one of your components being damaged or broken (see <a href="/rules/component-states/">Component States</a>) leaves you with too few resources to power your constant draw components, your mech will no longer function at all.<br>
+If a joint is broken you can no longer use attachments in that joint. If the broken joint is your in your legs section you can no longer move.<br>
+If your mech is down due to damaged or broken components, you will either have to disable some components or make repairs in order to get back on your feet.</p>
 <h3>Dying</h3>
-<p>If your cabin is destroyed, and no other special circumstances or effects prevent it, your mechaneer dies.</p>
+<p>If your cabin is broken, and no other special circumstances or effects prevent it, your mechaneer dies.</p>
 
         </div>
       </div>

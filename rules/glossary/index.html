@@ -21,6 +21,16 @@
     <!-- Google Material Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   
+    <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 1,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 48
+    }
+    </style>
+
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
@@ -29,6 +39,18 @@
   <body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-set-preferred-theme-onload="true">
     <!-- Modals go here -->
     <!-- Reference: https://www.gethalfmoon.com/docs/modal -->
+
+    <div class="modal" id="modal-1" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content modal-content-media">
+          <a href="#" class="close" role="button" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </a>
+          <h5 class="modal-title" id="modal-title"></h5>
+          <span id="modal-content"></span>
+        </div>
+      </div>
+    </div>
 
     <!-- Page wrapper start -->
     <div class="page-wrapper with-sidebar" data-sidebar-type="full-height">
@@ -43,7 +65,7 @@
 
           <!-- Sidebar brand -->
           <a href="#" class="sidebar-brand">
-            <img src="https://mechtronica.net/images/logo.svg" alt="Mechtronica">
+            <img class="m-0" src="https://mechtronica.net/images/logo-beta.svg" alt="Mechtronica">
           </a>
           <br/>
 
@@ -76,6 +98,14 @@
                       <a href="https://mechtronica.net/lore/solar-system/" class="sidebar-link ml-10">Solar System</a>
                     
                   
+                    
+                      <a href="https://mechtronica.net/lore/factions/" class="sidebar-link ml-10">Factions</a>
+                    
+                  
+                    
+                      <a href="https://mechtronica.net/lore/manufacturers/" class="sidebar-link ml-10">Manufacturers</a>
+                    
+                  
                 </div>
               </details>
             
@@ -99,11 +129,15 @@
                     
                         <h6 class="sidebar-title">Mech Building</h6>
                       
+                        <a href="https://mechtronica.net/rules/build-overview/" class="sidebar-link ml-10">Overview</a>
+                      
+                        <a href="https://mechtronica.net/rules/component-details/" class="sidebar-link ml-10">Components</a>
+                      
                         <a href="https://mechtronica.net/rules/build-planning/" class="sidebar-link ml-10">Planning</a>
                       
-                        <a href="https://mechtronica.net/rules/selecting-components/" class="sidebar-link ml-10">Selecting Components</a>
-                      
                         <a href="https://mechtronica.net/rules/placing-components/" class="sidebar-link ml-10">Placing Components</a>
+                      
+                        <a href="https://mechtronica.net/rules/build-calculations/" class="sidebar-link ml-10">Calculations</a>
                       
                         <a href="https://mechtronica.net/rules/build-validating/" class="sidebar-link ml-10">Validating</a>
                       
@@ -136,10 +170,6 @@
                     
                         <h6 class="sidebar-title">Appendices</h6>
                       
-                        <a href="https://mechtronica.net/rules/assumptions/" class="sidebar-link ml-10">Assumptions</a>
-                      
-                        <a href="https://mechtronica.net/rules/tips-for-gms/" class="sidebar-link ml-10">Tips for GMs</a>
-                      
                         <a href="https://mechtronica.net/rules/glossary/" class="sidebar-link ml-10 active">Glossary</a>
                       
                     
@@ -148,7 +178,15 @@
               </details>
             
           
-
+          <div class="d-flex flex-row justify-content-center m-20">
+            <a class="text hidden-dm" style="color: #000;" href="mailto:feedback@mechtronica.net"><span class="material-symbols-outlined w-25 mx-10"> mail </span></a>
+            <a class="text hidden-lm" style="color: #fff;" href="mailto:feedback@mechtronica.net"><span class="material-symbols-outlined w-25 mx-10"> mail </span></a>
+            <a class="hidden-dm" href="https://github.com/mechtronica/mechtronica.net/issues"><img class="w-25 mx-10" src="https://mechtronica.net/images/github-mark.svg"/></a>
+            <a class="hidden-lm" href="https://github.com/mechtronica/mechtronica.net/issues"><img class="w-25 mx-10" src="https://mechtronica.net/images/github-mark-white.svg"/></a>
+            <a class="hidden-dm" href="https://discord.gg/VPzzYHqxFy"><img class="w-25 mx-10" src="https://mechtronica.net/images/discord-mark-black.svg"/></a>
+            <a class="hidden-lm" href="https://discord.gg/VPzzYHqxFy"><img class="w-25 mx-10" src="https://mechtronica.net/images/discord-mark-white.svg"/></a>
+          </div>
+          <p class="font-size-14 text-center"> The website is licensed under <br> <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode"> Creative Commons CC BY-SA </a></p>
         </div>
       </div>
       <!-- Sidebar end -->
@@ -165,7 +203,7 @@
 <table class='table'>
     
     <tr>
-        <td> Attachment Component </td> <td> Commonly called attachments. Components which provide a mech with a particular capability. Attachments are always excess-draw, and can be placed in a mech's arm sections (as opposed to Infrastructure components). </td>
+        <td> Attachment Component </td> <td> Commonly called attachments. Components which provide a mech with a particular capability. Attachments are always excess-draw, and can be placed in a mech&#39;s arm sections (as opposed to Infrastructure components). </td>
     </tr>
     
     <tr>
@@ -177,11 +215,7 @@
     </tr>
     
     <tr>
-        <td> Components </td> <td> The parts that make a mech operate. Components are installed in slots in your mech's Frame. </td>
-    </tr>
-    
-    <tr>
-        <td> Part Type </td> <td> Part Types describe categories of parts which share common features (such as Weapons, Cabins, or Modules) </td>
+        <td> Components </td> <td> Components are mech Parts that must be installed in slots in your mech&#39;s Frame. </td>
     </tr>
     
     <tr>
@@ -189,7 +223,19 @@
     </tr>
     
     <tr>
+        <td> Cooling </td> <td> Cooling is a resource that keeps your mech from overheating. Most parts generate heat and require cooling to operate. </td>
+    </tr>
+    
+    <tr>
         <td> Disassembling </td> <td> Reducing a component into Spare Parts. </td>
+    </tr>
+    
+    <tr>
+        <td> Effect </td> <td> Effects are special abilities a part has. For some component types there are standard effects that are referenced with a keyword. </td>
+    </tr>
+    
+    <tr>
+        <td> Equipment </td> <td> Attachment Components that aren&#39;t weapons. This includes a variety of tools, storage gear, and other bits and bobs. </td>
     </tr>
     
     <tr>
@@ -201,11 +247,7 @@
     </tr>
     
     <tr>
-        <td> Frame </td> <td> Frames are the superstructure of a mech. You attach components to a frame to build your mech. They come in three sizes:  light, standard, and heavy. </td>
-    </tr>
-    
-    <tr>
-        <td> Fuel Tank </td> <td> Fuel Tanks store fuel to be consumed by your mech's Power Plant. </td>
+        <td> Fuel Type </td> <td> Fuel comes in 5 different types: Hydrogen, Lithium Ion, Ethanol, Methane, and Nuclear. </td>
     </tr>
     
     <tr>
@@ -213,23 +255,15 @@
     </tr>
     
     <tr>
-        <td> Heavy Frame </td> <td> See Frame. Heavy Frames are very slow, but have lots of component slots. </td>
-    </tr>
-    
-    <tr>
         <td> Infrastructure Component </td> <td> Infrastructure components help a mech manage resources and operate effectively, but do not provide direct utility (as opposed to Attachment components) </td>
     </tr>
     
     <tr>
-        <td> Light Frame </td> <td> See Frame. Light Frames have the fewest components lots, but are generally much faster than Standard and Heavy Frames. </td>
+        <td> Maintenance Power (MP) </td> <td> A measure of how much repair work you can perform on a mech in a single turn. </td>
     </tr>
     
     <tr>
         <td> Mech Parameters </td> <td> Mech Parameters are the stats that describe your mech. This includes speed, height, weight, strength, and cargo capacity. </td>
-    </tr>
-    
-    <tr>
-        <td> Maintenance Power (MP) </td> <td> A measure of how much repair work you can perform on a mech in a single turn. </td>
     </tr>
     
     <tr>
@@ -241,19 +275,27 @@
     </tr>
     
     <tr>
-        <td> Equipment </td> <td> Attachment Components that aren't weapons. This includes a variety of tools, storage gear, and other bits and bobs. </td>
+        <td> Part Type </td> <td> Part Types describe categories of parts which share common features (such as Weapons, Cabins, or Modules) </td>
     </tr>
     
     <tr>
-        <td> Power </td> <td> Power is the resource that gets your mech moving. It comes in three types:  electrical, mechanical, and steam.  </td>
+        <td> Parts </td> <td> The parts that make your mech operate. This includes Frames, Plating, Modules, and all types of Components. </td>
     </tr>
     
     <tr>
-        <td> Power Plant </td> <td> Power Plants are components that consume fuel to provide your mech with Power. </td>
+        <td> Power </td> <td> Power is the resource that gets your mech moving. It comes in three types:  Electrical, Mechanical, and Steam.  </td>
     </tr>
     
     <tr>
-        <td> Resources </td> <td> Power, Cooling, and CPU:  the resources that your mech draws on to operate. </td>
+        <td> Power Type </td> <td> Power comes in 3 different types: Electrical, Mechanical, and Steam. </td>
+    </tr>
+    
+    <tr>
+        <td> Processing </td> <td> Processing is the resource that allows your mech to compute things. Most components require some amount of processing. </td>
+    </tr>
+    
+    <tr>
+        <td> Resources </td> <td> Power, Cooling, and CPU: the resources that your mech draws on to operate. </td>
     </tr>
     
     <tr>
@@ -261,7 +303,7 @@
     </tr>
     
     <tr>
-        <td> Standard Frame </td> <td> See Frame. Standard Frames provide a fair number of component slots without sacrificing too much speed. </td>
+        <td> Software </td> <td> The software your mainframe uses. This software places constraints on what cabin and modules you can use. </td>
     </tr>
     
     <tr>

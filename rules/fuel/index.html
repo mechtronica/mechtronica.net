@@ -10,7 +10,7 @@
 
     <!-- Favicon and title -->
     <link rel="icon" href="https://mechtronica.net/images/icon.svg">
-    <title> Selecting Components </title>
+    <title> Fuel </title>
 
     <!-- Halfmoon CSS -->
     <link href="https://mechtronica.net/halfmoonui/css/halfmoon-variables.min.css" rel="stylesheet" />
@@ -21,6 +21,16 @@
     <!-- Google Material Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   
+    <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 1,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 48
+    }
+    </style>
+
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
@@ -29,6 +39,18 @@
   <body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-set-preferred-theme-onload="true">
     <!-- Modals go here -->
     <!-- Reference: https://www.gethalfmoon.com/docs/modal -->
+
+    <div class="modal" id="modal-1" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content modal-content-media">
+          <a href="#" class="close" role="button" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </a>
+          <h5 class="modal-title" id="modal-title"></h5>
+          <span id="modal-content"></span>
+        </div>
+      </div>
+    </div>
 
     <!-- Page wrapper start -->
     <div class="page-wrapper with-sidebar" data-sidebar-type="full-height">
@@ -43,7 +65,7 @@
 
           <!-- Sidebar brand -->
           <a href="#" class="sidebar-brand">
-            <img src="https://mechtronica.net/images/logo.svg" alt="Mechtronica">
+            <img class="m-0" src="https://mechtronica.net/images/logo-beta.svg" alt="Mechtronica">
           </a>
           <br/>
 
@@ -76,12 +98,20 @@
                       <a href="https://mechtronica.net/lore/solar-system/" class="sidebar-link ml-10">Solar System</a>
                     
                   
+                    
+                      <a href="https://mechtronica.net/lore/factions/" class="sidebar-link ml-10">Factions</a>
+                    
+                  
+                    
+                      <a href="https://mechtronica.net/lore/manufacturers/" class="sidebar-link ml-10">Manufacturers</a>
+                    
+                  
                 </div>
               </details>
             
           
             
-              <details class="collapse-panel" open> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+              <details class="collapse-panel"> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
                 <summary class="collapse-header">
                   Rules
                 </summary>
@@ -99,11 +129,15 @@
                     
                         <h6 class="sidebar-title">Mech Building</h6>
                       
+                        <a href="https://mechtronica.net/rules/build-overview/" class="sidebar-link ml-10">Overview</a>
+                      
+                        <a href="https://mechtronica.net/rules/component-details/" class="sidebar-link ml-10">Components</a>
+                      
                         <a href="https://mechtronica.net/rules/build-planning/" class="sidebar-link ml-10">Planning</a>
                       
-                        <a href="https://mechtronica.net/rules/selecting-components/" class="sidebar-link ml-10 active">Selecting Components</a>
-                      
                         <a href="https://mechtronica.net/rules/placing-components/" class="sidebar-link ml-10">Placing Components</a>
+                      
+                        <a href="https://mechtronica.net/rules/build-calculations/" class="sidebar-link ml-10">Calculations</a>
                       
                         <a href="https://mechtronica.net/rules/build-validating/" class="sidebar-link ml-10">Validating</a>
                       
@@ -136,10 +170,6 @@
                     
                         <h6 class="sidebar-title">Appendices</h6>
                       
-                        <a href="https://mechtronica.net/rules/assumptions/" class="sidebar-link ml-10">Assumptions</a>
-                      
-                        <a href="https://mechtronica.net/rules/tips-for-gms/" class="sidebar-link ml-10">Tips for GMs</a>
-                      
                         <a href="https://mechtronica.net/rules/glossary/" class="sidebar-link ml-10">Glossary</a>
                       
                     
@@ -148,7 +178,15 @@
               </details>
             
           
-
+          <div class="d-flex flex-row justify-content-center m-20">
+            <a class="text hidden-dm" style="color: #000;" href="mailto:feedback@mechtronica.net"><span class="material-symbols-outlined w-25 mx-10"> mail </span></a>
+            <a class="text hidden-lm" style="color: #fff;" href="mailto:feedback@mechtronica.net"><span class="material-symbols-outlined w-25 mx-10"> mail </span></a>
+            <a class="hidden-dm" href="https://github.com/mechtronica/mechtronica.net/issues"><img class="w-25 mx-10" src="https://mechtronica.net/images/github-mark.svg"/></a>
+            <a class="hidden-lm" href="https://github.com/mechtronica/mechtronica.net/issues"><img class="w-25 mx-10" src="https://mechtronica.net/images/github-mark-white.svg"/></a>
+            <a class="hidden-dm" href="https://discord.gg/VPzzYHqxFy"><img class="w-25 mx-10" src="https://mechtronica.net/images/discord-mark-black.svg"/></a>
+            <a class="hidden-lm" href="https://discord.gg/VPzzYHqxFy"><img class="w-25 mx-10" src="https://mechtronica.net/images/discord-mark-white.svg"/></a>
+          </div>
+          <p class="font-size-14 text-center"> The website is licensed under <br> <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode"> Creative Commons CC BY-SA </a></p>
         </div>
       </div>
       <!-- Sidebar end -->
@@ -160,63 +198,116 @@
           <span class="sr-only">Toggle sidebar</span> <!-- sr-only = show only on screen readers -->
         </button>
         <div class="content">
-          <h2>Selecting Components</h2>
-<p>At this point you should have a basic idea of who your mechaneer is and how their mech should feel. Now it's time to dig into the details of choosing which components to use.</p>
-<p>There are a huge selection of components with a variety of different uses. Selecting just a few parts to use can seem a bit overwhelming, but with a few key concepts in mind it shouldn't be too difficult.</p>
-<h3>Basic Anatomy of a Mech Part</h3>
-<h4>Part Types</h4>
-<p>The first thing to note about any part is its <strong>Part Type</strong>. Parts fall into different categories based on their function. For example, <strong>Power Plants</strong> provide <strong>Power</strong>, <strong>Cabins</strong> keep your mechaneer cozy, and <strong>Weapons</strong> are for blowing stuff up.</p>
+          <h2>Fuel</h2>
+<p>Fuel is stored in tanks and is used on a per-day basis.<br>
+At the end of every day you use fuel equal to your <b class="keyword" data-toggle="tooltip" data-title="See Resources. The amount of each resource used by constant-draw components.">Used Resources</b> for power.<br>
+If you are using more than one fuel and/or power plant this is a little more complicated, see <a href="/rules/multiple-power-plants/">Multiple Power Plants</a>.</p>
+<h3>Fuel Types</h3>
+<p>There are 5 fuel types which are roughly on a scale of power density/efficiency from least power dense at the top to most power dense at the bottom:</p>
+<ul>
+<li>Hydrogen</li>
+<li>Lithium Ion</li>
+<li>Ethanol</li>
+<li>Methane</li>
+<li>Nuclear</li>
+</ul>
+<h3>Fuel Costs</h3>
+<p>Below are recommended fuel costs per unit for each planet and fuel type.<br>
+These are based on how inhabited the planet is and how easily accessible each fuel type is on that planet.</p>
 <table class="table">
 <thead>
 <tr>
-<th>Part Type</th>
-<th>Function</th>
+<th>Planet</th>
+<th>Hydrogen</th>
+<th>Lithium Ion</th>
+<th>Ethanol</th>
+<th>Methane</th>
+<th>Nuclear</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Frame</td>
-<td>The mech frame is the core superstructure of any mech.</td>
+<td>Erimos</td>
+<td>3</td>
+<td>4</td>
+<td>8</td>
+<td>6</td>
+<td>12</td>
 </tr>
 <tr>
-<td>Plating</td>
-<td>Plating protects a mech's components from damage.</td>
+<td>Okeanos</td>
+<td>2</td>
+<td>3</td>
+<td>6</td>
+<td>5</td>
+<td>8</td>
 </tr>
 <tr>
-<td>Cabin</td>
-<td>Cabins are the center of command and control for a mech. Mechaneers pilot their mechs from inside the cabin.</td>
+<td>Cheilos</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>4</td>
+<td>7</td>
 </tr>
 <tr>
-<td>Mainframes</td>
-<td>A mech's mainframe computer provides CPU and interacts with Modules installed in the Cabin.</td>
+<td>Megalos</td>
+<td>3</td>
+<td>3</td>
+<td>7</td>
+<td>6</td>
+<td>9</td>
 </tr>
 <tr>
-<td>Modules</td>
-<td>Modules provide special functionality to a mech, typically at the cost of some CPU. There are a large variety of Modules with unique effects.</td>
+<td>Vyssini</td>
+<td>3</td>
+<td>4</td>
+<td>8</td>
+<td>8</td>
+<td>15</td>
 </tr>
 <tr>
-<td>Power Plants</td>
-<td>A mech's power plant generates Power by using up some sort of fuel.</td>
+<td>Zounkla</td>
+<td>3</td>
+<td>3</td>
+<td>5</td>
+<td>5</td>
+<td>8</td>
 </tr>
 <tr>
-<td>Fuel Tanks</td>
-<td>Fuel tanks store fuel and supply it to power plants.</td>
+<td>Katagaida</td>
+<td>3</td>
+<td>4</td>
+<td>8</td>
+<td>7</td>
+<td>12</td>
 </tr>
 <tr>
-<td>Coolers</td>
-<td>Coolers provide Cooling to help manage heat generated by other components.</td>
+<td>Xeimonas</td>
+<td>3</td>
+<td>4</td>
+<td>8</td>
+<td>7</td>
+<td>15</td>
 </tr>
 <tr>
-<td>Weapons</td>
-<td>Weapons are for breaking things, like hostile mechs.</td>
+<td>Karvouno</td>
+<td>3</td>
+<td>4</td>
+<td>7</td>
+<td>7</td>
+<td>15</td>
 </tr>
 <tr>
-<td>Equipment</td>
-<td>Mech equipment that isn't a weapon. Includes a variety of tools, storage devices, and other bits and bobs.</td>
+<td>Efferos</td>
+<td>3</td>
+<td>4</td>
+<td>7</td>
+<td>8</td>
+<td>15</td>
 </tr>
 </tbody>
 </table>
-<h4>Constant-draw vs Excess-draw</h4>
 
         </div>
       </div>

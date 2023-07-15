@@ -31,6 +31,9 @@
     --dm-button-box-shadow-focus: rgba(0, 0, 0, 0);
     --lm-collapse-header-focus-effect-box-shadow: inset 0 0 0 0 var(--primary-color-light);
     --dm-collapse-header-focus-effect-box-shadow: inset 0 0 0 0 var(--primary-color-dark);
+
+    /* Resize alert heading to match other resized text */
+    --alert-heading-font-size: font-size: calc(1.75*var(--base-font-size));
 }
 
 h1 {

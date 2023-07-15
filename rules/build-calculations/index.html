@@ -10,7 +10,7 @@
 
     <!-- Favicon and title -->
     <link rel="icon" href="https://mechtronica.net/images/icon.svg">
-    <title> Home </title>
+    <title> Mech Stats </title>
 
     <!-- Halfmoon CSS -->
     <link href="https://mechtronica.net/halfmoonui/css/halfmoon-variables.min.css" rel="stylesheet" />
@@ -72,7 +72,7 @@
           <!-- Sidebar links and titles -->
           
             
-              <a href="https://mechtronica.net/home/" class="sidebar-link ml-10 active">Home</a>
+              <a href="https://mechtronica.net/home/" class="sidebar-link ml-10">Home</a>
             
           
             
@@ -111,7 +111,7 @@
             
           
             
-              <details class="collapse-panel"> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+              <details class="collapse-panel" open> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
                 <summary class="collapse-header">
                   Rules
                 </summary>
@@ -137,7 +137,7 @@
                       
                         <a href="https://mechtronica.net/rules/placing-components/" class="sidebar-link ml-10">Placing Components</a>
                       
-                        <a href="https://mechtronica.net/rules/build-calculations/" class="sidebar-link ml-10">Calculations</a>
+                        <a href="https://mechtronica.net/rules/build-calculations/" class="sidebar-link ml-10 active">Calculations</a>
                       
                         <a href="https://mechtronica.net/rules/build-validating/" class="sidebar-link ml-10">Validating</a>
                       
@@ -198,12 +198,121 @@
           <span class="sr-only">Toggle sidebar</span> <!-- sr-only = show only on screen readers -->
         </button>
         <div class="content">
-          <h3>What is Mechtronica?</h3>
-<p>Mechtronica is a tabletop RPG set in a post-apocalyptic sci-fi universe focusing heavily on mechs, large bipedal piloted robots. At the heart of Mechtronica is mech building, most of the rules center around how you build a functional mech and we strive to make it feel both highly customizable and yet constrained in pseudo-realistic ways.</p>
-<h3>Status</h3>
-<p>Mechtronica is currently in <strong>Public Beta</strong>. The rules are complete and everything you need to play is available on this website. However some numbers may still need fine tuning, the lore is a little lacking in content, and some minor rules may change. We would love any feedback you may have; you can email us at <a href="mailto:feedback@mechtronica.net">feedback@mechtronica.net</a> or submit an issue on our <a href="https://github.com/mechtronica/mechtronica.net/issues">GitHub repository</a>. You can also share feedback, ask questions, or just share mecha-memes on our <a href="https://discord.gg/pgJV39T7">Discord Server</a>.</p>
-<h3>A Quick Note on the Rules</h3>
-<p>The rules presented on this website assume some prior knowledge of typical TTRPGs. This may be cleaned up in the future, but for now if you're brand new to this type of game you should read up on them a bit before you try to dive into the rules here. <a href="https://howtogm.guide/basics/intro-to-tabletop-roleplaying-games">This article</a> is a pretty good basic introduction to the core concepts of tabletop RPGs.</p>
+          <h2>Build Calculations</h2>
+<p>This page details calculating all the stats and other numbers for your mech.</p>
+<h3>Mech Stats</h3>
+<p>Your mech has 6 different stats describing it's physical parameters:</p>
+<table class="table">
+<thead>
+<tr>
+<th>Stat</th>
+<th>Description</th>
+<th>Calculation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weight</td>
+<td>Weight of your mech in tons</td>
+<td>Weight of frame</td>
+</tr>
+<tr>
+<td>Height</td>
+<td>Height of your mech in feet</td>
+<td>Height of frame</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>Speed of your mech in ft/s</td>
+<td>Speed of frame - penalties from plating</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>Lift weight of your mech in tons</td>
+<td>Strength of frame</td>
+</tr>
+<tr>
+<td>Cargo Space</td>
+<td>Your mech can store as many components as it has cargo space</td>
+<td>Cargo space from cabin and attachments</td>
+</tr>
+</tbody>
+</table>
+<h3>Shields</h3>
+<p>Your mech has a shield pool for each section (Torso, Left Arm, Right Arm, and Legs) The max shields for each section is equal to the shields of the plating for that section. Current shields is used to track damage to your shields from combat.</p>
+<h3>Fuel</h3>
+<p>Space is provided to track different types of fuel (see <a href="/rules/multiple-power-plants">Multiple Power Plants</a> for a case where you might want this). Max fuel for a given type is the sum of the fuel capacity of all tanks for that type of fuel in your mech. Tanks have different sizes and each size+type combination has a different fuel capacity.</p>
+<h3>Resources</h3>
+<p>There are three types of <b class="keyword" data-toggle="tooltip" data-title="Power, Cooling, and CPU: the resources that your mech draws on to operate.">Resources</b>, CPU, Cooling, and Power, and there are three different types of power for a total of 5 unique resources. Spots for all of these are provided on the character sheet.<br>
+For any given resource there are 3 numbers to track: <b class="keyword" data-toggle="tooltip" data-title="See Resources. The amount of each resource generated by your mech.">Available Resources</b> (produced by components), <b class="keyword" data-toggle="tooltip" data-title="See Resources. The amount of each resource used by constant-draw components.">Used Resources</b> (used by constant-draw components), and <b class="keyword" data-toggle="tooltip" data-title="See Resources. The amount of each resource remaining for excess-draw components such as attachments.">Excess Resources</b> (left over for excess draw components). They are related like so:</p>
+<p>Excess Resources = Available Resources - Used Resources</p>
+<p>Components that consume a resource will list their value for that resource as negative, whereas components that produce it will show that value as positive. Here are the component types that contribute to the resource calculations. Note that there may be exceptions to this if the component has a special <b class="keyword" data-toggle="tooltip" data-title="Effects are special abilities a part has. For some component types there are standard effects that are referenced with a keyword.">Effect</b>.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Resource</th>
+<th>Calculation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Available Power</td>
+<td>Sum power from Power Plant(s)</td>
+</tr>
+<tr>
+<td>Used Power</td>
+<td>Sum power from Frame, Cabin, Mainframe(s), Cooler(s)</td>
+</tr>
+<tr>
+<td>Excess Power</td>
+<td>Available Power - Used Power</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr>
+<th>Resource</th>
+<th>Calculation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Available Cooling</td>
+<td>Sum cooling from Frame, Plating, and Cooler(s)</td>
+</tr>
+<tr>
+<td>Used Cooling</td>
+<td>Sum cooling from Power Plant(s), Cabin, Mainframe(s)</td>
+</tr>
+<tr>
+<td>Excess Cooling</td>
+<td>Available Cooling - Used Cooling</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr>
+<th>Resource</th>
+<th>Calculation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Available CPU</td>
+<td>Sum CPU from Mainframe(s), Compute Module(s)</td>
+</tr>
+<tr>
+<td>Used CPU</td>
+<td>Sum CPU from Cabin, Power Plant(s), Cooler(s), Other Module(s)</td>
+</tr>
+<tr>
+<td>Excess CPU</td>
+<td>Available CPU - Used CPU</td>
+</tr>
+</tbody>
+</table>
 
         </div>
       </div>

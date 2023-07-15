@@ -21,6 +21,16 @@
     <!-- Google Material Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   
+    <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 1,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 48
+    }
+    </style>
+
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
@@ -29,6 +39,18 @@
   <body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-set-preferred-theme-onload="true">
     <!-- Modals go here -->
     <!-- Reference: https://www.gethalfmoon.com/docs/modal -->
+
+    <div class="modal" id="modal-1" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content modal-content-media">
+          <a href="#" class="close" role="button" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </a>
+          <h5 class="modal-title" id="modal-title"></h5>
+          <span id="modal-content"></span>
+        </div>
+      </div>
+    </div>
 
     <!-- Page wrapper start -->
     <div class="page-wrapper with-sidebar" data-sidebar-type="full-height">
@@ -43,7 +65,7 @@
 
           <!-- Sidebar brand -->
           <a href="#" class="sidebar-brand">
-            <img src="https://mechtronica.net/images/logo.svg" alt="Mechtronica">
+            <img class="m-0" src="https://mechtronica.net/images/logo-beta.svg" alt="Mechtronica">
           </a>
           <br/>
 
@@ -76,6 +98,14 @@
                       <a href="https://mechtronica.net/lore/solar-system/" class="sidebar-link ml-10">Solar System</a>
                     
                   
+                    
+                      <a href="https://mechtronica.net/lore/factions/" class="sidebar-link ml-10">Factions</a>
+                    
+                  
+                    
+                      <a href="https://mechtronica.net/lore/manufacturers/" class="sidebar-link ml-10">Manufacturers</a>
+                    
+                  
                 </div>
               </details>
             
@@ -99,11 +129,15 @@
                     
                         <h6 class="sidebar-title">Mech Building</h6>
                       
+                        <a href="https://mechtronica.net/rules/build-overview/" class="sidebar-link ml-10">Overview</a>
+                      
+                        <a href="https://mechtronica.net/rules/component-details/" class="sidebar-link ml-10">Components</a>
+                      
                         <a href="https://mechtronica.net/rules/build-planning/" class="sidebar-link ml-10 active">Planning</a>
                       
-                        <a href="https://mechtronica.net/rules/selecting-components/" class="sidebar-link ml-10">Selecting Components</a>
-                      
                         <a href="https://mechtronica.net/rules/placing-components/" class="sidebar-link ml-10">Placing Components</a>
+                      
+                        <a href="https://mechtronica.net/rules/build-calculations/" class="sidebar-link ml-10">Calculations</a>
                       
                         <a href="https://mechtronica.net/rules/build-validating/" class="sidebar-link ml-10">Validating</a>
                       
@@ -136,10 +170,6 @@
                     
                         <h6 class="sidebar-title">Appendices</h6>
                       
-                        <a href="https://mechtronica.net/rules/assumptions/" class="sidebar-link ml-10">Assumptions</a>
-                      
-                        <a href="https://mechtronica.net/rules/tips-for-gms/" class="sidebar-link ml-10">Tips for GMs</a>
-                      
                         <a href="https://mechtronica.net/rules/glossary/" class="sidebar-link ml-10">Glossary</a>
                       
                     
@@ -148,7 +178,15 @@
               </details>
             
           
-
+          <div class="d-flex flex-row justify-content-center m-20">
+            <a class="text hidden-dm" style="color: #000;" href="mailto:feedback@mechtronica.net"><span class="material-symbols-outlined w-25 mx-10"> mail </span></a>
+            <a class="text hidden-lm" style="color: #fff;" href="mailto:feedback@mechtronica.net"><span class="material-symbols-outlined w-25 mx-10"> mail </span></a>
+            <a class="hidden-dm" href="https://github.com/mechtronica/mechtronica.net/issues"><img class="w-25 mx-10" src="https://mechtronica.net/images/github-mark.svg"/></a>
+            <a class="hidden-lm" href="https://github.com/mechtronica/mechtronica.net/issues"><img class="w-25 mx-10" src="https://mechtronica.net/images/github-mark-white.svg"/></a>
+            <a class="hidden-dm" href="https://discord.gg/VPzzYHqxFy"><img class="w-25 mx-10" src="https://mechtronica.net/images/discord-mark-black.svg"/></a>
+            <a class="hidden-lm" href="https://discord.gg/VPzzYHqxFy"><img class="w-25 mx-10" src="https://mechtronica.net/images/discord-mark-white.svg"/></a>
+          </div>
+          <p class="font-size-14 text-center"> The website is licensed under <br> <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode"> Creative Commons CC BY-SA </a></p>
         </div>
       </div>
       <!-- Sidebar end -->
@@ -161,18 +199,14 @@
         </button>
         <div class="content">
           <h2>Planning a Mech Build</h2>
-<p>The first step in building your mech is planning. Typically you first want to have an idea of how you want your mech to feel. Up-close brawler mechs will feel very different from mid-range gunners or long-range snipers. Think about how you want to play -- and how that relates to your mechaneer's personality.</p>
-<p>Once you have an idea of how you want to play, you should select a Mech Frame and Power Type. Read on for information on how each of these affect your mech.</p>
-<h3>The Mech Frame</h3>
-<p>The <strong>Frame</strong> is the foundation of your mech. It provides the superstructure you'll attach your weapons and components to, as well as the moving parts and power distribution system. Each frame has some number of slots for installing components.</p>
-<h4>The Speed Tradeoff</h4>
-<p>Frames come in three basic sizes: <strong>Light</strong>, <strong>Standard</strong>, and <strong>Heavy</strong>. Frame size determines how many slots you have and your base speed. Light mechs have the fewest slots, but move the fastest. Heavy mechs have a plethora of slots, but move at a crawl. This generally means that the more firepower your mech has, the slower it will be.</p>
-<h3>The Power Subsystem</h3>
-<p>Every mech requires a steady supply of <strong>Power</strong> to keep running. The power subsystem supplies that power.</p>
-<p>The power subsystem consists of two components: a <strong>Power Plant</strong> and a <strong>Fuel Tank</strong>. The power plant uses fuel from the fuel tank to generate a steady supply of energy. In order to have a working mech, you'll need a plant that generates enough power to feed all of your <strong>constant-draw</strong> components. And if you want to use any other <strong>attachments</strong> - like weapons - you'll need enough <strong>excess</strong> power left over to supply those too.</p>
-<p>Your Power Plant can only provide a single type of Power. There are three power types to choose from: Mechanical, Electrical, and Steam. Since almost all components in your mech must use the same power type, it's important to choose the right one.</p>
+<p>The first step in building your mech is planning. Do you want to build a combat-focused mech built for dealing maximum damage? Perhaps your <b class="keyword" data-toggle="tooltip" data-title="A Mechaneer is a person who is capable of piloting a mech.">Mechaneer</b> needs a mech capable of hauling scientific equipment and taking specific measurements. Or maybe you earn a living as a field mechanic, and focus on equipment to make sophistocated repairs when far from a garage. Think about how you want to play, and how that relates to your mechaneer's personality.</p>
+<p>Once you choose a focus, you should select a mech Frame and a <b class="keyword" data-toggle="tooltip" data-title="Power is the resource that gets your mech moving. It comes in three types:  Electrical, Mechanical, and Steam. ">Power</b> Type. Read on for information on factors that you should consider when building your mech.</p>
+<h3>Tradeoffs to Consider</h3>
+<h4>Frame Size and Speed</h4>
+<p>As the foundation of your mech, your frame has a significant impact on play style. Heavy frames provide more space for additional attachments, but are much slower as a result of their size. Large frames also offer a much larger target, and as such are easier to hit. Light frames are quick and hard to hit, but have very limited space for components. Standard frames are a good balance between the two.</p>
+<p>Note that Plating also confers a speed penalty. Heavier armor can absorb a lot more damage before breaking, but will slow your mech down.</p>
 <h4>Power Type and Weapon Range</h4>
-<p>Mech play style varies quite a bit with power type. Mechanical mechs tend have short-range weaponry, while Electrical mechs tend to have the longest range. Steam-powered mechs have access to both short-range Blunt Force weapons and long-range artillery, so they're sort of a jack-of-all-trades.</p>
+<p>Mech play style varies quite a bit with power type. Mechanical mechs tend have short-range weaponry, while Electrical mechs tend to have the longest range. Steam-powered mechs have access to both short-range blunt force weapons which can compound damage and long-range artillery, so they're sort of a jack-of-all-trades.</p>
 <table class="table">
 <thead>
 <tr>
@@ -187,7 +221,7 @@
 </tr>
 <tr>
 <td>Steam</td>
-<td>Mid range (50 ft to 900 ft)</td>
+<td>Any range (50 ft to 900 ft)</td>
 </tr>
 <tr>
 <td>Electrical</td>
@@ -195,38 +229,204 @@
 </tr>
 </tbody>
 </table>
-<h3>The Control Subystem</h3>
-<p>A mech is only useful if you can get it to do what you want. That's what the control subsystem is for: it provides a way for mechaneers to interact with their mechs.</p>
-<p>The control subsystem consists of the <strong>Cabin</strong>, <strong>Mainframe</strong>, and <strong>Modules</strong>.</p>
-<p>Arguably the most important component in the control subsystem is the Cabin. This is where your mechaneer resides while piloting your mech. Cabins contain a wide range of things: a (hopefully) comfortable place to sit, instruments and controls, and cargo space. The Cabin also powers your Mainframe. (This is why your mainframe doesn't have a power type, even though it draws power). Last but not least, Cabins have a number of slots for installing Modules that modify the behavior of your mech.</p>
-<p>The second most important bit of the control subsystem is the Mainframe. This provides your mech with Processing resources.</p>
-<p>Finally we have Modules. Modules consume some amount of Processing in order to provide extra capabilities to your mech. There are a wide variety of modules that do many different things. Some add passive scanning capabilities to your mech. Others improve the accuracy of your weapons. Others still help you optimize resource usage.</p>
-<h4>Software</h4>
-<p>In order to control your mech, your Cabin and Modules need to be compatible with the <strong>Software</strong> running on your Mainframe. There are three different types of Software, and each has distinct benefits:</p>
-<table>
+<h4>Control Software</h4>
+<p>The <b class="keyword" data-toggle="tooltip" data-title="Components are mech Parts that must be installed in slots in your mech's Frame.">Components</b> compatible with each software have distinct costs and benefits. As such, you'll want to choose software that fits well with your focus.</p>
+<table class="table">
 <thead>
 <tr>
 <th>Software</th>
-<th>Advantages</th>
+<th>Component Tradeoffs</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>UMIX</td>
+<td>Very small, with low heat and power usage, but limited Processing and few Module slots</td>
+</tr>
+<tr>
 <td>ProtOS</td>
-<td>Well balanced, produces a moderate amount of CPU at reasonable cost</td>
+<td>Well balanced, with moderate CPU at reasonable resource usage</td>
 </tr>
 <tr>
 <td>Ursa NT</td>
-<td>Bonus to Targeting, lots of CPU and mod slots, but large and hot</td>
-</tr>
-<tr>
-<td>UMIX</td>
-<td>Very small, low power usage, but limited CPU production</td>
+<td>Bonuses to Targeting and lots of Module slots, but large and resource-intensive</td>
 </tr>
 </tbody>
 </table>
-<p>Many components are compatible with multiple types of software, but you can only run one type of software at a time on your Mainframe. You can change software at a Garage. As long as your Cabin and Modules can all run the same software as your Mainframe, your mech will be operable.</p>
-<p>Next, check out <a href="https://mechtronica.net/rules/selecting-components">Selecting Components</a>.</p>
+<h4>Fuel Type and Power Plant Class</h4>
+<p>Power Plants are categorized based on what type of Power they generate and what type of Fuel they require. Some fuels deplete quickly, and some are much more scarce than others, so you'll want to pay attention to the type of fuel your power plant uses.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Power Plant Class</th>
+<th>Power Type</th>
+<th>Fuel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ethanol Boiler</td>
+<td>Steam</td>
+<td>Ethanol</td>
+</tr>
+<tr>
+<td>Ethanol Engine</td>
+<td>Mechanical</td>
+<td>Ethanol</td>
+</tr>
+<tr>
+<td>Ethanol Fuel Cell</td>
+<td>Electrical</td>
+<td>Ethanol</td>
+</tr>
+<tr>
+<td>Hydrogen Boiler</td>
+<td>Steam</td>
+<td>Hydrogen</td>
+</tr>
+<tr>
+<td>Hydrogen Engine</td>
+<td>Mechanical</td>
+<td>Hydrogen</td>
+</tr>
+<tr>
+<td>Hydrogen Fuel Cell</td>
+<td>Electrical</td>
+<td>Hydrogen</td>
+</tr>
+<tr>
+<td>Lithium Ion Regulator</td>
+<td>Electrical</td>
+<td>Lithium Ion</td>
+</tr>
+<tr>
+<td>Methane Boiler</td>
+<td>Steam</td>
+<td>Methane</td>
+</tr>
+<tr>
+<td>Methane Engine</td>
+<td>Mechanical</td>
+<td>Methane</td>
+</tr>
+<tr>
+<td>Nuclear Boiler</td>
+<td>Steam</td>
+<td>Nuclear</td>
+</tr>
+<tr>
+<td>Nuclear Generator</td>
+<td>Mechanical</td>
+<td>Nuclear</td>
+</tr>
+<tr>
+<td>Nuclear Turbine</td>
+<td>Electrical</td>
+<td>Nuclear</td>
+</tr>
+</tbody>
+</table>
+<h4>Fuel Tank Capacity and Depletion</h4>
+<p>Each day, your mech will use up an amount of fuel equal to its Used Power. If you run out of fuel, your mech will be unable to move or use attachments until refueled.</p>
+<p>Some fuel types are much more energy-dense than others, which means that mechs using those types of fuel will typically need to refuel less often. The table below shows how much Power can be stored in small and large Fuel Tanks of each type.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Fuel Tank</th>
+<th>Fuel</th>
+<th>Capacity (Small)</th>
+<th>Capacity (Large)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ethanol Tank</td>
+<td>Ethanol</td>
+<td>10</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Hydrogen Tank</td>
+<td>Hydrogen</td>
+<td>20</td>
+<td>40</td>
+</tr>
+<tr>
+<td>Lithim Ion Battery</td>
+<td>Lithium Ion</td>
+<td>30</td>
+<td>60</td>
+</tr>
+<tr>
+<td>Methane Tank</td>
+<td>Methane</td>
+<td>40</td>
+<td>80</td>
+</tr>
+<tr>
+<td>Reactor Vessel</td>
+<td>Nuclear</td>
+<td>60</td>
+<td>120</td>
+</tr>
+</tbody>
+</table>
+<p>Depending on how much power your mech uses, you may need to consider a larger fuel tank or even a different fuel type.</p>
+<h3>Step by step Mech-Building Outline</h3>
+<ol>
+<li>Develop a vision for your mechaneer and mech
+<ul>
+<li>Come up with a name and background for your mechaneer</li>
+<li>Decide what you want to focus your mech on (combat, field repairs, science, etc.)</li>
+</ul>
+</li>
+<li>Choose a Frame
+<ul>
+<li>Smaller mechs are faster and often don't need auxiliary cooling</li>
+<li>Larger mechs have much more firepower</li>
+</ul>
+</li>
+<li>Choose your mech's main weapons and equipment
+<ul>
+<li>Find attachments that fit your vision</li>
+<li>Choose a power type that lets you get most of the attachments you want</li>
+<li>Don't worry about filling all your slots here, just pick a couple must-haves</li>
+</ul>
+</li>
+<li>Add the control subsystem
+<ul>
+<li>Choose a mainframe that provides enough processing for the components you've selected so far, plus a bit extra to spare</li>
+<li>Choose a cabin compatible with your mainframe's software</li>
+</ul>
+</li>
+<li>Add the power subsystem
+<ul>
+<li>Choose a power plant that provides enough power for the components you've selected so far, plus a bit extra to spare</li>
+<li>Choose a fuel tank for your power plant</li>
+</ul>
+</li>
+<li>Check whether you need to add a cooler
+<ul>
+<li>If you just barely have enough excess cooling to use your attachments at this point, you probably need to add a cooler</li>
+</ul>
+</li>
+<li>Add more weapons and equipment
+<ul>
+<li>Fill in remaining slots in your mech with a few more attachments</li>
+</ul>
+</li>
+<li>Add Modules to your Mainframe
+<ul>
+<li>Select modules that synergize with your mech's capabilities</li>
+</ul>
+</li>
+<li>Check your resources and rebalance if needed
+<ul>
+<li>Compute Available, Used, and Excess resources for Power, Processing, and Cooling</li>
+<li>If you don't have enough excess resources, consider upgrading infrastructure components or using less chonky weapons and equipment</li>
+</ul>
+</li>
+</ol>
 
         </div>
       </div>

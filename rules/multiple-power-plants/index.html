@@ -10,7 +10,7 @@
 
     <!-- Favicon and title -->
     <link rel="icon" href="https://mechtronica.net/images/icon.svg">
-    <title> Outline </title>
+    <title> Using Multiple Power Plants </title>
 
     <!-- Halfmoon CSS -->
     <link href="https://mechtronica.net/halfmoonui/css/halfmoon-variables.min.css" rel="stylesheet" />
@@ -21,6 +21,16 @@
     <!-- Google Material Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   
+    <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 1,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 48
+    }
+    </style>
+
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
@@ -29,6 +39,18 @@
   <body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-set-preferred-theme-onload="true">
     <!-- Modals go here -->
     <!-- Reference: https://www.gethalfmoon.com/docs/modal -->
+
+    <div class="modal" id="modal-1" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content modal-content-media">
+          <a href="#" class="close" role="button" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </a>
+          <h5 class="modal-title" id="modal-title"></h5>
+          <span id="modal-content"></span>
+        </div>
+      </div>
+    </div>
 
     <!-- Page wrapper start -->
     <div class="page-wrapper with-sidebar" data-sidebar-type="full-height">
@@ -43,7 +65,7 @@
 
           <!-- Sidebar brand -->
           <a href="#" class="sidebar-brand">
-            <img src="https://mechtronica.net/images/logo.svg" alt="Mechtronica">
+            <img class="m-0" src="https://mechtronica.net/images/logo-beta.svg" alt="Mechtronica">
           </a>
           <br/>
 
@@ -76,6 +98,14 @@
                       <a href="https://mechtronica.net/lore/solar-system/" class="sidebar-link ml-10">Solar System</a>
                     
                   
+                    
+                      <a href="https://mechtronica.net/lore/factions/" class="sidebar-link ml-10">Factions</a>
+                    
+                  
+                    
+                      <a href="https://mechtronica.net/lore/manufacturers/" class="sidebar-link ml-10">Manufacturers</a>
+                    
+                  
                 </div>
               </details>
             
@@ -99,11 +129,15 @@
                     
                         <h6 class="sidebar-title">Mech Building</h6>
                       
+                        <a href="https://mechtronica.net/rules/build-overview/" class="sidebar-link ml-10">Overview</a>
+                      
+                        <a href="https://mechtronica.net/rules/component-details/" class="sidebar-link ml-10">Components</a>
+                      
                         <a href="https://mechtronica.net/rules/build-planning/" class="sidebar-link ml-10">Planning</a>
                       
-                        <a href="https://mechtronica.net/rules/selecting-components/" class="sidebar-link ml-10">Selecting Components</a>
-                      
                         <a href="https://mechtronica.net/rules/placing-components/" class="sidebar-link ml-10">Placing Components</a>
+                      
+                        <a href="https://mechtronica.net/rules/build-calculations/" class="sidebar-link ml-10">Calculations</a>
                       
                         <a href="https://mechtronica.net/rules/build-validating/" class="sidebar-link ml-10">Validating</a>
                       
@@ -136,10 +170,6 @@
                     
                         <h6 class="sidebar-title">Appendices</h6>
                       
-                        <a href="https://mechtronica.net/rules/assumptions/" class="sidebar-link ml-10">Assumptions</a>
-                      
-                        <a href="https://mechtronica.net/rules/tips-for-gms/" class="sidebar-link ml-10">Tips for GMs</a>
-                      
                         <a href="https://mechtronica.net/rules/glossary/" class="sidebar-link ml-10">Glossary</a>
                       
                     
@@ -148,7 +178,15 @@
               </details>
             
           
-
+          <div class="d-flex flex-row justify-content-center m-20">
+            <a class="text hidden-dm" style="color: #000;" href="mailto:feedback@mechtronica.net"><span class="material-symbols-outlined w-25 mx-10"> mail </span></a>
+            <a class="text hidden-lm" style="color: #fff;" href="mailto:feedback@mechtronica.net"><span class="material-symbols-outlined w-25 mx-10"> mail </span></a>
+            <a class="hidden-dm" href="https://github.com/mechtronica/mechtronica.net/issues"><img class="w-25 mx-10" src="https://mechtronica.net/images/github-mark.svg"/></a>
+            <a class="hidden-lm" href="https://github.com/mechtronica/mechtronica.net/issues"><img class="w-25 mx-10" src="https://mechtronica.net/images/github-mark-white.svg"/></a>
+            <a class="hidden-dm" href="https://discord.gg/VPzzYHqxFy"><img class="w-25 mx-10" src="https://mechtronica.net/images/discord-mark-black.svg"/></a>
+            <a class="hidden-lm" href="https://discord.gg/VPzzYHqxFy"><img class="w-25 mx-10" src="https://mechtronica.net/images/discord-mark-white.svg"/></a>
+          </div>
+          <p class="font-size-14 text-center"> The website is licensed under <br> <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode"> Creative Commons CC BY-SA </a></p>
         </div>
       </div>
       <!-- Sidebar end -->
@@ -160,61 +198,16 @@
           <span class="sr-only">Toggle sidebar</span> <!-- sr-only = show only on screen readers -->
         </button>
         <div class="content">
-          <h3>Step by Step Outline</h3>
-<ol>
-<li>Develop a vision for your mechaneer and mech
-<ul>
-<li>Come up with a name and background for your mechaneer</li>
-<li>Decide what you want to focus your mech on (heavy weapons, speed, etc.)</li>
-</ul>
-</li>
-<li>Choose a Frame
-<ul>
-<li>Smaller mechs are faster and often don't need auxiliary cooling</li>
-<li>Larger mechs have much more firepower</li>
-</ul>
-</li>
-<li>Choose your mech's main weapons and attachments
-<ul>
-<li>Find a some weapons and equipment that fit your vision</li>
-<li>Choose a power type that lets you get most of the weapons and equipment you want</li>
-<li>Don't worry about filling all your slots here, just pick a couple must-haves</li>
-</ul>
-</li>
-<li>Add the control subsystem
-<ul>
-<li>Choose a mainframe that provides enough processing for your weapons and frame, plus a bit extra to spare</li>
-<li>Choose a cabin compatible with your mainframe's software</li>
-</ul>
-</li>
-<li>Add the power subsystem
-<ul>
-<li>Choose a power plant that provides enough power for your weapons, plus a bit extra to spare</li>
-<li>Choose a fuel tank for your power plant</li>
-</ul>
-</li>
-<li>Check whether you need to add a cooler
-<ul>
-<li>If you just barely have enough excess cooling to use your weapons and equipment at this point, you probably need to add a cooler</li>
-</ul>
-</li>
-<li>Add more weapons and equipment
-<ul>
-<li>Fill in the remaining slots in your mech with a few more weapons and equipment</li>
-</ul>
-</li>
-<li>Add Modules to your Mainframe
-<ul>
-<li>Select modules that synergize with your mech's capabilities</li>
-</ul>
-</li>
-<li>Check your resources and rebalance if needed
-<ul>
-<li>Compute Available, Used, and Excess resources for Power, Processing, and Cooling</li>
-<li>If you don't have enough excess resources, consider upgrading infrastructure components or using less chonky weapons and equipment</li>
-</ul>
-</li>
-</ol>
+          <h2>Multiple Power Plants</h2>
+<p>Having more than one <b class="keyword" data-toggle="tooltip" data-title="undefined">Power Plant</b> <em>can</em> make things more complicated. There are a few extra things to consider, but it can also provide you with some interesting build options.</p>
+<h3>Single Power Type</h3>
+<p>If you have more than one power plant, but they each supply the same <b class="keyword" data-toggle="tooltip" data-title="Power comes in 3 different types: Electrical, Mechanical, and Steam.">Power Type</b>, things are fairly simple. You can simply put all the power into one pool.</p>
+<h3>Multiple Power Types</h3>
+<p>If you have more than one power plant and they produce different power types, things get a little more complicated. You will have one power pool for each power type (the character sheets have spots for each type to support this), so if you have two electric plants and one mechanical plant, you simply add the power output of the two electric ones and that goes in the electric power pool, and the power from the mechanical plant goes in the mechanical power pool. Your mainframe will use the same power type as your cabin.</p>
+<h3>Multiple Fuels for One Power Type</h3>
+<p>If multiple plants produce the same power type but use different <b class="keyword" data-toggle="tooltip" data-title="Fuel comes in 5 different types: Hydrogen, Lithium Ion, Ethanol, Methane, and Nuclear.">Fuel Type</b> you have some configuration to do. You can choose how to split up fuel consumption between then different fuels, with the constraint that a power plant can never consume more fuel than power it produces. For instance, if you have an electric hydrogen plant that produces 10 power and an electric ethanol plant that produces 15 power, and your electric used power is 15, then you can configure your mech to consume 5 hydrogen and 10 ethanol every day, but not 12 hydrogen and 3 ethanol (because your hydrogen plant can only produce 10 power it cannot consume more than 10 hydrogen). You can configure this fuel consumption any time you are at a <b class="keyword" data-toggle="tooltip" data-title="A garage is a place where you can tinker with your mech.">Garage</b>.</p>
+<h3>Sharing Fuel Tanks</h3>
+<p>If multiple power plants have the same fuel type, then they can share one or more fuel tanks. Simply sum up the capacities of all fuel tanks of the same type and treat them as one pool.</p>
 
         </div>
       </div>

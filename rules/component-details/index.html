@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Favicon and title -->
+    <link rel="icon" href="https://mechtronica.net/images/icon.svg">
+    <title> Components </title>
+
+    <!-- Halfmoon CSS -->
+    <link href="https://mechtronica.net/halfmoonui/css/halfmoon-variables.min.css" rel="stylesheet" />
+
+    <!-- Custom Halfmoon Variables -->
+    <link href="https://mechtronica.net/custom-variables.css" rel="stylesheet" />
+
+    <!-- Google Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  
+    <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 1,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 48
+    }
+    </style>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+
+  </head>
+  <body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-set-preferred-theme-onload="true">
+    <!-- Modals go here -->
+    <!-- Reference: https://www.gethalfmoon.com/docs/modal -->
+
+    <div class="modal" id="modal-1" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content modal-content-media">
+          <a href="#" class="close" role="button" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </a>
+          <h5 class="modal-title" id="modal-title"></h5>
+          <span id="modal-content"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page wrapper start -->
+    <div class="page-wrapper with-sidebar" data-sidebar-type="full-height">
+      
+      <!-- Sticky alerts (toasts), empty container -->
+      <!-- Reference: https://www.gethalfmoon.com/docs/sticky-alerts-toasts -->
+      <div class="sticky-alerts"></div>
+
+      <!-- Sidebar start -->
+      <div class="sidebar">
+        <div class="sidebar-menu">
+
+          <!-- Sidebar brand -->
+          <a href="#" class="sidebar-brand">
+            <img class="m-0" src="https://mechtronica.net/images/logo-beta.svg" alt="Mechtronica">
+          </a>
+          <br/>
+
+          <!-- Sidebar links and titles -->
+          
+            
+              <a href="https://mechtronica.net/home/" class="sidebar-link ml-10">Home</a>
+            
+          
+            
+              <a href="https://mechtronica.net/character-sheets/downloads/" class="sidebar-link ml-10">Character Sheets</a>
+            
+          
+            
+              <a href="https://mechtronica.net/mechdb/viewer/" class="sidebar-link ml-10">MechDB</a>
+            
+          
+            
+              <details class="collapse-panel"> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+                <summary class="collapse-header">
+                  Lore
+                </summary>
+                <div class="collapse-content">
+                  
+                    
+                      <a href="https://mechtronica.net/lore/intro/" class="sidebar-link ml-10">Intro</a>
+                    
+                  
+                    
+                      <a href="https://mechtronica.net/lore/solar-system/" class="sidebar-link ml-10">Solar System</a>
+                    
+                  
+                    
+                      <a href="https://mechtronica.net/lore/factions/" class="sidebar-link ml-10">Factions</a>
+                    
+                  
+                    
+                      <a href="https://mechtronica.net/lore/manufacturers/" class="sidebar-link ml-10">Manufacturers</a>
+                    
+                  
+                </div>
+              </details>
+            
+          
+            
+              <details class="collapse-panel" open> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+                <summary class="collapse-header">
+                  Rules
+                </summary>
+                <div class="collapse-content">
+                  
+                    
+                        <h6 class="sidebar-title">Mechaneer Creation</h6>
+                      
+                        <a href="https://mechtronica.net/rules/mechaneer-description/" class="sidebar-link ml-10">Mechaneer Description</a>
+                      
+                        <a href="https://mechtronica.net/rules/mechaneer-stats/" class="sidebar-link ml-10">Mechaneer Stats</a>
+                      
+                    
+                  
+                    
+                        <h6 class="sidebar-title">Mech Building</h6>
+                      
+                        <a href="https://mechtronica.net/rules/build-overview/" class="sidebar-link ml-10">Overview</a>
+                      
+                        <a href="https://mechtronica.net/rules/component-details/" class="sidebar-link ml-10 active">Components</a>
+                      
+                        <a href="https://mechtronica.net/rules/build-planning/" class="sidebar-link ml-10">Planning</a>
+                      
+                        <a href="https://mechtronica.net/rules/placing-components/" class="sidebar-link ml-10">Placing Components</a>
+                      
+                        <a href="https://mechtronica.net/rules/build-calculations/" class="sidebar-link ml-10">Calculations</a>
+                      
+                        <a href="https://mechtronica.net/rules/build-validating/" class="sidebar-link ml-10">Validating</a>
+                      
+                    
+                  
+                    
+                        <h6 class="sidebar-title">Turn Based Play</h6>
+                      
+                        <a href="https://mechtronica.net/rules/combat/" class="sidebar-link ml-10">Combat</a>
+                      
+                        <a href="https://mechtronica.net/rules/turn-structure/" class="sidebar-link ml-10">Turn Structure</a>
+                      
+                        <a href="https://mechtronica.net/rules/weapons/" class="sidebar-link ml-10">Weapons</a>
+                      
+                        <a href="https://mechtronica.net/rules/equipment/" class="sidebar-link ml-10">Equipment</a>
+                      
+                    
+                  
+                    
+                        <h6 class="sidebar-title">Maintenance</h6>
+                      
+                        <a href="https://mechtronica.net/rules/maintenance/" class="sidebar-link ml-10">Performing Maintenance</a>
+                      
+                        <a href="https://mechtronica.net/rules/maintenance-costs/" class="sidebar-link ml-10">Maintenance Costs</a>
+                      
+                        <a href="https://mechtronica.net/rules/component-states/" class="sidebar-link ml-10">Component States</a>
+                      
+                    
+                  
+                    
+                        <h6 class="sidebar-title">Appendices</h6>
+                      
+                        <a href="https://mechtronica.net/rules/glossary/" class="sidebar-link ml-10">Glossary</a>
+                      
+                    
+                  
+                </div>
+              </details>
+            
+          
+          <div class="d-flex flex-row justify-content-center m-20">
+            <a class="text hidden-dm" style="color: #000;" href="mailto:feedback@mechtronica.net"><span class="material-symbols-outlined w-25 mx-10"> mail </span></a>
+            <a class="text hidden-lm" style="color: #fff;" href="mailto:feedback@mechtronica.net"><span class="material-symbols-outlined w-25 mx-10"> mail </span></a>
+            <a class="hidden-dm" href="https://github.com/mechtronica/mechtronica.net/issues"><img class="w-25 mx-10" src="https://mechtronica.net/images/github-mark.svg"/></a>
+            <a class="hidden-lm" href="https://github.com/mechtronica/mechtronica.net/issues"><img class="w-25 mx-10" src="https://mechtronica.net/images/github-mark-white.svg"/></a>
+            <a class="hidden-dm" href="https://discord.gg/VPzzYHqxFy"><img class="w-25 mx-10" src="https://mechtronica.net/images/discord-mark-black.svg"/></a>
+            <a class="hidden-lm" href="https://discord.gg/VPzzYHqxFy"><img class="w-25 mx-10" src="https://mechtronica.net/images/discord-mark-white.svg"/></a>
+          </div>
+          <p class="font-size-14 text-center"> The website is licensed under <br> <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode"> Creative Commons CC BY-SA </a></p>
+        </div>
+      </div>
+      <!-- Sidebar end -->
+
+      <!-- Content wrapper start -->
+      <div class="content-wrapper">
+        <button class="btn btn-square m-10" type="button" onclick="halfmoon.toggleSidebar()" style="padding-top: 0.4rem;">
+          <span class="material-symbols-outlined">menu</span>
+          <span class="sr-only">Toggle sidebar</span> <!-- sr-only = show only on screen readers -->
+        </button>
+        <div class="content">
+          <!-- The goal of this page is to provide a detailed reference for component information -->
+<h2>Components</h2>
+<p>A mech is exactly the sum of its parts. This page explains the details and stats of different mech <b class="keyword" data-toggle="tooltip" data-title="The parts that make your mech operate. This includes Frames, Plating, Modules, and all types of Components.">Parts</b> and <b class="keyword" data-toggle="tooltip" data-title="Components are mech Parts that must be installed in slots in your mech's Frame.">Components</b>, grouped by <b class="keyword" data-toggle="tooltip" data-title="Part Types describe categories of parts which share common features (such as Weapons, Cabins, or Modules)">Part Type</b>.</p>
+<!-- TODO: Table of Contents -->
+<h3>Common Traits</h3>
+<p>Almost every part will have a few basic traits:</p>
+<table class="table">
+<thead>
+<tr>
+<th>Trait</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Manufacturer</td>
+<td>The in-game group that manufactures a part.</td>
+</tr>
+<tr>
+<td>Model</td>
+<td>The part's model name as given by the manufacturer.</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>A short description of the item. Usually provides some information about the design or history of the part.</td>
+</tr>
+</tbody>
+</table>
+<h3>Mech Frames</h3>
+<p>The Frame is the foundation of your mech. It provides the superstructure you'll attach your weapons and components to, as well as the moving parts and power distribution system. Each frame has some number of slots for installing components.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Stat</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strength</td>
+<td>The maximum weight (in tons) a mech is rated to lift.</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>How quickly a mech can maneuver. Determines how far you can move in one turn.</td>
+</tr>
+<tr>
+<td>Weight</td>
+<td>The mech's weight (in tons).</td>
+</tr>
+<tr>
+<td>Height</td>
+<td>The mech's height (in feet).</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>The amount of power used by the frame's moving parts.</td>
+</tr>
+<tr>
+<td>Cooling</td>
+<td>The cooling provided by the frame.</td>
+</tr>
+<tr>
+<td>Processing</td>
+<td>The amount of processing used by the frame's sensors and electronics.</td>
+</tr>
+</tbody>
+</table>
+<h4>Classes</h4>
+<p>Frames come in three basic sizes: Light, Standard, and Heavy. Frame size determines how many slots you have and your base speed. Smaller frames are hard to hit, but larger frames have more space for more firepower.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Light</td>
+<td>Light frames have little space for components, but tend to be fast and hard to hit.</td>
+</tr>
+<tr>
+<td>Standard</td>
+<td>Standard frames provide a good balance between movement speed and space for components.</td>
+</tr>
+<tr>
+<td>Heavy</td>
+<td>Heavy frames have loads of component slots, but are very slow as a result of their size.</td>
+</tr>
+</tbody>
+</table>
+<h4>Component Slots</h4>
+<p>Mech frames have a number of slots where other components are installed. Slots come in two standard sizes: small (S) and large (L). Some slots are more exposed than others, and therefore more likely to be hit.</p>
+<p>The number of slots in a frame depends on the frame class.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Stat</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>Used to identify which slot a component is installed in.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>The maximum component size which will fit in a slot.</td>
+</tr>
+<tr>
+<td>Hit Values</td>
+<td>The minimum and maximum range you have to roll when targeting in order to hit a particular slot. See <a href="https://mechtronica.net/rules/combat">Combat</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>More details on component slots and mech frames can be found in <a href="https://mechtronica.net/rules/placing-components">Placing Components</a>.</p>
+<h4>Plating</h4>
+<p>Plating protects components by absorbing damage dealt to a particular section. You should probably have plating on each section of your mech, but some mechs (especially those focused on speed) will forgo plating in some sections.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Stat</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cooling</td>
+<td>The cooling provided by the plating.</td>
+</tr>
+<tr>
+<td>Shields</td>
+<td>The amount of damage the plating can take before breaking.</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>How much the plating slows down your mech.</td>
+</tr>
+<tr>
+<td>Effect</td>
+<td>Special effects conferred by the plating.</td>
+</tr>
+</tbody>
+</table>
+<h3>The Power Subsystem</h3>
+<p>The power subsystem consists of two components: a Power Plant and a Fuel Tank. The power plant uses fuel from the fuel tank to generate a steady supply of energy.</p>
+<h4>Power Plants</h4>
+<p>Power Plants convert fuel into <b class="keyword" data-toggle="tooltip" data-title="Power is the resource that gets your mech moving. It comes in three types:  Electrical, Mechanical, and Steam. ">Power</b>.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Stat</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Size</td>
+<td>The minimum slot size required to install this component.</td>
+</tr>
+<tr>
+<td>Power Type</td>
+<td>The type of power generated by this power plant.</td>
+</tr>
+<tr>
+<td>Fuel Type</td>
+<td>The type of fuel that this power plant requires.</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>The amount of power generated by this power plant.</td>
+</tr>
+<tr>
+<td>Cooling</td>
+<td>The amount of cooling that this component requires.</td>
+</tr>
+<tr>
+<td>Processing</td>
+<td>The amount of processing that this component requires.</td>
+</tr>
+</tbody>
+</table>
+<h5>Power Types</h5>
+<p>Each power plant supplies a specific type of power: either Mechanical, Electrical, or Steam power. Components must also be supplied with power of the correct type.</p>
+<blockquote>
+<p>Note: There are a few components that are not marked with a specific power type: namely Mainframes and Mech Frames. Mainframes use power supplied by your cabin, so they draw power of the same type as the Cabin. Frames are unique in that they can be reconfigured at a garage to use a different power type. See <a href="https://mechtronica.net/rules/maintenance">Maintenance</a> for more info on reconfiguring frames.</p>
+</blockquote>
+<!-- TODO: Make sure the maintenance page has info on this ^ -->
+<p>It is possible to <a href="https://mechtronica.net/rules/multiple-power-plants">use multiple power plants</a> with different types, but this typically isn't worth the amount of space it uses up. It is strongly recommended that you choose a single power plant and components that match the power type it supplies.</p>
+<p>See <a href="https://mechtronica.net/rules/build-planning">Planning</a> for more information on how to choose a power type.</p>
+<h4>Fuel Tanks</h4>
+<p>Fuel tanks store fuel and supply it to the power plant. There are several different types of fuel, each with its own advantages and disadvantages. See <a href="https://mechtronica.net/rules/build-planning">Planning</a> for more details on fuel types and how to pick the right one for your mech.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Stat</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fuel Type</td>
+<td>The type of fuel stored.</td>
+</tr>
+<tr>
+<td>Capacity</td>
+<td>The amount of fuel stored.</td>
+</tr>
+</tbody>
+</table>
+<h3>The Control Subsystem</h3>
+<p>Mechs are controlled by a combination of <b class="keyword" data-toggle="tooltip" data-title="A Mechaneer is a person who is capable of piloting a mech.">Mechaneer</b> input and computer automation. The control subsystem consists of the Cabin, Mainframe, and Modules.</p>
+<h4>Software</h4>
+<p>In order to control your mech, your Cabin and Modules need to be compatible with the Software running on your Mainframe. There are three different types of software, aligned with the three Control classes.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Class</th>
+<th>Software</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Efficiency</td>
+<td>UMIX</td>
+<td>Efficiency-focused control components minimize size, power, and heat at the cost of lower processing capacity and fewer module slots.</td>
+</tr>
+<tr>
+<td>Standard</td>
+<td>ProtOS</td>
+<td>The Standard class focuses on balancing heat, power, and processing while also providing plenty of cargo space.</td>
+</tr>
+<tr>
+<td>Combat</td>
+<td>Ursa NT</td>
+<td>Combat-focused control components prioritize maximum processing at the cost of higher heat output and power draw. Combat Mainframes also provide a bonus to targeting through dedicated aim point selection routines.</td>
+</tr>
+</tbody>
+</table>
+<p>Many components are compatible with multiple types of software, but you can only run one type of software at a time on your Mainframe. Your Cabin and all Modules must be compatible with the software on your Mainframe.</p>
+<h4>Cabins</h4>
+<p>Cabins provide mechaneers with all the necessary controls to pilot their mechs. They also usually have some slots for Modules and cargo.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Stat</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Software</td>
+<td>The software this cabin is compatible with.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>The minimum slot size required to install this component.</td>
+</tr>
+<tr>
+<td>Power Type</td>
+<td>The type of power this component requires.</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>The amount of power that this component requires.</td>
+</tr>
+<tr>
+<td>Cooling</td>
+<td>The amount of cooling that this component requires.</td>
+</tr>
+<tr>
+<td>Processing</td>
+<td>The amount of processing that this component requires.</td>
+</tr>
+<tr>
+<td>Module slots</td>
+<td>The maximum number of Modules that can be installed in this cabin.</td>
+</tr>
+<tr>
+<td>Cargo</td>
+<td>The maximum number of components that can be stored in the cabin's integrated storage.</td>
+</tr>
+</tbody>
+</table>
+<h4>Mainframes</h4>
+<p>Mainframes provide mechs with <b class="keyword" data-toggle="tooltip" data-title="Processing is the resource that allows your mech to compute things. Most components require some amount of processing.">Processing</b>.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Stat</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Software</td>
+<td>The software that runs on this mainframe.</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>The minimum slot size required to install this component.</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>The amount of power that this component requires.</td>
+</tr>
+<tr>
+<td>Cooling</td>
+<td>The amount of cooling that this component requires.</td>
+</tr>
+<tr>
+<td>Processing</td>
+<td>The amount of processing provided by this mainframe.</td>
+</tr>
+<tr>
+<td>Effect</td>
+<td>Special effects conferred by this mainframe, such as targeting bonuses.</td>
+</tr>
+</tbody>
+</table>
+<p>Note that Mainframes do not specify a power type. This is because power for Mainframes is routed through the Cabin, where it is converted from the Cabin's power type into electrical power specifically for running control electronics. Effectively, this means that Mainframes use your Cabin's power type.</p>
+<h4>Modules</h4>
+<p>Modules are special mech parts that use a small amount of processing in order to augment mech capabilites. They vary widely in effect, from providing combat advantages to cosmetic improvements. Modules are installed in Module slots in the Cabin. Modules, like Mainframes, use the Cabin's power type.</p>
+<p>There are many different types of Modules grouped into classes based on their function:</p>
+<table class="table">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Combat</td>
+<td>Combat modules augment combat capabilities of a mech through increased damage or special effects.</td>
+</tr>
+<tr>
+<td>Compute</td>
+<td>Compute modules provide a small amount of processing.</td>
+</tr>
+<tr>
+<td>Maintenance</td>
+<td>These modules improve maintenance capabilities, usually by providing diagnostic information.</td>
+</tr>
+<tr>
+<td>Navigation</td>
+<td>Nav modules provide detailed location data and information about terrain.</td>
+</tr>
+<tr>
+<td>Remote Link</td>
+<td>Remote Link modules allow mechaneers to remotely access another mech's functions.</td>
+</tr>
+<tr>
+<td>Resource</td>
+<td>These modules add advanced resource management features, such as scheduling activation of certain components for reduced resource usage.</td>
+</tr>
+<tr>
+<td>Scanner</td>
+<td>Scanner modules provide extra detection capabilities beyond what's built into a mech.</td>
+</tr>
+<tr>
+<td>Targeting</td>
+<td>Targeting modules provide a targeting bonus in combat.</td>
+</tr>
+</tbody>
+</table>
+<p>All modules must be compatible with the software running on the mainframe in order to function. Modules use up a small amount of processing.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Stat</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Software</td>
+<td>The software(s) this module is compatible with.</td>
+</tr>
+<tr>
+<td>Processing</td>
+<td>The amount of processing that this component requires.</td>
+</tr>
+<tr>
+<td>Effect</td>
+<td>Special effects and/or abilites provided by this module.</td>
+</tr>
+</tbody>
+</table>
+<h3>Coolers</h3>
+<p>If your mech generates too much heat, it won't be able to function at maximum efficiency. In some cases, some components may even be inoperable until sufficiently cooled down. That's where coolers come in. Coolers help regulate the heat your mech generates and keep everything running smoothly.</p>
+<p>There are four classes of coolers: ultra-efficient passive coolers, moderately efficient air coolers, inneficient but capable phase change coolers, and middle-of-the-road water coolers.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Passive</td>
+<td>Passive coolers provide a minimal amount of cooling with minimal resource usage.</td>
+</tr>
+<tr>
+<td>Air</td>
+<td>Air coolers provide a moderate amount of cooling with low resource usage.</td>
+</tr>
+<tr>
+<td>Water</td>
+<td>Water coolers provide significant cooling with only slightly more power usage than Air coolers.</td>
+</tr>
+<tr>
+<td>Phase Change</td>
+<td>Phase Change coolers maximize cooling potential at the cost of higher resource usage.</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr>
+<th>Stat</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Power</td>
+<td>The amount of power that this component requires.</td>
+</tr>
+<tr>
+<td>Cooling</td>
+<td>The amount of cooling provided by this component.</td>
+</tr>
+<tr>
+<td>Processing</td>
+<td>The amount of processing required by this component.</td>
+</tr>
+</tbody>
+</table>
+<h3>Attachments</h3>
+<p>Attachments are components that provide some sort of utility or offensive capability. These components are not in constant use, so they only draw resources when used. Attachment components can also be placed in a mech's arm sections, unlike the Infrastructure components discussed above.</p>
+<h4>Weapons</h4>
+<p>Weapons are attachments that are primarily intended for combat. In the harsh world of Mechtronica, mechaneers require a diverse array of unique weapon types to stay safe.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arc Rifle</td>
+<td>Arc rifles unleash massive shocks which can overload enemy mech circuits.</td>
+</tr>
+<tr>
+<td>Beam Rifle</td>
+<td>Beam rifles fire a laser of concentrated energy which dumps heat into enemy systems.</td>
+</tr>
+<tr>
+<td>Rocket</td>
+<td>Rockets launchers are long-range precision instruments capable of dealing significant damage without risking close-range combat.</td>
+</tr>
+<tr>
+<td>Auto Gun</td>
+<td>One of the oldest technologies still around, auto guns fire a constant stream of bullets at moderate range.</td>
+</tr>
+<tr>
+<td>Chain Blade</td>
+<td>Chain Blades allow mechs to rapidly and precisely disassemble nearby opponents.</td>
+</tr>
+<tr>
+<td>Grenade</td>
+<td>Grenade launchers deal difficult-to-repair damage at close range.</td>
+</tr>
+<tr>
+<td>Artillery</td>
+<td>Artillery cannons lob projectiles long distances to deal significant damage.</td>
+</tr>
+<tr>
+<td>Blunt Force</td>
+<td>Blunt Force weapons are excellent for throwing enemy mechs off balance to help deal even more damage.</td>
+</tr>
+<tr>
+<td>Cannon</td>
+<td>Cannons deal huge damage at moderate range.</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr>
+<th>Stat</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Size</td>
+<td>The minimum slot size required to install this component.</td>
+</tr>
+<tr>
+<td>Power Type</td>
+<td>The type of power this component requires.</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>The amount of power that this component requires.</td>
+</tr>
+<tr>
+<td>Cooling</td>
+<td>The amount of cooling that this component requires.</td>
+</tr>
+<tr>
+<td>Processing</td>
+<td>The amount of processing that this component requires.</td>
+</tr>
+<tr>
+<td>Range</td>
+<td>The maximum range that this weapon can achieve.</td>
+</tr>
+<tr>
+<td>Targeting</td>
+<td>The amount you can adjust your targeting rolls.</td>
+</tr>
+<tr>
+<td>Damage</td>
+<td>The amount of damage that this weapon deals to plating.</td>
+</tr>
+<tr>
+<td>Effect</td>
+<td>Special effects triggered when landing a hit with this weapon. See <a href="https://mechtronica.net/rules/weapons">Weapons</a> for details on the different effects.</td>
+</tr>
+</tbody>
+</table>
+<h4>Equipment</h4>
+<p>Equipment describes attachments that provide some sort of utility that isn't strictly combat-focused. Many equipment components upgrade movement, enhance repair capabilities, or provide special measuring tools.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cargo Pod</td>
+<td>Cargo pods provide extra storage for your knicknacks.</td>
+</tr>
+<tr>
+<td>Booster</td>
+<td>Boost rockets let your mech move faster or jump higher.</td>
+</tr>
+<tr>
+<td>Flaregun</td>
+<td>Flare guns fire brilliant flares that can even signal help from ships in low orbit.</td>
+</tr>
+<tr>
+<td>Manipulator</td>
+<td>Manipulators significantly speed up salvaging and repairs on other mechs, while also providing precise manipulation for detail-oriented tasks.</td>
+</tr>
+<tr>
+<td>Mining Tool</td>
+<td>These tools allow you to mine raw resources which can later be sold or refined.</td>
+</tr>
+<tr>
+<td>MSAL</td>
+<td>Mobile Sample Analysis Labs provide specialized scientific measurement capabilities.</td>
+</tr>
+<tr>
+<td>Shield</td>
+<td>Shields let you provide temporary extra protection to yourself or nearby mechs.</td>
+</tr>
+<tr>
+<td>Welding Tool</td>
+<td>These toolkits help with salvaging and repairs on other mechs.</td>
+</tr>
+<tr>
+<td>Winch</td>
+<td>Winches allow you to haul large objects with ease, up to a rated maximum weight.</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr>
+<th>Stat</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Size</td>
+<td>The minimum slot size required to install this component.</td>
+</tr>
+<tr>
+<td>Power Type</td>
+<td>The type of power this component requires.</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>The amount of power that this component requires.</td>
+</tr>
+<tr>
+<td>Cooling</td>
+<td>The amount of cooling that this component requires.</td>
+</tr>
+<tr>
+<td>Processing</td>
+<td>The amount of processing that this component requires.</td>
+</tr>
+<tr>
+<td>Effect</td>
+<td>Special abilities conferred by this equipment. See <a href="https://mechtronica.net/rules/equipment">Equipment</a> for details on the different equipment effects.</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+      </div>
+      <!-- Content wrapper end -->
+
+    </div>
+    <script src="https://mechtronica.net/halfmoonui/js/halfmoon.min.js"></script>
+  </body>
+</html>
