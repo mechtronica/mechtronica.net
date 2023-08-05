@@ -16,13 +16,13 @@ Hand-to-hand combat centers on the concept of "Advantage". All non-mech combatan
 
 At the start of each combatant's turn they gain 1 Advantage point (unless they started their turn with 0; then they gain 6 Advantage points instead). They may then move and take 1 action.
 
-Actions give you a chance to reduce your opponent's Advantage. An action consists of a description of what you want to do (for example "attempt to flank my opponent") and an accompanying stat roll (in this example, probably Agility or Perception). If your roll is successful, the GM decides how many Advantage points the opponent loses. 
+Actions give you a chance to reduce your opponent's Advantage. An action consists of a description of what you want to do (for example "attempt to flank my opponent") and an accompanying stat roll (in this example, probably Agility or Perception). If your roll is successful, the GM decides how many Advantage points the opponent loses.
 
-Once a combatant's Advantage is reduced to 0 points, the attacker(s) may make an atack consistent with their efforts up to that point. That might mean dealing a serious injury or disarming the opponent, for example. It could even mean incapacitating the opponent.
+Once a combatant's Advantage is reduced to 0 points, the attacker(s) may make an attack consistent with their efforts up to that point. That might mean dealing a serious injury or disarming the opponent, for example. It could even mean incapacitating the opponent.
 
 ### Dealing with Mechs while on Foot
-While you never want to be in this situation, there come a time where you're being attacked by an opponent in a mech while you're on foot. Usually your best option in this case will be to make a hasty escape. 
+While you never want to be in this situation, there may come a time where you're being attacked by an opponent in a mech while you're on foot. Usually your best option in this case will be to make a hasty escape.
 
-Mechs can target non-mech combatants on a successful Targeting roll of 1-40. If a mechaneer is hit by a mech's attack while not in their mech, they die. 
+Mechs can target non-mech combatants on a successful Targeting roll of 1-25. If a mechaneer is hit by a mech's attack while not in their mech, they die.
 
-If you find yourself being hunted by an enemy mech while you don't have access to your own mech, you should take cover immediately and quickly find a means of escape. Only large numbers of heavily armed combatants have any chance of taking down an enemy mech on foot. 
+If you find yourself being hunted by an enemy mech while you don't have access to your own mech, you should take cover immediately and quickly find a means of escape. Only large numbers of heavily armed combatants have any chance of taking down an enemy mech on foot.
