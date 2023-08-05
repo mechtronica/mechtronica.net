@@ -81,3 +81,11 @@ body {
     font-family: 'Inconsolata', monospace;
     color: #f478ff;
 }
+
+ul, ol {
+    margin-left: 1em;
+}
+
+li {
+    list-style-position: outside;
+}
