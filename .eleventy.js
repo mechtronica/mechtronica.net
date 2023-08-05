@@ -38,7 +38,7 @@ module.exports = function(eleventyConfig) {
     });
     eleventyConfig.setLibrary('md', markdownLib);
     eleventyConfig.addShortcode('keyword', function(word, glossary) {
-      return '<b class="keyword" data-toggle="tooltip" data-title="' + glossary[word] + '">' + word + '</b>'
+      return '<b class="keyword" onclick="halfmoon.initStickyAlert({content: \'' + glossary[word] + '\', title: \'' + word + '\', hasDismissButton: true, timeShown: 5000});">' + word + '</b>'
     });
     eleventyConfig.addFilter('getObjectsByAttribute', function(objects, attribute, value) {
       return objects.filter((obj) => obj[attribute] == value);
