@@ -58,6 +58,7 @@ h6 {
 /* More tooltip styling */
 [data-toggle="tooltip"]::after {
     text-align: left;
+    z-index: 50;
 }
 
 /* More collapse styling (to look good in the sidebar) */
