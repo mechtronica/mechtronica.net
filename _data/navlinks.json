@@ -28,6 +28,7 @@
     "Turn Based Play" :
     {
       "Combat": "/rules/combat/",
+      "Out-of-Mech Combat": "/rules/out-of-mech/",
       "Turn Structure": "/rules/turn-structure/",
       "Weapons": "/rules/weapons/",
       "Equipment": "/rules/equipment/"
