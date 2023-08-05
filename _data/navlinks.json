@@ -25,11 +25,11 @@
       "Calculations": "/rules/build-calculations/",
       "Validating": "/rules/build-validating/"
     },
-    "Turn Based Play" :
+    "Gameplay" :
     {
+      "Turn Structure": "/rules/turn-structure/",
       "Combat": "/rules/combat/",
       "Out-of-Mech Combat": "/rules/out-of-mech/",
-      "Turn Structure": "/rules/turn-structure/",
       "Weapons": "/rules/weapons/",
       "Equipment": "/rules/equipment/"
     },
