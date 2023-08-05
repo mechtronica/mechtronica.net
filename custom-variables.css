@@ -58,6 +58,7 @@ h6 {
 /* More tooltip styling */
 [data-toggle="tooltip"]::after {
     text-align: left;
+    z-index: 50;
 }
 
 /* More collapse styling (to look good in the sidebar) */
@@ -80,4 +81,12 @@ body {
 .keyword {
     font-family: 'Inconsolata', monospace;
     color: #f478ff;
+}
+
+ul, ol {
+    margin-left: 1em;
+}
+
+li {
+    list-style-position: outside;
 }

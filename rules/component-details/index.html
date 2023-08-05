@@ -144,11 +144,13 @@
                     
                   
                     
-                        <h6 class="sidebar-title">Turn Based Play</h6>
+                        <h6 class="sidebar-title">Gameplay</h6>
+                      
+                        <a href="https://mechtronica.net/rules/turn-structure/" class="sidebar-link ml-10">Turn Structure</a>
                       
                         <a href="https://mechtronica.net/rules/combat/" class="sidebar-link ml-10">Combat</a>
                       
-                        <a href="https://mechtronica.net/rules/turn-structure/" class="sidebar-link ml-10">Turn Structure</a>
+                        <a href="https://mechtronica.net/rules/out-of-mech/" class="sidebar-link ml-10">Out-of-Mech Combat</a>
                       
                         <a href="https://mechtronica.net/rules/weapons/" class="sidebar-link ml-10">Weapons</a>
                       
@@ -192,7 +194,7 @@
       <!-- Sidebar end -->
 
       <!-- Content wrapper start -->
-      <div class="content-wrapper">
+      <div class="content-wrapper d-flex flex-column">
         <button class="btn btn-square m-10" type="button" onclick="halfmoon.toggleSidebar()" style="padding-top: 0.4rem;">
           <span class="material-symbols-outlined">menu</span>
           <span class="sr-only">Toggle sidebar</span> <!-- sr-only = show only on screen readers -->
@@ -200,7 +202,7 @@
         <div class="content">
           <!-- The goal of this page is to provide a detailed reference for component information -->
 <h2>Components</h2>
-<p>A mech is exactly the sum of its parts. This page explains the details and stats of different mech <b class="keyword" data-toggle="tooltip" data-title="The parts that make your mech operate. This includes Frames, Plating, Modules, and all types of Components.">Parts</b> and <b class="keyword" data-toggle="tooltip" data-title="Components are mech Parts that must be installed in slots in your mech's Frame.">Components</b>, grouped by <b class="keyword" data-toggle="tooltip" data-title="Part Types describe categories of parts which share common features (such as Weapons, Cabins, or Modules)">Part Type</b>.</p>
+<p>A mech is exactly the sum of its parts. This page explains the details and stats of different mech <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'The parts that make your mech operate. This includes Frames, Plating, Modules, and all types of Components.', title: 'Parts', hasDismissButton: true, timeShown: 5000});">Parts</b> and <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'Components are mech Parts that must be installed in slots in your mech's Frame.', title: 'Components', hasDismissButton: true, timeShown: 5000});">Components</b>, grouped by <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'Part Types describe categories of parts which share common features (such as Weapons, Cabins, or Modules)', title: 'Part Type', hasDismissButton: true, timeShown: 5000});">Part Type</b>.</p>
 <!-- TODO: Table of Contents -->
 <h3>Common Traits</h3>
 <p>Almost every part will have a few basic traits:</p>
@@ -347,7 +349,7 @@
 <h3>The Power Subsystem</h3>
 <p>The power subsystem consists of two components: a Power Plant and a Fuel Tank. The power plant uses fuel from the fuel tank to generate a steady supply of energy.</p>
 <h4>Power Plants</h4>
-<p>Power Plants convert fuel into <b class="keyword" data-toggle="tooltip" data-title="Power is the resource that gets your mech moving. It comes in three types:  Electrical, Mechanical, and Steam. ">Power</b>.</p>
+<p>Power Plants convert fuel into <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'Power is the resource that gets your mech moving. It comes in three types:  Electrical, Mechanical, and Steam. ', title: 'Power', hasDismissButton: true, timeShown: 5000});">Power</b>.</p>
 <table class="table">
 <thead>
 <tr>
@@ -411,7 +413,7 @@
 </tbody>
 </table>
 <h3>The Control Subsystem</h3>
-<p>Mechs are controlled by a combination of <b class="keyword" data-toggle="tooltip" data-title="A Mechaneer is a person who is capable of piloting a mech.">Mechaneer</b> input and computer automation. The control subsystem consists of the Cabin, Mainframe, and Modules.</p>
+<p>Mechs are controlled by a combination of <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'A Mechaneer is a person who is capable of piloting a mech.', title: 'Mechaneer', hasDismissButton: true, timeShown: 5000});">Mechaneer</b> input and computer automation. The control subsystem consists of the Cabin, Mainframe, and Modules.</p>
 <h4>Software</h4>
 <p>In order to control your mech, your Cabin and Modules need to be compatible with the Software running on your Mainframe. There are three different types of software, aligned with the three Control classes.</p>
 <table class="table">
@@ -486,7 +488,7 @@
 </tbody>
 </table>
 <h4>Mainframes</h4>
-<p>Mainframes provide mechs with <b class="keyword" data-toggle="tooltip" data-title="Processing is the resource that allows your mech to compute things. Most components require some amount of processing.">Processing</b>.</p>
+<p>Mainframes provide mechs with <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'Processing is the resource that allows your mech to compute things. Most components require some amount of processing.', title: 'Processing', hasDismissButton: true, timeShown: 5000});">Processing</b>.</p>
 <table class="table">
 <thead>
 <tr>
@@ -821,6 +823,7 @@
 </table>
 
         </div>
+        <div class="flex-grow-1"></div>
         <div class="bg-dark-dm bg-white-lm p-20 position-sticky bottom-0 border-top">
           <p class="m-0 text-center"> Have questions? <br class="d-md-none"> <a href="https://discord.gg/VPzzYHqxFy"> Join our Discord </a> and ask away! </p>
         </div>

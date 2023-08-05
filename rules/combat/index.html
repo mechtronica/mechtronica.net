@@ -144,11 +144,13 @@
                     
                   
                     
-                        <h6 class="sidebar-title">Turn Based Play</h6>
+                        <h6 class="sidebar-title">Gameplay</h6>
+                      
+                        <a href="https://mechtronica.net/rules/turn-structure/" class="sidebar-link ml-10">Turn Structure</a>
                       
                         <a href="https://mechtronica.net/rules/combat/" class="sidebar-link ml-10 active">Combat</a>
                       
-                        <a href="https://mechtronica.net/rules/turn-structure/" class="sidebar-link ml-10">Turn Structure</a>
+                        <a href="https://mechtronica.net/rules/out-of-mech/" class="sidebar-link ml-10">Out-of-Mech Combat</a>
                       
                         <a href="https://mechtronica.net/rules/weapons/" class="sidebar-link ml-10">Weapons</a>
                       
@@ -192,7 +194,7 @@
       <!-- Sidebar end -->
 
       <!-- Content wrapper start -->
-      <div class="content-wrapper">
+      <div class="content-wrapper d-flex flex-column">
         <button class="btn btn-square m-10" type="button" onclick="halfmoon.toggleSidebar()" style="padding-top: 0.4rem;">
           <span class="material-symbols-outlined">menu</span>
           <span class="sr-only">Toggle sidebar</span> <!-- sr-only = show only on screen readers -->
@@ -200,8 +202,8 @@
         <div class="content">
           <h2>Combat</h2>
 <p>In the cruel world of Mechtronica you're sure to face a scuffle every now and then, whether you're a mercenary, miner, or meanderer.</p>
-<h3>Attack Structure</h3>
-<p>Attacking comes in a few steps like so:</p>
+<h3>Attacking</h3>
+<p>Attacking happens in a few steps:</p>
 <ol>
 <li><strong>Aiming</strong>: Select the section on the opponent mech to aim for.</li>
 <li><strong>Firing</strong>: Roll 1d100. You may then adjust this number up or down up to the targeting bonus of your weapon. If the roll falls within any of the section's roll ranges then you hit the corresponding slot.</li>
@@ -213,15 +215,28 @@
 </ul>
 </li>
 </ol>
+<!-- TODO: Consider adding a section on how to record damage -->
 <h3>Consequences</h3>
-<p>Losing some components will have severe consequences for you.<br>
-If one of your components being damaged or broken (see <a href="/rules/component-states/">Component States</a>) leaves you with too few resources to power your constant draw components, your mech will no longer function at all.<br>
-If a joint is broken you can no longer use attachments in that joint. If the broken joint is your in your legs section you can no longer move.<br>
-If your mech is down due to damaged or broken components, you will either have to disable some components or make repairs in order to get back on your feet.</p>
+<p>Losing some components will have severe consequences for you:</p>
+<ul>
+<li>If one of your components being <a href="/rules/component-states/">damaged or broken</a> leaves you with too few resources to power your constant draw components:
+<ul>
+<li>Your mech will immediately shut down.</li>
+<li>Your will be unable to use your mech until you have disabled some components or made repairs.</li>
+</ul>
+</li>
+<li>If a joint is broken:
+<ul>
+<li>You can no longer use attachments in the section attached to that joint.</li>
+<li>If the broken joint is your in your legs section: you can no longer move.</li>
+</ul>
+</li>
+</ul>
 <h3>Dying</h3>
 <p>If your cabin is broken, and no other special circumstances or effects prevent it, your mechaneer dies.</p>
 
         </div>
+        <div class="flex-grow-1"></div>
         <div class="bg-dark-dm bg-white-lm p-20 position-sticky bottom-0 border-top">
           <p class="m-0 text-center"> Have questions? <br class="d-md-none"> <a href="https://discord.gg/VPzzYHqxFy"> Join our Discord </a> and ask away! </p>
         </div>

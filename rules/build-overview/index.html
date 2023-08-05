@@ -144,11 +144,13 @@
                     
                   
                     
-                        <h6 class="sidebar-title">Turn Based Play</h6>
+                        <h6 class="sidebar-title">Gameplay</h6>
+                      
+                        <a href="https://mechtronica.net/rules/turn-structure/" class="sidebar-link ml-10">Turn Structure</a>
                       
                         <a href="https://mechtronica.net/rules/combat/" class="sidebar-link ml-10">Combat</a>
                       
-                        <a href="https://mechtronica.net/rules/turn-structure/" class="sidebar-link ml-10">Turn Structure</a>
+                        <a href="https://mechtronica.net/rules/out-of-mech/" class="sidebar-link ml-10">Out-of-Mech Combat</a>
                       
                         <a href="https://mechtronica.net/rules/weapons/" class="sidebar-link ml-10">Weapons</a>
                       
@@ -192,7 +194,7 @@
       <!-- Sidebar end -->
 
       <!-- Content wrapper start -->
-      <div class="content-wrapper">
+      <div class="content-wrapper d-flex flex-column">
         <button class="btn btn-square m-10" type="button" onclick="halfmoon.toggleSidebar()" style="padding-top: 0.4rem;">
           <span class="material-symbols-outlined">menu</span>
           <span class="sr-only">Toggle sidebar</span> <!-- sr-only = show only on screen readers -->
@@ -201,7 +203,7 @@
           <h2>Overview</h2>
 <p>Mech building is at the heart of the Mechtronica RPG system and as such has some of the most in depth mechanics. To start we'll introduce the key concepts here before you dive into the details.</p>
 <p>The mechtronica system is highly modular. It's not like picking a car model and choosing trims and packages—you're building this from the ground up. You will pick a frame which is where all the other parts for your mech will go, but the main thing it determines are how fast your mech is and how many parts it can fit.</p>
-<p>Nearly all parts use <b class="keyword" data-toggle="tooltip" data-title="Power, Cooling, and CPU: the resources that your mech draws on to operate.">Resources</b>. Resources (and the related <b class="keyword" data-toggle="tooltip" data-title="Power comes in 3 different types: Electrical, Mechanical, and Steam.">Power Type</b>) are the main constraints on your mech build. You have to make sure you have enough resources for all your <b class="keyword" data-toggle="tooltip" data-title="undefined">Infrastructure Components</b> to operate and enough left over to use your <b class="keyword" data-toggle="tooltip" data-title="undefined">Attachment Components</b> when you need to.</p>
+<p>Nearly all parts use <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'Power, Cooling, and CPU: the resources that your mech draws on to operate.', title: 'Resources', hasDismissButton: true, timeShown: 5000});">Resources</b>. Resources (and the related <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'Power comes in 3 different types: Electrical, Mechanical, and Steam.', title: 'Power Type', hasDismissButton: true, timeShown: 5000});">Power Type</b>) are the main constraints on your mech build. You have to make sure you have enough resources for all your <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'undefined', title: 'Infrastructure Components', hasDismissButton: true, timeShown: 5000});">Infrastructure Components</b> to operate and enough left over to use your <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'undefined', title: 'Attachment Components', hasDismissButton: true, timeShown: 5000});">Attachment Components</b> when you need to.</p>
 <p>Most infrastructure components can be grouped into &quot;Subsystems&quot;. These groups of components interact with each other closely and set constraints on each other. There are three such subsystems:</p>
 <ul>
 <li>Frame Subsystem: Together, the frame and plating determine speed and provide some cooling</li>
@@ -211,6 +213,7 @@
 <p>There are also a few things to note about the cabin. The cabin and the frame are the only two components which you can have strictly one of each per mech. The cabin is the ultimate weakpoint of your mech, and if it is destroyed, you die (see <a href="https://mechtronica.net/rules/combat">Combat</a>).</p>
 
         </div>
+        <div class="flex-grow-1"></div>
         <div class="bg-dark-dm bg-white-lm p-20 position-sticky bottom-0 border-top">
           <p class="m-0 text-center"> Have questions? <br class="d-md-none"> <a href="https://discord.gg/VPzzYHqxFy"> Join our Discord </a> and ask away! </p>
         </div>

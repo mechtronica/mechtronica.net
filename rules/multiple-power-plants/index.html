@@ -144,11 +144,13 @@
                     
                   
                     
-                        <h6 class="sidebar-title">Turn Based Play</h6>
+                        <h6 class="sidebar-title">Gameplay</h6>
+                      
+                        <a href="https://mechtronica.net/rules/turn-structure/" class="sidebar-link ml-10">Turn Structure</a>
                       
                         <a href="https://mechtronica.net/rules/combat/" class="sidebar-link ml-10">Combat</a>
                       
-                        <a href="https://mechtronica.net/rules/turn-structure/" class="sidebar-link ml-10">Turn Structure</a>
+                        <a href="https://mechtronica.net/rules/out-of-mech/" class="sidebar-link ml-10">Out-of-Mech Combat</a>
                       
                         <a href="https://mechtronica.net/rules/weapons/" class="sidebar-link ml-10">Weapons</a>
                       
@@ -192,24 +194,25 @@
       <!-- Sidebar end -->
 
       <!-- Content wrapper start -->
-      <div class="content-wrapper">
+      <div class="content-wrapper d-flex flex-column">
         <button class="btn btn-square m-10" type="button" onclick="halfmoon.toggleSidebar()" style="padding-top: 0.4rem;">
           <span class="material-symbols-outlined">menu</span>
           <span class="sr-only">Toggle sidebar</span> <!-- sr-only = show only on screen readers -->
         </button>
         <div class="content">
           <h2>Multiple Power Plants</h2>
-<p>Having more than one <b class="keyword" data-toggle="tooltip" data-title="undefined">Power Plant</b> <em>can</em> make things more complicated. There are a few extra things to consider, but it can also provide you with some interesting build options.</p>
+<p>Having more than one <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'undefined', title: 'Power Plant', hasDismissButton: true, timeShown: 5000});">Power Plant</b> <em>can</em> make things more complicated. There are a few extra things to consider, but it can also provide you with some interesting build options.</p>
 <h3>Single Power Type</h3>
-<p>If you have more than one power plant, but they each supply the same <b class="keyword" data-toggle="tooltip" data-title="Power comes in 3 different types: Electrical, Mechanical, and Steam.">Power Type</b>, things are fairly simple. You can simply put all the power into one pool.</p>
+<p>If you have more than one power plant, but they each supply the same <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'Power comes in 3 different types: Electrical, Mechanical, and Steam.', title: 'Power Type', hasDismissButton: true, timeShown: 5000});">Power Type</b>, things are fairly simple. You can simply put all the power into one pool.</p>
 <h3>Multiple Power Types</h3>
 <p>If you have more than one power plant and they produce different power types, things get a little more complicated. You will have one power pool for each power type (the character sheets have spots for each type to support this), so if you have two electric plants and one mechanical plant, you simply add the power output of the two electric ones and that goes in the electric power pool, and the power from the mechanical plant goes in the mechanical power pool. Your mainframe will use the same power type as your cabin.</p>
 <h3>Multiple Fuels for One Power Type</h3>
-<p>If multiple plants produce the same power type but use different <b class="keyword" data-toggle="tooltip" data-title="Fuel comes in 5 different types: Hydrogen, Lithium Ion, Ethanol, Methane, and Nuclear.">Fuel Type</b> you have some configuration to do. You can choose how to split up fuel consumption between then different fuels, with the constraint that a power plant can never consume more fuel than power it produces. For instance, if you have an electric hydrogen plant that produces 10 power and an electric ethanol plant that produces 15 power, and your electric used power is 15, then you can configure your mech to consume 5 hydrogen and 10 ethanol every day, but not 12 hydrogen and 3 ethanol (because your hydrogen plant can only produce 10 power it cannot consume more than 10 hydrogen). You can configure this fuel consumption any time you are at a <b class="keyword" data-toggle="tooltip" data-title="A garage is a place where you can tinker with your mech.">Garage</b>.</p>
+<p>If multiple plants produce the same power type but use different <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'Fuel comes in 5 different types: Hydrogen, Lithium Ion, Ethanol, Methane, and Nuclear.', title: 'Fuel Type', hasDismissButton: true, timeShown: 5000});">Fuel Type</b> you have some configuration to do. You can choose how to split up fuel consumption between then different fuels, with the constraint that a power plant can never consume more fuel than power it produces. For instance, if you have an electric hydrogen plant that produces 10 power and an electric ethanol plant that produces 15 power, and your electric used power is 15, then you can configure your mech to consume 5 hydrogen and 10 ethanol every day, but not 12 hydrogen and 3 ethanol (because your hydrogen plant can only produce 10 power it cannot consume more than 10 hydrogen). You can configure this fuel consumption any time you are at a <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'A garage is a place where you can tinker with your mech.', title: 'Garage', hasDismissButton: true, timeShown: 5000});">Garage</b>.</p>
 <h3>Sharing Fuel Tanks</h3>
 <p>If multiple power plants have the same fuel type, then they can share one or more fuel tanks. Simply sum up the capacities of all fuel tanks of the same type and treat them as one pool.</p>
 
         </div>
+        <div class="flex-grow-1"></div>
         <div class="bg-dark-dm bg-white-lm p-20 position-sticky bottom-0 border-top">
           <p class="m-0 text-center"> Have questions? <br class="d-md-none"> <a href="https://discord.gg/VPzzYHqxFy"> Join our Discord </a> and ask away! </p>
         </div>

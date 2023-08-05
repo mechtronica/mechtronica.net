@@ -144,11 +144,13 @@
                     
                   
                     
-                        <h6 class="sidebar-title">Turn Based Play</h6>
+                        <h6 class="sidebar-title">Gameplay</h6>
+                      
+                        <a href="https://mechtronica.net/rules/turn-structure/" class="sidebar-link ml-10">Turn Structure</a>
                       
                         <a href="https://mechtronica.net/rules/combat/" class="sidebar-link ml-10">Combat</a>
                       
-                        <a href="https://mechtronica.net/rules/turn-structure/" class="sidebar-link ml-10">Turn Structure</a>
+                        <a href="https://mechtronica.net/rules/out-of-mech/" class="sidebar-link ml-10">Out-of-Mech Combat</a>
                       
                         <a href="https://mechtronica.net/rules/weapons/" class="sidebar-link ml-10">Weapons</a>
                       
@@ -192,15 +194,15 @@
       <!-- Sidebar end -->
 
       <!-- Content wrapper start -->
-      <div class="content-wrapper">
+      <div class="content-wrapper d-flex flex-column">
         <button class="btn btn-square m-10" type="button" onclick="halfmoon.toggleSidebar()" style="padding-top: 0.4rem;">
           <span class="material-symbols-outlined">menu</span>
           <span class="sr-only">Toggle sidebar</span> <!-- sr-only = show only on screen readers -->
         </button>
         <div class="content">
           <h2>Planning a Mech Build</h2>
-<p>The first step in building your mech is planning. Do you want to build a combat-focused mech built for dealing maximum damage? Perhaps your <b class="keyword" data-toggle="tooltip" data-title="A Mechaneer is a person who is capable of piloting a mech.">Mechaneer</b> needs a mech capable of hauling scientific equipment and taking specific measurements. Or maybe you earn a living as a field mechanic, and focus on equipment to make sophistocated repairs when far from a garage. Think about how you want to play, and how that relates to your mechaneer's personality.</p>
-<p>Once you choose a focus, you should select a mech Frame and a <b class="keyword" data-toggle="tooltip" data-title="Power is the resource that gets your mech moving. It comes in three types:  Electrical, Mechanical, and Steam. ">Power</b> Type. Read on for information on factors that you should consider when building your mech.</p>
+<p>The first step in building your mech is planning. Do you want to build a combat-focused mech built for dealing maximum damage? Perhaps your <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'A Mechaneer is a person who is capable of piloting a mech.', title: 'Mechaneer', hasDismissButton: true, timeShown: 5000});">Mechaneer</b> needs a mech capable of hauling scientific equipment and taking specific measurements. Or maybe you earn a living as a field mechanic, and focus on equipment to make sophistocated repairs when far from a garage. Think about how you want to play, and how that relates to your mechaneer's personality.</p>
+<p>Once you choose a focus, you should select a mech Frame and a <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'Power is the resource that gets your mech moving. It comes in three types:  Electrical, Mechanical, and Steam. ', title: 'Power', hasDismissButton: true, timeShown: 5000});">Power</b> Type. Read on for information on factors that you should consider when building your mech.</p>
 <h3>Tradeoffs to Consider</h3>
 <h4>Frame Size and Speed</h4>
 <p>As the foundation of your mech, your frame has a significant impact on play style. Heavy frames provide more space for additional attachments, but are much slower as a result of their size. Large frames also offer a much larger target, and as such are easier to hit. Light frames are quick and hard to hit, but have very limited space for components. Standard frames are a good balance between the two.</p>
@@ -230,7 +232,7 @@
 </tbody>
 </table>
 <h4>Control Software</h4>
-<p>The <b class="keyword" data-toggle="tooltip" data-title="Components are mech Parts that must be installed in slots in your mech's Frame.">Components</b> compatible with each software have distinct costs and benefits. As such, you'll want to choose software that fits well with your focus.</p>
+<p>The <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'Components are mech Parts that must be installed in slots in your mech's Frame.', title: 'Components', hasDismissButton: true, timeShown: 5000});">Components</b> compatible with each software have distinct costs and benefits. As such, you'll want to choose software that fits well with your focus.</p>
 <table class="table">
 <thead>
 <tr>
@@ -429,6 +431,7 @@
 </ol>
 
         </div>
+        <div class="flex-grow-1"></div>
         <div class="bg-dark-dm bg-white-lm p-20 position-sticky bottom-0 border-top">
           <p class="m-0 text-center"> Have questions? <br class="d-md-none"> <a href="https://discord.gg/VPzzYHqxFy"> Join our Discord </a> and ask away! </p>
         </div>

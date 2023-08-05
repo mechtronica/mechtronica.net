@@ -144,11 +144,13 @@
                     
                   
                     
-                        <h6 class="sidebar-title">Turn Based Play</h6>
+                        <h6 class="sidebar-title">Gameplay</h6>
+                      
+                        <a href="https://mechtronica.net/rules/turn-structure/" class="sidebar-link ml-10">Turn Structure</a>
                       
                         <a href="https://mechtronica.net/rules/combat/" class="sidebar-link ml-10">Combat</a>
                       
-                        <a href="https://mechtronica.net/rules/turn-structure/" class="sidebar-link ml-10">Turn Structure</a>
+                        <a href="https://mechtronica.net/rules/out-of-mech/" class="sidebar-link ml-10">Out-of-Mech Combat</a>
                       
                         <a href="https://mechtronica.net/rules/weapons/" class="sidebar-link ml-10">Weapons</a>
                       
@@ -192,7 +194,7 @@
       <!-- Sidebar end -->
 
       <!-- Content wrapper start -->
-      <div class="content-wrapper">
+      <div class="content-wrapper d-flex flex-column">
         <button class="btn btn-square m-10" type="button" onclick="halfmoon.toggleSidebar()" style="padding-top: 0.4rem;">
           <span class="material-symbols-outlined">menu</span>
           <span class="sr-only">Toggle sidebar</span> <!-- sr-only = show only on screen readers -->
@@ -208,9 +210,9 @@
 <li>Large components are in large slots</li>
 </ul>
 <h3>Power Type</h3>
-<p>One of the first things you should check is <b class="keyword" data-toggle="tooltip" data-title="Power comes in 3 different types: Electrical, Mechanical, and Steam.">Power Type</b>. If you are doing a single power plant mech (or a multi-power plant mech but they all produce the same power type), then all your other components must match the power type of your power plant. For mechs with multiple power types see <a href="/rules/multiple-power-plants/">Multiple Power Plants</a>.</p>
+<p>One of the first things you should check is <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'Power comes in 3 different types: Electrical, Mechanical, and Steam.', title: 'Power Type', hasDismissButton: true, timeShown: 5000});">Power Type</b>. If you are doing a single power plant mech (or a multi-power plant mech but they all produce the same power type), then all your other components must match the power type of your power plant. For mechs with multiple power types see <a href="/rules/multiple-power-plants/">Multiple Power Plants</a>.</p>
 <h3>Software</h3>
-<p>Your cabin and all your modules must be compatible with the <b class="keyword" data-toggle="tooltip" data-title="The software your mainframe uses. This software places constraints on what cabin and modules you can use.">Software</b> of your mainframe.</p>
+<p>Your cabin and all your modules must be compatible with the <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'The software your mainframe uses. This software places constraints on what cabin and modules you can use.', title: 'Software', hasDismissButton: true, timeShown: 5000});">Software</b> of your mainframe.</p>
 <h3>Resources</h3>
 <p>To make sure you have enough resources check that:</p>
 <ul>
@@ -221,6 +223,7 @@
 <p>If at any point you realize you won't have enough resources to do something, or your stats are otherwise not as desired, you'll of course have to adjust what components you are using. Remember there's more than one way to adjust stats; often times modules and equipment provide alternative ways to adjust resource usage, speed, damage, or other stats and may be used to fine tune a build.</p>
 
         </div>
+        <div class="flex-grow-1"></div>
         <div class="bg-dark-dm bg-white-lm p-20 position-sticky bottom-0 border-top">
           <p class="m-0 text-center"> Have questions? <br class="d-md-none"> <a href="https://discord.gg/VPzzYHqxFy"> Join our Discord </a> and ask away! </p>
         </div>

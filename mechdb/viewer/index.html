@@ -144,11 +144,13 @@
                     
                   
                     
-                        <h6 class="sidebar-title">Turn Based Play</h6>
+                        <h6 class="sidebar-title">Gameplay</h6>
+                      
+                        <a href="https://mechtronica.net/rules/turn-structure/" class="sidebar-link ml-10">Turn Structure</a>
                       
                         <a href="https://mechtronica.net/rules/combat/" class="sidebar-link ml-10">Combat</a>
                       
-                        <a href="https://mechtronica.net/rules/turn-structure/" class="sidebar-link ml-10">Turn Structure</a>
+                        <a href="https://mechtronica.net/rules/out-of-mech/" class="sidebar-link ml-10">Out-of-Mech Combat</a>
                       
                         <a href="https://mechtronica.net/rules/weapons/" class="sidebar-link ml-10">Weapons</a>
                       
@@ -192,7 +194,7 @@
       <!-- Sidebar end -->
 
       <!-- Content wrapper start -->
-      <div class="content-wrapper">
+      <div class="content-wrapper d-flex flex-column">
         <button class="btn btn-square m-10" type="button" onclick="halfmoon.toggleSidebar()" style="padding-top: 0.4rem;">
           <span class="material-symbols-outlined">menu</span>
           <span class="sr-only">Toggle sidebar</span> <!-- sr-only = show only on screen readers -->
@@ -203,7 +205,7 @@
    The search function supports both normal text searching and <a href="https://goessner.net/articles/JsonPath/">JSONPath</a> searching (any search prefixed with a $ will be treated as a JSONPath).</p>
 <div class="d-flex m-10">
   <p class="m-0 mr-10">Search: </p>
-  <input type='text' class='form-control' id='mechdb-search' placeholder='Search MechDB'>
+  <input type='search' class='form-control' id='mechdb-search' placeholder='Search MechDB'>
 </div>
 <div class="d-flex m-10">
   <p class="m-0 mr-10">Filter by type: </p>
@@ -369,6 +371,7 @@ function showFrameSlots(name) {
 </script>
 <script src='https://mechtronica.net/jsonpath-0.8.0.js'></script>
         </div>
+        <div class="flex-grow-1"></div>
         <div class="bg-dark-dm bg-white-lm p-20 position-sticky bottom-0 border-top">
           <p class="m-0 text-center"> Have questions? <br class="d-md-none"> <a href="https://discord.gg/VPzzYHqxFy"> Join our Discord </a> and ask away! </p>
         </div>

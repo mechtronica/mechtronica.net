@@ -144,11 +144,13 @@
                     
                   
                     
-                        <h6 class="sidebar-title">Turn Based Play</h6>
+                        <h6 class="sidebar-title">Gameplay</h6>
+                      
+                        <a href="https://mechtronica.net/rules/turn-structure/" class="sidebar-link ml-10">Turn Structure</a>
                       
                         <a href="https://mechtronica.net/rules/combat/" class="sidebar-link ml-10">Combat</a>
                       
-                        <a href="https://mechtronica.net/rules/turn-structure/" class="sidebar-link ml-10">Turn Structure</a>
+                        <a href="https://mechtronica.net/rules/out-of-mech/" class="sidebar-link ml-10">Out-of-Mech Combat</a>
                       
                         <a href="https://mechtronica.net/rules/weapons/" class="sidebar-link ml-10">Weapons</a>
                       
@@ -192,7 +194,7 @@
       <!-- Sidebar end -->
 
       <!-- Content wrapper start -->
-      <div class="content-wrapper">
+      <div class="content-wrapper d-flex flex-column">
         <button class="btn btn-square m-10" type="button" onclick="halfmoon.toggleSidebar()" style="padding-top: 0.4rem;">
           <span class="material-symbols-outlined">menu</span>
           <span class="sr-only">Toggle sidebar</span> <!-- sr-only = show only on screen readers -->
@@ -200,7 +202,7 @@
         <div class="content">
           <h2>Fuel</h2>
 <p>Fuel is stored in tanks and is used on a per-day basis.<br>
-At the end of every day you use fuel equal to your <b class="keyword" data-toggle="tooltip" data-title="See Resources. The amount of each resource used by constant-draw components.">Used Resources</b> for power.<br>
+At the end of every day you use fuel equal to your <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'See Resources. The amount of each resource used by constant-draw components.', title: 'Used Resources', hasDismissButton: true, timeShown: 5000});">Used Resources</b> for power.<br>
 If you are using more than one fuel and/or power plant this is a little more complicated, see <a href="/rules/multiple-power-plants/">Multiple Power Plants</a>.</p>
 <h3>Fuel Types</h3>
 <p>There are 5 fuel types which are roughly on a scale of power density/efficiency from least power dense at the top to most power dense at the bottom:</p>
@@ -310,6 +312,7 @@ These are based on how inhabited the planet is and how easily accessible each fu
 </table>
 
         </div>
+        <div class="flex-grow-1"></div>
         <div class="bg-dark-dm bg-white-lm p-20 position-sticky bottom-0 border-top">
           <p class="m-0 text-center"> Have questions? <br class="d-md-none"> <a href="https://discord.gg/VPzzYHqxFy"> Join our Discord </a> and ask away! </p>
         </div>
