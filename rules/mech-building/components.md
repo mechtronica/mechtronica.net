@@ -1,12 +1,14 @@
 ---
 layout: template.njk
-title: Components
-permalink: /rules/component-details/
+title: Component Types
+permalink: /rules/component-types/
 tags: rules_page
 ---
 <!-- The goal of this page is to provide a detailed reference for component information -->
-## Components
-A mech is exactly the sum of its parts. This page explains the details and stats of different mech {% keyword 'Parts' glossary %} and {% keyword 'Components' glossary %}, grouped by {% keyword 'Part Type' glossary %}.
+## Component Types
+A mech is exactly the sum of its {% keyword 'Parts' glossary %}. This page explains the different {% keyword 'Part Type' glossary %}s as well as what their accompanying stats and traits represent. 
+
+> Looking for somewhere to view component stats? Check out [MechDB]({{site.url}}/mechdb/viewer)!
 
 <!-- TODO: Table of Contents -->
 
