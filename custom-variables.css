@@ -80,6 +80,7 @@ body {
 
 .keyword {
     font-family: 'Inconsolata', monospace;
+    cursor: pointer;
     color: #f478ff;
 }
 
@@ -89,4 +90,10 @@ ul, ol {
 
 li {
     list-style-position: outside;
+}
+
+blockquote > p {
+    padding-left: 1rem;
+    border-left: 2px solid var(--dark-color);
+    background-color: var(--gray-color-light);
 }
