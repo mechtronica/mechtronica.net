@@ -2,7 +2,7 @@ default: serve
 
 # Install dependencies
 setup:
-    npm i @11ty/eleventy markdown-it markdown-it-attrs
+    npm i @11ty/eleventy markdown-it markdown-it-attrs markdown-it-anchor
 
 build: clean setup
     #!/usr/bin/env bash
