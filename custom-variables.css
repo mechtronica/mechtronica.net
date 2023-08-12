@@ -80,6 +80,7 @@ body {
 
 .keyword {
     font-family: 'Inconsolata', monospace;
+    cursor: pointer;
     color: #f478ff;
 }
 
