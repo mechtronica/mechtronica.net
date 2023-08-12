@@ -1,0 +1,41 @@
+---
+layout: template.njk
+title: MechDB Viewer
+permalink: mechdb/builder/
+---
+<h2>Mech Builder</h2>
+<style>
+    .joint {
+        position: absolute;
+        width: 7.5%;
+        aspect-ratio: 1;
+    }
+    .slot {
+        position: absolute;
+        width: 14%;
+        aspect-ratio: 1;
+    }
+</style>
+<div class="position-relative">
+    <img style="margin-top: 7%; width: 100%;" src="{{site.url}}/images/frames/standard-background.svg">
+    <!-- Left Arm -->
+    <img class="joint" style="top: 15%; left: 19%;" src="{{site.url}}/images/frames/joint-background.svg">
+    <img class="slot" style="top: 10%; left: 3%;" src="{{site.url}}/images/frames/slot-background.svg">
+    <img class="slot" style="top: 34%; left: 3%;" src="{{site.url}}/images/frames/slot-background.svg">
+    <!-- Right Arm -->
+    <img class="joint" style="top: 15%; right: 19%;" src="{{site.url}}/images/frames/joint-background.svg">
+    <img class="slot" style="top: 10%; right: 3%;" src="{{site.url}}/images/frames/slot-background.svg">
+    <img class="slot" style="top: 34%; right: 3%;" src="{{site.url}}/images/frames/slot-background.svg">
+    <!-- Torso -->
+    <img class="slot" style="top: 0; left: 28%;" src="{{site.url}}/images/frames/slot-background.svg">
+    <img class="slot" style="top: 0; right: 28%;" src="{{site.url}}/images/frames/slot-background.svg">
+    <img class="slot" style="top: 17%; left: 28%;" src="{{site.url}}/images/frames/slot-background.svg">
+    <img class="slot" style="top: 17%; right: 28%;" src="{{site.url}}/images/frames/slot-background.svg">
+    <img class="slot" style="top: 28%; left: 43%;" src="{{site.url}}/images/frames/slot-background.svg">
+    <img class="slot" style="top: 34%; left: 28%;" src="{{site.url}}/images/frames/slot-background.svg">
+    <img class="slot" style="top: 34%; right: 28%;" src="{{site.url}}/images/frames/slot-background.svg">
+    <!-- Legs -->
+    <img class="joint" style="top: 50%; left: 46.5%;" src="{{site.url}}/images/frames/joint-background.svg">
+    <img class="slot" style="top: 58%; left: 17%;" src="{{site.url}}/images/frames/slot-background.svg">
+    <img class="slot" style="top: 58%; right: 17%;" src="{{site.url}}/images/frames/slot-background.svg">
+</div>
