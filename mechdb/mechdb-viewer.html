@@ -26,7 +26,7 @@ permalink: mechdb/viewer/
     <option value="Equipment">Equipment</option>
   </select>
 </div>
-<table class="table" id="results"></table>
+<table class='table' id='results'></table>
 
 <script>
 data = [];
@@ -93,6 +93,7 @@ function onchange_typeselect() {
 
 function searchJson(search) {
   results = [];
+  console.log(search);
   for (let x of data) {
     for (let y in x) {
       if (typeof x[y] === 'string' || x[y] instanceof String) {
@@ -152,14 +153,11 @@ function showJson(query) {
     for (let x of filteredData) {
       text += '<tr>';
       for (let y of ordered_headers) {
-        if (y == 'name') {
-          text += '<td><a href="#modal-1" onclick="showDetails(\'' + x.name + '\')">' + x[y] + '</a></td>';
-        }
-        else if (y == 'slots' && y in x) {
+        if (y == 'slots' && y in x) {
           text += '<td><a href="#modal-1" onclick="showFrameSlots(\'' + x.name + '\')">show</a></td>';
         }
         else {
-          text += '<td>' + truncate(y in x ? x[y] : '---' ) + '</td>';
+          text += '<td>' + (y in x ? x[y] : '---' ) + '</td>';
         }
       }
       text += '</tr>';
@@ -169,56 +167,9 @@ function showJson(query) {
   document.getElementById('results').innerHTML = text;
 }
 
-function truncate(text) {
-  if (text.length > 20) {
-    return text.substring(0, 17) + '...';
-  }
-  else {
-    return text;
-  }
-}
-
 function showFrameSlots(name) {
   modal_title.innerHTML = name;
   modal_content.innerHTML = '<img class="img-fluid" src="{{site.url}}/images/frames/' + encodeURIComponent(name) + '.svg"></img>'
 }
-
-function showDetails(name) {
-  part_data = jsonPath(data, '$[?(@.name=="' + name + '")]')[0];
-  special_headers = ['name', 'manufacturer', 'description', 'effect', 'slots'];
-  modal_title.innerHTML = part_data['name'];
-  modal_subtitle.innerHTML = part_data['manufacturer'];
-  stats_table = '<tabe>';
-  for (let y of ordered_headers) {
-    if (y in part_data && !(y in special_headers)) {
-      stats_table += '<tr>\n'
-                   + '  <td>' + titleCase(y) + '</td>\n'
-                   + '  <td>' + part_data[y] + '</td>\n'
-                   + '</tr>';
-    }
-  }
-  stats_table += '</table>';
-
-  effect = '';
-  if ('effect' in part_data) {
-    effect = '<h5>Effect</h5>\n'
-           + '<p>' + part_data['effect'] + '</p>';
-  }
-
-  description = '';
-  if ('description' in part_data) {
-    description = '<h5>Description</h5>\n'
-                + '<p>' + part_data['description'] + '</p>';
-  }
-
-  modal_content.innerHTML = '<div>\n'
-                          + stats_table + '\n'
-                            + '<div>\n'
-                            + effect + '\n'
-                            + description + '\n'
-                            + '</div>\n'
-                          + '</div>\n'
-}
-
 </script>
 <script src='{{site.url}}/jsonpath-0.8.0.js'></script>
