@@ -5,3 +5,4 @@ permalink: rules/how-to-play-for-players/
 tags: rules_page
 ---
 ## How to Play (for Players)
+
