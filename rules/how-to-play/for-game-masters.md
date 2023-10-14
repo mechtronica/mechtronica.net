@@ -10,7 +10,7 @@ As a game master you are responsible for organizing sessions, developing story (
 
 ### Preparation
 
-Once you have a story idea (or campaign book) and a group of players, you'll want to schedule a "session 0" where players create their character sheets. It is generally a good idea to give your players an rough idea of what the campaign is about any expectations for their characters to fit into that story so they can develop ideas and backstory for their characters before session 0. Keep in mind that the process of actually creating your mech can be very time consuming, so having players do as much as they can on their own before session 0 is advisable. If players will be using paper character sheets make sure to have those handy before session 0 too. If this is your first time using the Mechtronica system, make sure to familiarize yourself with the rules beforehand so you can walk players through it, and refer new players to this website as well so they can do their own reading beforehand.
+Once you have a story idea (or campaign book) and a group of players, you'll want to schedule a "session 0" where players create their character sheets. It is generally a good idea to give your players a rough idea of what the campaign is about and any expectations for their characters to fit into that story so they can develop ideas and backstory for their characters before session 0. Keep in mind that the process of actually creating your mech can be very time consuming, so having players do as much as they can on their own before session 0 is advisable. If players will be using paper character sheets make sure to have those handy before session 0 too. If this is your first time using the Mechtronica system, make sure to familiarize yourself with the rules beforehand so you can walk players through it, and refer new players to this website as well so they can do their own reading beforehand.
 
 ### Session 0
 
@@ -28,3 +28,7 @@ So the time comes for the first session. If you haven't already, discuss each pl
 ### Session 1
 
 Now that your players have their character sheets all filled out, it's time for the action. In session 1 the GM sets the stage for campaign, explaining how the characters meet (or already know each other) and describes the situation they find themselves in that will start things off in the direction of adventure. The basic flow of the game will be you as the GM describing what's going on, the players deciding what they are going to do, and then you describing the outcome of their actions (with stat rolls and turn-based play as appropriate).
+
+### And onward!
+
+Continue meeting up with your players for sessions and progressing through the story. It is important to add times when players can buy parts and modify their mechs, at least every 2 to 3 sessions, as continuous improvements to your mech is an important part of the game and it is how players "level up", as Mechtronica doesn't have actual levels for unlocking abilities etc.
