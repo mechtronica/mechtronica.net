@@ -5,7 +5,7 @@ permalink: rules/maintenance/
 tags: rules_page
 ---
 
-### Maintenance Overview
+## Maintenance Overview
 
 Maintenance is the act of repairing your mech after taking damage. Maintenance uses "Maintenance Power" (abbreviated as "MP") to track how much maintenance you can do in a turn. You perform maintenance using a toolkit, and that toolkit will give you some amount of MP. There are two main types of toolkits and they have different use cases:
 
