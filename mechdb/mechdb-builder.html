@@ -10,32 +10,71 @@ permalink: mechdb/builder/
         width: 7.5%;
         aspect-ratio: 1;
     }
+
     .slot {
         position: absolute;
         width: 14%;
         aspect-ratio: 1;
     }
+
+    .slot:hover {
+        filter: brightness(200%);
+    }
+
 </style>
-<div class="position-relative">
-    <img style="margin-top: 7%; width: 100%;" src="{{site.url}}/images/frames/standard-background.svg">
-    <!-- Left Arm -->
-    <img class="joint" style="top: 15%; left: 19%;" src="{{site.url}}/images/frames/joint-background.svg">
-    <img class="slot" style="top: 10%; left: 3%;" src="{{site.url}}/images/frames/slot-background.svg">
-    <img class="slot" style="top: 34%; left: 3%;" src="{{site.url}}/images/frames/slot-background.svg">
-    <!-- Right Arm -->
-    <img class="joint" style="top: 15%; right: 19%;" src="{{site.url}}/images/frames/joint-background.svg">
-    <img class="slot" style="top: 10%; right: 3%;" src="{{site.url}}/images/frames/slot-background.svg">
-    <img class="slot" style="top: 34%; right: 3%;" src="{{site.url}}/images/frames/slot-background.svg">
-    <!-- Torso -->
-    <img class="slot" style="top: 0; left: 28%;" src="{{site.url}}/images/frames/slot-background.svg">
-    <img class="slot" style="top: 0; right: 28%;" src="{{site.url}}/images/frames/slot-background.svg">
-    <img class="slot" style="top: 17%; left: 28%;" src="{{site.url}}/images/frames/slot-background.svg">
-    <img class="slot" style="top: 17%; right: 28%;" src="{{site.url}}/images/frames/slot-background.svg">
-    <img class="slot" style="top: 28%; left: 43%;" src="{{site.url}}/images/frames/slot-background.svg">
-    <img class="slot" style="top: 34%; left: 28%;" src="{{site.url}}/images/frames/slot-background.svg">
-    <img class="slot" style="top: 34%; right: 28%;" src="{{site.url}}/images/frames/slot-background.svg">
-    <!-- Legs -->
-    <img class="joint" style="top: 50%; left: 46.5%;" src="{{site.url}}/images/frames/joint-background.svg">
-    <img class="slot" style="top: 58%; left: 17%;" src="{{site.url}}/images/frames/slot-background.svg">
-    <img class="slot" style="top: 58%; right: 17%;" src="{{site.url}}/images/frames/slot-background.svg">
+<div class="d-flex flex-row">
+    <div class="position-relative w-half h-full">
+        <img style="margin-top: 7%; width: 100%;" src="{{site.url}}/images/frames/standard-background.svg">
+        <!-- Left Arm -->
+        <img class="joint" style="top: 15%; left: 19%;" src="{{site.url}}/images/frames/joint-background.svg">
+        <img class="slot" style="top: 10%; left: 3%;" src="{{site.url}}/images/frames/slot-background.svg">
+        <img class="slot" style="top: 34%; left: 3%;" src="{{site.url}}/images/frames/slot-background.svg">
+        <!-- Right Arm -->
+        <img class="joint" style="top: 15%; right: 19%;" src="{{site.url}}/images/frames/joint-background.svg">
+        <img class="slot" style="top: 10%; right: 3%;" src="{{site.url}}/images/frames/slot-background.svg">
+        <img class="slot" style="top: 34%; right: 3%;" src="{{site.url}}/images/frames/slot-background.svg">
+        <!-- Torso -->
+        <img class="slot" style="top: 0; left: 28%;" src="{{site.url}}/images/frames/slot-background.svg">
+        <img class="slot" style="top: 0; right: 28%;" src="{{site.url}}/images/frames/slot-background.svg">
+        <img class="slot" style="top: 17%; left: 28%;" src="{{site.url}}/images/frames/slot-background.svg">
+        <img class="slot" style="top: 17%; right: 28%;" src="{{site.url}}/images/frames/slot-background.svg">
+        <img class="slot" style="top: 28%; left: 43%;" src="{{site.url}}/images/frames/slot-background.svg">
+        <img class="slot" style="top: 34%; left: 28%;" src="{{site.url}}/images/frames/slot-background.svg">
+        <img class="slot" style="top: 34%; right: 28%;" src="{{site.url}}/images/frames/slot-background.svg">
+        <!-- Legs -->
+        <img class="joint" style="top: 50%; left: 46.5%;" src="{{site.url}}/images/frames/joint-background.svg">
+        <img class="slot" style="top: 58%; left: 17%;" src="{{site.url}}/images/frames/slot-background.svg">
+        <img class="slot" style="top: 58%; right: 17%;" src="{{site.url}}/images/frames/slot-background.svg">
+    </div>
+    <div class="w-half">
+        <div class="d-flex m-10">
+            <p class="m-0 mr-10">Search: </p>
+            <input type='search' class='form-control' id='mechdb-search' placeholder='Search MechDB'>
+          </div>
+          <div class="d-flex m-10">
+            <p class="m-0 mr-10">Filter by type: </p>
+            <select class="form-control w-200" id="type-select" onchange="onchange_typeselect()">
+              <option value="" selected="selected" disabled="disabled">Select</option>
+              <option value="Frame">Frame</option>
+              <option value="Plating">Plating</option>
+              <option value="Cabin">Cabin</option>
+              <option value="Mainframe">Mainframe</option>
+              <option value="Module">Module</option>
+              <option value="Cooler">Cooler</option>
+              <option value="Power Plant">Power Plant</option>
+              <option value="Tank">Tank</option>
+              <option value="Weapon">Weapon</option>
+              <option value="Equipment">Equipment</option>
+            </select>
+          </div>
+          <table class='table' id='results'></table>
+    </div>
 </div>
+
+<script>
+    function slot_click() {
+
+    }
+</script>
+<script src='{{site.url}}/jsonpath-0.8.0.js'></script>
+<script src='{{site.url}}/mechdb.js'></script>
