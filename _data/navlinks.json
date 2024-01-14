@@ -11,6 +11,12 @@
   },
   "Rules":
   {
+    "How to Play":
+    {
+      "Intro to TTRPGs" : "/rules/intro-to-ttrpgs/",
+      "For Players": "/rules/how-to-play-for-players/",
+      "For Game Masters": "/rules/how-to-play-for-game-masters/"
+    },
     "Mechaneer Creation":
     {
       "Mechaneer Description" : "/rules/mechaneer-description/",
