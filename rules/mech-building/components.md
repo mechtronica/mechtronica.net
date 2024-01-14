@@ -9,6 +9,7 @@ tags: rules_page
 A mech is exactly the sum of its {% keyword 'Parts' glossary %}. This page explains the different {% keyword 'Part Type' glossary %}s as well as what their accompanying stats and traits represent. 
 
 > Looking for somewhere to view component stats? Check out [MechDB]({{site.url}}/mechdb/viewer)!
+{.text-muted}
 
 <!-- TODO: Table of Contents -->
 
