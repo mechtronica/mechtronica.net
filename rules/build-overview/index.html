@@ -118,6 +118,17 @@
                 <div class="collapse-content">
                   
                     
+                        <h6 class="sidebar-title">How to Play</h6>
+                      
+                        <a href="https://mechtronica.net/rules/intro-to-ttrpgs/" class="sidebar-link ml-10">Intro to TTRPGs</a>
+                      
+                        <a href="https://mechtronica.net/rules/how-to-play-for-players/" class="sidebar-link ml-10">For Players</a>
+                      
+                        <a href="https://mechtronica.net/rules/how-to-play-for-game-masters/" class="sidebar-link ml-10">For Game Masters</a>
+                      
+                    
+                  
+                    
                         <h6 class="sidebar-title">Mechaneer Creation</h6>
                       
                         <a href="https://mechtronica.net/rules/mechaneer-description/" class="sidebar-link ml-10">Mechaneer Description</a>
@@ -131,9 +142,9 @@
                       
                         <a href="https://mechtronica.net/rules/build-overview/" class="sidebar-link ml-10 active">Overview</a>
                       
-                        <a href="https://mechtronica.net/rules/component-details/" class="sidebar-link ml-10">Components</a>
-                      
                         <a href="https://mechtronica.net/rules/build-planning/" class="sidebar-link ml-10">Planning</a>
+                      
+                        <a href="https://mechtronica.net/rules/component-types/" class="sidebar-link ml-10">Component Types</a>
                       
                         <a href="https://mechtronica.net/rules/placing-components/" class="sidebar-link ml-10">Placing Components</a>
                       
@@ -200,7 +211,7 @@
           <span class="sr-only">Toggle sidebar</span> <!-- sr-only = show only on screen readers -->
         </button>
         <div class="content">
-          <h2>Overview</h2>
+          <h2 id="overview" tabindex="-1">Overview</h2>
 <p>Mech building is at the heart of the Mechtronica RPG system and as such has some of the most in depth mechanics. To start we'll introduce the key concepts here before you dive into the details.</p>
 <p>The mechtronica system is highly modular. It's not like picking a car model and choosing trims and packages—you're building this from the ground up. You will pick a frame which is where all the other parts for your mech will go, but the main thing it determines are how fast your mech is and how many parts it can fit.</p>
 <p>Nearly all parts use <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'Power, Cooling, and CPU: the resources that your mech draws on to operate.', title: 'Resources', hasDismissButton: true, timeShown: 5000});">Resources</b>. Resources (and the related <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'Power comes in 3 different types: Electrical, Mechanical, and Steam.', title: 'Power Type', hasDismissButton: true, timeShown: 5000});">Power Type</b>) are the main constraints on your mech build. You have to make sure you have enough resources for all your <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'undefined', title: 'Infrastructure Components', hasDismissButton: true, timeShown: 5000});">Infrastructure Components</b> to operate and enough left over to use your <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'undefined', title: 'Attachment Components', hasDismissButton: true, timeShown: 5000});">Attachment Components</b> when you need to.</p>
@@ -211,6 +222,61 @@
 <li>Power Subsystem: The power subsystem components are constrained by fuel type</li>
 </ul>
 <p>There are also a few things to note about the cabin. The cabin and the frame are the only two components which you can have strictly one of each per mech. The cabin is the ultimate weakpoint of your mech, and if it is destroyed, you die (see <a href="https://mechtronica.net/rules/combat">Combat</a>).</p>
+<h3 id="step-by-step-guide-to-building-a-mech" tabindex="-1">Step by step Guide to Building a Mech</h3>
+<ol>
+<li>Develop a vision for your mechaneer and mech
+<ul>
+<li>Come up with a name and background for your mechaneer</li>
+<li>Decide what you want to focus your mech on (combat, field repairs, science, etc.)</li>
+</ul>
+</li>
+<li>Choose a Frame
+<ul>
+<li>Smaller mechs are faster and often don't need auxiliary cooling</li>
+<li>Larger mechs have much more firepower</li>
+</ul>
+</li>
+<li>Choose your mech's main weapons and equipment
+<ul>
+<li>Find attachments that fit your vision</li>
+<li>Choose a power type that lets you get most of the attachments you want</li>
+<li>Don't worry about filling all your slots here, just pick a couple must-haves</li>
+</ul>
+</li>
+<li>Add the control subsystem
+<ul>
+<li>Choose a mainframe that provides enough processing for the components you've selected so far, plus a bit extra to spare</li>
+<li>Choose a cabin compatible with your mainframe's software</li>
+</ul>
+</li>
+<li>Add the power subsystem
+<ul>
+<li>Choose a power plant that provides enough power for the components you've selected so far, plus a bit extra to spare</li>
+<li>Choose a fuel tank for your power plant</li>
+</ul>
+</li>
+<li>Check whether you need to add a cooler
+<ul>
+<li>If you just barely have enough excess cooling to use your attachments at this point, you probably need to add a cooler</li>
+</ul>
+</li>
+<li>Add more weapons and equipment
+<ul>
+<li>Fill in remaining slots in your mech with a few more attachments</li>
+</ul>
+</li>
+<li>Add Modules to your Mainframe
+<ul>
+<li>Select modules that synergize with your mech's capabilities</li>
+</ul>
+</li>
+<li>Check your resources and rebalance if needed
+<ul>
+<li>Compute Available, Used, and Excess resources for Power, Processing, and Cooling</li>
+<li>If you don't have enough excess resources, consider upgrading infrastructure components or using less chonky weapons and equipment</li>
+</ul>
+</li>
+</ol>
 
         </div>
         <div class="flex-grow-1"></div>

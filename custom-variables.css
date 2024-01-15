@@ -80,6 +80,7 @@ body {
 
 .keyword {
     font-family: 'Inconsolata', monospace;
+    cursor: pointer;
     color: #f478ff;
 }
 
@@ -89,4 +90,8 @@ ul, ol {
 
 li {
     list-style-position: outside;
+}
+
+.modal-title {
+    color: #ffffff;
 }

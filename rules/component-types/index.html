@@ -10,7 +10,7 @@
 
     <!-- Favicon and title -->
     <link rel="icon" href="https://mechtronica.net/images/icon.svg">
-    <title> Components </title>
+    <title> Component Types </title>
 
     <!-- Halfmoon CSS -->
     <link href="https://mechtronica.net/halfmoonui/css/halfmoon-variables.min.css" rel="stylesheet" />
@@ -118,6 +118,17 @@
                 <div class="collapse-content">
                   
                     
+                        <h6 class="sidebar-title">How to Play</h6>
+                      
+                        <a href="https://mechtronica.net/rules/intro-to-ttrpgs/" class="sidebar-link ml-10">Intro to TTRPGs</a>
+                      
+                        <a href="https://mechtronica.net/rules/how-to-play-for-players/" class="sidebar-link ml-10">For Players</a>
+                      
+                        <a href="https://mechtronica.net/rules/how-to-play-for-game-masters/" class="sidebar-link ml-10">For Game Masters</a>
+                      
+                    
+                  
+                    
                         <h6 class="sidebar-title">Mechaneer Creation</h6>
                       
                         <a href="https://mechtronica.net/rules/mechaneer-description/" class="sidebar-link ml-10">Mechaneer Description</a>
@@ -131,9 +142,9 @@
                       
                         <a href="https://mechtronica.net/rules/build-overview/" class="sidebar-link ml-10">Overview</a>
                       
-                        <a href="https://mechtronica.net/rules/component-details/" class="sidebar-link ml-10 active">Components</a>
-                      
                         <a href="https://mechtronica.net/rules/build-planning/" class="sidebar-link ml-10">Planning</a>
+                      
+                        <a href="https://mechtronica.net/rules/component-types/" class="sidebar-link ml-10 active">Component Types</a>
                       
                         <a href="https://mechtronica.net/rules/placing-components/" class="sidebar-link ml-10">Placing Components</a>
                       
@@ -201,10 +212,13 @@
         </button>
         <div class="content">
           <!-- The goal of this page is to provide a detailed reference for component information -->
-<h2>Components</h2>
-<p>A mech is exactly the sum of its parts. This page explains the details and stats of different mech <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'The parts that make your mech operate. This includes Frames, Plating, Modules, and all types of Components.', title: 'Parts', hasDismissButton: true, timeShown: 5000});">Parts</b> and <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'Components are mech Parts that must be installed in slots in your mech's Frame.', title: 'Components', hasDismissButton: true, timeShown: 5000});">Components</b>, grouped by <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'Part Types describe categories of parts which share common features (such as Weapons, Cabins, or Modules)', title: 'Part Type', hasDismissButton: true, timeShown: 5000});">Part Type</b>.</p>
+<h2 id="component-types" tabindex="-1">Component Types</h2>
+<p>A mech is exactly the sum of its <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'The parts that make your mech operate. This includes Frames, Plating, Modules, and all types of Components.', title: 'Parts', hasDismissButton: true, timeShown: 5000});">Parts</b>. This page explains the different <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'Part Types describe categories of parts which share common features (such as Weapons, Cabins, or Modules)', title: 'Part Type', hasDismissButton: true, timeShown: 5000});">Part Type</b>s as well as what their accompanying stats and traits represent.</p>
+<blockquote class="text-muted">
+<p>Looking for somewhere to view component stats? Check out <a href="https://mechtronica.net/mechdb/viewer">MechDB</a>!</p>
+</blockquote>
 <!-- TODO: Table of Contents -->
-<h3>Common Traits</h3>
+<h3 id="common-traits" tabindex="-1">Common Traits</h3>
 <p>Almost every part will have a few basic traits:</p>
 <table class="table">
 <thead>
@@ -228,7 +242,7 @@
 </tr>
 </tbody>
 </table>
-<h3>Mech Frames</h3>
+<h3 id="mech-frames" tabindex="-1">Mech Frames</h3>
 <p>The Frame is the foundation of your mech. It provides the superstructure you'll attach your weapons and components to, as well as the moving parts and power distribution system. Each frame has some number of slots for installing components.</p>
 <table class="table">
 <thead>
@@ -268,7 +282,7 @@
 </tr>
 </tbody>
 </table>
-<h4>Classes</h4>
+<h4 id="classes" tabindex="-1">Classes</h4>
 <p>Frames come in three basic sizes: Light, Standard, and Heavy. Frame size determines how many slots you have and your base speed. Smaller frames are hard to hit, but larger frames have more space for more firepower.</p>
 <table class="table">
 <thead>
@@ -292,7 +306,7 @@
 </tr>
 </tbody>
 </table>
-<h4>Component Slots</h4>
+<h4 id="component-slots" tabindex="-1">Component Slots</h4>
 <p>Mech frames have a number of slots where other components are installed. Slots come in two standard sizes: small (S) and large (L). Some slots are more exposed than others, and therefore more likely to be hit.</p>
 <p>The number of slots in a frame depends on the frame class.</p>
 <table class="table">
@@ -318,7 +332,7 @@
 </tbody>
 </table>
 <p>More details on component slots and mech frames can be found in <a href="https://mechtronica.net/rules/placing-components">Placing Components</a>.</p>
-<h4>Plating</h4>
+<h4 id="plating" tabindex="-1">Plating</h4>
 <p>Plating protects components by absorbing damage dealt to a particular section. You should probably have plating on each section of your mech, but some mechs (especially those focused on speed) will forgo plating in some sections.</p>
 <table class="table">
 <thead>
@@ -346,9 +360,9 @@
 </tr>
 </tbody>
 </table>
-<h3>The Power Subsystem</h3>
+<h3 id="the-power-subsystem" tabindex="-1">The Power Subsystem</h3>
 <p>The power subsystem consists of two components: a Power Plant and a Fuel Tank. The power plant uses fuel from the fuel tank to generate a steady supply of energy.</p>
-<h4>Power Plants</h4>
+<h4 id="power-plants" tabindex="-1">Power Plants</h4>
 <p>Power Plants convert fuel into <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'Power is the resource that gets your mech moving. It comes in three types:  Electrical, Mechanical, and Steam. ', title: 'Power', hasDismissButton: true, timeShown: 5000});">Power</b>.</p>
 <table class="table">
 <thead>
@@ -384,7 +398,7 @@
 </tr>
 </tbody>
 </table>
-<h5>Power Types</h5>
+<h5 id="power-types" tabindex="-1">Power Types</h5>
 <p>Each power plant supplies a specific type of power: either Mechanical, Electrical, or Steam power. Components must also be supplied with power of the correct type.</p>
 <blockquote>
 <p>Note: There are a few components that are not marked with a specific power type: namely Mainframes and Mech Frames. Mainframes use power supplied by your cabin, so they draw power of the same type as the Cabin. Frames are unique in that they can be reconfigured at a garage to use a different power type. See <a href="https://mechtronica.net/rules/maintenance">Maintenance</a> for more info on reconfiguring frames.</p>
@@ -392,7 +406,7 @@
 <!-- TODO: Make sure the maintenance page has info on this ^ -->
 <p>It is possible to <a href="https://mechtronica.net/rules/multiple-power-plants">use multiple power plants</a> with different types, but this typically isn't worth the amount of space it uses up. It is strongly recommended that you choose a single power plant and components that match the power type it supplies.</p>
 <p>See <a href="https://mechtronica.net/rules/build-planning">Planning</a> for more information on how to choose a power type.</p>
-<h4>Fuel Tanks</h4>
+<h4 id="fuel-tanks" tabindex="-1">Fuel Tanks</h4>
 <p>Fuel tanks store fuel and supply it to the power plant. There are several different types of fuel, each with its own advantages and disadvantages. See <a href="https://mechtronica.net/rules/build-planning">Planning</a> for more details on fuel types and how to pick the right one for your mech.</p>
 <table class="table">
 <thead>
@@ -412,9 +426,9 @@
 </tr>
 </tbody>
 </table>
-<h3>The Control Subsystem</h3>
+<h3 id="the-control-subsystem" tabindex="-1">The Control Subsystem</h3>
 <p>Mechs are controlled by a combination of <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'A Mechaneer is a person who is capable of piloting a mech.', title: 'Mechaneer', hasDismissButton: true, timeShown: 5000});">Mechaneer</b> input and computer automation. The control subsystem consists of the Cabin, Mainframe, and Modules.</p>
-<h4>Software</h4>
+<h4 id="software" tabindex="-1">Software</h4>
 <p>In order to control your mech, your Cabin and Modules need to be compatible with the Software running on your Mainframe. There are three different types of software, aligned with the three Control classes.</p>
 <table class="table">
 <thead>
@@ -443,7 +457,7 @@
 </tbody>
 </table>
 <p>Many components are compatible with multiple types of software, but you can only run one type of software at a time on your Mainframe. Your Cabin and all Modules must be compatible with the software on your Mainframe.</p>
-<h4>Cabins</h4>
+<h4 id="cabins" tabindex="-1">Cabins</h4>
 <p>Cabins provide mechaneers with all the necessary controls to pilot their mechs. They also usually have some slots for Modules and cargo.</p>
 <table class="table">
 <thead>
@@ -487,7 +501,7 @@
 </tr>
 </tbody>
 </table>
-<h4>Mainframes</h4>
+<h4 id="mainframes" tabindex="-1">Mainframes</h4>
 <p>Mainframes provide mechs with <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'Processing is the resource that allows your mech to compute things. Most components require some amount of processing.', title: 'Processing', hasDismissButton: true, timeShown: 5000});">Processing</b>.</p>
 <table class="table">
 <thead>
@@ -524,7 +538,7 @@
 </tbody>
 </table>
 <p>Note that Mainframes do not specify a power type. This is because power for Mainframes is routed through the Cabin, where it is converted from the Cabin's power type into electrical power specifically for running control electronics. Effectively, this means that Mainframes use your Cabin's power type.</p>
-<h4>Modules</h4>
+<h4 id="modules" tabindex="-1">Modules</h4>
 <p>Modules are special mech parts that use a small amount of processing in order to augment mech capabilites. They vary widely in effect, from providing combat advantages to cosmetic improvements. Modules are installed in Module slots in the Cabin. Modules, like Mainframes, use the Cabin's power type.</p>
 <p>There are many different types of Modules grouped into classes based on their function:</p>
 <table class="table">
@@ -592,7 +606,7 @@
 </tr>
 </tbody>
 </table>
-<h3>Coolers</h3>
+<h3 id="coolers" tabindex="-1">Coolers</h3>
 <p>If your mech generates too much heat, it won't be able to function at maximum efficiency. In some cases, some components may even be inoperable until sufficiently cooled down. That's where coolers come in. Coolers help regulate the heat your mech generates and keep everything running smoothly.</p>
 <p>There are four classes of coolers: ultra-efficient passive coolers, moderately efficient air coolers, inneficient but capable phase change coolers, and middle-of-the-road water coolers.</p>
 <table class="table">
@@ -643,9 +657,9 @@
 </tr>
 </tbody>
 </table>
-<h3>Attachments</h3>
+<h3 id="attachments" tabindex="-1">Attachments</h3>
 <p>Attachments are components that provide some sort of utility or offensive capability. These components are not in constant use, so they only draw resources when used. Attachment components can also be placed in a mech's arm sections, unlike the Infrastructure components discussed above.</p>
-<h4>Weapons</h4>
+<h4 id="weapons" tabindex="-1">Weapons</h4>
 <p>Weapons are attachments that are primarily intended for combat. In the harsh world of Mechtronica, mechaneers require a diverse array of unique weapon types to stay safe.</p>
 <table class="table">
 <thead>
@@ -739,7 +753,7 @@
 </tr>
 </tbody>
 </table>
-<h4>Equipment</h4>
+<h4 id="equipment" tabindex="-1">Equipment</h4>
 <p>Equipment describes attachments that provide some sort of utility that isn't strictly combat-focused. Many equipment components upgrade movement, enhance repair capabilities, or provide special measuring tools.</p>
 <table class="table">
 <thead>
