@@ -21,8 +21,8 @@ So the time comes for the first session. If you haven't already, discuss each pl
 3. Have players roll for their mechaneer stats (see [Mechaneer Stats]({{site_url}}/rules/mechaneer-stats/))
 4. Discuss with each player what kind of mech they want, and how that would fit into the team and the campaign (You may, for instance, be running a campaign with less combat and players will need to take that into account. See [Mech Build Planning]({{site_url}}/rules/build-planning)).
 5. Give players a mech build budget and/or a restricted component list to build from (see [MechDB Viewer]({{site_url}}/mechdb/viewer/)).
-6. Help players through selecting components (see [Components]({{site_url}}/rules/component-details/) and [MechDB Viewer]({{site_url}}/mechdb/viewer/)), filling out the mech sections of their character sheet (see [Placing Components]({{site_url}}/rules/placing-components/)), and calculating values (see [Mech Build Calculations]({{site_url}}/rules/build-calculations/)).
-7. Check over players' builds to make sure they are valid (see [Mech Build Validation]({{site_url}}/rules/build-validation/)) and help them make adjustments as necessary.
+6. Help players through selecting components (see [Components]({{site_url}}/rules/component-types/) and [MechDB Viewer]({{site_url}}/mechdb/viewer/)), filling out the mech sections of their character sheet (see [Placing Components]({{site_url}}/rules/placing-components/)), and calculating values (see [Mech Build Calculations]({{site_url}}/rules/build-calculations/)).
+7. Check over players' builds to make sure they are valid (see [Mech Build Validating]({{site_url}}/rules/build-validating/)) and help them make adjustments as necessary.
 8. If time permits, have the introductory session (see next Session 1 below).
 
 ### Session 1
