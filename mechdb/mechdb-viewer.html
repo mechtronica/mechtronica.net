@@ -28,14 +28,5 @@ permalink: mechdb/viewer/
 </div>
 <table class='table' id='results'></table>
 
-<script>
-  modal_title = document.getElementById('modal-title')
-  modal_content = document.getElementById('modal-content')
-
-  function showFrameSlots(name) {
-    modal_title.innerHTML = name;
-    modal_content.innerHTML = '<img class="img-fluid" src="{{site.url}}/images/frames/' + encodeURIComponent(name) + '.svg"></img>'
-  }
-</script>
 <script src='{{site.url}}/jsonpath-0.8.0.js'></script>
 <script src='{{site.url}}/mechdb.js'></script>

@@ -1,3 +1,4 @@
+max_text_len = 25;
 data = [];
 excluded_headers = [];
 header_order = [
@@ -32,8 +33,10 @@ header_order = [
 ];
 
 type_select = document.getElementById('type-select')
-
+modal_title = document.getElementById('modal-title')
+modal_content = document.getElementById('modal-content')
 mechdb_search = document.getElementById('mechdb-search')
+
 mechdb_search.addEventListener('keypress', function(event) {
   // If the user presses the 'Enter' key on the keyboard
   if (event.key === 'Enter') {
@@ -119,16 +122,38 @@ function showJson(query) {
     for (let x of filteredData) {
       text += '<tr>';
       for (let y of ordered_headers) {
-        if (y == 'slots' && y in x) {
-          text += '<td><a href="#modal-1" onclick="showFrameSlots(\'' + x.name + '\')">show</a></td>';
+        text += '<td>';
+        if (y in x) {
+          if (y == 'slots') {
+            text += '<a href="#modal-1" onclick="showFrameSlots(\'' + x.name + '\')">show</a>';
+          }
+          else {
+            if (x[y].length > max_text_len) {
+              text += '<a href="#modal-1" onclick="showText(\'' + y + '\', \'' + x[y] + '\')">show</a>';
+            }
+            else {
+              text += x[y];
+            }
+          }
         }
         else {
-          text += '<td>' + (y in x ? x[y] : '---' ) + '</td>';
+          text += '---'
         }
+        text += '</td>';
       }
       text += '</tr>';
     }
   }
 
   document.getElementById('results').innerHTML = text;
+}
+
+function showFrameSlots(name) {
+  modal_title.innerHTML = name;
+  modal_content.innerHTML = '<img class="img-fluid" src="' + window.location.origin + '/images/frames/' + encodeURIComponent(name) + '.svg"></img>'
+}
+
+function showText(title, text) {
+  modal_title.innerHTML = title;
+  modal_content.innerHTML = '<p>' + text + '</p>'
 }
