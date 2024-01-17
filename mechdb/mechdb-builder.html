@@ -7,13 +7,24 @@ permalink: mechdb/builder/
     .joint {
         position: absolute;
         width: 7.5%;
-        aspect-ratio: 1;
     }
 
     .slot {
         position: absolute;
         width: 14%;
-        aspect-ratio: 1;
+        height: 14%;
+    }
+
+    .slot > img {
+        width: 100%;
+    }
+
+    .slot > p {
+        font-size: medium;
+        color: black;
+        margin: 5%;
+        position: absolute;
+        top: 0;
     }
 
     .slot:hover {
@@ -59,25 +70,76 @@ permalink: mechdb/builder/
         <div class="position-relative">
             <img style="margin-top: 7%; width: 100%;" src="{{site.url}}/images/frames/standard-background.svg">
             <!-- Left Arm -->
-            <img id="LJ" class="joint" style="top: 15%; left: 19%;" src="{{site.url}}/images/frames/joint-background.svg">
-            <img id="L1" class="slot" style="top: 10%; left: 3%;" src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('L1');">
-            <img id="L2" class="slot" style="top: 34%; left: 3%;" src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('L2');">
+            <div id="LJ" class="joint" style="top: 15%; left: 19%;">
+                <img src="{{site.url}}/images/frames/joint-background.svg">
+                <p></p>
+            </div>
+            <div id="L1" class="slot" style="top: 10%; left: 3%;">
+                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('L1');">
+                <p></p>
+            </div>
+            <div id="L2" class="slot" style="top: 34%; left: 3%;">
+                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('L2');">
+                <p></p>
+            </div>
+            
             <!-- Right Arm -->
-            <img id="RJ" class="joint" style="top: 15%; right: 19%;" src="{{site.url}}/images/frames/joint-background.svg">
-            <img id="R1" class="slot" style="top: 10%; right: 3%;" src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('R1');">
-            <img id="R2" class="slot" style="top: 34%; right: 3%;" src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('R2');">
+            <div id="RJ" class="joint" style="top: 15%; right: 19%;">
+                <img src="{{site.url}}/images/frames/joint-background.svg">
+                <p></p>
+            </div>
+            <div id="R1" class="slot" style="top: 10%; right: 3%;">
+                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('R1');">
+                <p></p>
+            </div>
+            <div id="R2" class="slot" style="top: 34%; right: 3%;">
+                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('R2');">
+                <p></p>
+            </div>
+            
             <!-- Torso -->
-            <img id="T1" class="slot" style="top: 0; left: 28%;" src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('T1');">
-            <img id="T2" class="slot" style="top: 0; right: 28%;" src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('T2');">
-            <img id="T3" class="slot" style="top: 17%; left: 28%;" src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('T3');">
-            <img id="T4" class="slot" style="top: 17%; right: 28%;" src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('T4');">
-            <img id="T5" class="slot" style="top: 28%; left: 43%;" src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('T5');">
-            <img id="T6" class="slot" style="top: 34%; left: 28%;" src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('T6');">
-            <img id="T7" class="slot" style="top: 34%; right: 28%;" src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('T7');">
+            <div id="T1" class="slot" style="top: 0; left: 28%;">
+                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('T1');">
+                <p></p>
+            </div>
+            <div id="T2" class="slot" style="top: 0; right: 28%;">
+                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('T2');">
+                <p></p>
+            </div>
+            <div id="T3" class="slot" style="top: 17%; left: 28%;">
+                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('T3');">
+                <p></p>
+            </div>
+            <div id="T4" class="slot" style="top: 17%; right: 28%;">
+                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('T4');">
+                <p></p>
+            </div>
+            <div id="T5" class="slot" style="top: 28%; left: 43%;">
+                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('T5');">
+                <p></p>
+            </div>
+            <div id="T6" class="slot" style="top: 34%; left: 28%;">
+                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('T6');">
+                <p></p>
+            </div>
+            <div id="T7" class="slot" style="top: 34%; right: 28%;">
+                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('T7');">
+                <p></p>
+            </div>
+            
             <!-- Legs -->
-            <img id="BJ" class="joint" style="top: 50%; left: 46.5%;" src="{{site.url}}/images/frames/joint-background.svg">
-            <img id="B1" class="slot" style="top: 58%; left: 17%;" src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('B1');">
-            <img id="B2" class="slot" style="top: 58%; right: 17%;" src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('B2');">
+            <div id="BJ" class="joint" style="top: 50%; left: 46.5%;">
+                <img src="{{site.url}}/images/frames/joint-background.svg">
+                <p></p>
+            </div>
+            <div id="B1" class="slot" style="top: 58%; left: 17%;">
+                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('B1');">
+                <p></p>
+            </div>
+            <div id="B2" class="slot" style="top: 58%; right: 17%;">
+                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('B2');">
+                <p></p>
+            </div>
         </div>
     </div>
     <div style="width: 60%;">
@@ -108,54 +170,63 @@ permalink: mechdb/builder/
 </div>
 
 <script>
-    components = [];
+    components = {};
     selected_slot = null;
     available_p = {
-        'power': document.getElementById('available-power'),
-        'cooling': document.getElementById('available-cooling'),
+        'pwr': document.getElementById('available-power'),
+        'cool': document.getElementById('available-cooling'),
         'cpu': document.getElementById('available-cpu')
     }
     used_p = {
-        'power': document.getElementById('used-power'),
-        'cooling': document.getElementById('used-cooling'),
+        'pwr': document.getElementById('used-power'),
+        'cool': document.getElementById('used-cooling'),
         'cpu': document.getElementById('used-cpu')
     }
     excess_p = {
-        'power': document.getElementById('excess-power'),
-        'cooling': document.getElementById('excess-cooling'),
+        'pwr': document.getElementById('excess-power'),
+        'cool': document.getElementById('excess-cooling'),
         'cpu': document.getElementById('excess-cpu')
     }
 
     function slot_click(slot) {
         if (selected_slot != null) {
-            selected_slot.classList.remove('selected_slot');
+            document.getElementById(selected_slot).classList.remove('selected_slot');
         }
-        selected_slot = document.getElementById(slot);
-        selected_slot.classList.add('selected_slot');
+        selected_slot = slot;
+        document.getElementById(selected_slot).classList.add('selected_slot');
     }
 
     function calculate_resources() {
-        available = {'power': 0, 'cooling': 0, 'cpu': 0};
-        used = {'power': 0, 'cooling': 0, 'cpu': 0};
-        excess = {'power': 0, 'cooling': 0, 'cpu': 0};
-        for (let x of ['power', 'cooling', 'cpu']) {
-            for (let component of components) {
-                if (x in component) {
-                    if (component[x] > 0) {
-                        used[x] += component[x];
-                    }
-                    else {
-                        available[x] -= component[x];
+        available = {'pwr': 0, 'cool': 0, 'cpu': 0};
+        used = {'pwr': 0, 'cool': 0, 'cpu': 0};
+        excess = {'pwr': 0, 'cool': 0, 'cpu': 0};
+        for (let x of ['pwr', 'cool', 'cpu']) {
+            for (let slot in components) {
+                if (components[slot] != null) {
+                    if (x in components[slot]) {
+                        if (components[slot][x] > 0) {
+                            available[x] += parseInt(components[slot][x]);
+                        }
+                        else {
+                            used[x] -= parseInt(components[slot][x]);
+                        }
                     }
                 }
             }
             excess[x] = available[x] - used[x];
-            available_p[x].innerHTML = str(available[x])
-            used_p[x].innerHTML = str(used[x])
-            excess_p[x].innerHTML = str(excess[x])
+            available_p[x].innerHTML = available[x];
+            used_p[x].innerHTML = used[x];
+            excess_p[x].innerHTML = excess[x];
         }
         
     }
+
+    function partClick(name) {
+        components[selected_slot] = (jsonPath(data, '$[?(@.name=="' + name + '")]')[0]);
+        document.getElementById(selected_slot).children[1].innerHTML = name;
+        calculate_resources();
+    }
+
 </script>
 <script src='{{site.url}}/jsonpath-0.8.0.js'></script>
 <script src='{{site.url}}/mechdb.js'></script>

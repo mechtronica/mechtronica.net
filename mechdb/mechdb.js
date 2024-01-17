@@ -112,6 +112,8 @@ function showJson(query) {
       }
     }
 
+    text += '<th>select</th>'
+
     for (let x of header_order) {
       if (headers.includes(x)) {
         text += '<th>' + x + '</th>';
@@ -121,6 +123,7 @@ function showJson(query) {
 
     for (let x of filteredData) {
       text += '<tr>';
+      text += '<td><button class="btn btn-square" onclick="partClick(\'' + x.name + '\')">⮜</button></td>'
       for (let y of ordered_headers) {
         text += '<td>';
         if (y in x) {
