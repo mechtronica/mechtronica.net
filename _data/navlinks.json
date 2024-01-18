@@ -25,6 +25,7 @@
     "Mech Building" :
     {
       "Overview": "/rules/build-overview/",
+      "Step-by-step Guide": "/rules/build-guide/",
       "Planning": "/rules/build-planning/",
       "Component Types": "/rules/component-types/",
       "Placing Components": "/rules/placing-components/",
@@ -47,7 +48,8 @@
     },
     "Appendices" :
     {
-      "Glossary": "/rules/glossary/"
+      "Glossary": "/rules/glossary/",
+      "Using Multiple Power Plants": "/rules/multiple-power-plants"
     }
   }
 }

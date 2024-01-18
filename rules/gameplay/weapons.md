@@ -6,7 +6,7 @@ tags: rules_page
 ---
 
 ## Weapons
-Weapons deal damage and special effects during combat. For details on weapon use see [Combat]({{site_url}}/rules/combat/).
+Weapons are attachments that deal damage (and sometimes special effects) during combat. For details on weapon use see [Combat]({{site_url}}/rules/combat/).
 
 ### Weapon Keywords Effects
 Many weapons do special things and when this is the case these effects get a keyword.
