@@ -7,7 +7,7 @@ tags: rules_page
 ## Planning a Mech Build
 The first step in building your mech is planning. Do you want to build a combat-focused mech built for dealing maximum damage? Perhaps your {% keyword 'Mechaneer' glossary %} needs a mech capable of hauling scientific equipment and taking specific measurements. Or maybe you earn a living as a field mechanic, and focus on equipment to make sophistocated repairs when far from a garage. Think about how you want to play, and how that relates to your mechaneer's personality.
 
-Once you choose a focus, you should select a mech Frame and a {%keyword 'Power' glossary %} Type. Read on for information on factors that you should consider when building your mech.
+Once you choose a focus, you should select a mech Frame and a {%keyword 'Power Type' glossary %}. Read on for information on factors that you should consider when building your mech.
 
 ### Tradeoffs to Consider
 
