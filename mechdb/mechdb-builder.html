@@ -155,7 +155,7 @@ permalink: mechdb/builder/
 <div class="d-flex layout-and-parts-container">
     <div class="d-flex flex-column mech-layout-container" style="margin: 0 2% 0 2%;">
         <details>
-            <summary>
+            <summary style="cursor: pointer;">
                 Resources
             </summary>
             <table class="stats-table">
@@ -522,7 +522,7 @@ permalink: mechdb/builder/
     }
 
     function validatePlacement(part, slot) {
-        if (!valid_placements[selected_slot].includes(part.type)) {
+        if (!valid_placements[slot].includes(part.type)) {
             return {valid: false, message: 'That type of part cannot go in that slot.'};
         }
         if ('F' in components && part.size == 'L' && components.F.slots[slot].size == 'S') {
@@ -541,7 +541,7 @@ permalink: mechdb/builder/
         slots = normal_slots.concat(pseudo_slots);
         deleted = false;
         for (let slot in components) {
-            if (!validatePlacement(components[slot], slot)) {
+            if (!validatePlacement(components[slot], slot).valid) {
                 delete components[slot];
                 deleted = true;
             }
@@ -592,6 +592,21 @@ permalink: mechdb/builder/
     function makePseudoSlotText(slot) {
         text = '';
         text += pseudo_slot_labels[slot];
+
+        cabin = getSlotsByComponentType('Cabin');
+        
+        if (cabin.length > 0 && slot[0] == 'M') {
+            if (parseInt(slot[1]) <= components[cabin[0]].mods) {
+                document.getElementById(slot).classList.remove('invisible');
+            }
+            else {
+                document.getElementById(slot).classList.add('invisible');
+                if (slot in components) {
+                    delete components[slot];
+                }
+            }
+        }
+
         if (slot in components) {
             text += components[slot].name;
         }
