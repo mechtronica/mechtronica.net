@@ -15,23 +15,29 @@ permalink: mechdb/builder/
     }
 
     .slot {
+        cursor: pointer;
         position: absolute;
         width: 13%;
         height: 8.8%;
     }
 
+    .slot * {
+        cursor: pointer;
+    }
+
     .slot > img {
         width: 100%;
+        display: block;
     }
 
     .slot > p {
-        line-height: 115%;
-        font-size: 40%;
+        line-height: 1.1vh;
+        font-size: 1.1vh;
         text-align: center;
         color: black;
-        margin: 5%;
         position: absolute;
         top: 0;
+        width: 100%;
     }
 
     .slot:hover {
@@ -39,17 +45,24 @@ permalink: mechdb/builder/
     }
 
     .pseudo-slot {
+        cursor: pointer;
         position: absolute;
         width: 48%;
         height: 4%;
     }
 
+    .pseudo-slot * {
+        cursor: pointer;
+    }
+
     .pseudo-slot > img {
         width: 100%;
+        display: block;
     }
 
     .pseudo-slot > p {
-        font-size: 70%;
+        line-height: 1.8vh;
+        font-size: 1.8vh;
         color: black;
         margin: 1% 2% 1% 2%;
         position: absolute;
@@ -77,9 +90,70 @@ permalink: mechdb/builder/
         text-align: left;
     }
 
+    .resizer-handle::-webkit-resizer {
+        border: 2px solid yellow;
+        background: blue;
+        box-shadow: 0 0 2px 5px red;
+        outline: 2px dashed green;
+
+        /*size does not work*/  
+        display:block;  
+        width: 150px !important;
+        height: 150px !important;
+    }
+
+    .mech-layout {
+        width: 50vh;
+    }
+
+    .part-search {
+        width: 70%;
+    }
+
+    .part-table {
+        height: calc(100vh - 25rem);
+    }
+
+    .layout-and-parts-container {
+        flex-direction: row;
+    }
+
+    @media (max-aspect-ratio: 0.57) {
+        .slot > p {
+            line-height: 0.9vh;
+            font-size: 0.9vh;
+        }
+
+        .pseudo-slot > p {
+            line-height: 1.6vh;
+            font-size: 1.6vh;
+        }
+
+        .mech-layout {
+            width: 100%;
+        }
+
+        .mech-layout-container {
+            height: 30vh;
+            overflow-y: scroll;
+        }
+
+        .part-search {
+            width: 100%;
+        }
+
+        .part-table {
+            height: 40vh;
+        }
+
+        .layout-and-parts-container {
+            flex-direction: column;
+        }
+    }
+
 </style>
-<div class="d-flex flex-row">
-    <div class="d-flex flex-column" style="width: 35%; margin-right: 5%;">
+<div class="d-flex layout-and-parts-container">
+    <div class="d-flex flex-column mech-layout-container" style="margin: 0 2% 0 2%;">
         <details>
             <summary>
                 Resources
@@ -125,151 +199,151 @@ permalink: mechdb/builder/
                 </tbody>
             </table>
         </details>
-
-        <div class="position-relative" style="margin: 2% auto 2% auto; width: 50vh;">
+        <div class="position-relative mech-layout">
 
             <img style="margin-top: 7%; width: 100%;" src="{{site.url}}/images/frames/standard-background-w-box.svg">
 
             <!-- Left Arm -->
-            <div id="LJ" class="joint" style="top: 15%; left: 19%;">
+            <div id="LJ" class="joint" style="top: 10%; left: 19%;">
                 <img src="{{site.url}}/images/frames/joint-background.svg">
                 <p></p>
             </div>
-            <div id="L1" class="slot" style="top: 10%; left: 3%;">
-                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('L1');">
+            <div id="L1" class="slot" style="top: 5%; left: 3%;" onclick="slot_click('L1');">
+                <img src="{{site.url}}/images/frames/slot-background.svg">
                 <p></p>
             </div>
-            <div id="L2" class="slot" style="top: 34%; left: 3%;">
-                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('L2');">
+            <div id="L2" class="slot" style="top: 23%; left: 3%;" onclick="slot_click('L2');">
+                <img src="{{site.url}}/images/frames/slot-background.svg">
                 <p></p>
             </div>
             
             <!-- Right Arm -->
-            <div id="RJ" class="joint" style="top: 15%; right: 19%;">
+            <div id="RJ" class="joint" style="top: 10%; right: 19%;">
                 <img src="{{site.url}}/images/frames/joint-background.svg">
                 <p></p>
             </div>
-            <div id="R1" class="slot" style="top: 10%; right: 3%;">
-                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('R1');">
+            <div id="R1" class="slot" style="top: 5%; right: 3%;" onclick="slot_click('R1');">
+                <img src="{{site.url}}/images/frames/slot-background.svg">
                 <p></p>
             </div>
-            <div id="R2" class="slot" style="top: 34%; right: 3%;">
-                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('R2');">
+            <div id="R2" class="slot" style="top: 23%; right: 3%;" onclick="slot_click('R2');">
+                <img src="{{site.url}}/images/frames/slot-background.svg">
                 <p></p>
             </div>
             
             <!-- Torso -->
-            <div id="T1" class="slot" style="top: 0; left: 28%;">
-                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('T1');">
+            <div id="T1" class="slot" style="top: 0; left: 28%;" onclick="slot_click('T1');">
+                <img src="{{site.url}}/images/frames/slot-background.svg">
                 <p></p>
             </div>
-            <div id="T2" class="slot" style="top: 0; right: 28%;">
-                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('T2');">
+            <div id="T2" class="slot" style="top: 0; right: 28%;" onclick="slot_click('T2');">
+                <img src="{{site.url}}/images/frames/slot-background.svg">
                 <p></p>
             </div>
-            <div id="T3" class="slot" style="top: 17%; left: 28%;">
-                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('T3');">
+            <div id="T3" class="slot" style="top: 13%; left: 28%;" onclick="slot_click('T3');">
+                <img src="{{site.url}}/images/frames/slot-background.svg">
                 <p></p>
             </div>
-            <div id="T4" class="slot" style="top: 17%; right: 28%;">
-                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('T4');">
+            <div id="T4" class="slot" style="top: 13%; right: 28%;" onclick="slot_click('T4');">
+                <img src="{{site.url}}/images/frames/slot-background.svg">
                 <p></p>
             </div>
-            <div id="T5" class="slot" style="top: 28%; left: 43%;">
-                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('T5');">
+            <div id="T5" class="slot" style="top: 20%; left: 43%;" onclick="slot_click('T5');">
+                <img src="{{site.url}}/images/frames/slot-background.svg">
                 <p></p>
             </div>
-            <div id="T6" class="slot" style="top: 34%; left: 28%;">
-                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('T6');">
+            <div id="T6" class="slot" style="top: 25%; left: 28%;" onclick="slot_click('T6');">
+                <img src="{{site.url}}/images/frames/slot-background.svg">
                 <p></p>
             </div>
-            <div id="T7" class="slot" style="top: 34%; right: 28%;">
-                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('T7');">
+            <div id="T7" class="slot" style="top: 25%; right: 28%;" onclick="slot_click('T7');">
+                <img src="{{site.url}}/images/frames/slot-background.svg">
                 <p></p>
             </div>
             
             <!-- Legs -->
-            <div id="BJ" class="joint" style="top: 50%; left: 46.5%;">
+            <div id="BJ" class="joint" style="top: 35%; left: 46.5%;">
                 <img src="{{site.url}}/images/frames/joint-background.svg">
                 <p></p>
             </div>
-            <div id="B1" class="slot" style="top: 58%; left: 17%;">
-                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('B1');">
+            <div id="B1" class="slot" style="top: 42%; left: 17%;" onclick="slot_click('B1');">
+                <img src="{{site.url}}/images/frames/slot-background.svg">
                 <p></p>
             </div>
-            <div id="B2" class="slot" style="top: 58%; right: 17%;">
-                <img src="{{site.url}}/images/frames/slot-background.svg" onclick="slot_click('B2');">
+            <div id="B2" class="slot" style="top: 42%; right: 17%;" onclick="slot_click('B2');">
+                <img src="{{site.url}}/images/frames/slot-background.svg">
                 <p></p>
             </div>
 
             <!-- Frame -->
-            <div id="F" class="pseudo-slot" style="top: 76.5%; left: 1%;">
-                <img src="{{site.url}}/images/frames/pseudoslot-background.svg" onclick="slot_click('F');">
+            <div id="F" class="pseudo-slot" style="top: 76.5%; left: 1%;" onclick="slot_click('F');">
+                <img src="{{site.url}}/images/frames/pseudoslot-background.svg">
                 <p>
                     Frame
                 </p>
             </div>
 
             <!-- Plating -->
-            <div id="TP" class="pseudo-slot" style="top: 81%; left: 1%;">
-                <img src="{{site.url}}/images/frames/pseudoslot-background.svg" onclick="slot_click('TP');">
+            <div id="TP" class="pseudo-slot" style="top: 81%; left: 1%;" onclick="slot_click('TP');">
+                <img src="{{site.url}}/images/frames/pseudoslot-background.svg">
                 <p>
                     Torso Plating
                 </p>
             </div>
-            <div id="LP" class="pseudo-slot" style="top: 85.5%; left: 1%;">
-                <img src="{{site.url}}/images/frames/pseudoslot-background.svg" onclick="slot_click('LP');">
+            <div id="LP" class="pseudo-slot" style="top: 85.5%; left: 1%;" onclick="slot_click('LP');">
+                <img src="{{site.url}}/images/frames/pseudoslot-background.svg">
                 <p>
                     Left Plating
                 </p>
             </div>
-            <div id="RP" class="pseudo-slot" style="top: 90%; left: 1%;">
-                <img src="{{site.url}}/images/frames/pseudoslot-background.svg" onclick="slot_click('RP');">
+            <div id="RP" class="pseudo-slot" style="top: 90%; left: 1%;" onclick="slot_click('RP');">
+                <img src="{{site.url}}/images/frames/pseudoslot-background.svg">
                 <p>
                     Right Plating
                 </p>
             </div>
-            <div id="BP" class="pseudo-slot" style="top: 94.5%; left: 1%;">
-                <img src="{{site.url}}/images/frames/pseudoslot-background.svg" onclick="slot_click('BP');">
+            <div id="BP" class="pseudo-slot" style="top: 94.5%; left: 1%;" onclick="slot_click('BP');">
+                <img src="{{site.url}}/images/frames/pseudoslot-background.svg">
                 <p>
                     Legs Plating
                 </p>
             </div>
 
             <!-- Modules -->
-            <div id="M1" class="pseudo-slot" style="top: 76.5%; left: 50%;">
-                <img src="{{site.url}}/images/frames/pseudoslot-background.svg" onclick="slot_click('M1');">
+            <div id="M1" class="pseudo-slot" style="top: 76.5%; left: 50%;" onclick="slot_click('M1');">
+                <img src="{{site.url}}/images/frames/pseudoslot-background.svg">
                 <p>
                     Module 1
                 </p>
             </div>
-            <div id="M2" class="pseudo-slot" style="top: 81%; left: 50%;">
-                <img src="{{site.url}}/images/frames/pseudoslot-background.svg" onclick="slot_click('M2');">
+            <div id="M2" class="pseudo-slot" style="top: 81%; left: 50%;" onclick="slot_click('M2');">
+                <img src="{{site.url}}/images/frames/pseudoslot-background.svg">
                 <p>
                     Module 2
                 </p>
             </div>
-            <div id="M3" class="pseudo-slot" style="top: 85.5%; left: 50%;">
-                <img src="{{site.url}}/images/frames/pseudoslot-background.svg" onclick="slot_click('M3');">
+            <div id="M3" class="pseudo-slot" style="top: 85.5%; left: 50%;" onclick="slot_click('M3');">
+                <img src="{{site.url}}/images/frames/pseudoslot-background.svg">
                 <p>
                     Module 3
                 </p>
             </div>
-            <div id="M4" class="pseudo-slot" style="top: 90%; left: 50%;">
-                <img src="{{site.url}}/images/frames/pseudoslot-background.svg" onclick="slot_click('M4');">
+            <div id="M4" class="pseudo-slot" style="top: 90%; left: 50%;" onclick="slot_click('M4');">
+                <img src="{{site.url}}/images/frames/pseudoslot-background.svg">
                 <p>
                     Module 4
                 </p>
             </div>
-            <div id="M5" class="pseudo-slot" style="top: 94.5%; left: 50%;">
-                <img src="{{site.url}}/images/frames/pseudoslot-background.svg" onclick="slot_click('M5');">
+            <div id="M5" class="pseudo-slot" style="top: 94.5%; left: 50%;" onclick="slot_click('M5');">
+                <img src="{{site.url}}/images/frames/pseudoslot-background.svg">
                 <p>
                     Module 5
                 </p>
             </div>
         </div>
     </div>
-    <div style="width: 65%;">
+
+    <div class="part-search">
         <div class="d-flex m-10">
             <p class="m-0 mr-10">Search: </p>
             <input type='search' class='form-control' id='mechdb-search' placeholder='Search MechDB'>
@@ -290,7 +364,7 @@ permalink: mechdb/builder/
                 <option value="Equipment">Equipment</option>
             </select>
         </div>
-        <div class="overflow-y-scroll overflow-x-scroll" style="width: 100%; height: calc(100vh - 25rem);">
+        <div class="overflow-y-scroll overflow-x-scroll part-table" style="width: 100%;">
             <table class='table' id='results'></table>
         </div>
     </div>
@@ -373,13 +447,14 @@ permalink: mechdb/builder/
         document.getElementById(selected_slot).classList.add('selected-slot');
     }
 
-    function getCabin() {
+    function getSlotsByComponentType(type) {
+        results = [];
         for (let slot in components) {
-            if (components[slot].type == 'Cabin') {
-                return components[slot];
+            if (components[slot].type == type) {
+                results.push(slot);
             }
         }
-        return false;
+        return results;
     }
 
     function calculate_resources() {
@@ -388,14 +463,23 @@ permalink: mechdb/builder/
         excess = {'pwr-m': 0, 'pwr-e': 0, 'pwr-s': 0, 'cool': 0, 'cpu': 0};
 
         _components = JSON.parse(JSON.stringify(components));
-        cabin = getCabin();
+        cabin = getSlotsByComponentType('Cabin');
 
         if ('F' in _components) {
-            if (cabin) {
-                _components['F']['p-type'] = cabin['p-type'];
+            if (cabin.length > 0) {
+                _components['F']['p-type'] = _components[cabin[0]]['p-type'];
             }
             else {
                 _components['F']['p-type'] = 'N/A';
+            }
+        }
+        
+        for (let mainframe of getSlotsByComponentType('Mainframe')) {
+            if (cabin.length > 0) {
+                _components[mainframe]['p-type'] = _components[cabin[0]]['p-type'];
+            }
+            else {
+                _components[mainframe]['p-type'] = 'N/A';
             }
         }
 
@@ -425,13 +509,45 @@ permalink: mechdb/builder/
 
     function partClick(name) {
         part = getPart(name);
-        if (valid_placements[selected_slot].includes(part.type)) {
+        validation = validatePlacement(part, selected_slot);
+        if (validation.valid) {
             components[selected_slot] = part;
             calculate_resources();
+            validateAllComponents();
             update_slot_text();
         }
         else {
-            halfmoon.initStickyAlert({content: '', title: 'Invalid Placement!', hasDismissButton: true, timeShown: 5000, alertType: 'alert-danger',});
+            halfmoon.initStickyAlert({content: validation.message, title: 'Invalid placement!', hasDismissButton: true, timeShown: 5000, alertType: 'alert-danger'});
+        }
+    }
+
+    function validatePlacement(part, slot) {
+        if (!valid_placements[selected_slot].includes(part.type)) {
+            return {valid: false, message: 'That type of part cannot go in that slot.'};
+        }
+        if ('F' in components && part.size == 'L' && components.F.slots[slot].size == 'S') {
+            return {valid: false, message: 'Large parts cannot go in small slots.'};
+        }
+        if (part.type == 'Cabin') {
+            cabin = getSlotsByComponentType('Cabin');
+            if (cabin.length > 0 && cabin[0] != slot) {
+                return {valid: false, message: 'You can only have one cabin in a mech.'};
+            }
+        }
+        return {valid: true};
+    }
+
+    function validateAllComponents() {
+        slots = normal_slots.concat(pseudo_slots);
+        deleted = false;
+        for (let slot in components) {
+            if (!validatePlacement(components[slot], slot)) {
+                delete components[slot];
+                deleted = true;
+            }
+        }
+        if (deleted) {
+            halfmoon.initStickyAlert({content: '', title: 'Removed invalid components.', hasDismissButton: true, timeShown: 5000, alertType: 'alert-danger'});
         }
     }
 
@@ -496,6 +612,22 @@ permalink: mechdb/builder/
         else {
             return text.substring(0, length-3) + '...';
         }
+    }
+
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
     }
 
 </script>
