@@ -21,13 +21,13 @@ So the time comes for the first session. If you haven't already, discuss each pl
 3. Have players roll for their mechaneer stats (see [Mechaneer Stats]({{site_url}}/rules/mechaneer-stats/))
 4. Discuss with each player what kind of mech they want, and how that would fit into the team and the campaign (You may, for instance, be running a campaign with less combat and players will need to take that into account. See [Mech Build Planning]({{site_url}}/rules/build-planning)).
 5. Give players a mech build budget and/or a restricted component list to build from (see [MechDB Viewer]({{site_url}}/mechdb/viewer/)).
-6. Help players through selecting components (see [Components]({{site_url}}/rules/component-types/) and [MechDB Viewer]({{site_url}}/mechdb/viewer/)), filling out the mech sections of their character sheet (see [Placing Components]({{site_url}}/rules/placing-components/)), and calculating values (see [Mech Build Calculations]({{site_url}}/rules/build-calculations/)).
+6. Help players through selecting components, filling out the mech sections of their character sheet, and calculating values. See [Build Guide]({{site_url}}/rules/build-guide/) for more details and instructions.
 7. Check over players' builds to make sure they are valid (see [Mech Build Validating]({{site_url}}/rules/build-validating/)) and help them make adjustments as necessary.
 8. If time permits, have the introductory session (see next Session 1 below).
 
 ### Session 1
 
-Now that your players have their character sheets all filled out, it's time for the action. In session 1 the GM sets the stage for campaign, explaining how the characters meet (or already know each other) and describes the situation they find themselves in that will start things off in the direction of adventure. The basic flow of the game will be you as the GM describing what's going on, the players deciding what they are going to do, and then you describing the outcome of their actions (with stat rolls and turn-based play as appropriate).
+Now that your players have their character sheets all filled out, it's time for the action. In session 1 the GM sets the stage for the campaign, explaining how the characters meet (or already know each other) and describes the situation they find themselves in that will start things off in the direction of adventure. The basic flow of the game will be you as the GM describing what's going on, the players deciding what they are going to do, and then you describing the outcome of their actions (with stat rolls and turn-based play as appropriate).
 
 ### And onward!
 
