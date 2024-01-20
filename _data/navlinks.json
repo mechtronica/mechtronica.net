@@ -24,8 +24,7 @@
     },
     "Mech Building" :
     {
-      "Overview": "/rules/build-overview/",
-      "Step-by-step Guide": "/rules/build-guide/",
+      "Build Guide": "/rules/build-guide/",
       "Planning": "/rules/build-planning/",
       "Component Types": "/rules/component-types/",
       "Placing Components": "/rules/placing-components/",
@@ -44,7 +43,8 @@
     {
       "Performing Maintenance": "/rules/maintenance/",
       "Maintenance Costs": "/rules/maintenance-costs/",
-      "Component States": "/rules/component-states/"
+      "Component States": "/rules/component-states/",
+      "Fuel Use": "/rules/fuel/"
     },
     "Appendices" :
     {
