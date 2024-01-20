@@ -238,31 +238,31 @@ permalink: mechdb/builder/
 
             <!-- Modules -->
             <div id="M1" class="pseudo-slot" style="top: 76.5%; left: 50%;">
-                <img src="{{site.url}}/images/frames/pseudoslot-background.svg" onclick="slot_click('F');">
+                <img src="{{site.url}}/images/frames/pseudoslot-background.svg" onclick="slot_click('M1');">
                 <p>
                     Module 1
                 </p>
             </div>
             <div id="M2" class="pseudo-slot" style="top: 81%; left: 50%;">
-                <img src="{{site.url}}/images/frames/pseudoslot-background.svg" onclick="slot_click('TP');">
+                <img src="{{site.url}}/images/frames/pseudoslot-background.svg" onclick="slot_click('M2');">
                 <p>
                     Module 2
                 </p>
             </div>
             <div id="M3" class="pseudo-slot" style="top: 85.5%; left: 50%;">
-                <img src="{{site.url}}/images/frames/pseudoslot-background.svg" onclick="slot_click('LP');">
+                <img src="{{site.url}}/images/frames/pseudoslot-background.svg" onclick="slot_click('M3');">
                 <p>
                     Module 3
                 </p>
             </div>
             <div id="M4" class="pseudo-slot" style="top: 90%; left: 50%;">
-                <img src="{{site.url}}/images/frames/pseudoslot-background.svg" onclick="slot_click('RP');">
+                <img src="{{site.url}}/images/frames/pseudoslot-background.svg" onclick="slot_click('M4');">
                 <p>
                     Module 4
                 </p>
             </div>
             <div id="M5" class="pseudo-slot" style="top: 94.5%; left: 50%;">
-                <img src="{{site.url}}/images/frames/pseudoslot-background.svg" onclick="slot_click('BP');">
+                <img src="{{site.url}}/images/frames/pseudoslot-background.svg" onclick="slot_click('M5');">
                 <p>
                     Module 5
                 </p>
@@ -325,7 +325,7 @@ permalink: mechdb/builder/
         'M4': ['Module'],
         'M5': ['Module']
     }
-    normal_slots = ['L1', 'L2', 'R1', 'R2', 'T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'];
+    normal_slots = ['L1', 'L2', 'R1', 'R2', 'T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'B1', 'B2'];
     pseudo_slots = ['LP', 'RP', 'TP', 'BP', 'M1', 'M2', 'M3', 'M4', 'M5', 'F'];
     pseudo_slot_labels = {
         'LP': 'Left Arm Plating: ',
@@ -362,6 +362,8 @@ permalink: mechdb/builder/
         'cool': document.getElementById('excess-cooling'),
         'cpu': document.getElementById('excess-cpu')
     }
+
+    update_slot_text();
 
     function slot_click(slot) {
         if (selected_slot != null) {
@@ -452,8 +454,17 @@ permalink: mechdb/builder/
         }
         text += slot + '<br>';
         if ('F' in components) {
-            text += 'size: ' + components.F.slots[slot].size + '<br>';
-            text += 'hit: ' + components.F.slots[slot].hit[0] + ' - ' + components.F.slots[slot].hit[0];
+            if (slot in components.F.slots) {
+                text += 'size: ' + components.F.slots[slot].size + '<br>';
+                text += 'hit: ' + components.F.slots[slot].hit[0] + ' - ' + components.F.slots[slot].hit[0];
+                document.getElementById(slot).classList.remove('invisible');
+            }
+            else {
+                document.getElementById(slot).classList.add('invisible');
+                if (slot in components) {
+                    delete components[slot];
+                }
+            }
         }
         else {
             text += 'size: ---<br>';
@@ -471,6 +482,7 @@ permalink: mechdb/builder/
         else {
             text += '---';
         }
+        return text;
     }
 
     function getPart(part) {
@@ -482,7 +494,7 @@ permalink: mechdb/builder/
             return text;
         }
         else {
-            return text.substring(0, length-3) + '...'
+            return text.substring(0, length-3) + '...';
         }
     }
 
