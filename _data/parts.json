@@ -2107,16 +2107,6 @@
         "cpu": "-3"
     },
     {
-        "msrp": "2000",
-        "manufacturer": "Cryobank",
-        "name": "Glacier9",
-        "class": "Resource",
-        "software": "ProtOS, UMIX",
-        "cpu": "-2",
-        "effect": "A just-in-time predictive cooler controller, it keeps coolers off until they are needed (for instance for weapons or attachments), thus the power consumption of coolers controlled this way is treated as if it were an attachment that is activated right before you use an attachment that requires more cooling than is your current excess resource pool. ",
-        "type": "Module"
-    },
-    {
         "msrp": "6200",
         "type": "Power Plant",
         "manufacturer": "Familiar Industries",
