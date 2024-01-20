@@ -1,13 +1,11 @@
 ---
 layout: template.njk
-title: Step-by-step Mech Building Guide
+title: Mech Building Guide
 permalink: /rules/build-guide/
 tags: rules_page
 ---
 
 ## {{title}}
-
-### Overview
 
 Mech building is at the heart of the Mechtronica RPG system and as such has some of the most in depth mechanics. To start we'll introduce the key concepts here before you dive into the details.
 

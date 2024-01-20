@@ -16,7 +16,7 @@ Your first order of business in any campaign will be to design your character. C
 
 Your mech is the main focus of the game mechanics. It may also be a play a big part in the story for your character, depending on your character design (maybe your character is sentimental about their mech, or maybe the mech is just a machine to accomplish the task at hand).
 
-You will usually create your mech on or before the first session (or maybe a bit of both). See the Mech Building section for details on the process, starting with [Mech Building Overview]({{site_url}}/rules/build-overview/). Remember your mech is a part of a larger story, including the campaign and the other player characters. Talk with the other players and your GM to make sure your mech will fit well into the story and be helpful to your team.
+You will usually create your mech on or before the first session (or maybe a bit of both). See the Mech Building section for details on the process, starting with the [Build Guide]({{site_url}}/rules/build-guide/). Remember your mech is a part of a larger story, including the campaign and the other player characters. Talk with the other players and your GM to make sure your mech will fit well into the story and be helpful to your team.
 
 ### Gameplay
 
