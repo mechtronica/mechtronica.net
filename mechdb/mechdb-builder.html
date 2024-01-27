@@ -437,6 +437,7 @@ permalink: mechdb/builder/
         'cpu': document.getElementById('excess-cpu')
     }
 
+    load_components_cookie();
     update_slot_text();
 
     function slot_click(slot) {
@@ -465,26 +466,22 @@ permalink: mechdb/builder/
         _components = JSON.parse(JSON.stringify(components));
         cabin = getSlotsByComponentType('Cabin');
 
-        if ('F' in _components) {
-            if (cabin.length > 0) {
-                _components['F']['p-type'] = _components[cabin[0]]['p-type'];
-            }
-            else {
-                _components['F']['p-type'] = 'N/A';
-            }
-        }
-        
-        for (let mainframe of getSlotsByComponentType('Mainframe')) {
-            if (cabin.length > 0) {
-                _components[mainframe]['p-type'] = _components[cabin[0]]['p-type'];
-            }
-            else {
-                _components[mainframe]['p-type'] = 'N/A';
+        for (let slot in _components) {
+            type = _components[slot].type;
+            if (type == 'Mainframe' || type == 'Frame') {
+                if (cabin.length > 0) {
+                    _components[slot]['p-type'] = _components[cabin[0]]['p-type'];
+                }
+                else {
+                    _components[slot]['p-type'] = 'N/A';
+                }
             }
         }
 
         for (let slot in _components) {
-            _components[slot]['pwr-' + _components[slot]['p-type'].toLowerCase()] = _components[slot]['pwr'];
+            if ('pwr' in _components[slot]) {
+                _components[slot]['pwr-' + _components[slot]['p-type'].toLowerCase()] = _components[slot]['pwr'];
+            }
         }
 
         for (let x of ['pwr-m', 'pwr-e', 'pwr-s', 'cool', 'cpu']) {
@@ -515,6 +512,7 @@ permalink: mechdb/builder/
             calculate_resources();
             validateAllComponents();
             update_slot_text();
+            update_components_cookie();
         }
         else {
             halfmoon.initStickyAlert({content: validation.message, title: 'Invalid placement!', hasDismissButton: true, timeShown: 5000, alertType: 'alert-danger'});
@@ -627,6 +625,21 @@ permalink: mechdb/builder/
         else {
             return text.substring(0, length-3) + '...';
         }
+    }
+
+    function update_components_cookie() {
+        setCookie('components', JSON.stringify(components));
+    }
+
+    function load_components_cookie() {
+        cval = getCookie('components');
+        if (cval != '') {
+            components = JSON.parse(cval);
+        }
+    }
+
+    function setCookie(cname, cval) {
+        document.cookie = cname + '=' + cval;
     }
 
     function getCookie(cname) {
