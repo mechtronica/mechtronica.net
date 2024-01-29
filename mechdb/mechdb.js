@@ -1,6 +1,9 @@
 max_text_len = 25;
 data = [];
 excluded_headers = [];
+use_select_column = false;
+select_column_header = 'select';
+select_column_button_text = '●';
 header_order = [
         "msrp",
         "type",
@@ -46,8 +49,6 @@ mechdb_search.addEventListener('keypress', function(event) {
     showJson(val);
   }
 }); 
-
-loadDataFile('/mechdb/parts.json');
 
 function loadDataFile(path) {
   fetch(path)
@@ -112,18 +113,22 @@ function showJson(query) {
       }
     }
 
-    text += '<th>select</th>'
+    if (use_select_column) {
+      text += '<th>' + select_column_header + '</th>';
+    }
 
     for (let x of header_order) {
       if (headers.includes(x)) {
         text += '<th>' + x + '</th>';
-        ordered_headers.push(x)
+        ordered_headers.push(x);
       }
     }
 
     for (let x of filteredData) {
       text += '<tr>';
-      text += '<td><button class="btn btn-square" onclick="partClick(\'' + x.name + '\')">⮜</button></td>'
+      if (use_select_column) {
+        text += '<td><button class="btn btn-square" onclick="partClick(\'' + x.name + '\')">' + select_column_button_text + '</button></td>';
+      }
       for (let y of ordered_headers) {
         text += '<td>';
         if (y in x) {
