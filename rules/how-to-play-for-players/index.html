@@ -47,7 +47,7 @@
             <span aria-hidden="true">&times;</span>
           </a>
           <h5 class="modal-title" id="modal-title"></h5>
-          <span id="modal-content"></span>
+          <div id="modal-content"></div>
         </div>
       </div>
     </div>
@@ -80,7 +80,11 @@
             
           
             
-              <a href="https://mechtronica.net/mechdb/viewer/" class="sidebar-link ml-10">MechDB</a>
+              <a href="https://mechtronica.net/mechdb/viewer/" class="sidebar-link ml-10">Part Database</a>
+            
+          
+            
+              <a href="https://mechtronica.net/mechdb/builder/" class="sidebar-link ml-10">Mech Builder</a>
             
           
             
@@ -209,12 +213,12 @@
       <!-- Sidebar end -->
 
       <!-- Content wrapper start -->
-      <div class="content-wrapper d-flex flex-column">
-        <button class="btn btn-square m-10" type="button" onclick="halfmoon.toggleSidebar()" style="padding-top: 0.4rem;">
+      <div class="content-wrapper d-flex flex-column overflow-hidden">
+        <button class="btn btn-square left-0 m-10" type="button" onclick="halfmoon.toggleSidebar()" style="padding-top: 0.4rem;">
           <span class="material-symbols-outlined">menu</span>
           <span class="sr-only">Toggle sidebar</span> <!-- sr-only = show only on screen readers -->
         </button>
-        <div class="content">
+        <div class="content overflow-y-scroll" style="margin: 0 20px 0 20px;">
           <h2 id="how-to-play-(for-players)" tabindex="-1">How to Play (for Players)</h2>
 <p>As a player you will be roleplaying a Mechaneer, one versed in all the intricacies of mech piloting, maintenance, and combat. You'll design your mech (usually at or before the first session) and navigate the gritty world of Mechtronica through whatever crazy story your GM dreams up.</p>
 <h3 id="your-character" tabindex="-1">Your Character</h3>
@@ -234,11 +238,13 @@ Maintaining your mech, including repairing damage during or out of combat, refue
 Modifying your mech as the game progresses. Since Mechtronica does not have a leveling or XP system, tinkering is the main way you improve over the course of the game. Make sure to go out of your way to shop for or salvage components so you can improve your mech. The Maintenance and Mech Building sections are both relevant to tinkering. Note there are limits on when and where you can make changes to your mech, see <a href="/rules/maintenance/">Maintenance</a> and <a href="/rules/maintenance-costs/">Maintenance Costs</a> for more on that.</p>
 
         </div>
-        <div class="flex-grow-1"></div>
-        <div class="bg-dark-dm bg-white-lm p-20 position-sticky bottom-0 border-top">
+        <div class="flex-grow-1">
+        </div>
+        <div class="bg-dark-dm bg-white-lm p-10 w-full border-top">
           <p class="m-0 text-center"> Have questions? <br class="d-md-none"> <a href="https://discord.gg/VPzzYHqxFy"> Join our Discord </a> and ask away! </p>
         </div>
       </div>
+
       <!-- Content wrapper end -->
 
     </div>

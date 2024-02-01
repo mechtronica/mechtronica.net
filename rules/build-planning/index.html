@@ -47,7 +47,7 @@
             <span aria-hidden="true">&times;</span>
           </a>
           <h5 class="modal-title" id="modal-title"></h5>
-          <span id="modal-content"></span>
+          <div id="modal-content"></div>
         </div>
       </div>
     </div>
@@ -80,7 +80,11 @@
             
           
             
-              <a href="https://mechtronica.net/mechdb/viewer/" class="sidebar-link ml-10">MechDB</a>
+              <a href="https://mechtronica.net/mechdb/viewer/" class="sidebar-link ml-10">Part Database</a>
+            
+          
+            
+              <a href="https://mechtronica.net/mechdb/builder/" class="sidebar-link ml-10">Mech Builder</a>
             
           
             
@@ -209,12 +213,12 @@
       <!-- Sidebar end -->
 
       <!-- Content wrapper start -->
-      <div class="content-wrapper d-flex flex-column">
-        <button class="btn btn-square m-10" type="button" onclick="halfmoon.toggleSidebar()" style="padding-top: 0.4rem;">
+      <div class="content-wrapper d-flex flex-column overflow-hidden">
+        <button class="btn btn-square left-0 m-10" type="button" onclick="halfmoon.toggleSidebar()" style="padding-top: 0.4rem;">
           <span class="material-symbols-outlined">menu</span>
           <span class="sr-only">Toggle sidebar</span> <!-- sr-only = show only on screen readers -->
         </button>
-        <div class="content">
+        <div class="content overflow-y-scroll" style="margin: 0 20px 0 20px;">
           <h2 id="planning-a-mech-build" tabindex="-1">Planning a Mech Build</h2>
 <p>The first step in building your mech is planning. Do you want to build a combat-focused mech built for dealing maximum damage? Perhaps your <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'A Mechaneer is a person who is capable of piloting a mech.', title: 'Mechaneer', hasDismissButton: true, timeShown: 5000});">Mechaneer</b> needs a mech capable of hauling scientific equipment and taking specific measurements. Or maybe you earn a living as a field mechanic, and focus on equipment to make sophistocated repairs when far from a garage. Think about how you want to play, and how that relates to your mechaneer's personality.</p>
 <p>Once you choose a focus, you should select a mech Frame and a <b class="keyword" onclick="halfmoon.initStickyAlert({content: 'Power comes in 3 different types: Electrical, Mechanical, and Steam.', title: 'Power Type', hasDismissButton: true, timeShown: 5000});">Power Type</b>. Read on for information on factors that you should consider when building your mech.</p>
@@ -391,11 +395,13 @@
 <p>Depending on how much power your mech uses, you may need to consider a larger fuel tank or even a different fuel type.</p>
 
         </div>
-        <div class="flex-grow-1"></div>
-        <div class="bg-dark-dm bg-white-lm p-20 position-sticky bottom-0 border-top">
+        <div class="flex-grow-1">
+        </div>
+        <div class="bg-dark-dm bg-white-lm p-10 w-full border-top">
           <p class="m-0 text-center"> Have questions? <br class="d-md-none"> <a href="https://discord.gg/VPzzYHqxFy"> Join our Discord </a> and ask away! </p>
         </div>
       </div>
+
       <!-- Content wrapper end -->
 
     </div>

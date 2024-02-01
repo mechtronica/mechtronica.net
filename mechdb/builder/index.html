@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Favicon and title -->
+    <link rel="icon" href="https://mechtronica.net/images/icon.svg">
+    <title> MechDB Builder </title>
+
+    <!-- Halfmoon CSS -->
+    <link href="https://mechtronica.net/halfmoonui/css/halfmoon-variables.min.css" rel="stylesheet" />
+
+    <!-- Custom Halfmoon Variables -->
+    <link href="https://mechtronica.net/custom-variables.css" rel="stylesheet" />
+
+    <!-- Google Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  
+    <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 1,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 48
+    }
+    </style>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+
+  </head>
+  <body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-set-preferred-theme-onload="true">
+    <!-- Modals go here -->
+    <!-- Reference: https://www.gethalfmoon.com/docs/modal -->
+
+    <div class="modal" id="modal-1" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content modal-content-media">
+          <a href="#" class="close" role="button" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </a>
+          <h5 class="modal-title" id="modal-title"></h5>
+          <div id="modal-content"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page wrapper start -->
+    <div class="page-wrapper with-sidebar" data-sidebar-type="full-height">
+      
+      <!-- Sticky alerts (toasts), empty container -->
+      <!-- Reference: https://www.gethalfmoon.com/docs/sticky-alerts-toasts -->
+      <div class="sticky-alerts"></div>
+
+      <!-- Sidebar start -->
+      <div class="sidebar border-right">
+        <div class="sidebar-menu">
+
+          <!-- Sidebar brand -->
+          <a href="#" class="sidebar-brand">
+            <img class="m-0" src="https://mechtronica.net/images/logo-beta.svg" alt="Mechtronica">
+          </a>
+          <br/>
+
+          <!-- Sidebar links and titles -->
+          
+            
+              <a href="https://mechtronica.net/home/" class="sidebar-link ml-10">Home</a>
+            
+          
+            
+              <a href="https://mechtronica.net/character-sheets/downloads/" class="sidebar-link ml-10">Character Sheets</a>
+            
+          
+            
+              <a href="https://mechtronica.net/mechdb/viewer/" class="sidebar-link ml-10">Part Database</a>
+            
+          
+            
+              <a href="https://mechtronica.net/mechdb/builder/" class="sidebar-link ml-10 active">Mech Builder</a>
+            
+          
+            
+              <details class="collapse-panel"> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+                <summary class="collapse-header">
+                  Lore
+                </summary>
+                <div class="collapse-content">
+                  
+                    
+                      <a href="https://mechtronica.net/lore/intro/" class="sidebar-link ml-10">Intro</a>
+                    
+                  
+                    
+                      <a href="https://mechtronica.net/lore/solar-system/" class="sidebar-link ml-10">Solar System</a>
+                    
+                  
+                    
+                      <a href="https://mechtronica.net/lore/factions/" class="sidebar-link ml-10">Factions</a>
+                    
+                  
+                    
+                      <a href="https://mechtronica.net/lore/manufacturers/" class="sidebar-link ml-10">Manufacturers</a>
+                    
+                  
+                </div>
+              </details>
+            
+          
+            
+              <details class="collapse-panel"> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+                <summary class="collapse-header">
+                  Rules
+                </summary>
+                <div class="collapse-content">
+                  
+                    
+                        <h6 class="sidebar-title">How to Play</h6>
+                      
+                        <a href="https://mechtronica.net/rules/intro-to-ttrpgs/" class="sidebar-link ml-10">Intro to TTRPGs</a>
+                      
+                        <a href="https://mechtronica.net/rules/how-to-play-for-players/" class="sidebar-link ml-10">For Players</a>
+                      
+                        <a href="https://mechtronica.net/rules/how-to-play-for-game-masters/" class="sidebar-link ml-10">For Game Masters</a>
+                      
+                    
+                  
+                    
+                        <h6 class="sidebar-title">Mechaneer Creation</h6>
+                      
+                        <a href="https://mechtronica.net/rules/mechaneer-description/" class="sidebar-link ml-10">Mechaneer Description</a>
+                      
+                        <a href="https://mechtronica.net/rules/mechaneer-stats/" class="sidebar-link ml-10">Mechaneer Stats</a>
+                      
+                    
+                  
+                    
+                        <h6 class="sidebar-title">Mech Building</h6>
+                      
+                        <a href="https://mechtronica.net/rules/build-guide/" class="sidebar-link ml-10">Build Guide</a>
+                      
+                        <a href="https://mechtronica.net/rules/build-planning/" class="sidebar-link ml-10">Planning</a>
+                      
+                        <a href="https://mechtronica.net/rules/component-types/" class="sidebar-link ml-10">Component Types</a>
+                      
+                        <a href="https://mechtronica.net/rules/placing-components/" class="sidebar-link ml-10">Placing Components</a>
+                      
+                        <a href="https://mechtronica.net/rules/build-calculations/" class="sidebar-link ml-10">Calculations</a>
+                      
+                        <a href="https://mechtronica.net/rules/build-validating/" class="sidebar-link ml-10">Validating</a>
+                      
+                    
+                  
+                    
+                        <h6 class="sidebar-title">Gameplay</h6>
+                      
+                        <a href="https://mechtronica.net/rules/turn-structure/" class="sidebar-link ml-10">Turn Structure</a>
+                      
+                        <a href="https://mechtronica.net/rules/combat/" class="sidebar-link ml-10">Combat</a>
+                      
+                        <a href="https://mechtronica.net/rules/out-of-mech/" class="sidebar-link ml-10">Out-of-Mech Combat</a>
+                      
+                        <a href="https://mechtronica.net/rules/weapons/" class="sidebar-link ml-10">Weapons</a>
+                      
+                        <a href="https://mechtronica.net/rules/equipment/" class="sidebar-link ml-10">Equipment</a>
+                      
+                    
+                  
+                    
+                        <h6 class="sidebar-title">Maintenance</h6>
+                      
+                        <a href="https://mechtronica.net/rules/maintenance/" class="sidebar-link ml-10">Performing Maintenance</a>
+                      
+                        <a href="https://mechtronica.net/rules/maintenance-costs/" class="sidebar-link ml-10">Maintenance Costs</a>
+                      
+                        <a href="https://mechtronica.net/rules/component-states/" class="sidebar-link ml-10">Component States</a>
+                      
+                        <a href="https://mechtronica.net/rules/fuel/" class="sidebar-link ml-10">Fuel Use</a>
+                      
+                    
+                  
+                    
+                        <h6 class="sidebar-title">Appendices</h6>
+                      
+                        <a href="https://mechtronica.net/rules/glossary/" class="sidebar-link ml-10">Glossary</a>
+                      
+                        <a href="https://mechtronica.net/rules/multiple-power-plants" class="sidebar-link ml-10">Using Multiple Power Plants</a>
+                      
+                    
+                  
+                </div>
+              </details>
+            
+          
+          <div class="d-flex flex-row justify-content-center m-20">
+            <a class="text hidden-dm" style="color: #000;" href="mailto:feedback@mechtronica.net"><span class="material-symbols-outlined w-25 mx-10"> mail </span></a>
+            <a class="text hidden-lm" style="color: #fff;" href="mailto:feedback@mechtronica.net"><span class="material-symbols-outlined w-25 mx-10"> mail </span></a>
+            <a class="hidden-dm" href="https://github.com/mechtronica/mechtronica.net/issues"><img class="w-25 mx-10" src="https://mechtronica.net/images/github-mark.svg"/></a>
+            <a class="hidden-lm" href="https://github.com/mechtronica/mechtronica.net/issues"><img class="w-25 mx-10" src="https://mechtronica.net/images/github-mark-white.svg"/></a>
+            <a class="hidden-dm" href="https://discord.gg/VPzzYHqxFy"><img class="w-25 mx-10" src="https://mechtronica.net/images/discord-mark-black.svg"/></a>
+            <a class="hidden-lm" href="https://discord.gg/VPzzYHqxFy"><img class="w-25 mx-10" src="https://mechtronica.net/images/discord-mark-white.svg"/></a>
+          </div>
+          <p class="font-size-14 text-center"> The website is licensed under <br> <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode"> Creative Commons CC BY-SA </a></p>
+        </div>
+      </div>
+      <!-- Sidebar end -->
+
+      <!-- Content wrapper start -->
+      <div class="content-wrapper d-flex flex-column overflow-hidden">
+        <button class="btn btn-square left-0 m-10" type="button" onclick="halfmoon.toggleSidebar()" style="padding-top: 0.4rem;">
+          <span class="material-symbols-outlined">menu</span>
+          <span class="sr-only">Toggle sidebar</span> <!-- sr-only = show only on screen readers -->
+        </button>
+        <div class="content overflow-y-scroll" style="margin: 0 20px 0 20px;">
+          <style>
+    .joint {
+        position: absolute;
+        width: 8%;
+        height: 8%;
+    }
+
+    .joint > img {
+        width: 100%;
+    }
+
+    .slot {
+        cursor: pointer;
+        position: absolute;
+        width: 13%;
+        height: 8.8%;
+    }
+
+    .slot * {
+        cursor: pointer;
+    }
+
+    .slot > img {
+        width: 100%;
+        display: block;
+    }
+
+    .slot > p {
+        line-height: 1.1vh;
+        font-size: 1.1vh;
+        text-align: center;
+        color: black;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .slot:hover {
+        filter: brightness(200%);
+    }
+
+    .pseudo-slot {
+        cursor: pointer;
+        position: absolute;
+        width: 48%;
+        height: 4%;
+    }
+
+    .pseudo-slot * {
+        cursor: pointer;
+    }
+
+    .pseudo-slot > img {
+        width: 100%;
+        display: block;
+    }
+
+    .pseudo-slot > p {
+        line-height: 1.8vh;
+        font-size: 1.8vh;
+        color: black;
+        margin: 1% 2% 1% 2%;
+        position: absolute;
+        top: 0;
+    }
+
+    .content-wrapper {
+        overflow-y: hidden;
+    }
+
+    .selected-slot {
+        border-radius: 0.75rem;
+        border: 3px solid yellow;
+    }
+
+    .stats-table {
+        width: 100%;
+    }
+
+    .stats-table * {
+        font-size: 1.5rem;
+    }
+
+    .stats-table th {
+        text-align: left;
+    }
+
+    .resizer-handle::-webkit-resizer {
+        border: 2px solid yellow;
+        background: blue;
+        box-shadow: 0 0 2px 5px red;
+        outline: 2px dashed green;
+
+        /*size does not work*/  
+        display:block;  
+        width: 150px !important;
+        height: 150px !important;
+    }
+
+    .mech-layout {
+        width: 50vh;
+    }
+
+    .part-search {
+        width: 66%;
+    }
+
+    .part-table {
+        height: calc(100vh - 22rem);
+    }
+
+    .layout-and-parts-container {
+        flex-direction: row;
+    }
+
+    @media (max-aspect-ratio: 0.57) {
+        .slot > p {
+            line-height: 0.9vh;
+            font-size: 0.9vh;
+        }
+
+        .pseudo-slot > p {
+            line-height: 1.6vh;
+            font-size: 1.6vh;
+        }
+
+        .mech-layout {
+            width: 100%;
+        }
+
+        .mech-layout-container {
+            height: 30vh;
+            overflow-y: scroll;
+        }
+
+        .part-search {
+            width: 100%;
+        }
+
+        .part-table {
+            height: 40vh;
+        }
+
+        .layout-and-parts-container {
+            flex-direction: column;
+        }
+    }
+
+</style>
+<div class="d-flex layout-and-parts-container">
+    <div class="d-flex flex-column mech-layout-container" style="margin: 0 2% 0 2%;">
+        <details class="collapse-panel">
+            <summary class="collapse-header" style="cursor: pointer;">
+                Resources
+            </summary>
+            <table class="stats-table">
+                <tbody>
+                    <tr>
+                        <th></th>
+                        <th>Available</th>
+                        <th>Used</th>
+                        <th>Excess</th>
+                    </tr>
+                    <tr>
+                        <th>Power (M)</th>
+                        <td id="available-power-m"></td>
+                        <td id="used-power-m"></td>
+                        <td id="excess-power-m"></td>
+                    </tr>
+                    <tr>
+                        <th>Power (E)</th>
+                        <td id="available-power-e"></td>
+                        <td id="used-power-e"></td>
+                        <td id="excess-power-e"></td>
+                    </tr>
+                    <tr>
+                        <th>Power (S)</th>
+                        <td id="available-power-s"></td>
+                        <td id="used-power-s"></td>
+                        <td id="excess-power-s"></td>
+                    </tr>
+                    <tr>
+                        <th>Cooling</th>
+                        <td id="available-cooling"></td>
+                        <td id="used-cooling"></td>
+                        <td id="excess-cooling"></td>
+                    </tr>
+                    <tr>
+                        <th>CPU</th>
+                        <td id="available-cpu"></td>
+                        <td id="used-cpu"></td>
+                        <td id="excess-cpu"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </details>
+        <div class="position-relative mech-layout">
+
+            <img style="margin-top: 7%; width: 100%;" src="https://mechtronica.net/images/frames/standard-background-w-box.svg">
+
+            <!-- Left Arm -->
+            <div id="LJ" class="joint" style="top: 10%; left: 19%;">
+                <img src="https://mechtronica.net/images/frames/joint-background.svg">
+                <p></p>
+            </div>
+            <div id="L1" class="slot" style="top: 5%; left: 3%;" onclick="slot_click('L1');">
+                <img src="https://mechtronica.net/images/frames/slot-background.svg">
+                <p></p>
+            </div>
+            <div id="L2" class="slot" style="top: 23%; left: 3%;" onclick="slot_click('L2');">
+                <img src="https://mechtronica.net/images/frames/slot-background.svg">
+                <p></p>
+            </div>
+            
+            <!-- Right Arm -->
+            <div id="RJ" class="joint" style="top: 10%; right: 19%;">
+                <img src="https://mechtronica.net/images/frames/joint-background.svg">
+                <p></p>
+            </div>
+            <div id="R1" class="slot" style="top: 5%; right: 3%;" onclick="slot_click('R1');">
+                <img src="https://mechtronica.net/images/frames/slot-background.svg">
+                <p></p>
+            </div>
+            <div id="R2" class="slot" style="top: 23%; right: 3%;" onclick="slot_click('R2');">
+                <img src="https://mechtronica.net/images/frames/slot-background.svg">
+                <p></p>
+            </div>
+            
+            <!-- Torso -->
+            <div id="T1" class="slot" style="top: 0; left: 28%;" onclick="slot_click('T1');">
+                <img src="https://mechtronica.net/images/frames/slot-background.svg">
+                <p></p>
+            </div>
+            <div id="T2" class="slot" style="top: 0; right: 28%;" onclick="slot_click('T2');">
+                <img src="https://mechtronica.net/images/frames/slot-background.svg">
+                <p></p>
+            </div>
+            <div id="T3" class="slot" style="top: 13%; left: 28%;" onclick="slot_click('T3');">
+                <img src="https://mechtronica.net/images/frames/slot-background.svg">
+                <p></p>
+            </div>
+            <div id="T4" class="slot" style="top: 13%; right: 28%;" onclick="slot_click('T4');">
+                <img src="https://mechtronica.net/images/frames/slot-background.svg">
+                <p></p>
+            </div>
+            <div id="T5" class="slot" style="top: 20%; left: 43%;" onclick="slot_click('T5');">
+                <img src="https://mechtronica.net/images/frames/slot-background.svg">
+                <p></p>
+            </div>
+            <div id="T6" class="slot" style="top: 25%; left: 28%;" onclick="slot_click('T6');">
+                <img src="https://mechtronica.net/images/frames/slot-background.svg">
+                <p></p>
+            </div>
+            <div id="T7" class="slot" style="top: 25%; right: 28%;" onclick="slot_click('T7');">
+                <img src="https://mechtronica.net/images/frames/slot-background.svg">
+                <p></p>
+            </div>
+            
+            <!-- Legs -->
+            <div id="BJ" class="joint" style="top: 35%; left: 46.5%;">
+                <img src="https://mechtronica.net/images/frames/joint-background.svg">
+                <p></p>
+            </div>
+            <div id="B1" class="slot" style="top: 42%; left: 17%;" onclick="slot_click('B1');">
+                <img src="https://mechtronica.net/images/frames/slot-background.svg">
+                <p></p>
+            </div>
+            <div id="B2" class="slot" style="top: 42%; right: 17%;" onclick="slot_click('B2');">
+                <img src="https://mechtronica.net/images/frames/slot-background.svg">
+                <p></p>
+            </div>
+
+            <!-- Frame -->
+            <div id="F" class="pseudo-slot" style="top: 76.5%; left: 1%;" onclick="slot_click('F');">
+                <img src="https://mechtronica.net/images/frames/pseudoslot-background.svg">
+                <p>
+                    Frame
+                </p>
+            </div>
+
+            <!-- Plating -->
+            <div id="TP" class="pseudo-slot" style="top: 81%; left: 1%;" onclick="slot_click('TP');">
+                <img src="https://mechtronica.net/images/frames/pseudoslot-background.svg">
+                <p>
+                    Torso Plating
+                </p>
+            </div>
+            <div id="LP" class="pseudo-slot" style="top: 85.5%; left: 1%;" onclick="slot_click('LP');">
+                <img src="https://mechtronica.net/images/frames/pseudoslot-background.svg">
+                <p>
+                    Left Plating
+                </p>
+            </div>
+            <div id="RP" class="pseudo-slot" style="top: 90%; left: 1%;" onclick="slot_click('RP');">
+                <img src="https://mechtronica.net/images/frames/pseudoslot-background.svg">
+                <p>
+                    Right Plating
+                </p>
+            </div>
+            <div id="BP" class="pseudo-slot" style="top: 94.5%; left: 1%;" onclick="slot_click('BP');">
+                <img src="https://mechtronica.net/images/frames/pseudoslot-background.svg">
+                <p>
+                    Legs Plating
+                </p>
+            </div>
+
+            <!-- Modules -->
+            <div id="M1" class="pseudo-slot" style="top: 76.5%; left: 50%;" onclick="slot_click('M1');">
+                <img src="https://mechtronica.net/images/frames/pseudoslot-background.svg">
+                <p>
+                    Module 1
+                </p>
+            </div>
+            <div id="M2" class="pseudo-slot" style="top: 81%; left: 50%;" onclick="slot_click('M2');">
+                <img src="https://mechtronica.net/images/frames/pseudoslot-background.svg">
+                <p>
+                    Module 2
+                </p>
+            </div>
+            <div id="M3" class="pseudo-slot" style="top: 85.5%; left: 50%;" onclick="slot_click('M3');">
+                <img src="https://mechtronica.net/images/frames/pseudoslot-background.svg">
+                <p>
+                    Module 3
+                </p>
+            </div>
+            <div id="M4" class="pseudo-slot" style="top: 90%; left: 50%;" onclick="slot_click('M4');">
+                <img src="https://mechtronica.net/images/frames/pseudoslot-background.svg">
+                <p>
+                    Module 4
+                </p>
+            </div>
+            <div id="M5" class="pseudo-slot" style="top: 94.5%; left: 50%;" onclick="slot_click('M5');">
+                <img src="https://mechtronica.net/images/frames/pseudoslot-background.svg">
+                <p>
+                    Module 5
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="part-search">
+        <div class="d-flex m-10">
+            <a href="#modal-1" onclick="showHelp()">🛈</a>
+            <p class="m-0 mr-10">&nbsp;Search: </p>
+            <input type='search' class='form-control' id='mechdb-search' placeholder='Search MechDB'>
+        </div>
+        <div class="d-flex m-10">
+            <p class="m-0 mr-10">Filter by type: </p>
+            <select class="form-control w-200" id="type-select" onchange="onchange_typeselect()">
+                <option value="" selected="selected" disabled="disabled">Select</option>
+                <option value="Frame">Frame</option>
+                <option value="Plating">Plating</option>
+                <option value="Cabin">Cabin</option>
+                <option value="Mainframe">Mainframe</option>
+                <option value="Module">Module</option>
+                <option value="Cooler">Cooler</option>
+                <option value="Power Plant">Power Plant</option>
+                <option value="Tank">Tank</option>
+                <option value="Weapon">Weapon</option>
+                <option value="Equipment">Equipment</option>
+            </select>
+        </div>
+        <div class="overflow-y-scroll overflow-x-scroll part-table" style="width: 100%;">
+            <table class='table' id='results'></table>
+        </div>
+    </div>
+</div>
+<script src='https://mechtronica.net/jsonpath-0.8.0.js'></script>
+<script src='https://mechtronica.net/mechdb.js'></script>
+<script>
+    valid_placements = {
+        'L1': ['Equipment', 'Weapon'],
+        'L2': ['Equipment', 'Weapon'],
+        'R1': ['Equipment', 'Weapon'],
+        'R2': ['Equipment', 'Weapon'],
+        'T1': ['Equipment', 'Weapon', 'Cabin', 'Cooler', 'Mainframe', 'Power Plant', 'Tank'],
+        'T2': ['Equipment', 'Weapon', 'Cabin', 'Cooler', 'Mainframe', 'Power Plant', 'Tank'],
+        'T3': ['Equipment', 'Weapon', 'Cabin', 'Cooler', 'Mainframe', 'Power Plant', 'Tank'],
+        'T4': ['Equipment', 'Weapon', 'Cabin', 'Cooler', 'Mainframe', 'Power Plant', 'Tank'],
+        'T5': ['Equipment', 'Weapon', 'Cabin', 'Cooler', 'Mainframe', 'Power Plant', 'Tank'],
+        'T6': ['Equipment', 'Weapon', 'Cabin', 'Cooler', 'Mainframe', 'Power Plant', 'Tank'],
+        'T7': ['Equipment', 'Weapon', 'Cabin', 'Cooler', 'Mainframe', 'Power Plant', 'Tank'],
+        'B1': ['Equipment', 'Weapon'],
+        'B2': ['Equipment', 'Weapon'],
+        'RJ': [],
+        'LJ': [],
+        'BJ': [],
+        'F': ['Frame'],
+        'LP': ['Plating'],
+        'RP': ['Plating'],
+        'TP': ['Plating'],
+        'BP': ['Plating'],
+        'M1': ['Module'],
+        'M2': ['Module'],
+        'M3': ['Module'],
+        'M4': ['Module'],
+        'M5': ['Module']
+    }
+    normal_slots = ['L1', 'L2', 'R1', 'R2', 'T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'B1', 'B2'];
+    pseudo_slots = ['LP', 'RP', 'TP', 'BP', 'M1', 'M2', 'M3', 'M4', 'M5', 'F'];
+    pseudo_slot_labels = {
+        'LP': 'Left Arm Plating: ',
+        'RP': 'Right Arm Plating: ',
+        'TP': 'Torso Plating: ',
+        'BP': 'Bottom Plating: ',
+        'M1': 'Module 1: ',
+        'M2': 'Module 2: ',
+        'M3': 'Module 3: ',
+        'M4': 'Module 4: ',
+        'M5': 'Module 5: ',
+        'F': 'Frame: '
+    }
+    components = {};
+    selected_slot = null;
+    available_p = {
+        'pwr-m': document.getElementById('available-power-m'),
+        'pwr-e': document.getElementById('available-power-e'),
+        'pwr-s': document.getElementById('available-power-s'),
+        'cool': document.getElementById('available-cooling'),
+        'cpu': document.getElementById('available-cpu')
+    }
+    used_p = {
+        'pwr-m': document.getElementById('used-power-m'),
+        'pwr-e': document.getElementById('used-power-e'),
+        'pwr-s': document.getElementById('used-power-s'),
+        'cool': document.getElementById('used-cooling'),
+        'cpu': document.getElementById('used-cpu')
+    }
+    excess_p = {
+        'pwr-m': document.getElementById('excess-power-m'),
+        'pwr-e': document.getElementById('excess-power-e'),
+        'pwr-s': document.getElementById('excess-power-s'),
+        'cool': document.getElementById('excess-cooling'),
+        'cpu': document.getElementById('excess-cpu')
+    }
+    use_select_column = true;
+    select_column_header = 'select';
+    select_column_button_text = '⮜';
+    loadDataFile('/mechdb/parts.json');
+    load_components_cookie();
+    update_slot_text();
+
+    function slot_click(slot) {
+        if (selected_slot != null) {
+            document.getElementById(selected_slot).classList.remove('selected-slot');
+        }
+        selected_slot = slot;
+        document.getElementById(selected_slot).classList.add('selected-slot');
+    }
+
+    function getSlotsByComponentType(type) {
+        results = [];
+        for (let slot in components) {
+            if (components[slot].type == type) {
+                results.push(slot);
+            }
+        }
+        return results;
+    }
+
+    function calculate_resources() {
+        available = {'pwr-m': 0, 'pwr-e': 0, 'pwr-s': 0, 'cool': 0, 'cpu': 0};
+        used = {'pwr-m': 0, 'pwr-e': 0, 'pwr-s': 0, 'cool': 0, 'cpu': 0};
+        excess = {'pwr-m': 0, 'pwr-e': 0, 'pwr-s': 0, 'cool': 0, 'cpu': 0};
+
+        _components = JSON.parse(JSON.stringify(components));
+        cabin = getSlotsByComponentType('Cabin');
+
+        for (let slot in _components) {
+            type = _components[slot].type;
+            if (type == 'Mainframe' || type == 'Frame') {
+                if (cabin.length > 0) {
+                    _components[slot]['p-type'] = _components[cabin[0]]['p-type'];
+                }
+                else {
+                    _components[slot]['p-type'] = 'N/A';
+                }
+            }
+        }
+
+        for (let slot in _components) {
+            if ('pwr' in _components[slot]) {
+                _components[slot]['pwr-' + _components[slot]['p-type'].toLowerCase()] = _components[slot]['pwr'];
+            }
+        }
+
+        for (let x of ['pwr-m', 'pwr-e', 'pwr-s', 'cool', 'cpu']) {
+            for (let slot in _components) {
+                if (_components[slot] != null) {
+                    if (x in _components[slot]) {
+                        if (_components[slot][x] > 0) {
+                            available[x] += parseInt(_components[slot][x]);
+                        }
+                        else {
+                            used[x] -= parseInt(_components[slot][x]);
+                        }
+                    }
+                }
+            }
+            excess[x] = available[x] - used[x];
+            available_p[x].innerHTML = available[x];
+            used_p[x].innerHTML = used[x];
+            excess_p[x].innerHTML = excess[x];
+        }
+    }
+
+    function partClick(name) {
+        part = getPart(name);
+        validation = validatePlacement(part, selected_slot);
+        if (validation.valid) {
+            components[selected_slot] = part;
+            calculate_resources();
+            validateAllComponents();
+            update_slot_text();
+            update_components_cookie();
+        }
+        else {
+            halfmoon.initStickyAlert({content: validation.message, title: 'Invalid placement!', hasDismissButton: true, timeShown: 5000, alertType: 'alert-danger'});
+        }
+    }
+
+    function validatePlacement(part, slot) {
+        if (!valid_placements[slot].includes(part.type)) {
+            return {valid: false, message: 'That type of part cannot go in that slot.'};
+        }
+        if ('F' in components && part.size == 'L' && components.F.slots[slot].size == 'S') {
+            return {valid: false, message: 'Large parts cannot go in small slots.'};
+        }
+        if (part.type == 'Cabin') {
+            cabin = getSlotsByComponentType('Cabin');
+            if (cabin.length > 0 && cabin[0] != slot) {
+                return {valid: false, message: 'You can only have one cabin in a mech.'};
+            }
+        }
+        return {valid: true};
+    }
+
+    function validateAllComponents() {
+        slots = normal_slots.concat(pseudo_slots);
+        deleted = false;
+        for (let slot in components) {
+            if (!validatePlacement(components[slot], slot).valid) {
+                delete components[slot];
+                deleted = true;
+            }
+        }
+        if (deleted) {
+            halfmoon.initStickyAlert({content: '', title: 'Removed invalid components.', hasDismissButton: true, timeShown: 5000, alertType: 'alert-danger'});
+        }
+    }
+
+    function update_slot_text() {
+        for (let slot of normal_slots) {
+            document.getElementById(slot).children[1].innerHTML = makeNormalSlotText(slot);
+        }
+        for (let slot of pseudo_slots) {
+            document.getElementById(slot).children[1].innerHTML = makePseudoSlotText(slot);
+        }
+    }
+
+    function makeNormalSlotText(slot) {
+        text = '';
+        if (slot in components) {
+            text += truncate(components[slot].name, 10) + '<br>';
+        }
+        else {
+            text += '---<br>';
+        }
+        text += slot + '<br>';
+        if ('F' in components) {
+            if (slot in components.F.slots) {
+                text += 'size: ' + components.F.slots[slot].size + '<br>';
+                text += 'hit: ' + components.F.slots[slot].hit[0] + ' - ' + components.F.slots[slot].hit[0];
+                document.getElementById(slot).classList.remove('invisible');
+            }
+            else {
+                document.getElementById(slot).classList.add('invisible');
+                if (slot in components) {
+                    delete components[slot];
+                }
+            }
+        }
+        else {
+            text += 'size: ---<br>';
+            text += 'hit: ---';
+        }
+        return text;
+    }
+
+    function makePseudoSlotText(slot) {
+        text = '';
+        text += pseudo_slot_labels[slot];
+
+        cabin = getSlotsByComponentType('Cabin');
+        
+        if (cabin.length > 0 && slot[0] == 'M') {
+            if (parseInt(slot[1]) <= components[cabin[0]].mods) {
+                document.getElementById(slot).classList.remove('invisible');
+            }
+            else {
+                document.getElementById(slot).classList.add('invisible');
+                if (slot in components) {
+                    delete components[slot];
+                }
+            }
+        }
+
+        if (slot in components) {
+            text += components[slot].name;
+        }
+        else {
+            text += '---';
+        }
+        return text;
+    }
+
+    function getPart(part) {
+        return (jsonPath(data, '$[?(@.name=="' + part + '")]')[0]);
+    }
+
+    function truncate(text, length) {
+        if (text.length <= length) {
+            return text;
+        }
+        else {
+            return text.substring(0, length-3) + '...';
+        }
+    }
+
+    function update_components_cookie() {
+        setCookie('components', JSON.stringify(components));
+    }
+
+    function load_components_cookie() {
+        cval = getCookie('components');
+        if (cval != '') {
+            components = JSON.parse(cval);
+        }
+    }
+
+    function setCookie(cname, cval) {
+        document.cookie = cname + '=' + cval;
+    }
+
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    function showHelp() {
+        modal_title.innerHTML = 'Mech Builder Help';
+        modal_content.innerHTML = '<p>The Mech Builder allows you to validate and tinker with mech builds by doing the calculations for you. Simply click on a slot to select it, then search for a part, and click the select button next to the part to put it in the slot.</p>';
+    }
+</script>
+        </div>
+        <div class="flex-grow-1">
+        </div>
+        <div class="bg-dark-dm bg-white-lm p-10 w-full border-top">
+          <p class="m-0 text-center"> Have questions? <br class="d-md-none"> <a href="https://discord.gg/VPzzYHqxFy"> Join our Discord </a> and ask away! </p>
+        </div>
+      </div>
+
+      <!-- Content wrapper end -->
+
+    </div>
+    <script src="https://mechtronica.net/halfmoonui/js/halfmoon.min.js"></script>
+  </body>
+</html>

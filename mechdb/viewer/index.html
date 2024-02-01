@@ -47,7 +47,7 @@
             <span aria-hidden="true">&times;</span>
           </a>
           <h5 class="modal-title" id="modal-title"></h5>
-          <span id="modal-content"></span>
+          <div id="modal-content"></div>
         </div>
       </div>
     </div>
@@ -80,7 +80,11 @@
             
           
             
-              <a href="https://mechtronica.net/mechdb/viewer/" class="sidebar-link ml-10 active">MechDB</a>
+              <a href="https://mechtronica.net/mechdb/viewer/" class="sidebar-link ml-10 active">Part Database</a>
+            
+          
+            
+              <a href="https://mechtronica.net/mechdb/builder/" class="sidebar-link ml-10">Mech Builder</a>
             
           
             
@@ -209,188 +213,69 @@
       <!-- Sidebar end -->
 
       <!-- Content wrapper start -->
-      <div class="content-wrapper d-flex flex-column">
-        <button class="btn btn-square m-10" type="button" onclick="halfmoon.toggleSidebar()" style="padding-top: 0.4rem;">
+      <div class="content-wrapper d-flex flex-column overflow-hidden">
+        <button class="btn btn-square left-0 m-10" type="button" onclick="halfmoon.toggleSidebar()" style="padding-top: 0.4rem;">
           <span class="material-symbols-outlined">menu</span>
           <span class="sr-only">Toggle sidebar</span> <!-- sr-only = show only on screen readers -->
         </button>
-        <div class="content">
-          <h2>MechDB</h2>
-<p>MechDB is the part database for Mechtronica, allowing you to search all the different mech parts for building your mech.
-   The search function supports both normal text searching and <a href="https://goessner.net/articles/JsonPath/">JSONPath</a> searching (any search prefixed with a $ will be treated as a JSONPath).</p>
-<div class="d-flex m-10">
-  <p class="m-0 mr-10">Search: </p>
-  <input type='search' class='form-control' id='mechdb-search' placeholder='Search MechDB'>
+        <div class="content overflow-y-scroll" style="margin: 0 20px 0 20px;">
+          <style>
+    .content-wrapper {
+      overflow: hidden;
+    }
+    
+    .part-table {
+      height: calc(100vh - 22rem);
+      overflow: hidden;
+    }
+</style>
+<div class="part-search">
+  <div class="d-flex m-10">
+    <a href="#modal-1" onclick="showHelp()">🛈</a>
+    <p class="m-0 mr-10">&nbsp;Search: </p>
+    <input type='search' class='form-control' id='mechdb-search' placeholder='Search MechDB'>
+  </div>
+  <div class="d-flex m-10">
+    <p class="m-0 mr-10">Filter by type: </p>
+    <select class="form-control w-200" id="type-select" onchange="onchange_typeselect()">
+      <option value="" selected="selected" disabled="disabled">Select</option>
+      <option value="Frame">Frame</option>
+      <option value="Plating">Plating</option>
+      <option value="Cabin">Cabin</option>
+      <option value="Mainframe">Mainframe</option>
+      <option value="Module">Module</option>
+      <option value="Cooler">Cooler</option>
+      <option value="Power Plant">Power Plant</option>
+      <option value="Tank">Tank</option>
+      <option value="Weapon">Weapon</option>
+      <option value="Equipment">Equipment</option>
+    </select>
+  </div>
+  <div class="part-table overflow-y-scroll overflow-x-scroll part-table" style="width: 100%;">
+    <table class='table' id='results'></table>
+  </div>
 </div>
-<div class="d-flex m-10">
-  <p class="m-0 mr-10">Filter by type: </p>
-  <select class="form-control w-200" id="type-select" onchange="onchange_typeselect()">
-    <option value="" selected="selected" disabled="disabled">Select</option>
-    <option value="Frame">Frame</option>
-    <option value="Plating">Plating</option>
-    <option value="Cabin">Cabin</option>
-    <option value="Mainframe">Mainframe</option>
-    <option value="Module">Module</option>
-    <option value="Cooler">Cooler</option>
-    <option value="Power Plant">Power Plant</option>
-    <option value="Tank">Tank</option>
-    <option value="Weapon">Weapon</option>
-    <option value="Equipment">Equipment</option>
-  </select>
-</div>
-<table class='table' id='results'></table>
 
-<script>
-data = [];
-excluded_headers = [];
-header_order = [
-        "msrp",
-        "type",
-        "manufacturer",
-        "name",
-        "class",
-        "fuel",
-        "software",
-        "size",
-        "p-type",
-        "pwr",
-        "cool",
-        "cpu",
-        "str",
-        "spd",
-        "shield",
-        "wt",
-        "ht",
-        "mods",
-        "cargo",
-        "rng",
-        "trg",
-        "dmg",
-        "capacity",
-        "targeting bonus",
-        "slots",
-        "special",
-        "effect",
-        "description"
-];
-
-type_select = document.getElementById('type-select')
-
-modal_title = document.getElementById('modal-title')
-modal_content = document.getElementById('modal-content')
-
-mechdb_search = document.getElementById('mechdb-search')
-mechdb_search.addEventListener('keypress', function(event) {
-  // If the user presses the 'Enter' key on the keyboard
-  if (event.key === 'Enter') {
-    // Cancel the default action, if needed
-    event.preventDefault();
-    val = document.getElementById('mechdb-search').value;
-    showJson(val);
-  }
-}); 
-
-loadDataFile('/mechdb/parts.json');
-
-function loadDataFile(path) {
-  fetch(path)
-    .then((response) => response.json())
-    .then((json) => data.push(...json))
-    .then(() => showJson('$[*]'));
-}
-
-function onchange_typeselect() {
-  showJson('$[?(@.type=="' + type_select.value + '")]')
-}
-
-function searchJson(search) {
-  results = [];
-  console.log(search);
-  for (let x of data) {
-    for (let y in x) {
-      if (typeof x[y] === 'string' || x[y] instanceof String) {
-        if ( x[y].toLowerCase().includes(search.toLowerCase())) {
-          results.push(x);
-          break;
-        }
-      }
-    }
-  }
-  return results;
-}
-
-function showJson(query) {
-  mechdb_search.value = query;
-  headers = [];
-  ordered_headers = [];
-  text = '';
-  filteredData = [];
-
-  if (query != '')
-  {
-    if (query[0] == '$') {
-      filteredData = jsonPath(data, query);
-    }
-    else {
-      filteredData = searchJson(query);
-    }
-  }
-
-  if (filteredData == false) {
-    text = `<div class="alert alert-secondary" role="alert">
-              <h4 class="alert-heading">No Results</h4>
-              Search returned no results or JSONPath expression has a syntax error.
-            </div>`;
-  }
-  else {
-
-    for (let x of filteredData) {
-      for (let y in x) {
-        if (!excluded_headers.includes(y))
-        {
-          if (!headers.includes(y)) {
-            headers.push(y);
-          }
-        }
-      }
-    }
-
-    for (let x of header_order) {
-      if (headers.includes(x)) {
-        text += '<th>' + x + '</th>';
-        ordered_headers.push(x)
-      }
-    }
-
-    for (let x of filteredData) {
-      text += '<tr>';
-      for (let y of ordered_headers) {
-        if (y == 'slots' && y in x) {
-          text += '<td><a href="#modal-1" onclick="showFrameSlots(\'' + x.name + '\')">show</a></td>';
-        }
-        else {
-          text += '<td>' + (y in x ? x[y] : '---' ) + '</td>';
-        }
-      }
-      text += '</tr>';
-    }
-  }
-
-  document.getElementById('results').innerHTML = text;
-}
-
-function showFrameSlots(name) {
-  modal_title.innerHTML = name;
-  modal_content.innerHTML = '<img class="img-fluid" src="https://mechtronica.net/images/frames/' + encodeURIComponent(name) + '.svg"></img>'
-}
-</script>
 <script src='https://mechtronica.net/jsonpath-0.8.0.js'></script>
+<script src='https://mechtronica.net/mechdb.js'></script>
+<script>
+  use_select_column = false;
+  select_column_header = 'compare';
+  select_column_button_text = '⤭';
+  loadDataFile('/mechdb/parts.json');
+  function showHelp() {
+    modal_title.innerHTML = 'Parts Database Search Help';
+    modal_content.innerHTML = '<p>This part viewer allows you to search all the different mech parts for building your mech.<br>The search function supports both normal text searching and <a href=\"https://goessner.net/articles/JsonPath/\">JSONPath</a> searching (any search prefixed with a $ will be treated as a JSONPath).</p>';
+  }
+</script>
         </div>
-        <div class="flex-grow-1"></div>
-        <div class="bg-dark-dm bg-white-lm p-20 position-sticky bottom-0 border-top">
+        <div class="flex-grow-1">
+        </div>
+        <div class="bg-dark-dm bg-white-lm p-10 w-full border-top">
           <p class="m-0 text-center"> Have questions? <br class="d-md-none"> <a href="https://discord.gg/VPzzYHqxFy"> Join our Discord </a> and ask away! </p>
         </div>
       </div>
+
       <!-- Content wrapper end -->
 
     </div>
