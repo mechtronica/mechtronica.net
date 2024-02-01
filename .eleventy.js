@@ -24,6 +24,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('halfmoonui');
   eleventyConfig.addPassthroughCopy('jsonpath-0.8.0.js');
   eleventyConfig.addPassthroughCopy('custom-variables.css');
+  eleventyConfig.addPassthroughCopy({'mechdb/mechdb.js': 'mechdb.js'});
 
   // Export character sheets
   eleventyConfig.addPassthroughCopy('character-sheets/*.pdf');

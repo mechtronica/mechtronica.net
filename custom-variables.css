@@ -34,6 +34,8 @@
 
     /* Resize alert heading to match other resized text */
     --alert-heading-font-size: font-size: calc(1.75*var(--base-font-size));
+
+    --css-scrollbar-width: default;
 }
 
 h1 {
