@@ -370,51 +370,58 @@
 </style>
 <div class="d-flex layout-and-parts-container">
     <div class="d-flex flex-column mech-layout-container" style="margin: 0 2% 0 2%;">
-        <details class="collapse-panel">
-            <summary class="collapse-header" style="cursor: pointer;">
-                Resources
-            </summary>
-            <table class="stats-table">
-                <tbody>
-                    <tr>
-                        <th></th>
-                        <th>Available</th>
-                        <th>Used</th>
-                        <th>Excess</th>
-                    </tr>
-                    <tr>
-                        <th>Power (M)</th>
-                        <td id="available-power-m"></td>
-                        <td id="used-power-m"></td>
-                        <td id="excess-power-m"></td>
-                    </tr>
-                    <tr>
-                        <th>Power (E)</th>
-                        <td id="available-power-e"></td>
-                        <td id="used-power-e"></td>
-                        <td id="excess-power-e"></td>
-                    </tr>
-                    <tr>
-                        <th>Power (S)</th>
-                        <td id="available-power-s"></td>
-                        <td id="used-power-s"></td>
-                        <td id="excess-power-s"></td>
-                    </tr>
-                    <tr>
-                        <th>Cooling</th>
-                        <td id="available-cooling"></td>
-                        <td id="used-cooling"></td>
-                        <td id="excess-cooling"></td>
-                    </tr>
-                    <tr>
-                        <th>CPU</th>
-                        <td id="available-cpu"></td>
-                        <td id="used-cpu"></td>
-                        <td id="excess-cpu"></td>
-                    </tr>
-                </tbody>
-            </table>
-        </details>
+        <div class="d-flex">
+            <details class="collapse-panel flex-grow-1">
+                <summary class="collapse-header" style="cursor: pointer;">
+                    Resources
+                </summary>
+                <table class="stats-table">
+                    <tbody>
+                        <tr>
+                            <th></th>
+                            <th>Available</th>
+                            <th>Used</th>
+                            <th>Excess</th>
+                        </tr>
+                        <tr>
+                            <th>Power (M)</th>
+                            <td id="available-power-m"></td>
+                            <td id="used-power-m"></td>
+                            <td id="excess-power-m"></td>
+                        </tr>
+                        <tr>
+                            <th>Power (E)</th>
+                            <td id="available-power-e"></td>
+                            <td id="used-power-e"></td>
+                            <td id="excess-power-e"></td>
+                        </tr>
+                        <tr>
+                            <th>Power (S)</th>
+                            <td id="available-power-s"></td>
+                            <td id="used-power-s"></td>
+                            <td id="excess-power-s"></td>
+                        </tr>
+                        <tr>
+                            <th>Cooling</th>
+                            <td id="available-cooling"></td>
+                            <td id="used-cooling"></td>
+                            <td id="excess-cooling"></td>
+                        </tr>
+                        <tr>
+                            <th>CPU</th>
+                            <td id="available-cpu"></td>
+                            <td id="used-cpu"></td>
+                            <td id="excess-cpu"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </details>
+            <button class="btn btn-square" onclick="clearSlotClick();">
+                <span class="material-symbols-outlined" style="margin-top: 0.15em;">delete</span>
+                <span class="sr-only">Clear slot</span> <!-- sr-only = show only on screen readers -->
+            </button>
+        </div>
+
         <div class="position-relative mech-layout">
 
             <img style="margin-top: 7%; width: 100%;" src="https://mechtronica.net/images/frames/standard-background-w-box.svg">
@@ -631,6 +638,7 @@
         'M5': 'Module 5: ',
         'F': 'Frame: '
     }
+    excess_draw = ['Weapon', 'Equipment'];
     components = {};
     selected_slot = null;
     available_p = {
@@ -708,7 +716,7 @@
         for (let x of ['pwr-m', 'pwr-e', 'pwr-s', 'cool', 'cpu']) {
             for (let slot in _components) {
                 if (_components[slot] != null) {
-                    if (x in _components[slot]) {
+                    if (x in _components[slot] && !excess_draw.includes(_components[slot].type)) {
                         if (_components[slot][x] > 0) {
                             available[x] += parseInt(_components[slot][x]);
                         }
@@ -730,14 +738,22 @@
         validation = validatePlacement(part, selected_slot);
         if (validation.valid) {
             components[selected_slot] = part;
-            calculate_resources();
             validateAllComponents();
+            calculate_resources();
             update_slot_text();
             update_components_cookie();
         }
         else {
             halfmoon.initStickyAlert({content: validation.message, title: 'Invalid placement!', hasDismissButton: true, timeShown: 5000, alertType: 'alert-danger'});
         }
+    }
+
+    function clearSlotClick() {
+        delete components[selected_slot];
+        validateAllComponents();
+        calculate_resources();
+        update_slot_text();
+        update_components_cookie();
     }
 
     function validatePlacement(part, slot) {
@@ -881,7 +897,7 @@
 
     function showHelp() {
         modal_title.innerHTML = 'Mech Builder Help';
-        modal_content.innerHTML = '<p>The Mech Builder allows you to validate and tinker with mech builds by doing the calculations for you. Simply click on a slot to select it, then search for a part, and click the select button next to the part to put it in the slot.</p>';
+        modal_content.innerHTML = '<p>The Mech Builder allows you to validate and tinker with mech builds by doing the calculations for you. Simply click on a slot to select it, then search for a part, and click the select button next to the part to put it in the slot. Click the trash can button while a slot is selected to clear the part from that slot.</p>';
     }
 </script>
         </div>
