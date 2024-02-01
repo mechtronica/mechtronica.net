@@ -43,12 +43,12 @@ permalink: mechdb/viewer/
 <script src='{{site.url}}/jsonpath-0.8.0.js'></script>
 <script src='{{site.url}}/mechdb.js'></script>
 <script>
-  use_select_column = true;
+  use_select_column = false;
   select_column_header = 'compare';
   select_column_button_text = '⤭';
   loadDataFile('/mechdb/parts.json');
   function showHelp() {
-    modal_title.innerHTML = 'MechDB Search Help';
-    modal_content.innerHTML = '<p>MechDB is the part database for Mechtronica, allowing you to search all the different mech parts for building your mech.<br>The search function supports both normal text searching and <a href=\"https://goessner.net/articles/JsonPath/\">JSONPath</a> searching (any search prefixed with a $ will be treated as a JSONPath).</p>';
+    modal_title.innerHTML = 'Parts Database Search Help';
+    modal_content.innerHTML = '<p>This part viewer allows you to search all the different mech parts for building your mech.<br>The search function supports both normal text searching and <a href=\"https://goessner.net/articles/JsonPath/\">JSONPath</a> searching (any search prefixed with a $ will be treated as a JSONPath).</p>';
   }
 </script>
