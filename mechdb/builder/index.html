@@ -323,18 +323,18 @@
     }
 
     .part-search {
-        width: 66%;
+        width: calc(100% - 60vh);
     }
 
     .part-table {
-        height: calc(100vh - 22rem);
+        height: calc(100vh - 23rem);
     }
 
     .layout-and-parts-container {
         flex-direction: row;
     }
 
-    @media (max-aspect-ratio: 0.57) {
+    @media (max-aspect-ratio: 1.25) {
         .slot > p {
             line-height: 0.9vh;
             font-size: 0.9vh;
@@ -350,7 +350,7 @@
         }
 
         .mech-layout-container {
-            height: 30vh;
+            height: 40vh;
             overflow-y: scroll;
         }
 
