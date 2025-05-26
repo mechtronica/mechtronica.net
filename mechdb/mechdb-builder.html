@@ -96,8 +96,8 @@ permalink: mechdb/builder/
         box-shadow: 0 0 2px 5px red;
         outline: 2px dashed green;
 
-        /*size does not work*/  
-        display:block;  
+        /*size does not work*/
+        display:block;
         width: 150px !important;
         height: 150px !important;
     }
@@ -116,6 +116,7 @@ permalink: mechdb/builder/
 
     .layout-and-parts-container {
         flex-direction: row;
+        height: 100%;
     }
 
     @media (max-aspect-ratio: 1.25) {
@@ -201,7 +202,7 @@ permalink: mechdb/builder/
                 </table>
             </details>
             <button class="btn btn-square" onclick="clearSlotClick();">
-                <span class="material-symbols-outlined" style="margin-top: 0.15em;">delete</span>
+                <span>🗑️</span>
                 <span class="sr-only">Clear slot</span> <!-- sr-only = show only on screen readers -->
             </button>
         </div>
@@ -223,7 +224,7 @@ permalink: mechdb/builder/
                 <img src="{{site.url}}/images/frames/slot-background.svg">
                 <p></p>
             </div>
-            
+
             <!-- Right Arm -->
             <div id="RJ" class="joint" style="top: 10%; right: 19%;">
                 <img src="{{site.url}}/images/frames/joint-background.svg">
@@ -237,7 +238,7 @@ permalink: mechdb/builder/
                 <img src="{{site.url}}/images/frames/slot-background.svg">
                 <p></p>
             </div>
-            
+
             <!-- Torso -->
             <div id="T1" class="slot" style="top: 0; left: 28%;" onclick="slot_click('T1');">
                 <img src="{{site.url}}/images/frames/slot-background.svg">
@@ -267,7 +268,7 @@ permalink: mechdb/builder/
                 <img src="{{site.url}}/images/frames/slot-background.svg">
                 <p></p>
             </div>
-            
+
             <!-- Legs -->
             <div id="BJ" class="joint" style="top: 35%; left: 46.5%;">
                 <img src="{{site.url}}/images/frames/joint-background.svg">
@@ -352,7 +353,7 @@ permalink: mechdb/builder/
 
     <div class="part-search">
         <div class="d-flex m-10">
-            <a href="#modal-1" onclick="showHelp()">🛈</a>
+            <a class="btn btn-square" style="padding: 0 0.15em;" href="#modal-1" onclick="showHelp()">ℹ️</a>
             <p class="m-0 mr-10">&nbsp;Search: </p>
             <input type='search' class='form-control' id='mechdb-search' placeholder='Search MechDB'>
         </div>
@@ -448,7 +449,7 @@ permalink: mechdb/builder/
     }
     use_select_column = true;
     select_column_header = 'select';
-    select_column_button_text = '⮜';
+    select_column_button_text = '🞣';
     loadDataFile('/mechdb/parts.json');
     load_components_cookie();
     update_slot_text();
@@ -613,7 +614,7 @@ permalink: mechdb/builder/
         text += pseudo_slot_labels[slot];
 
         cabin = getSlotsByComponentType('Cabin');
-        
+
         if (cabin.length > 0 && slot[0] == 'M') {
             if (parseInt(slot[1]) <= components[cabin[0]].mods) {
                 document.getElementById(slot).classList.remove('invisible');
