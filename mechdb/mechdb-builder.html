@@ -415,6 +415,7 @@ permalink: mechdb/builder/
         'M5': 'Module 5: ',
         'F': 'Frame: '
     }
+    excess_draw = ['Weapon', 'Equipment'];
     components = {};
     selected_slot = null;
     available_p = {
@@ -492,7 +493,7 @@ permalink: mechdb/builder/
         for (let x of ['pwr-m', 'pwr-e', 'pwr-s', 'cool', 'cpu']) {
             for (let slot in _components) {
                 if (_components[slot] != null) {
-                    if (x in _components[slot]) {
+                    if (x in _components[slot] && !excess_draw.includes(_components[slot].type)) {
                         if (_components[slot][x] > 0) {
                             available[x] += parseInt(_components[slot][x]);
                         }
