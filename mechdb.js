@@ -121,7 +121,6 @@ function searchJson(search) {
 }
 
 function showJson(query) {
-  mechdb_search.value = query;
 
   if (query != '') {
     if (query[0] == '$') {
@@ -168,7 +167,7 @@ function refreshTable() {
 
     for (let x of header_order) {
       if (headers.includes(x)) {
-        text += '<th style="white-space: nowrap;" onclick="addSortBy(\'' + x + '\')">' + x + ' <small>⇅</small></th>';
+        text += '<th style="white-space: nowrap; cursor: pointer;" onclick="addSortBy(\'' + x + '\')">' + x + ' <small>⇅</small></th>';
         ordered_headers.push(x);
       }
     }
