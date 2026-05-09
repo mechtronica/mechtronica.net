@@ -1,5 +1,6 @@
 max_text_len = 25;
 data = [];
+shown_data = [];
 excluded_headers = [];
 use_select_column = false;
 select_column_header = 'select';
@@ -35,10 +36,12 @@ header_order = [
         "description"
 ];
 
-type_select = document.getElementById('type-select')
-modal_title = document.getElementById('modal-title')
-modal_content = document.getElementById('modal-content')
-mechdb_search = document.getElementById('mechdb-search')
+filter_dict = {};
+sort_by_list = [];
+
+modal_title = document.getElementById('modal-title');
+modal_content = document.getElementById('modal-content');
+mechdb_search = document.getElementById('mechdb-search');
 
 mechdb_search.addEventListener('keypress', function(event) {
   // If the user presses the 'Enter' key on the keyboard
@@ -48,17 +51,57 @@ mechdb_search.addEventListener('keypress', function(event) {
     val = document.getElementById('mechdb-search').value;
     showJson(val);
   }
-}); 
+});
 
 function loadDataFile(path) {
   fetch(path)
     .then((response) => response.json())
     .then((json) => data.push(...json))
-    .then(() => showJson('$[*]'));
+    .then(() => showJson(''));
 }
 
-function onchange_typeselect() {
-  showJson('$[?(@.type=="' + type_select.value + '")]')
+function setFilter(field, value) {
+  if (value == 'Any') {
+    delete filter_dict[field];
+  }
+  else {
+    filter_dict[field] = value;
+  }
+  if (Object.keys(filter_dict).length > 0) {
+    showJson(buildFilter(filter_dict));
+  }
+  else {
+    showJson('');
+  }
+}
+
+function buildFilter(dict) {
+  var filter = '$[?(';
+  for (let k in dict) {
+    filter += '@.' + k + '=="' + dict[k] + '"' + '&&';
+  }
+  filter = filter.slice(0, -2);
+  filter += ')]';
+  return filter;
+}
+
+function addSortBy(field) {
+  var i = sort_by_list.indexOf(field);
+  if (i != -1) {
+    sort_by_list.splice(i, 1);
+  }
+  sort_by_list.push(field);
+
+  for (let x of sort_by_list) {
+    if (Number.isNaN(parseFloat(shown_data[0][x]))) {
+      shown_data.sort((a, b) => a[x].localeCompare(b[x]));
+    }
+    else {
+      shown_data.sort((a, b) => a[x] - b[x]);
+    }
+  }
+
+  refreshTable();
 }
 
 function searchJson(search) {
@@ -79,22 +122,28 @@ function searchJson(search) {
 
 function showJson(query) {
   mechdb_search.value = query;
-  headers = [];
-  ordered_headers = [];
-  text = '';
-  filteredData = [];
 
-  if (query != '')
-  {
+  if (query != '') {
     if (query[0] == '$') {
-      filteredData = jsonPath(data, query);
+      shown_data = jsonPath(data, query);
     }
     else {
-      filteredData = searchJson(query);
+      shown_data = searchJson(query);
     }
   }
+  else {
+    shown_data = [...data];
+  }
 
-  if (filteredData == false) {
+  refreshTable();
+}
+
+function refreshTable() {
+  text = ''
+  headers = [];
+  ordered_headers = [];
+
+  if (shown_data == false) {
     text = `<div class="alert alert-secondary" role="alert">
               <h4 class="alert-heading">No Results</h4>
               Search returned no results or JSONPath expression has a syntax error.
@@ -102,7 +151,7 @@ function showJson(query) {
   }
   else {
 
-    for (let x of filteredData) {
+    for (let x of shown_data) {
       for (let y in x) {
         if (!excluded_headers.includes(y))
         {
@@ -119,12 +168,12 @@ function showJson(query) {
 
     for (let x of header_order) {
       if (headers.includes(x)) {
-        text += '<th>' + x + '</th>';
+        text += '<th style="white-space: nowrap;" onclick="addSortBy(\'' + x + '\')">' + x + ' <small>⇅</small></th>';
         ordered_headers.push(x);
       }
     }
 
-    for (let x of filteredData) {
+    for (let x of shown_data) {
       text += '<tr>';
       if (use_select_column) {
         text += '<td><button class="btn btn-square" onclick="partClick(\'' + x.name + '\')">' + select_column_button_text + '</button></td>';
@@ -155,6 +204,8 @@ function showJson(query) {
 
   document.getElementById('results').innerHTML = text;
 }
+
+
 
 function showFrameSlots(name) {
   modal_title.innerHTML = name;
