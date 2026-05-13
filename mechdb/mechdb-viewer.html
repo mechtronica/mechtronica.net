@@ -15,13 +15,13 @@ permalink: mechdb/viewer/
 </style>
 <div class="part-search">
   <div class="d-flex m-10">
-    <a href="#modal-1" onclick="showHelp()">🛈</a>
+    <a href="#modal-1" onclick="showHelp()">ℹ️</a>
     <p class="m-0 mr-10">&nbsp;Search: </p>
     <input type='search' class='form-control' id='mechdb-search' placeholder='Search MechDB'>
   </div>
   <div class="d-flex m-10">
       <p class="m-0 mr-10">Filters: </p>
-      <select class="form-control w-150" id="type-select" onchange="setFilter('type', type_select.value)">
+      <select class="form-control" style="max-width: 200px;" id="type-select" onchange="setFilter('type', type_select.value)">
           <option value="Any" selected="selected">Any</option>
           <option value="Frame">Frame</option>
           <option value="Plating">Plating</option>
@@ -35,7 +35,7 @@ permalink: mechdb/viewer/
           <option value="Equipment">Equipment</option>
       </select>
       &nbsp;
-      <select class="form-control w-150" id="mfg-select" onchange="setFilter('manufacturer', mfg_select.value)">
+      <select class="form-control" style="max-width: 200px;" id="mfg-select" onchange="setFilter('manufacturer', mfg_select.value)">
           <option value="Any" selected="selected">Any</option>
           <option value="Bardtronics">Bardtronics</option>
           <option value="BMI Standards Co">BMI Standards Co</option>
