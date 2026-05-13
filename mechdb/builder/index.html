@@ -576,7 +576,7 @@
         </div>
         <div class="d-flex m-10">
             <p class="m-0 mr-10">Filters: </p>
-            <select class="form-control w-150" id="type-select" onchange="setFilter('type', type_select.value)">
+            <select class="form-control" style="max-width: 200px;" id="type-select" onchange="setFilter('type', type_select.value)">
                 <option value="Any" selected="selected">Any</option>
                 <option value="Frame">Frame</option>
                 <option value="Plating">Plating</option>
@@ -590,7 +590,7 @@
                 <option value="Equipment">Equipment</option>
             </select>
             &nbsp;
-            <select class="form-control w-150" id="mfg-select" onchange="setFilter('manufacturer', mfg_select.value)">
+            <select class="form-control" style="max-width: 200px;" id="mfg-select" onchange="setFilter('manufacturer', mfg_select.value)">
                 <option value="Any" selected="selected">Any</option>
                 <option value="Bardtronics">Bardtronics</option>
                 <option value="BMI Standards Co">BMI Standards Co</option>
@@ -693,12 +693,62 @@
         'cool': document.getElementById('excess-cooling'),
         'cpu': document.getElementById('excess-cpu')
     }
+
+    frame_slot_loc = {
+      'Light': {
+        'L1': {'top': '23%', 'left': '3%'},
+        'L2': {'top': '0', 'left': '0'},
+        'R1': {'top': '23%', 'right': '3%'},
+        'R2': {'top': '0', 'right': '0'},
+        'T1': {'top': '3%', 'left': '28%'},
+        'T2': {'top': '3%', 'right': '28%'},
+        'T3': {'top': '17%', 'left': '28%'},
+        'T4': {'top': '12%', 'left': '43%'},
+        'T5': {'top': '17%', 'right': '28%'},
+        'T6': {'top': '0', 'left': '0'},
+        'T7': {'top': '0', 'right': '0'},
+        'B1': {'top': '0', 'left': '0'},
+        'B2': {'top': '0', 'right': '0'}
+      },
+      'Standard': {
+        'L1': {'top': '5%', 'left': '3%'},
+        'L2': {'top': '23%', 'left': '3%'},
+        'R1': {'top': '5%', 'right': '3%'},
+        'R2': {'top': '23%', 'right': '3%'},
+        'T1': {'top': '3%', 'left': '28%'},
+        'T2': {'top': '7%', 'left': '43%'},
+        'T3': {'top': '3%', 'right': '28%'},
+        'T4': {'top': '15%', 'left': '28%'},
+        'T5': {'top': '20%', 'left': '43%'},
+        'T6': {'top': '15%', 'right': '28%'},
+        'T7': {'top': '0', 'right': '0'},
+        'B1': {'top': '0', 'left': '0'},
+        'B2': {'top': '0', 'right': '0'}
+      },
+      'Heavy': {
+        'L1': {'top': '5%', 'left': '3%'},
+        'L2': {'top': '23%', 'left': '3%'},
+        'R1': {'top': '5%', 'right': '3%'},
+        'R2': {'top': '23%', 'right': '3%'},
+        'T1': {'top': '0', 'left': '28%'},
+        'T2': {'top': '0', 'right': '28%'},
+        'T3': {'top': '13%', 'left': '28%'},
+        'T4': {'top': '13%', 'right': '28%'},
+        'T5': {'top': '20%', 'left': '43%'},
+        'T6': {'top': '25%', 'left': '28%'},
+        'T7': {'top': '25%', 'right': '28%'},
+        'B1': {'top': '42%', 'left': '17%'},
+        'B2': {'top': '42%', 'right': '17%'}
+      }
+    }
+
     use_select_column = true;
     select_column_header = 'select';
     select_column_button_text = '✚';
     loadDataFile('/mechdb/parts.json');
     load_components_cookie();
     update_slot_text();
+    update_slot_locations();
 
     function slot_click(slot) {
         if (selected_slot != null) {
@@ -772,6 +822,7 @@
             validateAllComponents();
             calculate_resources();
             update_slot_text();
+            update_slot_locations();
             update_components_cookie();
         }
         else {
@@ -784,6 +835,7 @@
         validateAllComponents();
         calculate_resources();
         update_slot_text();
+        update_slot_locations();
         update_components_cookie();
     }
 
@@ -826,6 +878,21 @@
         }
     }
 
+    function update_slot_locations() {
+      if ('F' in components) {
+        var frame_size = components.F.class;
+        for (x in frame_slot_loc[frame_size]) {
+          var slot = document.getElementById(x);
+          for (y of ['top', 'left', 'right', 'bottom']) {
+            slot.style[y] = '';
+          }
+          for (y in frame_slot_loc[frame_size][x]) {
+            slot.style[y] = frame_slot_loc[frame_size][x][y];
+          }
+        }
+      }
+    }
+
     function makeNormalSlotText(slot) {
         text = '';
         if (slot in components) {
@@ -838,7 +905,7 @@
         if ('F' in components) {
             if (slot in components.F.slots) {
                 text += 'size: ' + components.F.slots[slot].size + '<br>';
-                text += 'hit: ' + components.F.slots[slot].hit[0] + ' - ' + components.F.slots[slot].hit[0];
+                text += 'hit: ' + components.F.slots[slot].hit[0] + ' - ' + components.F.slots[slot].hit[1];
                 document.getElementById(slot).classList.remove('invisible');
             }
             else {

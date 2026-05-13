@@ -38,6 +38,7 @@ header_order = [
 
 filter_dict = {};
 sort_by_list = [];
+sort_by_dir = {};
 
 modal_title = document.getElementById('modal-title');
 modal_content = document.getElementById('modal-content');
@@ -89,15 +90,25 @@ function addSortBy(field) {
   var i = sort_by_list.indexOf(field);
   if (i != -1) {
     sort_by_list.splice(i, 1);
+    sort_by_dir[field] *= -1;
+  }
+  else {
+    sort_by_dir[field] = 1;
   }
   sort_by_list.push(field);
 
   for (let x of sort_by_list) {
     if (Number.isNaN(parseFloat(shown_data[0][x]))) {
-      shown_data.sort((a, b) => a[x].localeCompare(b[x]));
+      if (sort_by_dir[field] == 1) {
+        shown_data.sort((a, b) => a[x].localeCompare(b[x]));
+      }
+      else {
+        shown_data.sort((a, b) => b[x].localeCompare(a[x]));
+      }
+
     }
     else {
-      shown_data.sort((a, b) => a[x] - b[x]);
+      shown_data.sort((a, b) => sort_by_dir[field]*(a[x] - b[x]));
     }
   }
 
@@ -203,8 +214,6 @@ function refreshTable() {
 
   document.getElementById('results').innerHTML = text;
 }
-
-
 
 function showFrameSlots(name) {
   modal_title.innerHTML = name;
